@@ -165,7 +165,9 @@ if [ -d research/data/pubmed ] && [ -f research/baseline.json ]; then
     bad "baseline" "drifted from measure.py; run 'make review'"
   fi
 else
-  echo "  skip  no corpora present (run 'make fetch' to enable)"
+  # Must still count, or the total changes depending on whether corpora are
+  # present and the README assertion count below cannot be stable.
+  ok "baseline check skipped, no corpora (run 'make fetch' to enable)"
 fi
 
 # Must be the LAST assertion: it counts itself, so it only works at the end.

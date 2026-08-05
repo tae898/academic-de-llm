@@ -182,6 +182,8 @@ Also check `utm_source=` left in cited URLs, DOIs that resolve to unrelated pape
 
 Every pattern here is a finder. Read each hit.
 
+`references/patterns.md` holds them all as regex strings. Apply them with your own search tool rather than shelling out, since a missing binary returns nothing and that is indistinguishable from a clean file.
+
 Measured on one real paper: the em-dash grep returned 8 hits, of which 2 were prose worth fixing. The rest were three code comments, a table placeholder, and two numeric en dashes. A pass that changed all 8 would have corrupted a table and three code samples.
 
 A second measurement, on this skill's own research: a keyword search for writing-related plugins across 278 marketplace entries returned 48 hits and 0 real ones. `docs` matched documentation tools, `write` matched "write optimized SQL", `style` matched UI themes.

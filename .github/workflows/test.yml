@@ -17,8 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # macOS ships BSD grep with no PCRE support, so the matrix is the point:
-      # it catches patterns that only work on GNU grep.
       - name: Install ripgrep
         run: |
           if [ "$RUNNER_OS" = "macOS" ]; then

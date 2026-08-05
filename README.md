@@ -128,37 +128,30 @@ signal is density and co-occurrence, not presence.
 
 It does not make text true, well argued, or worth reading.
 
-## Portability
+## Requirements
 
-`rg` ([ripgrep](https://github.com/BurntSushi/ripgrep)) is the documented
-default because it behaves identically on Linux, macOS, and Windows.
+None to use it. The skill is three Markdown files, and Claude applies the
+patterns with its own search tool.
 
-Three patterns cannot be written in POSIX ERE at all, since multiline matching
-and Unicode property classes do not exist there. GNU grep handles two of them
-with `-P`; macOS ships BSD grep with no PCRE compiled in. Those three are marked
-"rg only" with the reason. Everything else has a portable `grep -E` fallback
-that CI verifies on both platforms.
-
-You do not need any of this to use the skill. Claude searches with its own
-built-in tooling. The shell commands are for reading a document yourself.
+Linux and macOS. Windows is not supported.
 
 ## Tests
 
 ```bash
-sh tests/check.sh
+sh tests/check.sh    # needs ripgrep
 ```
 
-26 assertions: every pattern fires on the planted-tells fixture, stays silent on
-the false-positive trap, the em dash search over-fires by exactly the documented
-amount, the portable fallbacks work, and the skill does not commit the tells it
-flags.
+22 assertions: every pattern fires on the planted-tells fixture, stays silent on
+the false-positive trap, the em dash pattern over-fires by exactly the documented
+amount, and the skill does not commit the tells it flags. CI runs them on
+`ubuntu-latest` and `macos-latest`.
 
-CI runs on `ubuntu-latest` and `macos-latest`. That matrix is not decoration.
-v2 shipped four broken patterns because they were only ever run under `ugrep`,
-which is permissive. On GNU grep two of them errored out and one silently
-matched nothing, which is the worse failure because it looks like a clean pass.
-One of them was the curly-quote search, whose curly quotes had been straightened
-by an editor into the ASCII ones it was meant to detect.
+They exist because v2 shipped four broken patterns. They passed locally only
+because the shell aliased `grep` to `ugrep`, which is permissive; on a clean
+machine two errored and one silently matched nothing, which is the worse failure
+because it looks like a clean pass. One was the curly-quote pattern, whose curly
+quotes had been straightened by an editor into the ASCII ones it was meant to
+detect.
 
 ## Related
 

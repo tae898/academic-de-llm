@@ -92,8 +92,11 @@ def density(d):
                 vals.append(n / max(w, 1) * 10000)
             print(f"{name:<24}" + ''.join(f'{v:>10.1f}' for v in vals))
         print()
-    print("\n  The naive arm getting WORSE is the non-circular part: it was not")
-    print("  optimising for these patterns either way.\n")
+    print("\n  RAW REGEX COUNTS. Patterns find candidates, not violations, and this")
+    print("  table cannot read a hit in context. Adjudicating the 2026 copula row by")
+    print("  hand turned 'naive beats skill' into 'both removed 3 of 3 real cases,")
+    print("  the rest are `maintains` as an ordinary verb'. Check before quoting.")
+    print("  Also partly circular for the skill arm.\n")
 
 
 def main():

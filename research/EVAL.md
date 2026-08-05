@@ -86,12 +86,34 @@ Per 10k words, 2026 abstracts.
 | Undue emphasis | 8.1 | 4.2 | **0.0** |
 | Negative parallelism | 4.1 | 0.0 | 0.0 |
 
-Mixed, and one row goes the wrong way: on copula avoidance the **naive prompt
-beats the skill**, 4.2 against 13.7.
+Two warnings about this table, and the second one is the more important.
 
-This measurement is partly circular for arm C, since a rewrite guided by pattern
-X will reduce pattern X. Treat the style and fidelity judgements as the real
-evidence and this table as a mechanism check.
+**It is partly circular for arm C.** A rewrite guided by pattern X will reduce
+pattern X. Treat the style and fidelity judgements as the real evidence.
+
+**It is raw regex counts, which this skill exists to warn against.** The copula
+row appears to show the naive prompt beating the skill, 4.2 against 13.7.
+Adjudicating all nine hits by hand says otherwise:
+
+| Arm | Raw hits | Real copula avoidance | False positives |
+|---|---|---|---|
+| original | 5 | **3** | 2 |
+| naive | 1 | **0** | 1 |
+| skill | 3 | **0** | 3 |
+
+The three real instances were `boasts promising prospects`, `offers an efficient
+and reliable solution` and `serves as a proof of concept`. **Both arms removed
+all three.** Every remaining hit is `maintains` used as an ordinary active verb,
+as in "maintains a high execution speed of 35 FPS", which is not a dressed-up
+copula at all.
+
+So the skill is not worse on copula avoidance. The apparent gap is entirely the
+finder misfiring, at n=5, which is noise even before adjudication.
+
+This is the skill's own central claim turned on its own eval: patterns find
+candidates, not violations, and someone has to read each hit. An automated
+density table cannot do that, so read this table as a mechanism check and
+nothing more.
 
 ## Two findings that reversed
 

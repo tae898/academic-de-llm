@@ -8,6 +8,8 @@ Every pattern is a finder, not a verdict. Read each hit before changing it. Tier
 
 Three patterns cannot be expressed in POSIX ERE at all, because multiline matching and Unicode property classes do not exist there. GNU grep can do two of them with `-P`; macOS ships BSD grep with no PCRE compiled in, so there is no single `grep` invocation that works on both platforms. Those three are marked **rg only**. Every other pattern has a portable `grep -E` fallback that works on GNU, BSD, and ugrep.
 
+On Windows, add `--crlf` to `rg` when searching files with CRLF line endings. Patterns anchored with `$` do not match otherwise, because the carriage return sits between the last character and the end of the line.
+
 Run step zero from `SKILL.md` before any of this. Excluding code blocks, tables, and frontmatter is what keeps the false-positive rate survivable.
 
 ## Tier 1: formatting

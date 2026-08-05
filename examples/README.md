@@ -7,8 +7,13 @@ cannot drift from what the patterns actually do.
 |---|---|
 | `before.md` | A realistic slopped README. Nine pattern families fire. |
 | `after.md` | The same document, de-LLM'd. The diff is the demo. |
+| `prose-before.md` | A real 2026 journal abstract. The **prose** branch, where Tier 1 finds nothing. |
+| `prose-after.md` | The same abstract, de-LLM'd. |
 | `false-positive-trap.md` | Legitimate prose. Patterns fire. Correct output is no change. |
 | `slopped.md` | Pattern coverage. One planted instance of everything, including the rare ones `before.md` has no natural home for. |
+
+The two pairs exist because `SKILL.md` branches on register and the branches do
+genuinely different work. See "The prose pair" below.
 
 ## before.md to after.md
 
@@ -107,3 +112,46 @@ The file also holds an en dash in a numeric range and a real rule of three.
 
 Cleaning up bad prose is easy. Correctly changing nothing is the harder test,
 and it is the one most tools in this space fail.
+
+## The prose pair
+
+`prose-before.md` is a real *Sensors* abstract from 2026, taken unedited from
+PubMed. It is here because every other fixture is Markdown, and the skill's
+prose branch had no worked example.
+
+**Tier 1 finds nothing.** No em dashes, no bold lists, no headings, because an
+abstract has no markup. On this branch the formatting tier is skipped entirely
+and Tier 2 is the whole job.
+
+| Tell | before | after | |
+|---|---|---|---|
+| Copula avoidance (`boasts`, `offers`) | 2 | 0 | |
+| Superficial `-ing` clause | 1 | 0 | |
+| Intensifier with no number (`significantly`) | 1 | 0 | |
+| `robust` / `robustness` | 4 | **4** | **all kept** |
+
+192 words to 131.
+
+### Why `robust` survives all four times
+
+`robust` is currently the fastest-*rising* vocabulary tell measured, 3.2x its
+pre-ChatGPT baseline and up 50% since 2024 while `crucial` and `delve` collapsed
+back to baseline. A banned-word list would strip all four.
+
+Read them in context and none can go. "lack of robustness" is a stated defect of
+classic RL algorithms. "hyperparameter robustness" is one of three named
+experiment types. "model robustness" is a measured outcome. The word is carrying
+a technical meaning every time, which is exactly the situation Tier 3 describes:
+the signal is density and co-occurrence, not presence.
+
+`significantly` went in the same sentence, because no number supports it and the
+underlying claim ("improves sample utilization efficiency") survives without it.
+That is the Prime Directive: the tell goes, the claim stays.
+
+### What was dropped, and why it is not a claim
+
+"This work offers an efficient and reliable solution for real-time adaptive
+signal control of isolated intersections." The whole sentence went. It is a
+self-assessment with no evidence behind it, and the scope it names (isolated
+signalized intersections) is already stated earlier. Nothing measurable was
+lost.

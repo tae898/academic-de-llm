@@ -1,0 +1,66 @@
+{
+ "corpus": "PubMed Sensors (Basel); arXiv cs.LG. See research/README.md",
+ "rates": {
+  "2019-21": {
+   "Copula avoidance": 1.63,
+   "Kobak's ten markers": 15.69,
+   "Negative parallelism": 0.49,
+   "Superficial -ing": 0.98,
+   "Undue emphasis": 0.33,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 1.47,
+   "delve/showcase/underscore": 0.0,
+   "pivotal": 0.33,
+   "robust": 4.41
+  },
+  "2024": {
+   "Copula avoidance": 4.19,
+   "Kobak's ten markers": 49.98,
+   "Negative parallelism": 1.22,
+   "Superficial -ing": 8.74,
+   "Undue emphasis": 0.87,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 5.94,
+   "delve/showcase/underscore": 1.92,
+   "pivotal": 1.05,
+   "robust": 9.26
+  },
+  "2025": {
+   "Copula avoidance": 6.72,
+   "Kobak's ten markers": 50.5,
+   "Negative parallelism": 0.78,
+   "Superficial -ing": 12.19,
+   "Undue emphasis": 0.31,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 3.91,
+   "delve/showcase/underscore": 1.25,
+   "pivotal": 1.41,
+   "robust": 17.35
+  },
+  "2026": {
+   "Copula avoidance": 4.63,
+   "Kobak's ten markers": 39.48,
+   "Negative parallelism": 0.72,
+   "Superficial -ing": 6.94,
+   "Undue emphasis": 0.29,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 0.87,
+   "delve/showcase/underscore": 0.29,
+   "pivotal": 0.43,
+   "robust": 13.88
+  },
+  "arxiv-2020": {
+   "-- (LaTeX en/em)": 3.67,
+   "--- (LaTeX em dash)": 0.0,
+   "U+2014 literal": 0.0,
+   "spaced \" - \"": 1.35
+  },
+  "arxiv-2026": {
+   "-- (LaTeX en/em)": 7.77,
+   "--- (LaTeX em dash)": 2.7,
+   "U+2014 literal": 0.0,
+   "spaced \" - \"": 3.72
+  }
+ },
+ "recorded": "2026-08"
+}

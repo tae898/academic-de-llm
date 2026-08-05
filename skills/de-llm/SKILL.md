@@ -1,6 +1,6 @@
 ---
 name: de-llm
-version: 3.0.0
+version: 3.1.0
 description: |
   Strip the surface markers that make text read as machine-generated, without
   flattening its meaning. Use when the user says "de-LLM", "de-slop", "remove
@@ -17,6 +17,7 @@ metadata:
     Wikipedia:Signs of AI writing (community-maintained);
     own corpus measurements, 2026-08 (see references/sources.md)
   last_reviewed: 2026-08
+  review_process: research/REVIEW.md
 ---
 
 # De-LLM: Remove the Tells, Keep the Meaning

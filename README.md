@@ -130,10 +130,16 @@ It does not make text true, well argued, or worth reading.
 
 ## Requirements
 
-None to use it. The skill is three Markdown files, and Claude applies the
-patterns with its own search tool.
+None to use it.
 
-Linux and macOS. Windows is not supported.
+The skill is three Markdown files that name no tool, no operating system and no
+install step. That is deliberate: it is knowledge, not a program, so it runs
+wherever Claude runs, Windows included. A test in `tests/check.sh` enforces it,
+so the constraint cannot rot.
+
+The **development tooling** is Linux and macOS. `tests/check.sh` needs ripgrep,
+and CI runs on `ubuntu-latest` and `macos-latest`. That is a constraint on
+contributors, not on users.
 
 ## Tests
 
@@ -141,7 +147,7 @@ Linux and macOS. Windows is not supported.
 sh tests/check.sh    # needs ripgrep
 ```
 
-38 assertions on four fixtures. Every pattern fires on the coverage fixture.
+49 assertions on four fixtures. Every pattern fires on the coverage fixture.
 The worked example asserts **exact** counts in both directions: `after.md` must
 still contain the two protected em dashes and the five-item flag reference,
 because a pass that drove every count to zero would have corrupted a table, a
@@ -154,6 +160,20 @@ machine two errored and one silently matched nothing, which is the worse failure
 because it looks like a clean pass. One was the curly-quote pattern, whose curly
 quotes had been straightened by an editor into the ASCII ones it was meant to
 detect.
+
+## Research
+
+Every measured number in this repo is reproducible, and the process that
+produces them is documented because it has to be re-run: between 2024 and 2026
+`crucial` fell 85% and `delve` effectively vanished, both back to their
+pre-ChatGPT baselines, while the structural tells held.
+
+| | |
+|---|---|
+| [`research/README.md`](research/README.md) | what each corpus can and cannot measure |
+| [`research/REVIEW.md`](research/REVIEW.md) | the quarterly checklist, `make review` |
+| [`research/MODELS.md`](research/MODELS.md) | which models produced which result, and the rules for picking them |
+| [`research/EVAL.md`](research/EVAL.md) | does this beat just asking an LLM to de-slop, with its limits stated at the same weight as its results |
 
 ## Related
 

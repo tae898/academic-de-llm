@@ -1,7 +1,7 @@
 {
   "name": "de-llm",
-  "description": "Strip the surface markers that make text read as machine-generated, without flattening its meaning. Ordered by measured frequency in agent-written prose: formatting first, paste-era artifacts last.",
-  "version": "3.0.0",
+  "description": "Strip the surface markers that make text read as machine-generated, without flattening its meaning. Branches on register: formatting dominates documents with markup, structure dominates plain prose. Every pattern is measured, and the measurements are reproducible.",
+  "version": "3.1.0",
   "author": {
     "name": "Taewoon Kim",
     "url": "https://taewoon.kim"

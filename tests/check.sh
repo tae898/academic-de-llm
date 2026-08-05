@@ -14,6 +14,8 @@ SLOP=examples/slopped.md
 TRAP=examples/false-positive-trap.md
 BEFORE=examples/before.md
 AFTER=examples/after.md
+PBEFORE=examples/prose-before.md
+PAFTER=examples/prose-after.md
 
 pass=0
 fail=0
@@ -106,6 +108,23 @@ count "after KEEPS the hedge"       "$AFTER"  1 'may vary'
 count "after copula = 1 false pos"  "$AFTER"  1 '\b(serves as|stands as|functions as|boasts|features|maintains|offers)\b'
 
 echo
+echo "Prose branch: Tier 1 is inapplicable, Tier 2 is the whole job"
+count "prose: no em dash to find"    "$PBEFORE" 0 '—'
+count "prose: no bold list to find"  "$PBEFORE" 0 '^\s*[-*] \*\*[^*]+\*\*'
+count "prose: no heading to find"    "$PBEFORE" 0 '^#{1,6} '
+count "prose before: copula"         "$PBEFORE" 2 '\b(boasts|offers|serves as|maintains)\b'
+count "prose before: -ing clause"    "$PBEFORE" 1 ', (constructing|integrating|calculating|conducted)'
+count "prose before: bare intensifier" "$PBEFORE" 1 'significantly|substantially|dramatically'
+count "prose after: copula fixed"    "$PAFTER"  0 '\b(boasts|offers|serves as|maintains)\b'
+count "prose after: -ing fixed"      "$PAFTER"  0 ', (constructing|integrating|calculating|conducted)'
+count "prose after: intensifier gone" "$PAFTER" 0 'significantly|substantially|dramatically'
+
+# `robust` is the fastest-RISING vocabulary tell (3.2x its pre-ChatGPT baseline)
+# and a banned-word list would strip all four. Every one carries a technical
+# meaning here, so every one must survive. This is the density rule as a test.
+count "prose: all 4 'robust' KEPT"   "$PAFTER"  4 '\brobust\w*\b'
+
+echo
 echo "Extended trap: every hit must be rejectable"
 count "trap em dashes"              "$TRAP"   4 '—'
 count "trap flag reference"         "$TRAP"   3 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
@@ -122,6 +141,26 @@ for f in skills/de-llm/SKILL.md README.md; do
   if [ "$n" -eq 0 ]; then ok "$f has no inline-header bold lists"
   else bad "$f" "$n inline-header bold lists"; fi
 done
+
+echo
+echo "The skill must name no tool and no operating system"
+# Word-boundary, and 'windows' only when it is not "time windows" / "four windows".
+toolhits=$(rg -in '\b(ripgrep|rg|grep|bash|zsh|powershell|shell|terminal|linux|macos|ubuntu)\b|(?<!time )(?<!four )(?<!both )\bwindows\b' \
+  skills/de-llm/SKILL.md skills/de-llm/references/patterns.md 2>/dev/null | wc -l | tr -d ' ')
+if [ "$toolhits" -eq 0 ]; then ok "skill names no tool or OS"
+else bad "skill" "$toolhits tool/OS mentions leaked into the skill"; fi
+
+echo
+echo "Published numbers must still match the code"
+if [ -d research/data/pubmed ] && [ -f research/baseline.json ]; then
+  if python3 research/drift.py 2>/dev/null | grep -q 'nothing moved'; then
+    ok "research/baseline.json matches measure.py"
+  else
+    bad "baseline" "drifted from measure.py; run 'make review'"
+  fi
+else
+  echo "  skip  no corpora present (run 'make fetch' to enable)"
+fi
 
 echo
 echo "----------------------------------------"

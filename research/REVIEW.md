@@ -71,7 +71,30 @@ Keep the previous run under `research/eval/out/archive-<date>-<rewriter>/`.
 Comparing across generations is the only direct evidence about whether a finding
 survives, which is the question the repo exists to keep asking.
 
-## 5. Update the skill
+## 5. Re-score the patterns themselves
+
+Trigger precision drifts with models exactly as the vocabulary did. `serves as`
+matching 9 of 9 real instances is a 2026 fact, not a property of English.
+
+```bash
+python3 research/eval/adjudicate.py    # panel labels every regex hit real or false
+python3 research/eval/recall.py        # judges read cold, find what the regex missed
+python3 research/eval/score.py         # precision and recall per trigger word
+```
+
+Then retier. A trigger below roughly 20% precision is noise and should come out
+of the regex; one that the judges keep finding but the regex misses should go
+in. When the tiers change, refreeze and reset the floors **deliberately**:
+
+```bash
+python3 research/eval/score.py --freeze          # new labels.json
+python3 research/eval/regress.py --set-floors    # new floors.json
+```
+
+Never reset the floors to make a red test green. That is the one move that turns
+this whole apparatus back into taste.
+
+## 6. Update the skill
 
 - Reorder tiers if the ranking changed. The ordering is a measurement, not a
   preference.
@@ -84,7 +107,7 @@ survives, which is the question the repo exists to keep asking.
 - Record what changed and why in `references/sources.md`, including corrections.
   Retractions stay visible; they are the most useful part of the file.
 
-## 6. Verify
+## 7. Verify
 
 ```bash
 make test           # every pattern assertion, both directions

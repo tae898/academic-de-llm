@@ -59,6 +59,9 @@ def pick(path, n):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--n', type=int, default=12, help='per post-ChatGPT era')
+    ap.add_argument('--pool', default='',
+                    help='override the 2026 corpus with a larger pool file, for when '
+                         'the default 12 gives too few real hits to say anything')
     ap.add_argument('--control', type=int, default=4,
                     help='pre-2022 abstracts. These cannot be AI-generated, so '
                          'they bound what the style metric actually measures.')
@@ -70,7 +73,8 @@ def main():
     # (`crucial` and `delve` are back at their pre-ChatGPT baselines by 2026),
     # so testing only on 2024 would measure the skill against a dead target.
     # pre-2022 cannot be AI-generated and bounds what the style metric means.
-    sample = ([{'era': '2026', 'text': t} for t in pick(f'{DATA}/pubmed/y2026.txt', a.n)] +
+    pool2026 = a.pool or f'{DATA}/pubmed/y2026.txt'
+    sample = ([{'era': '2026', 'text': t} for t in pick(pool2026, a.n)] +
               [{'era': '2024', 'text': t} for t in pick(f'{DATA}/pubmed/y2024.txt', a.n)] +
               [{'era': 'pre-2022', 'text': t} for t in pick(f'{DATA}/pubmed/ypre.txt', a.control)])
 

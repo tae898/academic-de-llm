@@ -42,23 +42,51 @@ def key():
     sys.exit('need OPENROUTER_API_KEY or ~/.tokens/openrouter_token')
 
 
-def call(model, prompt, max_tokens=4000, retries=3):
-    body = json.dumps({'model': model,
-                       'messages': [{'role': 'user', 'content': prompt}],
-                       'max_tokens': max_tokens}).encode()
+def call(model, prompt, max_tokens=4000, retries=3, timeout=180):
+    """One completion, with the reasoning-starvation failure handled explicitly.
+
+    A reasoning model spends tokens thinking before it writes anything, and that
+    thinking is charged against max_tokens. Starve it and the response comes back
+    with finish_reason "length" and an EMPTY content field, which reads exactly
+    like a refusal or a network failure. Observed: qwen3.8-max spending 4,876
+    reasoning tokens before emitting 405 characters.
+
+    You cannot switch this off. Verified against the API: `reasoning:
+    {"exclude": true}` still consumed the full budget and returned nothing, and
+    `effort: "low"` did the same. Those flags change what you are shown, not
+    what is spent. The only fix is room, so starvation doubles the budget and
+    retries rather than counting as an error.
+    """
+    budget = max_tokens
     for i in range(retries):
         try:
+            body = json.dumps({'model': model,
+                               'messages': [{'role': 'user', 'content': prompt}],
+                               'max_tokens': budget}).encode()
             req = urllib.request.Request(URL, data=body, headers={
                 'Authorization': f'Bearer {key()}', 'Content-Type': 'application/json'})
-            with urllib.request.urlopen(req, timeout=180) as r:
-                c = json.load(r)['choices'][0]['message'].get('content')
-            if c and c.strip():
-                return c.strip()
-        except Exception as e:                       # noqa: BLE001
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                d = json.load(r)
+            ch = d['choices'][0]
+            content = (ch.get('message', {}) or {}).get('content')
+            if content and content.strip():
+                return content.strip()
+            if ch.get('finish_reason') == 'length':
+                spent = (d.get('usage', {}).get('completion_tokens_details', {})
+                         or {}).get('reasoning_tokens')
+                # Size the next attempt from what it actually spent rather than
+                # blindly doubling: starting well below the requirement, doubling
+                # runs out of retries before it ever reaches a workable budget.
+                budget = max(budget * 2, (spent or budget) * 2 + 2000)
+                if i == retries - 1:
+                    return (f'__ERROR__ output starved by reasoning: spent {spent} reasoning '
+                            f'tokens with no content, gave up below {budget}')
+                continue                      # not transient, do not sleep
+        except Exception as e:                # noqa: BLE001
             if i == retries - 1:
                 return f'__ERROR__ {e}'
         time.sleep(3 * (i + 1))
-    return '__ERROR__ empty response'
+    return '__ERROR__ empty response after retries'
 
 
 def manifest(corpus, **extra):

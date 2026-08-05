@@ -1,0 +1,19 @@
+{
+  "_note": "Hand adjudication of the 2026 hits from the 12-abstract run, made before the automated panel existed. Used only to measure whether the panel agrees with a human. Not ground truth: one labeller, no blinding, and the labeller had a stake in the outcome.",
+  "labelled_by": "author, 2026-08-05",
+  "labels": [
+    {"pattern": "copula avoidance", "match": "boasts", "context_fragment": "boasts promising prospects", "real": true},
+    {"pattern": "copula avoidance", "match": "offers", "context_fragment": "offers an efficient and reliable solution", "real": true},
+    {"pattern": "copula avoidance", "match": "serves as", "context_fragment": "serves as a proof of concept", "real": true},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains uniform lateral resolution across different axial", "real": false},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains a high execution speed of 35 FPS", "real": false},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains local lane consistency at every prediction step", "real": false},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains an efficiency-accuracy trade-off", "real": false},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains uniform lateral resolution and", "real": false},
+    {"pattern": "copula avoidance", "match": "maintains", "context_fragment": "maintains local lane consistency at each prediction step", "real": false},
+    {"pattern": "undue emphasis", "match": "plays a vital role", "context_fragment": "3D point cloud understanding plays a vital role in remote sensing", "real": true},
+    {"pattern": "undue emphasis", "match": "plays a pivotal role", "context_fragment": "Evapotranspiration (ET) plays a pivotal role in the water and energy cycles", "real": true},
+    {"pattern": "undue emphasis", "match": "is critical for", "context_fragment": "is critical for robust video understanding", "real": true},
+    {"pattern": "negative parallelism", "match": "not only significantly enhances resolution but", "context_fragment": "not only significantly enhances resolution but also maintains uniform lateral resolution", "real": true}
+  ]
+}

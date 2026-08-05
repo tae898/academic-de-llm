@@ -3,7 +3,7 @@
 
     python3 research/eval/analyse.py
 """
-import collections, os, re, statistics, sys
+import collections, json, os, re, statistics, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import load   # noqa: E402
@@ -99,10 +99,94 @@ def density(d):
     print("  Also partly circular for the skill arm.\n")
 
 
+def adjudicated(d, rw):
+    """Real-hit counts after a judge panel classifies each regex match."""
+    import collections as _c
+    votes = _c.defaultdict(list)
+    for r in d['results']:
+        if not r.get('parsed'):
+            continue
+        key = (r['i'], r['arm'], r['pattern'], r['match'], r['context'][:60])
+        votes[key].append(bool(r['parsed'].get('real')))
+
+    era_of = {x['i']: x['era'] for x in rw['results']}
+    real = _c.Counter(); raw = _c.Counter(); unanimous = 0
+    for (i, arm, pat, _m, _c2), vs in votes.items():
+        era = era_of.get(i)
+        raw[(era, pat, arm)] += 1
+        if len(set(vs)) == 1:
+            unanimous += 1
+        if sum(vs) > len(vs) / 2:
+            real[(era, pat, arm)] += 1
+
+    print(f"=== ADJUDICATED HITS: panel majority of {len(next(iter(votes.values())))} judges "
+          f"on {len(votes)} matches ===")
+    print(f"    unanimous on {unanimous}/{len(votes)} ({unanimous/len(votes)*100:.0f}%)\n")
+    pats = sorted({p for _e, p, _a in raw})
+    for era in ('2026', '2024', 'pre-2022'):
+        if not any(e == era for e, _p, _a in raw):
+            continue
+        n = sum(1 for x in rw['results'] if x['era'] == era)
+        print(f"  -- {era}, {n} abstracts --")
+        print(f"     {'pattern':<22}{'original':>18}{'naive':>16}{'skill':>16}")
+        for pat in pats:
+            cells = []
+            for arm in ('A', 'B', 'C'):
+                cells.append(f"{real[(era,pat,arm)]} real /{raw[(era,pat,arm)]:>3} raw")
+            print(f"     {pat:<22}" + ''.join(f'{c:>18}' if i == 0 else f'{c:>16}'
+                                              for i, c in enumerate(cells)))
+        print()
+    print("  'real' = majority of the panel called it a genuine instance, not a")
+    print("  words-matched false positive. Raw counts are what an unadjudicated")
+    print("  density table would have reported.\n")
+
+
+def calibrate(d):
+    """Does the panel agree with the hand labels made before it existed?"""
+    import collections as _c
+    hp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'handlabels.json')
+    if not os.path.exists(hp):
+        return
+    hand = json.load(open(hp))['labels']
+    votes = _c.defaultdict(list)
+    for r in d['results']:
+        if r.get('parsed'):
+            votes[(r['pattern'], r['match'].lower(), r['context'])].append(bool(r['parsed'].get('real')))
+
+    agree = dis = miss = 0
+    print("=== CALIBRATION: panel vs the author's hand labels ===\n")
+    for h in hand:
+        found = [v for (p, m, ctx), v in votes.items()
+                 if p == h['pattern'] and h['context_fragment'][:40].lower() in ctx.lower()]
+        if not found:
+            miss += 1
+            continue
+        vs = found[0]
+        panel = sum(vs) > len(vs) / 2
+        if panel == h['real']:
+            agree += 1
+        else:
+            dis += 1
+            print(f"  DISAGREE  {h['pattern']}: hand={h['real']} panel={panel}")
+            print(f"            \"{h['context_fragment'][:70]}\"")
+    tot = agree + dis
+    if tot:
+        print(f"\n  agreed on {agree}/{tot} ({agree/tot*100:.0f}%), {miss} hand labels not "
+              f"matched in this run's hits")
+    print("  The hand labels are one person, unblinded, with a stake in the result.")
+    print("  Disagreement is not automatically the panel being wrong.\n")
+
+
 def main():
     rw = load('rewrites.json')
     show_manifest(rw, 'rewrites')
     density(rw)
+    try:
+        adj = load('adjudicated.json')
+        adjudicated(adj, rw)
+        calibrate(adj)
+    except SystemExit:
+        print("  (adjudicated.json not found, run research/eval/adjudicate.py)\n")
     for name, fn in (('style.json', style), ('fidelity.json', fidelity)):
         try:
             fn(load(name))

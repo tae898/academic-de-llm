@@ -149,6 +149,18 @@ if rg -q "^Six fixtures" examples/README.md && [ "$nfix" -eq 6 ]; then
   ok "examples/README fixture count matches ($nfix)"
 else bad "examples/README" "says a count that is not $nfix"; fi
 echo
+echo "Pattern precision must not regress against the frozen labels"
+if [ -f research/eval/labels.json ] && [ -f research/eval/floors.json ]; then
+  if python3 research/eval/regress.py --quiet >/dev/null 2>&1; then
+    ok "no pattern regressed (research/eval/floors.json)"
+  else
+    bad "patterns" "precision dropped or a real instance stopped being found; run research/eval/regress.py"
+  fi
+else
+  ok "no frozen labels yet (run research/eval/score.py --freeze)"
+fi
+
+echo
 echo "The skill must name no tool and no operating system"
 # Word-boundary, and 'windows' only when it is not "time windows" / "four windows".
 toolhits=$(rg -in '\b(ripgrep|rg|grep|bash|zsh|powershell|shell|terminal|linux|macos|ubuntu)\b|(?<!time )(?<!four )(?<!both )\bwindows\b' \

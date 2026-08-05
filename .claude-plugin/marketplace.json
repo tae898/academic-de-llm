@@ -1,0 +1,24 @@
+{
+  "name": "de-llm",
+  "description": "Writing skills from tae898. Evidence-ordered, with sources.",
+  "owner": {
+    "name": "Taewoon Kim",
+    "url": "https://github.com/tae898"
+  },
+  "plugins": [
+    {
+      "name": "de-llm",
+      "description": "Strip the surface markers that make text read as machine-generated, without flattening its meaning. Ordered by measured frequency in agent-written prose: formatting first, paste-era artifacts last.",
+      "author": {
+        "name": "Taewoon Kim"
+      },
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://github.com/tae898/de-llm",
+      "strict": false,
+      "skills": [
+        "./skills/de-llm"
+      ]
+    }
+  ]
+}

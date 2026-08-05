@@ -1,0 +1,31 @@
+name: patterns
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      # macOS ships BSD grep with no PCRE support, so the matrix is the point:
+      # it catches patterns that only work on GNU grep.
+      - name: Install ripgrep
+        run: |
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            brew install ripgrep
+          else
+            sudo apt-get update -qq && sudo apt-get install -y -qq ripgrep
+          fi
+
+      - name: Run pattern checks
+        run: sh tests/check.sh

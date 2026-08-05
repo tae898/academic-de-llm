@@ -1,0 +1,19 @@
+{
+  "name": "de-llm",
+  "description": "Strip the surface markers that make text read as machine-generated, without flattening its meaning. Ordered by measured frequency in agent-written prose: formatting first, paste-era artifacts last.",
+  "version": "3.0.0",
+  "author": {
+    "name": "Taewoon Kim",
+    "url": "https://taewoon.kim"
+  },
+  "homepage": "https://github.com/tae898/de-llm",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "editing",
+    "ai-slop",
+    "prose",
+    "documentation",
+    "style"
+  ]
+}

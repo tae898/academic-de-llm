@@ -1,0 +1,41 @@
+# Attribution
+
+This project's own text, patterns, and code are MIT licensed (see LICENSE).
+
+## Wikipedia:Signs of AI writing
+
+The structural and formatting pattern taxonomy in `skills/de-llm/SKILL.md` draws
+on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing),
+maintained by WikiProject AI Cleanup and licensed
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+Several category names are Wikipedia's terminology and are used as such:
+negative parallelism, superficial analysis with -ing endings, undue emphasis on
+significance, copula avoidance, vague attribution, elegant variation, false
+ranges, and the "challenges and future prospects" formula. The per-vendor
+artifact strings in Tier 4 are also compiled there.
+
+The text here is a paraphrase and restructuring rather than a copy, and the
+ordering, thresholds, rewrite guidance, and measurements are original. If you
+reuse the pattern taxonomy itself, attribute Wikipedia.
+
+## Kobak et al. 2025
+
+Frequency ratios, absolute gaps, and the excess-vocabulary word lists in Tier 3
+are reported from:
+
+> Kobak, D., González-Márquez, R., Horvát, E.-Á., et al. (2025).
+> "Delving into LLM-assisted writing in biomedical publications through excess
+> vocabulary." *Science Advances*. Preprint: [arXiv:2406.07016](https://arxiv.org/abs/2406.07016).
+> Data and code: <https://github.com/berenslab/llm-excess-vocab>
+
+These are cited findings, not a derivative work. See
+`skills/de-llm/references/sources.md` for what the paper does and does not
+establish.
+
+## Own measurements
+
+The corpus measurements in `references/sources.md` (35 plugin READMEs, 2,298
+plugin descriptions) are original to this project and MIT licensed with the
+rest. They have no baseline and measure prevalence rather than excess. Read the
+limitations before citing them.

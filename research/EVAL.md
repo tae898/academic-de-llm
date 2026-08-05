@@ -123,9 +123,13 @@ Recorded because they are the reason the limits section exists.
 the naive prompt made superficial `-ing` 31% worse and copula avoidance 160%
 worse. It was a good story: the model fixes vocabulary it has heard about and
 walks into structural patterns it has no name for. With `openai/gpt-5.6-terra`
-on 2026 abstracts it cuts both, and beats the skill on one. The model learned to
-de-slop on its own. Any claim of this shape needs re-testing every time the
-rewriter changes.
+on 2026 abstracts it cuts both. The model learned to de-slop on its own.
+
+Worth noting that the old figure was measured the same unadjudicated way as the
+copula row above, so "160% worse" was probably part artifact too. It was never
+checked by hand, because it flattered the skill. Findings that agree with you
+get less scrutiny, which is the argument for fixing the method rather than the
+number.
 
 **The first fidelity number was meaningless.** Asking judges to flag anything
 "dropped, altered or WEAKENED" returned 22% faithful for the skill against 71%

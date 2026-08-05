@@ -112,7 +112,7 @@ The measurement above has no baseline. This one does, and it is the only figure 
 
 | Pattern | pre-2022 | 2024 | ratio |
 |---|---|---|---|
-| Superficial `-ing` clause | 1.0 | 8.7 | **8.9x** |
+| Superficial `-ing` clause | 0.98 | 8.72 | **8.9x** |
 | `crucial` | 1.5 | 5.9 | 4.0x |
 | Kobak's ten markers, combined | 15.7 | 50.0 | **3.2x** |
 | `insights` | 1.0 | 3.3 | 3.4x |
@@ -126,7 +126,7 @@ The measurement above has no baseline. This one does, and it is the only figure 
 **What it establishes**
 
 - **Kobak's vocabulary finding replicates on a sample they did not use.** Their ten markers rose 3.2x in a journal they measured independently.
-- **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x, higher than any vocabulary marker here. Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
+- **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x by 2024, higher than any vocabulary marker here (it has since fallen to 6.9x baseline, see source 5). Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
 - **Markdown-specific formatting cannot be measured here and is not claimed.** Inline-header lists and title case headings require markup, so their absence from abstracts is definitional rather than a finding.
 
 **Correction, 2026-08-05.** An earlier version of this section reported em dash at 0.0 per 10k in abstracts in both windows and concluded that formatting tells track markup rather than machine authorship. **That was a data artifact and the conclusion was wrong.** PubMed normalises every dash to an ASCII hyphen: the raw XML contains zero U+2014 and zero U+2013 characters in all four windows, including pre-2022. Em dash is simply not measurable in that corpus.

@@ -1,6 +1,6 @@
 # Examples
 
-Four fixtures. They are also the test corpus for `tests/check.sh`, so they
+Six fixtures. They are also the test corpus for `tests/check.sh`, so they
 cannot drift from what the patterns actually do.
 
 | File | Role |

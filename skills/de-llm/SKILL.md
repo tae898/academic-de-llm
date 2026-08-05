@@ -31,7 +31,7 @@ Everything here comes from a published source, a community screening guide, or a
 | Kobak et al. 2025, *Science Advances* [10.1126/sciadv.adt3813](https://doi.org/10.1126/sciadv.adt3813), "Delving into LLM-assisted writing in biomedical publications through excess vocabulary" ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016), [data](https://github.com/berenslab/llm-excess-vocab)) | 15.1M English-language PubMed abstracts, 2010 to 2024. Measures 2024 word frequencies against a counterfactual projected from 2021 to 2022, so "excess" is a measured quantity. | The vocabulary list, with frequency ratios |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Maintained by editors who screen AI text at volume across millions of articles | The structural and formatting patterns, and the paste-era artifacts |
 | Own prevalence measurement, 2026-08 | 35 agent-era plugin READMEs (51k words) and 2,298 plugin descriptions (116k words). No baseline, so it measures prevalence, not excess. | The README column below |
-| Own before-and-after measurement, 2026-08 | 591 *Sensors* (MDPI) abstracts from PubMed, 118k words, split 2019 to 2021 against 2024. Same journal both sides, so this one is excess against a real baseline. | The register split, and the 8.9x figure for `-ing` clauses |
+| Own before-and-after measurement, 2026-08 | *Sensors* (MDPI) abstracts from PubMed in four windows, 2019 to 2021 through 2026, 251k words. Same journal throughout, so this one is excess against a real baseline. | The register split, and the decay of the vocabulary tier |
 
 ## Read the register first, then pick a tier
 
@@ -71,11 +71,13 @@ Say what you skipped when you report back ("skipped: 3 code blocks, 1 table, fro
 
 ## Tier 1: Formatting
 
-Highest yield **in documents with markup**, and the tier older guides bury. Skip this tier entirely on plain prose, where all of it measures zero.
+Highest yield **in documents with markup**, and the tier older guides bury.
+
+On plain prose only the em dash below applies. Everything else in this tier needs markup to exist, so it cannot occur.
 
 ### Em dash
 
-91% of files, 122 per 10k words, the single strongest signal.
+The strongest signal in documents with markup: 91% of READMEs, 122 per 10k words. It is also the one Tier 1 pattern that occurs in plain prose, where it roughly doubled in arXiv abstracts between 2020 and 2026 (3.7 to 7.8 per 10k).
 
 Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitute:
 
@@ -117,7 +119,7 @@ Model-level generation habits rather than interface artifacts, so they survive a
 
 ### Superficial analysis via -ing
 
-**The strongest structural tell measured, and the strongest tell of any kind in plain prose.** It rose 8.9x in one journal between 2019 to 2021 and 2024, higher than any vocabulary marker, and it does not occur in READMEs at all.
+**The strongest tell of any kind in plain prose, and it does not occur in READMEs at all.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 8.7 in 2024, peaked at 12.2 in 2025, and sits at 6.9 in 2026. Still nearly 7x baseline after two years, while the vocabulary markers decayed.
 
 A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`.
 

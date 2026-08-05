@@ -143,6 +143,12 @@ for f in skills/de-llm/SKILL.md README.md; do
 done
 
 echo
+echo "Docs must not drift from the fixtures they describe"
+nfix=$(ls examples/*.md | grep -cv 'README'); nfix=${nfix:-0}
+if rg -q "^Six fixtures" examples/README.md && [ "$nfix" -eq 6 ]; then
+  ok "examples/README fixture count matches ($nfix)"
+else bad "examples/README" "says a count that is not $nfix"; fi
+echo
 echo "The skill must name no tool and no operating system"
 # Word-boundary, and 'windows' only when it is not "time windows" / "four windows".
 toolhits=$(rg -in '\b(ripgrep|rg|grep|bash|zsh|powershell|shell|terminal|linux|macos|ubuntu)\b|(?<!time )(?<!four )(?<!both )\bwindows\b' \
@@ -160,6 +166,14 @@ if [ -d research/data/pubmed ] && [ -f research/baseline.json ]; then
   fi
 else
   echo "  skip  no corpora present (run 'make fetch' to enable)"
+fi
+
+# Must be the LAST assertion: it counts itself, so it only works at the end.
+nass=$((pass + fail + 1))
+if grep -q "$nass assertions" README.md 2>/dev/null; then
+  ok "README says $nass assertions, matching this run"
+else
+  bad "README" "assertion count is stale, this run has $nass"
 fi
 
 echo

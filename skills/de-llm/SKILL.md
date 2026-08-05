@@ -48,7 +48,7 @@ Measured on 35 agent-written READMEs:
 
 Formatting dominates by a factor of ten to fifty. So formatting comes first here, and the paste-era artifacts that older guides lead with come last.
 
-Related but separate: `simple-english` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
+Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
 
 ## The Prime Directive
 

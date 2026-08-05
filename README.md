@@ -155,11 +155,13 @@ detect.
 
 ## Related
 
-[`simple-english`](https://github.com/tae898/simple-english) applies ASD-STE100
-Simplified Technical English. Use that when a reader might misread the text. Use
-this when a reader might think a machine wrote it. On technical documentation,
-run both. On a paper, run only this one, because STE bans the modals that carry
-your certainty.
+[`SimpleEnglish`](https://github.com/AminBlg/SimpleEnglish) by
+[@AminBlg](https://github.com/AminBlg) applies ASD-STE100 Simplified Technical
+English. Not affiliated with this project.
+
+Use that one when a reader might misread the text. Use this one when a reader
+might think a machine wrote it. On technical documentation, run both. On a
+paper, run only this one, because STE bans the modals that carry your certainty.
 
 ## License
 

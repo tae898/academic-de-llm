@@ -173,7 +173,7 @@ pre-ChatGPT baselines, while the structural tells held.
 | [`research/README.md`](research/README.md) | what each corpus can and cannot measure |
 | [`research/REVIEW.md`](research/REVIEW.md) | the quarterly checklist, `make review` |
 | [`research/MODELS.md`](research/MODELS.md) | which models produced which result, and the rules for picking them |
-| [`research/EVAL.md`](research/EVAL.md) | does this beat just asking an LLM to de-slop, with its limits stated at the same weight as its results |
+| [`research/EVAL.md`](research/EVAL.md) | does this beat just asking an LLM to de-slop. Four judges from four labs, blind. Includes two findings that reversed when the models were made current |
 
 ## Related
 

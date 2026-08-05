@@ -11,9 +11,10 @@ maintained by WikiProject AI Cleanup and licensed
 
 Several category names are Wikipedia's terminology and are used as such:
 negative parallelism, superficial analysis with -ing endings, undue emphasis on
-significance, copula avoidance, vague attribution, elegant variation, false
-ranges, and the "challenges and future prospects" formula. The per-vendor
-artifact strings in Tier 4 are also compiled there.
+significance, copula avoidance, vague attribution, elegant variation, and the
+"challenges and future prospects" formula. The per-vendor artifact strings in
+Tier 4 are also compiled there. "False ranges" is not Wikipedia's and is listed
+as unsourced in references/sources.md.
 
 The text here is a paraphrase and restructuring rather than a copy, and the
 ordering, thresholds, rewrite guidance, and measurements are original. If you
@@ -24,9 +25,11 @@ reuse the pattern taxonomy itself, attribute Wikipedia.
 Frequency ratios, absolute gaps, and the excess-vocabulary word lists in Tier 3
 are reported from:
 
-> Kobak, D., González-Márquez, R., Horvát, E.-Á., et al. (2025).
+> Kobak, D., González-Márquez, R., Horvát, E.-Á., & Lause, J. (2025).
 > "Delving into LLM-assisted writing in biomedical publications through excess
-> vocabulary." *Science Advances*. Preprint: [arXiv:2406.07016](https://arxiv.org/abs/2406.07016).
+> vocabulary." *Science Advances*, 11(27), July 2025.
+> <https://doi.org/10.1126/sciadv.adt3813>
+> Preprint: <https://arxiv.org/abs/2406.07016> (cite v5 or later; v1 figures differ).
 > Data and code: <https://github.com/berenslab/llm-excess-vocab>
 
 These are cited findings, not a derivative work. See

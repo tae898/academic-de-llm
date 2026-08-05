@@ -41,7 +41,7 @@ Model-level habits, so they survive across vendors and model generations.
 
 ## Tier 3: excess vocabulary
 
-26% of files, 2.4 per 10k words. Source: Kobak et al. 2025, measured against a 2021 to 2022 counterfactual over 14.2M abstracts.
+26% of files, 2.4 per 10k words. Source: Kobak et al. 2025, measured against a 2021 to 2022 counterfactual over 15.1M abstracts.
 
 Their strongest markers, plus the highest frequency ratios:
 

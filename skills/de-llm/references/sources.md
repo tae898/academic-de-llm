@@ -4,21 +4,24 @@ What each source actually establishes, and what it does not. Read this before ci
 
 ---
 
-## 1. Kobak, Gonzalez-Marquez, Horvát et al. (2025)
+## 1. Kobak, González-Márquez, Horvát & Lause (2025)
 
 **"Delving into LLM-assisted writing in biomedical publications through excess vocabulary"**
-*Science Advances*. Preprint: [arXiv:2406.07016](https://arxiv.org/abs/2406.07016). Data and code: [berenslab/llm-excess-vocab](https://github.com/berenslab/llm-excess-vocab).
+*Science Advances* 11(27), July 2025. [doi:10.1126/sciadv.adt3813](https://doi.org/10.1126/sciadv.adt3813). Preprint: [arXiv:2406.07016](https://arxiv.org/abs/2406.07016). Data and code: [berenslab/llm-excess-vocab](https://github.com/berenslab/llm-excess-vocab).
 
-**Method.** 14.2 million PubMed abstracts, 2010–2024. For each word, project a counterfactual 2024 frequency from 2021–22 data, then measure the gap between projection and observation. The design is borrowed from excess-mortality analysis, so "excess" is a measured quantity against a baseline rather than a judgement about style.
+**Every number below is from arXiv v5 (3 July 2025), which matches the published version.** Earlier drafts of this file carried v1 figures from June 2024, when the corpus stopped mid-2024. All of them were wrong. If you are re-checking, check against v5 or the *Science Advances* paper, not v1.
+
+**Method.** 15.1 million English-language PubMed abstracts from 2010 onwards, cleaned. For each word, project a counterfactual 2024 frequency by linear extrapolation from 2021 and 2022, then measure both the gap δ = p − q and the ratio r = p/q against the observation. 2023 is deliberately excluded from the baseline because it could already be LLM-affected. The design is borrowed from excess-mortality analysis, so "excess" is a measured quantity against a baseline rather than a judgement about style.
 
 **What it establishes**
 
-- 2024's excess vocabulary is **stylistic, not topical**: of 280 excess style words, **66% verbs, 18% adjectives**. Covid-era excess words were content nouns. That inversion is the fingerprint.
-- Frequency ratios: `delves` r=25.2, `showcasing` r=9.2, `underscores` r=9.1.
-- Absolute gaps in common words: `potential` δ=0.041, `findings` δ=0.027, `crucial` δ=0.026.
-- Ten strongest combined markers: across, additionally, comprehensive, crucial, enhancing, exhibited, insights, notably, particularly, within.
-- Lower-bound prevalence: **≥10% of 2024 abstracts** in the arXiv version (Δ_rare=0.103, independently confirmed at Δ_common=0.098). The published *Science Advances* version reports a higher figure. Cite the published number if precision matters.
-- Sub-population spread: computational fields ~20%, MDPI/Frontiers ~17%, China/South Korea/Taiwan >15%, Nature/Science/Cell ~6%.
+- 2024's excess vocabulary is **stylistic, not topical**: of 379 excess style words in 2024, **66% verbs, 14% adjectives**. Content words were 79.2% nouns, and Covid-era excess words were almost entirely content words. That inversion is the fingerprint.
+- Frequency ratios: `delves` r=28.0, `underscores` r=13.8, `showcasing` r=10.7.
+- Absolute gaps in common words: `potential` δ=0.052, `findings` δ=0.041, `crucial` δ=0.037. A single marker word puts a floor under the estimate: δ=0.052 for `potential` alone implies at least 5.2% of 2024 abstracts went through an LLM.
+- Ten strongest combined markers, the "common set" chosen to maximize Δ: across, additionally, comprehensive, crucial, enhancing, exhibited, insights, notably, particularly, within.
+- Lower-bound prevalence: **at least 13.5% of 2024 abstracts**, from Δ = (Δ_common + Δ_rare)/2 = (0.134 + 0.136)/2 = 0.135. The rare set is 291 words, the common set is the 10 above, and the two sets do not overlap, so each is an independent estimate.
+- Excess word count rose from 190 in 2021 to 454 in 2024 counting inflections, or 343 unique lemmas.
+- Sub-population spread, as frequency gap Δ: computational fields and bioinformatics ≈0.20; China, South Korea and Taiwan ≈0.20; UK and Australia ≈0.05; MDPI 0.21, Frontiers 0.20; *Sensors* 0.25, *Cureus* 0.20; Nature family 0.10, *Science* and *Cell* 0.07. Intersections go higher: South Korean papers in *Sensors* 0.34, computation papers from China 0.41. The paper's own summary is that the bound ranges "from below 5% to over 40%".
 
 **What it does NOT establish**
 
@@ -111,6 +114,7 @@ Stated plainly so it can be challenged:
 - **The 8-hits-2-real em dash figure.** One paper, one measurement, no generality claimed.
 - **The tier ordering.** From source 3 above, which has no baseline. The ordering claim is "this fires more often", not "this is stronger evidence of machine authorship". Those are different claims and only the first is supported.
 - **The inline-header bold list as a rewrite target.** Wikipedia lists the pattern; the rule for when to keep it (genuinely parallel, meant to be scanned) is mine.
+- **False ranges.** Taken from the `humanizer` skill, which is Wikipedia-based, so it was assumed to be Wikipedia's. It is not: checked against the page on 2026-08-05 and no such section exists. Kept because the pattern is real, listed here because the attribution was wrong.
 
 ## Deliberate non-goals
 

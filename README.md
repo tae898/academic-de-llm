@@ -71,12 +71,12 @@ reads like ChatGPT".
 
 Nothing to configure. No corpus to build, no state to store, no Python.
 
-## Greps find candidates, not violations
+## Patterns find candidates, not violations
 
 The single most important thing in the repo, and the reason for
 `examples/false-positive-trap.md`.
 
-That file is legitimate technical prose. The raw em dash search returns 4 hits
+That file is legitimate technical prose. The raw em dash pattern returns 4 hits
 on it and **none of them are real**:
 
 ```
@@ -101,7 +101,7 @@ November 2022, and it reports what it skipped so the pass is auditable.
 
 | Source | What it is | What it gives |
 |---|---|---|
-| [Kobak et al. 2025](https://arxiv.org/abs/2406.07016), *Science Advances* | 14.2M PubMed abstracts. Projects a counterfactual 2024 word frequency from 2021 to 2022 data and measures the gap, so "excess" is a measured quantity. | The vocabulary list with frequency ratios (`delves` at 25.2x) |
+| [Kobak et al. 2025](https://doi.org/10.1126/sciadv.adt3813), *Science Advances* | 15.1M English-language PubMed abstracts. Projects a counterfactual 2024 word frequency from 2021 to 2022 data and measures the gap, so "excess" is a measured quantity. | The vocabulary list with frequency ratios (`delves` at 28.0x) |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Editors who screen AI text at volume across millions of articles | The structural and formatting taxonomy, and the paste-era artifacts |
 | This repo, 2026-08 | 35 plugin READMEs and 2,298 plugin descriptions | The ordering |
 

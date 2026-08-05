@@ -26,7 +26,7 @@ Everything here comes from a published source, a community screening guide, or a
 
 | Source | What it is | What it gives |
 |---|---|---|
-| Kobak et al. 2025, *Science Advances*, "Delving into LLM-assisted writing in biomedical publications through excess vocabulary" ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016), [data](https://github.com/berenslab/llm-excess-vocab)) | 14.2M PubMed abstracts, 2010 to 2024. Measures 2024 word frequencies against a counterfactual projected from 2021 to 2022, so "excess" is a measured quantity. | The vocabulary list, with frequency ratios |
+| Kobak et al. 2025, *Science Advances* [10.1126/sciadv.adt3813](https://doi.org/10.1126/sciadv.adt3813), "Delving into LLM-assisted writing in biomedical publications through excess vocabulary" ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016), [data](https://github.com/berenslab/llm-excess-vocab)) | 15.1M English-language PubMed abstracts, 2010 to 2024. Measures 2024 word frequencies against a counterfactual projected from 2021 to 2022, so "excess" is a measured quantity. | The vocabulary list, with frequency ratios |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Maintained by editors who screen AI text at volume across millions of articles | The structural and formatting patterns, and the paste-era artifacts |
 | Own measurement, 2026-08 | 35 agent-era plugin READMEs (51k words) and 2,298 plugin descriptions (116k words). No baseline, so it measures prevalence, not excess. | The ordering of this file |
 
@@ -102,7 +102,7 @@ Excessive boldface, especially bolding terms mid-paragraph as "key takeaways". E
 
 ## Tier 2: Structure
 
-Model-level generation habits rather than interface artifacts, so they survive across vendors and model generations. Wikipedia's categories, with its terminology.
+Model-level generation habits rather than interface artifacts, so they survive across vendors and model generations. Wikipedia's categories and terminology, except false ranges, which is noted below.
 
 ### Copula avoidance
 
@@ -138,6 +138,8 @@ Triplet adjectives or phrases. Not every triad is a tell; three real things are 
 
 `from X to Y` where X and Y are not on a common scale. "from the birth of stars to the enigmatic dance of dark matter" is a shape, not a range.
 
+Unsourced. Not on the Wikipedia page, unlike the rest of this tier. See `references/sources.md`.
+
 ### The challenges formula
 
 "Despite its X, it faces several challenges", followed by vague positivity.
@@ -150,9 +152,9 @@ Rotating synonyms to avoid repeating a word, an artifact of repetition penalties
 
 26% of files, 2.4 per 10k words. Lower frequency than formatting, but the only tier with a published measurement behind it.
 
-Kobak et al. found 2024's excess vocabulary is overwhelmingly stylistic, not topical: of 280 excess style words, 66% were verbs and 18% adjectives. That is the opposite of a real event like Covid, whose excess words were content nouns.
+Kobak et al. found 2024's excess vocabulary is overwhelmingly stylistic, not topical: of 379 excess style words, 66% were verbs and 14% adjectives. That is the opposite of a real event like Covid, whose excess words were content nouns (79.2% of content words were nouns).
 
-Highest frequency ratios (r = 2024 frequency ÷ counterfactual): `delves` 25.2, `showcasing` 9.2, `underscores` 9.1. Highest absolute gaps: `potential` 0.041, `findings` 0.027, `crucial` 0.026.
+Highest frequency ratios (r = 2024 frequency ÷ counterfactual): `delves` 28.0, `underscores` 13.8, `showcasing` 10.7. Highest absolute gaps: `potential` 0.052, `findings` 0.041, `crucial` 0.037.
 
 The authors' ten strongest combined markers: `across`, `additionally`, `comprehensive`, `crucial`, `enhancing`, `exhibited`, `insights`, `notably`, `particularly`, `within`.
 

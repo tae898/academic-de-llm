@@ -36,23 +36,23 @@ Everything here comes from a published source, a community screening guide, or a
 
 The tells are not universal. They split cleanly by whether the document has markup, and running the wrong tier first wastes the pass. Occurrences per 10k words:
 
-| Tell | Journal abstracts, pre-2022 | Journal abstracts, 2024 | Agent-written READMEs |
+| Tell | Prose, before | Prose, now | Agent-written READMEs |
 |---|---|---|---|
-| Em dash | 0.0 | 0.0 | 122.4 |
-| Inline-header bold list | 0.0 | 0.0 | 46.4 |
-| Title case headings | 0.0 | 0.0 | 59.2 |
-| Superficial `-ing` | 1.0 | 8.7 | 0.0 |
-| Copula avoidance | 1.6 | 4.2 | 1.0 |
-| Excess vocabulary | 15.7 | 50.0 | 13.3 |
+| Em dash | 3.7 | 7.8 | 122.4 |
+| Superficial `-ing` | 1.0 | 6.9 | 0.0 |
+| Copula avoidance | 1.6 | 4.6 | 1.0 |
+| Excess vocabulary | 15.7 | 39.5 | 13.3 |
+| Inline-header bold list | n/a | n/a | 46.4 |
+| Title case headings | n/a | n/a | 59.2 |
 | Vendor paste artifacts | 0.0 | 0.0 | 0.0 |
 
-**On Markdown, HTML, or anything with markup**, start at Tier 1. Formatting beats everything else by ten to fifty times, and it is absent from prose entirely, so it is a property of the format rather than of machine authorship.
+**On Markdown, HTML, or anything with markup**, start at Tier 1. Formatting beats everything else by ten to fifty times.
 
-**On plain prose**, meaning papers, abstracts, emails, and commit bodies, skip Tier 1 and start at Tier 2. Formatting tells cannot occur. The strongest signal there is the superficial `-ing` clause, which rose 8.9x in the same journal after ChatGPT and does not appear in READMEs at all.
+**On plain prose**, meaning papers, abstracts, emails, and commit bodies, only the em dash carries over from Tier 1. It roughly doubled in arXiv abstracts between 2020 and 2026, so it is worth a pass. Bold lists, headings and emoji are `n/a` because they cannot occur in a document with no markup, which is a fact about the format and not a measurement. Then go to Tier 2, where the superficial `-ing` clause is the strongest signal at 6.9x its pre-ChatGPT baseline.
 
 Both published sources predate widely used coding agents, and neither measured the split. Kobak measured 2024 biomedical abstracts. Wikipedia screens encyclopedia edits, where most AI text arrives pasted out of a chat window.
 
-The abstract columns are before-and-after in one journal, so they are excess against a real baseline. The README column has no baseline and is prevalence only. See `references/sources.md`.
+The prose columns are before-and-after against a real baseline, from two corpora: PubMed for the vocabulary and structure figures, arXiv for the em dash, because PubMed normalises every dash to an ASCII hyphen and cannot measure it at all. The README column has no baseline and is prevalence only. See `references/sources.md`.
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
 
@@ -170,7 +170,20 @@ Wikipedia's independently compiled list overlaps heavily, which is the useful pa
 
 Do not blanket-replace these. Every one is a legitimate English word, and a banned-word list is the failure mode of every other tool in this space. `Crucial` in a sentence that establishes why something is crucial is fine. The signal is density and co-occurrence: several of them in one paragraph, doing no work.
 
-Word-level tells also decay fastest. Each model generation drops the previous one's giveaways, and `delve` became famous enough to get trained out. Treat Kobak's method as the durable part and the specific list as perishable.
+**This list is decaying, and it has been measured decaying.** Same journal, tells per 10k words:
+
+| Word | 2019-21 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|
+| `crucial` | 1.5 | 5.9 | 3.9 | **0.9** |
+| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | 1.3 | **0.3** |
+| `pivotal` | 0.3 | 1.0 | 1.4 | **0.4** |
+| `robust` | 4.4 | 9.3 | 17.4 | **13.9** |
+
+`crucial` is back to its pre-ChatGPT baseline. `delve` is effectively gone. Those two were the most publicized, and publicity is what kills a word-level tell: it gets trained out, or authors edit it out on purpose.
+
+`robust` went the other way, still 3.2x baseline and up 50% since 2024. Excess vocabulary shifts rather than disappearing, so a fixed list ages badly in both directions.
+
+Treat Kobak's method as the durable part and this specific list as perishable. Over the same window the structural tells in Tier 2 held: the superficial `-ing` clause is still 6.9x its pre-ChatGPT baseline in 2026, and copula avoidance is still rising. **If you only have attention for one tier on prose, use Tier 2.**
 
 ## Tier 4: Paste-era artifacts
 

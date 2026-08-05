@@ -125,7 +125,19 @@ The measurement above has no baseline. This one does, and it is the only figure 
 
 - **Kobak's vocabulary finding replicates on a sample they did not use.** Their ten markers rose 3.2x in a journal they measured independently.
 - **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x, higher than any vocabulary marker here. Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
-- **Formatting tells are a property of markup, not of machine authorship.** Em dashes, inline-header lists and title case headings are flat at zero in abstracts across both windows, while running at 122, 46 and 59 per 10k in agent-written READMEs. This is why `SKILL.md` now branches on register instead of giving one global ordering.
+- **Markdown-specific formatting cannot be measured here and is not claimed.** Inline-header lists and title case headings require markup, so their absence from abstracts is definitional rather than a finding.
+
+**Correction, 2026-08-05.** An earlier version of this section reported em dash at 0.0 per 10k in abstracts in both windows and concluded that formatting tells track markup rather than machine authorship. **That was a data artifact and the conclusion was wrong.** PubMed normalises every dash to an ASCII hyphen: the raw XML contains zero U+2014 and zero U+2013 characters in all four windows, including pre-2022. Em dash is simply not measurable in that corpus.
+
+Measured instead on arXiv `cs.LG` abstracts, which preserve LaTeX dash markup, 299 abstracts from 2020 (52k words) against 300 from 2026 (59k words):
+
+| Form | 2020 | 2026 |
+|---|---|---|
+| `---` (LaTeX em dash) | 0.0 | 2.7 |
+| `--` | 3.7 | 7.8 |
+| spaced ` - ` | 1.4 | 3.7 |
+
+Em dash use roughly doubled in academic prose, and the 2026 instances are the parenthetical clause-separator pattern ("five influential benchmarks -- MMLU, ARC, ... -- revealing"). It is a real tell in prose, not only in Markdown. Two of the raw hits were a numeric range (`folds-1--5`) and a compound surname (`Kullback--Leibler`), at the false-positive rate this skill documents elsewhere.
 
 **What it does NOT establish**
 
@@ -136,7 +148,44 @@ The measurement above has no baseline. This one does, and it is the only figure 
 
 ---
 
-## 5. Consulted and not used
+## 5. Own decay measurement, 2024 to 2026 (2026-08)
+
+The skill has always claimed word-level tells decay faster than structural ones. This tests it.
+
+**Method.** The same *Sensors* (Basel) PubMed corpus as source 4, extended to four windows: 2019-2021 (61k words), 2024 (57k), 2025 (64k), 2026 (69k, partial year through August). Same journal throughout, so genre and venue are held constant.
+
+**Result**, tells per 10k words:
+
+| Tell | 2019-21 | 2024 | 2025 | 2026 | 2024 to 2026 |
+|---|---|---|---|---|---|
+| `crucial` | 1.5 | 5.9 | 3.9 | 0.9 | **-85%** |
+| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | 1.3 | 0.3 | **-85%** |
+| `pivotal` | 0.3 | 1.0 | 1.4 | 0.4 | -59% |
+| Undue emphasis | 0.3 | 0.9 | 0.3 | 0.3 | -67% |
+| Negative parallelism | 0.5 | 1.2 | 0.8 | 0.7 | -41% |
+| Kobak's ten, combined | 15.7 | 50.0 | 50.5 | 39.5 | -21% |
+| Superficial `-ing` | 1.0 | 8.7 | 12.2 | 6.9 | -21% |
+| Copula avoidance | 1.6 | 4.2 | 6.7 | 4.6 | **+10%** |
+| `robust` | 4.4 | 9.3 | 17.4 | 13.9 | **+50%** |
+
+**What it establishes**
+
+- **The famous words died.** `crucial` is back to its pre-ChatGPT level. `delve` is effectively gone. Both were the most publicized markers, and Kobak's own paper is part of why. Publicity appears to kill a word-level tell, whether by training or by authors editing it out.
+- **The structural tells did not.** Superficial `-ing` is still 6.9x its pre-ChatGPT baseline in 2026 after peaking in 2025. Copula avoidance is still climbing. The structural tier is the durable one, which is why `SKILL.md` now tells you to start there on prose.
+- **Excess vocabulary shifts rather than vanishing.** `robust` is 3.2x baseline and up 50% since 2024. A fixed word list ages badly in both directions, not just downward.
+
+**What it does NOT establish**
+
+- **Cause.** MDPI introduced AI screening over this period. "Models changed their output" and "editors filtered it out" are indistinguishable in this data, and both would produce the same curve.
+- 2026 is a partial year, through August.
+- One journal, as with source 4. *Sensors* is a high-Δ venue and may respond to screening pressure faster than a typical one.
+- Nothing about text outside peer review. An unedited 2026 chat transcript may still be full of `crucial`.
+
+**Consequence for anyone using this skill:** re-run this measurement before trusting Tier 3. The method survives; the list is a snapshot. Tier 2 is what to lean on.
+
+---
+
+## 6. Consulted and not used
 
 **"Explaining Generalization of AI-Generated Text Detectors Through Linguistic Analysis"** (arXiv:2601.07974). Fetched 2026-08. Discusses clause types, participles, coordination, lexical diversity and punctuation, and reports that some markers generalize across models while others are domain-sensitive. **No usable numbers were extracted**, so nothing in `SKILL.md` cites it. Worth a proper read if this skill is revised.
 

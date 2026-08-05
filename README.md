@@ -141,10 +141,12 @@ Linux and macOS. Windows is not supported.
 sh tests/check.sh    # needs ripgrep
 ```
 
-22 assertions: every pattern fires on the planted-tells fixture, stays silent on
-the false-positive trap, the em dash pattern over-fires by exactly the documented
-amount, and the skill does not commit the tells it flags. CI runs them on
-`ubuntu-latest` and `macos-latest`.
+38 assertions on four fixtures. Every pattern fires on the coverage fixture.
+The worked example asserts **exact** counts in both directions: `after.md` must
+still contain the two protected em dashes and the five-item flag reference,
+because a pass that drove every count to zero would have corrupted a table, a
+code comment, and a reference list. The trap asserts that all eleven of its hits
+are the rejectable kind. CI runs on `ubuntu-latest` and `macos-latest`.
 
 They exist because v2 shipped four broken patterns. They passed locally only
 because the shell aliased `grep` to `ugrep`, which is permissive; on a clean

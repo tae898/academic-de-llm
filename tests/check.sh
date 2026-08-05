@@ -12,6 +12,8 @@ set -eu
 cd "$(dirname "$0")/.."
 SLOP=examples/slopped.md
 TRAP=examples/false-positive-trap.md
+BEFORE=examples/before.md
+AFTER=examples/after.md
 
 pass=0
 fail=0
@@ -33,6 +35,15 @@ silent() {
   got=$(rg -n -- "$pat" "$TRAP" 2>/dev/null | wc -l | tr -d ' ')
   if [ "$got" -eq 0 ]; then ok "$name silent on trap"
   else bad "$name" "fired $got times on the false-positive trap"; fi
+}
+
+# count <name> <file> <exact> <regex>  -- the count must be EXACT, not >=.
+# Used for the worked example, where both over- and under-fixing are failures.
+count() {
+  name=$1; file=$2; want=$3; pat=$4
+  got=$(rg -c -- "$pat" "$file" 2>/dev/null || true); got=${got:-0}
+  if [ "$got" -eq "$want" ]; then ok "$name ($got)"
+  else bad "$name" "$file has $got, expected exactly $want"; fi
 }
 
 command -v rg >/dev/null 2>&1 || {
@@ -64,20 +75,43 @@ fires  "excess vocabulary"   4 '\b(delves?|crucial|comprehensive|insights|notabl
 fires  "paste artifacts"     1 'contentReference|oaicite|【'
 
 echo
-echo "False-positive trap: correct output is no changes at all"
-silent "inline-header list"  '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
-silent "title case heading"  '^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'
+# Patterns that must find NOTHING on the trap. The ones that do fire there
+# are asserted by exact count further down, because firing is correct and the
+# rejection is the human's job.
+echo "False-positive trap: these must find nothing"
 silent "emoji"               '\p{Emoji_Presentation}'
 silent "curly quotes"        '[\x{201C}\x{201D}\x{2018}\x{2019}]'
-silent "copula avoidance"    '\b(serves as|stands as|functions as|boasts|maintains)\b'
 silent "paste artifacts"     'contentReference|oaicite|【'
+silent "superficial -ing"    ', (highlighting|underscoring|emphasizing|ensuring)'
+silent "challenges formula"  '[Dd]espite .* (faces|challenges)'
 
-# The em dash pattern is DOCUMENTED to over-fire. Every hit on the trap is
-# inside code, a table cell, or a quoted error string. That is what the skip
-# pass is for, so assert the count instead of pretending it is clean.
-em=$(rg -n -- '—' "$TRAP" 2>/dev/null | wc -l | tr -d ' ')
-if [ "$em" -eq 4 ]; then ok "em dash over-fires exactly as documented (4 hits, 0 real)"
-else bad "em dash" "trap produced $em hits, the docs say 4"; fi
+
+echo
+echo "Worked example: before.md -> after.md"
+count "before fires em dash"        "$BEFORE" 3 '—'
+count "before fires bold list"      "$BEFORE" 8 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
+count "before fires title case"     "$BEFORE" 3 '^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'
+
+# A pass that drives every count to zero is WRONG. These assert that the
+# skip pass and the keep-judgment both survived the rewrite.
+count "after KEEPS 2 em dashes"     "$AFTER"  2 '—'
+count "after KEEPS flag reference"  "$AFTER"  5 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
+count "after fixed title case"      "$AFTER"  0 '^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'
+count "after fixed -ing analysis"   "$AFTER"  0 ', (highlighting|underscoring|emphasizing|ensuring|reflecting|contributing to|allowing|enabling)'
+count "after fixed neg parallelism" "$AFTER"  0 'not just .* but'
+count "after fixed challenges"      "$AFTER"  0 '[Dd]espite .* (faces|challenges)'
+count "after fixed vague attrib"    "$AFTER"  0 'Observers have|Experts (argue|say)'
+count "after fixed stacked hedge"   "$AFTER"  0 'may potentially|can sometimes'
+count "after KEEPS the hedge"       "$AFTER"  1 'may vary'
+count "after copula = 1 false pos"  "$AFTER"  1 '\b(serves as|stands as|functions as|boasts|features|maintains|offers)\b'
+
+echo
+echo "Extended trap: every hit must be rejectable"
+count "trap em dashes"              "$TRAP"   4 '—'
+count "trap flag reference"         "$TRAP"   3 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
+count "trap pre-2022 quotation"     "$TRAP"   1 '\b(stands as)\b'
+count "trap proper-noun heading"    "$TRAP"   1 '^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'
+count "trap 'crucial' x2: live+quote" "$TRAP" 2 '\bcrucial\b'
 
 echo
 echo "Self-audit: the skill must not commit the tells it flags"

@@ -2,6 +2,8 @@
 
 What each source actually establishes, and what it does not. Read this before citing anything in `SKILL.md` to someone else.
 
+Every measured number below is reproducible: `python3 research/fetch.py && python3 research/measure.py`. See `research/README.md`.
+
 ---
 
 ## 1. Kobak, González-Márquez, Horvát & Lause (2025)

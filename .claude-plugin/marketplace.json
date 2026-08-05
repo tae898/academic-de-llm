@@ -14,11 +14,7 @@
       },
       "category": "productivity",
       "source": "./",
-      "homepage": "https://github.com/tae898/de-llm",
-      "strict": false,
-      "skills": [
-        "./skills/de-llm"
-      ]
+      "homepage": "https://github.com/tae898/de-llm"
     }
   ]
 }

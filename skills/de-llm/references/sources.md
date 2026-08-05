@@ -54,7 +54,7 @@ What each source actually establishes, and what it does not. Read this before ci
 
 ---
 
-## 3. Own corpus measurement (2026-08)
+## 3. Own prevalence measurement, agent-written READMEs (2026-08)
 
 Not published, not peer-reviewed, and reported here so it can be checked.
 
@@ -91,11 +91,52 @@ Each pattern from `SKILL.md` was matched against both and reported as files affe
 - The em dash count does not exclude code blocks or tables. The paper measurement in `patterns.md` suggests roughly a quarter of raw hits are real prose, which would put the true rate near 30 per 10k. Still the largest by a wide margin.
 - One genre, one month, one language.
 
-**The obvious next step**, not done: apply Kobak's counterfactual method to a timestamped GitHub corpus, projecting 2026 README and commit-message word frequencies from a 2019 to 2021 baseline. That would turn prevalence into measured excess for a register nobody has studied.
+**The obvious next step**, not done: apply Kobak's counterfactual method to a timestamped GitHub corpus, projecting 2026 README and commit-message word frequencies from a 2019 to 2021 baseline. That would turn prevalence into measured excess for the README register too.
 
 ---
 
-## 4. Consulted and not used
+## 4. Own before-and-after measurement, journal abstracts (2026-08)
+
+The measurement above has no baseline. This one does, and it is the only figure in this skill that separates "common" from "more common than it should be" outside Kobak's own work.
+
+**Method.** All abstracts from *Sensors* (Basel, MDPI) indexed in PubMed, split into a pre-ChatGPT window and a post window, same journal and same genre on both sides:
+
+- 298 abstracts from 2019 to 2021, 61,166 words.
+- 293 abstracts from 2024, 57,220 words.
+
+*Sensors* was chosen because Kobak measures it at Δ = 0.25, among the highest of any journal, so the effect should be visible in a small sample. Patterns were counted per 10k words in each window.
+
+**Result**
+
+| Pattern | pre-2022 | 2024 | ratio |
+|---|---|---|---|
+| Superficial `-ing` clause | 1.0 | 8.7 | **8.9x** |
+| `crucial` | 1.5 | 5.9 | 4.0x |
+| Kobak's ten markers, combined | 15.7 | 50.0 | **3.2x** |
+| `insights` | 1.0 | 3.3 | 3.4x |
+| Undue emphasis | 0.3 | 0.9 | 2.7x |
+| Copula avoidance | 1.6 | 4.2 | 2.6x |
+| Negative parallelism | 0.5 | 1.2 | 2.5x |
+| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | absent, then present |
+| Em dash | 0.0 | 0.0 | no change |
+| Paste artifacts | 0.0 | 0.0 | no change |
+
+**What it establishes**
+
+- **Kobak's vocabulary finding replicates on a sample they did not use.** Their ten markers rose 3.2x in a journal they measured independently.
+- **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x, higher than any vocabulary marker here. Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
+- **Formatting tells are a property of markup, not of machine authorship.** Em dashes, inline-header lists and title case headings are flat at zero in abstracts across both windows, while running at 122, 46 and 59 per 10k in agent-written READMEs. This is why `SKILL.md` now branches on register instead of giving one global ordering.
+
+**What it does NOT establish**
+
+- **One journal, one field, one publisher.** *Sensors* was picked because the effect is large there. It is not representative of publishing.
+- **It is a raw before-and-after, not a counterfactual.** Kobak projects an expected 2024 frequency from 2021 to 2022 and measures the gap. This compares two observed windows, so it cannot separate LLM effects from five years of drift in the journal's topics, authorship, or editorial standards.
+- **Small.** 118k words against Kobak's 15.1 million.
+- Nothing about any individual abstract, for the same reason as everything else here.
+
+---
+
+## 5. Consulted and not used
 
 **"Explaining Generalization of AI-Generated Text Detectors Through Linguistic Analysis"** (arXiv:2601.07974). Fetched 2026-08. Discusses clause types, participles, coordination, lexical diversity and punctuation, and reports that some markers generalize across models while others are domain-sensitive. **No usable numbers were extracted**, so nothing in `SKILL.md` cites it. Worth a proper read if this skill is revised.
 

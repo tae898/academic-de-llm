@@ -7,14 +7,15 @@ description: |
   the AI tells", "make this sound human", "this reads like ChatGPT", "sounds
   like an LLM wrote it", or asks why a draft feels generated. Works on any
   register: READMEs, documentation, LaTeX and academic papers, commit messages,
-  PR descriptions, issue comments, emails. Ordered by measured frequency in
-  agent-written text, so the highest-yield fixes come first.
+  PR descriptions, issue comments, emails. Branches on register, because the
+  tells differ: formatting dominates documents with markup, structure dominates
+  plain prose.
 license: MIT
 metadata:
   sources: >
     Kobak et al., Science Advances 2025 (arXiv:2406.07016);
     Wikipedia:Signs of AI writing (community-maintained);
-    own corpus measurement, 2026-08 (see references/sources.md)
+    own corpus measurements, 2026-08 (see references/sources.md)
   last_reviewed: 2026-08
 ---
 
@@ -28,25 +29,30 @@ Everything here comes from a published source, a community screening guide, or a
 |---|---|---|
 | Kobak et al. 2025, *Science Advances* [10.1126/sciadv.adt3813](https://doi.org/10.1126/sciadv.adt3813), "Delving into LLM-assisted writing in biomedical publications through excess vocabulary" ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016), [data](https://github.com/berenslab/llm-excess-vocab)) | 15.1M English-language PubMed abstracts, 2010 to 2024. Measures 2024 word frequencies against a counterfactual projected from 2021 to 2022, so "excess" is a measured quantity. | The vocabulary list, with frequency ratios |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Maintained by editors who screen AI text at volume across millions of articles | The structural and formatting patterns, and the paste-era artifacts |
-| Own measurement, 2026-08 | 35 agent-era plugin READMEs (51k words) and 2,298 plugin descriptions (116k words). No baseline, so it measures prevalence, not excess. | The ordering of this file |
+| Own prevalence measurement, 2026-08 | 35 agent-era plugin READMEs (51k words) and 2,298 plugin descriptions (116k words). No baseline, so it measures prevalence, not excess. | The README column below |
+| Own before-and-after measurement, 2026-08 | 591 *Sensors* (MDPI) abstracts from PubMed, 118k words, split 2019 to 2021 against 2024. Same journal both sides, so this one is excess against a real baseline. | The register split, and the 8.9x figure for `-ing` clauses |
 
-## Why this file is ordered the way it is
+## Read the register first, then pick a tier
 
-Both published sources predate widely used coding agents. Kobak measured 2024 biomedical abstracts. Wikipedia screens encyclopedia edits, where most AI text arrives pasted out of a chat window. Neither measured what an agent writes directly into a file.
+The tells are not universal. They split cleanly by whether the document has markup, and running the wrong tier first wastes the pass. Occurrences per 10k words:
 
-Measured on 35 agent-written READMEs:
+| Tell | Journal abstracts, pre-2022 | Journal abstracts, 2024 | Agent-written READMEs |
+|---|---|---|---|
+| Em dash | 0.0 | 0.0 | 122.4 |
+| Inline-header bold list | 0.0 | 0.0 | 46.4 |
+| Title case headings | 0.0 | 0.0 | 59.2 |
+| Superficial `-ing` | 1.0 | 8.7 | 0.0 |
+| Copula avoidance | 1.6 | 4.2 | 1.0 |
+| Excess vocabulary | 15.7 | 50.0 | 13.3 |
+| Vendor paste artifacts | 0.0 | 0.0 | 0.0 |
 
-| Tell | Files affected | Per 10k words |
-|---|---|---|
-| Em dash | 91% | 122.4 |
-| Inline-header bold list | 49% | 46.4 |
-| Title case headings | 83% | 22.3 |
-| Copula avoidance | 34% | 3.1 |
-| Excess vocabulary | 26% | 2.4 |
-| Curly quotes | 0% | 0.0 |
-| Vendor paste artifacts | 0% | 0.0 |
+**On Markdown, HTML, or anything with markup**, start at Tier 1. Formatting beats everything else by ten to fifty times, and it is absent from prose entirely, so it is a property of the format rather than of machine authorship.
 
-Formatting dominates by a factor of ten to fifty. So formatting comes first here, and the paste-era artifacts that older guides lead with come last.
+**On plain prose**, meaning papers, abstracts, emails, and commit bodies, skip Tier 1 and start at Tier 2. Formatting tells cannot occur. The strongest signal there is the superficial `-ing` clause, which rose 8.9x in the same journal after ChatGPT and does not appear in READMEs at all.
+
+Both published sources predate widely used coding agents, and neither measured the split. Kobak measured 2024 biomedical abstracts. Wikipedia screens encyclopedia edits, where most AI text arrives pasted out of a chat window.
+
+The abstract columns are before-and-after in one journal, so they are excess against a real baseline. The README column has no baseline and is prevalence only. See `references/sources.md`.
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
 
@@ -64,7 +70,7 @@ Say what you skipped when you report back ("skipped: 3 code blocks, 1 table, fro
 
 ## Tier 1: Formatting
 
-Highest yield in agent-written text, and the tier older guides bury.
+Highest yield **in documents with markup**, and the tier older guides bury. Skip this tier entirely on plain prose, where all of it measures zero.
 
 ### Em dash
 
@@ -106,9 +112,11 @@ Model-level generation habits rather than interface artifacts, so they survive a
 
 ### Copula avoidance
 
-34% of files, the strongest structural tell measured. A plain `is` or `are` dressed up as `serves as`, `stands as`, `functions as`, `boasts`, `features`, `maintains`, `offers`.
+34% of READMEs, and 2.6x excess in journal abstracts after ChatGPT. A plain `is` or `are` dressed up as `serves as`, `stands as`, `functions as`, `boasts`, `features`, `maintains`, `offers`.
 
 ### Superficial analysis via -ing
+
+**The strongest structural tell measured, and the strongest tell of any kind in plain prose.** It rose 8.9x in one journal between 2019 to 2021 and 2024, higher than any vocabulary marker, and it does not occur in READMEs at all.
 
 A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`.
 

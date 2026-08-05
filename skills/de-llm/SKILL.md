@@ -164,9 +164,9 @@ Word-level tells also decay fastest. Each model generation drops the previous on
 
 ## Tier 4: Paste-era artifacts
 
-Strings a model emitted that no human would type. Near-conclusive when present, and trivially greppable.
+Strings a model emitted that no human would type. Near-conclusive when present, and trivial to match.
 
-They measured 0% across both corpora here, because they are web-interface citation renderings. They only appear when someone pastes out of a chat window, which agent-written text never does. Keep the check, since it costs one grep, but do not lead with it.
+They measured 0% across both corpora here, because they are web-interface citation renderings. They only appear when someone pastes out of a chat window, which agent-written text never does. Keep the check, since it costs one pass, but do not lead with it.
 
 | Model | Artifact strings |
 |---|---|
@@ -178,13 +178,11 @@ They measured 0% across both corpora here, because they are web-interface citati
 
 Also check `utm_source=` left in cited URLs, DOIs that resolve to unrelated papers, invalid ISBNs, and named references declared but never used.
 
-## Greps find candidates, not violations
+## Patterns find candidates, not violations
 
 Every pattern here is a finder. Read each hit.
 
-`references/patterns.md` holds them all as regex strings. Apply them with your own search tool rather than shelling out, since a missing binary returns nothing and that is indistinguishable from a clean file.
-
-Measured on one real paper: the em-dash grep returned 8 hits, of which 2 were prose worth fixing. The rest were three code comments, a table placeholder, and two numeric en dashes. A pass that changed all 8 would have corrupted a table and three code samples.
+Measured on one real paper: the em-dash pattern returned 8 hits, of which 2 were prose worth fixing. The rest were three code comments, a table placeholder, and two numeric en dashes. A pass that changed all 8 would have corrupted a table and three code samples.
 
 A second measurement, on this skill's own research: a keyword search for writing-related plugins across 278 marketplace entries returned 48 hits and 0 real ones. `docs` matched documentation tools, `write` matched "write optimized SQL", `style` matched UI themes.
 
@@ -202,7 +200,7 @@ Do not use this checklist as evidence about who wrote something. Use it to edit.
 
 1. Run the skip pass. Announce what you excluded.
 2. Fix formatting first. It is where the volume is.
-3. Read every grep hit from `references/patterns.md`. Fix only real ones.
+3. Read every hit from `references/patterns.md`. Fix only real ones.
 4. Count Tier 3 words per paragraph. One is nothing. Four doing no work is the signal.
 5. Read your three-item lists. Delete a third item that measures nothing.
 6. For every hedge you removed, ask whether the sentence now claims more than the evidence supports. Put back any that does.
@@ -219,5 +217,5 @@ Voice fingerprinting, meaning a statistical profile built from the author's own 
 
 ## References
 
-- `references/patterns.md` for every grep in one file
+- `references/patterns.md` for every pattern in one file
 - `references/sources.md` for what each source says, and what it does not

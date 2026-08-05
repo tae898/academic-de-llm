@@ -1,6 +1,6 @@
 # Patterns
 
-Regex strings, ordered by measured frequency in agent-written prose. Apply them with your own search tool. Nothing here is a shell command and there is nothing to install.
+Regex strings, ordered by measured frequency in agent-written prose.
 
 Two rules before you match anything.
 

@@ -125,6 +125,11 @@ count "prose after: intensifier gone" "$PAFTER" 0 'significantly|substantially|d
 count "prose: all 4 'robust' KEPT"   "$PAFTER"  4 '\brobust\w*\b'
 
 echo
+echo "Rhythm: the cleaned example must not be flattened"
+if r=$(python3 tests/rhythm.py 2>&1); then ok "prose-after keeps its rhythm ($r)"
+else bad "prose-after" "$r"; fi
+
+echo
 echo "Extended trap: every hit must be rejectable"
 count "trap em dashes"              "$TRAP"   4 '—'
 count "trap flag reference"         "$TRAP"   3 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'

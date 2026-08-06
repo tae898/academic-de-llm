@@ -155,7 +155,7 @@ contributors, not on users.
 sh tests/check.sh    # needs ripgrep
 ```
 
-53 assertions on six fixtures. Every pattern fires on the coverage fixture.
+54 assertions on six fixtures. Every pattern fires on the coverage fixture.
 The worked example asserts **exact** counts in both directions: `after.md` must
 still contain the two protected em dashes and the five-item flag reference,
 because a pass that drove every count to zero would have corrupted a table, a

@@ -214,6 +214,54 @@ Separating substantive loss from evaluative softening turned the same data into
 91% against 94%. The confound hit the skill hardest because the skill removes
 more praise words.
 
+## Quality: is the edit any good?
+
+Style asks whether text reads machine-written. Fidelity asks whether the facts
+survived. Neither asks whether the result is worth reading, and a de-slopped
+passage can pass both while being flat. Four judges, 560 judgements, rewriter
+`gpt-5.6-sol-pro`, on 2026 abstracts:
+
+| Arm | Better | Same | **Worse** | **Flatter** | Lost something |
+|---|---|---|---|---|---|
+| Naive prompt | 94% | 6% | **0%** | **5%** | 8% |
+| **This skill** | 84% | 2% | **13%** | **20%** | 15% |
+
+**The skill makes text flatter four times as often as a naive prompt**, and 13%
+of its edits are judged worse where the naive prompt produces none.
+
+Fidelity is untouched by this: 120/120 substantively faithful on the same texts,
+better than the naive prompt's 119/120, with zero major losses. The problem is
+not accuracy. It is prose.
+
+The judges agree on the mechanism, unprompted:
+
+> chops complex academic sentences into a series of short, repetitive structures
+> that make the rhythm flat and monotonous
+
+> uniformly flat We-led prose with no gain in rhythm, voice, or precision
+
+> discards useful framing such as "remains", "This work presents",
+> "Beyond implementation"
+
+That is this file applied thoroughly. Tier 2 says to break participial clauses
+into separate sentences; Tier 3 flags connective vocabulary. Do both across a
+paragraph and you get short declaratives sharing a subject, every tell gone and
+the cadence gone with them.
+
+Worth noting that `remains` is a trigger added the same day at 87% precision.
+It scores well as a tell and its removal was flagged as a loss of framing.
+**Precision measures how reliably a pattern indicates machine authorship. It says
+nothing about whether the phrase earns its place for the reader.**
+
+`SKILL.md` now carries rhythm preservation as a directive equal to "keep the
+claim", with three rules that override the tier guidance where they conflict.
+`tests/rhythm.py` enforces it on the worked example, which was itself guilty:
+before the check existed, `prose-after.md` had 3.4 sentence-length variance
+against the original's 8.4.
+
+**Not yet re-measured after that change.** The 20% figure describes the skill as
+it was when the eval ran.
+
 ## Limits
 
 - **Small.** 28 abstracts, four judges. Differences of a few percentage points

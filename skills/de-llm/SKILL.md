@@ -81,9 +81,29 @@ The prose columns are before-and-after against a real baseline, from two corpora
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
 
-## The Prime Directive
+## Two directives, equally binding
 
-Delete the tell, keep the claim. A rewrite that makes a sentence claim more than the evidence supports has broken the text to pass a style check. That is worse than the tell.
+**Delete the tell, keep the claim.** A rewrite that makes a sentence claim more than the evidence supports has broken the text to pass a style check. That is worse than the tell.
+
+**Delete the tell, keep the rhythm.** This one is here because the skill failed it. Measured against a naive "make this sound less AI-generated" prompt on the same texts, guidance from this file made the result *flatter* four times as often (20% against 5%) and produced edits judged outright worse 13% of the time where the naive prompt produced none. Independent judges described the same failure repeatedly:
+
+> chops complex academic sentences into a series of short, repetitive structures that make the rhythm flat and monotonous
+
+> uniformly flat We-led prose with no gain in rhythm, voice, or precision
+
+> discards useful framing such as "remains", "This work presents", "Beyond implementation"
+
+The mechanism is this file applied thoroughly. Tier 2 says to break participial clauses into separate sentences. Tier 3 flags connective vocabulary. Do both across a paragraph and you get short declaratives, most of them starting with the same subject, with every tell gone and every trace of cadence gone with it.
+
+So, three rules that override the tier guidance when they conflict with it:
+
+**Do not split a long sentence into three short ones just because the join was a participle.** Rewrite the participle in place, or promote the clause to a subordinate one. One long sentence among short ones is what a human paragraph looks like.
+
+**Do not start consecutive sentences with the same subject.** If a fix produces "We do X. We do Y. We do Z", the fix is worse than what it replaced, whatever the pattern count says.
+
+**A high-scoring trigger is not automatically worth removing.** `remains` is a real tell 87% of the time and the judges still flagged its removal as a loss of framing. Precision measures how reliably a pattern indicates machine authorship. It says nothing about whether the phrase is earning its place for the reader. Those are different questions and only you can answer the second.
+
+After any pass, read the result aloud. If every sentence is the same length, put one back.
 
 ## Step zero: the skip pass
 
@@ -263,7 +283,7 @@ Do not use this checklist as evidence about who wrote something. Use it to edit.
 5. Read your three-item lists. Delete a third item that measures nothing.
 6. For every hedge you removed, ask whether the sentence now claims more than the evidence supports. Put back any that does.
 7. Read the first sentence of each section. If it announces the section instead of stating a fact, rewrite it.
-8. If a fix flattened the rhythm, vary sentence length or restore one specific detail. Do not restore the tell.
+8. Read the result aloud. If sentences are uniformly short, or several start with the same subject, the pass has flattened the text and must be partly undone. See the second directive: this is the skill's own measured failure mode, not a hypothetical.
 
 ## Limits
 

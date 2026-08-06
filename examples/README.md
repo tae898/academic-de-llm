@@ -70,7 +70,7 @@ that the count never reaches zero on real text.
 "this **may** vary depending on your Redis configuration" keeps its hedge.
 Stripping `may potentially` down to `may` removes the stacked hedge without
 touching the uncertainty. Deleting the hedge entirely would make the sentence
-claim more than the benchmark supports, which the Prime Directive forbids.
+claim more than the benchmark supports, which the first directive forbids.
 
 "pending, active, and failed" survives as a rule of three, because those are
 three real states and deleting one loses information.
@@ -132,6 +132,20 @@ and Tier 2 is the whole job.
 
 192 words to 131.
 
+### Rhythm was preserved deliberately
+
+`prose-after.md` keeps a long sentence ("This paper develops a two-branch
+cooperative signal control framework for isolated signalized intersections,
+combining Expected SARSA and SARSA(λ)") next to short ones, and no two
+consecutive sentences open with the same subject.
+
+That is not decoration. Measured against a naive de-slop prompt, this skill made
+text flatter four times as often and produced edits judged worse 13% of the time
+where the naive prompt produced none, by splitting long sentences at every
+participle until the paragraph became uniform declaratives. The second directive
+in `SKILL.md` exists because of that measurement, and this fixture is what
+obeying it looks like.
+
 ### Why `robust` survives all four times
 
 `robust` is currently the fastest-*rising* vocabulary tell measured, 3.2x its
@@ -146,7 +160,7 @@ the signal is density and co-occurrence, not presence.
 
 `significantly` went in the same sentence, because no number supports it and the
 underlying claim ("improves sample utilization efficiency") survives without it.
-That is the Prime Directive: the tell goes, the claim stays.
+That is the first directive: the tell goes, the claim stays.
 
 ### What was dropped, and why it is not a claim
 

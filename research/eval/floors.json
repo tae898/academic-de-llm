@@ -2,28 +2,28 @@
  "_note": "Precision floors from the frozen labels. A regex edit that drops below these, or that stops surfacing a real instance, fails tests. Regenerate deliberately, never to make a red test green.",
  "floors": {
   "copula avoidance": {
-   "precision": 0.37,
-   "real_kept": 47,
+   "precision": 0.429,
+   "real_kept": 15,
    "real_lost": 0,
-   "surfaced": 127
+   "surfaced": 35
   },
   "negative parallelism": {
    "precision": 0.0,
    "real_kept": 0,
    "real_lost": 0,
-   "surfaced": 14
+   "surfaced": 3
   },
   "superficial -ing": {
-   "precision": 0.385,
-   "real_kept": 55,
+   "precision": 0.273,
+   "real_kept": 12,
    "real_lost": 0,
-   "surfaced": 143
+   "surfaced": 44
   },
   "undue emphasis": {
-   "precision": 0.814,
-   "real_kept": 35,
+   "precision": 0.889,
+   "real_kept": 8,
    "real_lost": 0,
-   "surfaced": 43
+   "surfaced": 9
   }
  }
 }

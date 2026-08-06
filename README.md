@@ -169,6 +169,25 @@ because it looks like a clean pass. One was the curly-quote pattern, whose curly
 quotes had been straightened by an editor into the ASCII ones it was meant to
 detect.
 
+## Does it beat just asking?
+
+Partly, and the answer depends on what is running it.
+
+| On 2026 journal abstracts | Naive prompt | This skill |
+|---|---|---|
+| Judged more machine-like | 72% | **28%** |
+| Substantively faithful | 97% | **97%** |
+| Edit judged better | **92%** | 91% |
+
+The skill removes considerably more tells. On a mid-tier rewriter it costs a
+little naturalness doing it, roughly a wash on quality. On a top-tier rewriter it
+wins both, 97% better edits against 94%.
+
+Both arms use the same model in each measurement, so this is not a handicap: a
+weaker model applies a 14KB instruction file less faithfully, and gets less of
+everything in it. Full numbers, both configurations, and the limits in
+[`research/EVAL.md`](research/EVAL.md).
+
 ## Research
 
 Every measured number in this repo is reproducible, and the process that

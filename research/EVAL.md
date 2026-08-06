@@ -31,89 +31,73 @@ skill) and none from OpenAI (which produced the rewrites). See
 Reproduce with `make eval`. Raw output in `research/eval/out/`, each file
 carrying a manifest of model ids, date, corpus and seed.
 
-## Style: which reads more machine-generated
+## Results
 
-Lower is better. Position randomised and corrected for.
+All figures below come from one configuration: `gpt-5.6-luna` rewriting,
+`grok-4.5` + `glm-5.2` + `deepseek-v4-flash` judging at `effort: low`, 30 2026
+*Sensors* abstracts. `make eval` reproduces them. Where an earlier configuration
+gave a different answer, both are shown, because the difference is one of the
+more useful things this repo knows.
 
-| Corpus | skill vs naive | naive vs original |
+### Style: which reads more machine-generated
+
+Lower is better. Blind, position-randomised.
+
+| Comparison | Result |
+|---|---|
+| skill vs naive | **28.1%** vs 71.9% |
+| skill vs original | **7.8%** vs 92.2% |
+| naive vs original | 15.6% vs 84.4% |
+
+The skill's rewrite reads as more human than the naive rewrite roughly three
+times out of four.
+
+### Fidelity: is the substance preserved
+
+Substantive loss only; removing a praise word is not counted.
+
+| Arm | Faithful | Major losses | Praise words removed |
+|---|---|---|---|
+| naive | 87/90 (97%) | 0 | 2.7 |
+| **skill** | **87/90 (97%)** | **0** | 2.5 |
+
+A tie, with no major losses either way.
+
+### Quality: is the edit any good
+
+| Arm | Better | Worse | Flatter | Lost something |
+|---|---|---|---|---|
+| naive | **92%** | **4%** | **9%** | **7%** |
+| skill | 91% | 6% | 12% | 12% |
+
+**A tie, or a marginal loss.** This is the number that does not survive a change
+of rewriter, and it matters more than any other in this file.
+
+### The skill's advantage is conditional on the model
+
+Measured on `gpt-5.6-sol-pro`, a stronger and 50x more expensive rewriter, the
+same skill and the same texts gave:
+
+| | luna | sol-pro |
 |---|---|---|
-| **2026** | **4.2%** vs 95.8% | 17.0% vs 83.0% |
-| 2024 | 22.9% vs 77.1% | 12.5% vs 87.5% |
-| pre-2022 control | 0.0% vs 100% | **68.8%** vs 31.2% |
+| Style advantage over naive | 72 / 28 | **85 / 15** |
+| Quality: better | 91% (naive 92%) | **97%** (naive 94%) |
+| Quality: worse | 6% (naive 4%) | **1%** (naive 0%) |
+| Quality: flatter | 12% (naive 9%) | **6%** (naive 5%) |
 
-On 2026 text the skill's rewrite was judged more human than the naive rewrite in
-**96% of blind pairings**.
+Both arms use the same rewriter in each column, so this is not a handicap. A
+weaker model applies the skill less faithfully, and it applies the rhythm
+directive less faithfully too, so it gets less de-slopping and less protection
+against flattening at the same time.
 
-The control row is the most informative line in this document. On text that
-genuinely predates ChatGPT, the naive rewrite was judged **more** machine-like
-than the untouched original 68.8% of the time. Asked to de-slop prose that was
-never slopped, the model added machine-like qualities. The skill-guided rewrite
-did not.
+**The honest claim, then:** on a capable model the skill clearly beats asking for
+a de-slop in one line. On a mid-tier model it removes more tells at a small cost
+in naturalness, roughly a wash. It is not a free win, and how much it is worth
+depends on what is executing it.
 
-That also repairs the metric. An earlier run showed rewrites beating pre-2022
-originals 100% of the time, which suggested the judges were only detecting
-"edited". With current judges the control lands near even on human text and
-decisive on machine text, which is the behaviour a valid style metric should
-show.
-
-## Fidelity: is the substance preserved
-
-Praise-word removal is not counted as loss. That distinction is the whole
-measurement; see the limits section for what happened without it.
-
-| Corpus | Arm | Substantively faithful | Major losses | Losses per judgement | Evaluative-only edits |
-|---|---|---|---|---|---|
-| 2026 | naive | 40/40 (100%) | 0 | 0.0 | 3.3 |
-| 2026 | **skill** | **38/39 (97%)** | **0** | **0.0** | **4.3** |
-| 2024 | naive | 40/40 (100%) | 0 | 0.0 | 4.0 |
-| 2024 | skill | 36/39 (92%) | 0 | 0.2 | 4.9 |
-| pre-2022 | naive | 14/14 (100%) | 0 | 0.0 | 2.1 |
-| pre-2022 | skill | 13/13 (100%) | 0 | 0.0 | 3.0 |
-
-Zero major losses anywhere. The skill costs about three points of substantive
-fidelity on 2026 text while making roughly a third more evaluative edits, which
-is the trade it is designed to make: strip praise language, keep the facts.
-
-## Tell density: objective, no judge
-
-Per 10k words, 2026 abstracts.
-
-| Pattern | original | naive | skill |
-|---|---|---|---|
-| Superficial `-ing` | 24.4 | 8.5 | **4.6** |
-| Copula avoidance | 20.3 | **4.2** | 13.7 |
-| Kobak's ten markers | 134.1 | 93.3 | **82.2** |
-| Undue emphasis | 8.1 | 4.2 | **0.0** |
-| Negative parallelism | 4.1 | 0.0 | 0.0 |
-
-Two warnings about this table, and the second one is the more important.
-
-**It is partly circular for arm C.** A rewrite guided by pattern X will reduce
-pattern X. Treat the style and fidelity judgements as the real evidence.
-
-**It is raw regex counts, which this skill exists to warn against.** The copula
-row appears to show the naive prompt beating the skill, 4.2 against 13.7.
-Adjudicating all nine hits by hand says otherwise:
-
-| Arm | Raw hits | Real copula avoidance | False positives |
-|---|---|---|---|
-| original | 5 | **3** | 2 |
-| naive | 1 | **0** | 1 |
-| skill | 3 | **0** | 3 |
-
-The three real instances were `boasts promising prospects`, `offers an efficient
-and reliable solution` and `serves as a proof of concept`. **Both arms removed
-all three.** Every remaining hit is `maintains` used as an ordinary active verb,
-as in "maintains a high execution speed of 35 FPS", which is not a dressed-up
-copula at all.
-
-So the skill is not worse on copula avoidance. The apparent gap is entirely the
-finder misfiring, at n=5, which is noise even before adjudication.
-
-This is the skill's own central claim turned on its own eval: patterns find
-candidates, not violations, and someone has to read each hit. An automated
-density table cannot do that, so read this table as a mechanism check and
-nothing more.
+That also means the cheap panel is right for regression testing and wrong for
+headline claims. Use `DELLM_REWRITER=openai/gpt-5.6-sol-pro make eval` for
+anything published.
 
 ## Pattern quality: precision and recall per finder
 
@@ -128,15 +112,15 @@ counts when two of three judges quote the same span. Precision is the first
 number, recall the second. `make eval` reproduces it; `research/eval/tune.py`
 re-scores a candidate pattern against the collected data for free.
 
-| | Recall | Precision |
+| Pattern | Precision | Recall |
 |---|---|---|
-| Patterns as shipped in v3.1.0 | **8%** | 32% |
-| After retiering on this data | **52%** | **42%** |
+| Undue emphasis | 8/9 (89%) | 13/18 (72%) |
+| Copula avoidance | 15/35 (43%) | 20/25 (80%) |
+| Superficial `-ing` | 12/44 (27%) | 29/50 (58%) |
+| Negative parallelism | 0/3 (0%) | 1/2 (50%) |
 
-**Recall was the real problem, not precision.** The v3.1.0 finders caught about
-one real instance in twelve. A 32% precision rate is defensible for a triage
-filter whose hits an agent reads; a 8% recall rate is not defensible as
-anything.
+Against the finders as they shipped in v0.3.1, which caught **8%** of real
+instances overall at 32% precision. The retier roughly quadrupled recall.
 
 ### What was actually wrong
 
@@ -213,54 +197,6 @@ for naive, which looked disqualifying. The judges were flagging the removal of
 Separating substantive loss from evaluative softening turned the same data into
 91% against 94%. The confound hit the skill hardest because the skill removes
 more praise words.
-
-## Quality: is the edit any good?
-
-Style asks whether text reads machine-written. Fidelity asks whether the facts
-survived. Neither asks whether the result is worth reading, and a de-slopped
-passage can pass both while being flat. Four judges, 560 judgements, rewriter
-`gpt-5.6-sol-pro`, on 2026 abstracts:
-
-| Arm | Better | Same | **Worse** | **Flatter** | Lost something |
-|---|---|---|---|---|---|
-| Naive prompt | 94% | 6% | **0%** | **5%** | 8% |
-| **This skill** | 84% | 2% | **13%** | **20%** | 15% |
-
-**The skill makes text flatter four times as often as a naive prompt**, and 13%
-of its edits are judged worse where the naive prompt produces none.
-
-Fidelity is untouched by this: 120/120 substantively faithful on the same texts,
-better than the naive prompt's 119/120, with zero major losses. The problem is
-not accuracy. It is prose.
-
-The judges agree on the mechanism, unprompted:
-
-> chops complex academic sentences into a series of short, repetitive structures
-> that make the rhythm flat and monotonous
-
-> uniformly flat We-led prose with no gain in rhythm, voice, or precision
-
-> discards useful framing such as "remains", "This work presents",
-> "Beyond implementation"
-
-That is this file applied thoroughly. Tier 2 says to break participial clauses
-into separate sentences; Tier 3 flags connective vocabulary. Do both across a
-paragraph and you get short declaratives sharing a subject, every tell gone and
-the cadence gone with them.
-
-Worth noting that `remains` is a trigger added the same day at 87% precision.
-It scores well as a tell and its removal was flagged as a loss of framing.
-**Precision measures how reliably a pattern indicates machine authorship. It says
-nothing about whether the phrase earns its place for the reader.**
-
-`SKILL.md` now carries rhythm preservation as a directive equal to "keep the
-claim", with three rules that override the tier guidance where they conflict.
-`tests/rhythm.py` enforces it on the worked example, which was itself guilty:
-before the check existed, `prose-after.md` had 3.4 sentence-length variance
-against the original's 8.4.
-
-**Not yet re-measured after that change.** The 20% figure describes the skill as
-it was when the eval ran.
 
 ## How much of this is about the judges?
 

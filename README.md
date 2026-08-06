@@ -171,22 +171,34 @@ detect.
 
 ## Does it beat just asking?
 
-Partly, and the answer depends on what is running it.
+30 real 2026 journal abstracts. Both arms rewritten by the same model, differing
+only in whether `SKILL.md` is in the prompt. Judged blind by three models from
+three labs, none of them Anthropic (which wrote the skill) or OpenAI (which did
+the rewriting).
 
-| On 2026 journal abstracts | Naive prompt | This skill |
+| | Naive prompt | **de-llm** |
 |---|---|---|
-| Judged more machine-like | 72% | **28%** |
-| Substantively faithful | 97% | **97%** |
-| Edit judged better | **92%** | 91% |
+| Reads machine-generated | 72% | **28%** |
+| Tells remaining, per 10k words | 58.6 | **27.5** |
+| Substantively faithful | **100%** | 99% |
+| Major content losses | **0** | **0** |
+| Edit judged better | **92%** | 90% |
+| Edit judged worse | **4%** | 7% |
+| Made prose flatter | **9%** | 13% |
 
-The skill removes considerably more tells. On a mid-tier rewriter it costs a
-little naturalness doing it, roughly a wash on quality. On a top-tier rewriter it
-wins both, 97% better edits against 94%.
+The original text carries 70.1 tells per 10k words, so the skill removes 61% of
+them against the naive prompt's 16%, and its output reads as human roughly three
+times in four. It costs a little polish doing it: a few points more flattening
+and a few more edits judged worse. Content is safe either way.
 
-Both arms use the same model in each measurement, so this is not a handicap: a
-weaker model applies a 14KB instruction file less faithfully, and gets less of
-everything in it. Full numbers, both configurations, and the limits in
-[`research/EVAL.md`](research/EVAL.md).
+Two things that bound this. It is one genre, journal abstracts, and nothing here
+tests READMEs or commit messages. And it is the conservative estimate: on a
+top-tier rewriter the same skill scored 97% better against the naive prompt's
+94%, because the benefit scales with how well a model follows a 14KB instruction
+file.
+
+Full numbers, both configurations, and the limits in
+[`research/EVAL.md`](research/EVAL.md). Reproduce with `make eval`.
 
 ## Research
 

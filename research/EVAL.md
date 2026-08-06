@@ -39,39 +39,24 @@ All figures below come from one configuration: `gpt-5.6-luna` rewriting,
 gave a different answer, both are shown, because the difference is one of the
 more useful things this repo knows.
 
-### Style: which reads more machine-generated
+### Head to head
 
-Lower is better. Blind, position-randomised.
+| | Naive prompt | de-llm |
+|---|---|---|
+| Reads machine-generated | 72% | **28%** |
+| Tells remaining per 10k words | 58.6 | **27.5** |
+| Substantively faithful | **100%** | 99% |
+| Major content losses | **0** | **0** |
+| Edit judged better | **92%** | 90% |
+| Edit judged worse | **4%** | 7% |
+| Made prose flatter | **9%** | 13% |
 
-| Comparison | Result |
-|---|---|
-| skill vs naive | **28.1%** vs 71.9% |
-| skill vs original | **7.8%** vs 92.2% |
-| naive vs original | 15.6% vs 84.4% |
+Original text: 70.1 tells per 10k words. The skill removes 61% of them, the
+naive prompt 16%.
 
-The skill's rewrite reads as more human than the naive rewrite roughly three
-times out of four.
-
-### Fidelity: is the substance preserved
-
-Substantive loss only; removing a praise word is not counted.
-
-| Arm | Faithful | Major losses | Praise words removed |
-|---|---|---|---|
-| naive | 87/90 (97%) | 0 | 2.7 |
-| **skill** | **87/90 (97%)** | **0** | 2.5 |
-
-A tie, with no major losses either way.
-
-### Quality: is the edit any good
-
-| Arm | Better | Worse | Flatter | Lost something |
-|---|---|---|---|---|
-| naive | **92%** | **4%** | **9%** | **7%** |
-| skill | 91% | 6% | 12% | 12% |
-
-**A tie, or a marginal loss.** This is the number that does not survive a change
-of rewriter, and it matters more than any other in this file.
+The quality columns run consistently a few points against the skill across every
+run today. At n=30 each is close to noise, but the direction does not vary, so
+treat it as a real and small cost rather than as measurement error.
 
 ### The skill's advantage is conditional on the model
 

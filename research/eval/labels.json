@@ -3207,6 +3207,501 @@
     true
    ],
    "unanimous": true
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "nerative diseases. The objective of this review is to identify the contribution of Transfer Learning and Reinforcement Learning in supporting the processes of daily activity recognition, thus enhancing the quality of life for patients. As this is a trending topic, the li",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "undue emphasis",
+   "match": "invaluable",
+   "context": " Alzheimer's or Parkinson's, affect individuals' ability to perform daily tasks autonomously and safely. HAR technology offers an invaluable solution by enabling real-time monitoring and assistance, helping to maintain independence and quality of life for patients. Addi",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": " review examines the contributions of transfer learning and reinforcement learning to daily activity recognition and their role in supporting patients\u2019 quality of life. Because the literature on this emerging topic remains dispersed, the review also maps current research",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "Human activity recognition (HAR) plays a crucial role in supporting patients with neurodegenerative diseases. Conditions such as Alzheimer\u2019s and Parkinson\u2019s can limit individuals\u2019 ability to perfor",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " helping",
+   "context": " individuals\u2019 ability to perform daily tasks independently and safely. HAR technology enables real-time monitoring and assistance, helping patients maintain their independence and quality of life. It also provides doctors and caregivers with valuable data for more pre",
+   "real": true,
+   "votes": [
+    false,
+    true,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "me terrain recognition while reducing dependence on external perception. The TCN captures temporal dependencies in sensor signals, supporting precise and robust detection. We validate the framework through extensive real-world experiments and deploy it on an embedded edg",
+   "real": true,
+   "votes": [
+    true,
+    false,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 2,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " helping",
+   "context": "daily tasks autonomously and safely. HAR technology offers an invaluable solution by enabling real-time monitoring and assistance, helping to maintain independence and quality of life for patients. Additionally, this technology provides a valuable data source for doct",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "ons on slip in quadruped robots. The findings confirm that quadruped robots can recognize terrain types and detect surface states, supporting safer and more adaptive locomotion. Overall, the proposed system offers a cost-effective, robust, and low-latency solution for re",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    false
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 4,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "os. External literature-derived data were utilized strictly as calibration baselines for modeled operational degradation profiles, maintaining methodological transparency. Performance evaluation focuses on analyzing relative behavior, stability, and variability across sen",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 4,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "tdoor conditions. Beyond implementation, the framework formalizes a reusable architectural model for adaptive multi-sensor fusion, supporting reproducibility and future comparative research. A dedicated dataset is described, comprising 584 unique real-world evaluation in",
+   "real": false,
+   "votes": [
+    true,
+    false,
+    false
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "copula avoidance",
+   "match": "provides an efficient and reliable solution",
+   "context": "ations across three dimensions. Scenario and parameter tests further confirm the framework\u2019s generality and robustness. This work provides an efficient and reliable solution for real-time adaptive signal control at isolated intersections.",
+   "real": true,
+   "votes": [
+    false,
+    true,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 8,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "copula avoidance",
+   "match": "provides an effective and reliable solution",
+   "context": "ficiency-accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate that GeoSeqNet provides an effective and reliable solution for point cloud understanding in challenging sensing environments.",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "real-world settings across multiple clinical cohorts. Such tools would improve transparency regarding definitions and performance, supporting more meaningful interpretation and comparison across studies. The Mobilise-D consortium previously validated a comprehensive anal",
+   "real": true,
+   "votes": [
+    true,
+    false,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "copula avoidance",
+   "match": "provides a flexible framework",
+   "context": " shows how environmental factors, including lighting conditions and spatial scale, affect measurement variability. Overall, EfMAR provides a flexible framework for adaptive outdoor AR-based geospatial measurement, with an emphasis on consistency, transparency, and architectural generaliza",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "nts on ModelNet40, ScanObjectNN, and ShapeNetPart demonstrate its effectiveness. The method achieves competitive performance while maintaining a favorable efficiency\u2013accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate ",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 9,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "acking system. The results demonstrate improvements in motion stability, execution efficiency, and user interaction quality, while maintaining a high level of control intuitiveness. The findings highlight the potential of Digital Twin-based VR systems as a unifying platfo",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 8,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "nObjectNN, and ShapeNetPart demonstrate the effectiveness of GeoSeqNet. The proposed method achieves competitive performance while maintaining a favorable efficiency-accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate ",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "paper presents a Digital Twin-based virtual reality (VR) interaction and control system for an innovative parallel surgical robot, supporting surgical training and real-time robot interaction. The framework transforms a conventional VR simulator into a bidirectional Digi",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "rmance through real-time trajectory refinement and motion guidance. The trained model is deployed with an ONNX-compatible runtime, supporting efficient inference and seamless integration into the control architecture. The system is evaluated experimentally in terms of us",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "paper presents a Digital Twin-based virtual reality (VR) interaction and control system for an innovative parallel surgical robot, supporting surgical training and real-time robot interaction. The framework extends a conventional VR simulator into a bidirectional Digital",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "tical tracking system. The results show improvements in motion stability, execution efficiency, and user interaction quality while maintaining a high level of control intuitiveness. These findings indicate that Digital Twin-based VR systems can provide a unified platform ",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 11,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "se findings suggest that alpha-band EEG activity reflects age-related differences in auditory-feedback-driven neural adaptability, supporting the idea that alpha-band modulation may serve as a potential biomarker of motor-cognitive adaptability.",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "findings suggest that alpha-band EEG activity reflects age-related differences in neural adaptability driven by auditory feedback, supporting the potential use of alpha-band modulation as a biomarker of motor-cognitive adaptability.",
+   "real": false,
+   "votes": [
+    false,
+    true,
+    false
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "Microsphere lenses produce photonic nanojets with subwavelength beam waists, yet conventional imaging methods have difficulty maintaining consistent image quality for targets located at different axial planes. This study analyzes an optical theory showing that integr",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 19,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "copula avoidance",
+   "match": "provides a multidimensional framework",
+   "context": "-independent over the tested range. Together, these results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical single-particle quality control o",
+   "real": true,
+   "votes": [
+    false,
+    true,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "copula avoidance",
+   "match": "provides a multidimensional framework",
+   "context": "centration-independent over the tested range. These results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical single-particle quality control o",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 22,
+   "era": "2026",
+   "arm": "A",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "dataset demonstrates that the proposed model can generate plausible trajectories across different intersection geometries, further supporting its generalizability across diverse road structures and driving scenarios.",
+   "real": true,
+   "votes": [
+    false,
+    true,
+    true
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "c nuPlan dataset demonstrates that the model can generate plausible trajectories across different intersection geometries, further supporting its generalizability across diverse road structures and driving scenarios.",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    false
+   ],
+   "unanimous": false
+  },
+  {
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "evel physical constraints support motion prediction for invisible targets and link the inferred states to fragmented trajectories, maintaining temporally continuous tracking during prolonged visual occlusions. Experiments on DAIR-V2X and our self-collected roadside datase",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "at the scene level, it predicts the motion of invisible targets and associates these inferred states with fragmented trajectories, maintaining temporal continuity during prolonged visual occlusions. Experiments on DAIR-V2X and our self-collected roadside dataset demonstra",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " supporting",
+   "context": "ation on the public nuPlan dataset shows that the model generates plausible trajectories across different intersection geometries, supporting its generalizability across diverse road structures and driving scenarios.",
+   "real": true,
+   "votes": [
+    true,
+    true,
+    true
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": " with Explainable Artificial Intelligence), integrates these techniques to provide comprehensive protection for IoT networks while maintaining transparency, security, and trustworthiness.",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
+  },
+  {
+   "i": 28,
+   "era": "2026",
+   "arm": "B",
+   "pattern": "superficial -ing",
+   "match": " maintaining",
+   "context": "ncy. The framework combines Random Forest (RF) and SelectKBest for hybrid feature selection, reducing computational overhead while maintaining high detection accuracy. Deep Autoencoders (DAEs) detect anomalous traffic that deviates from learned normal behavior, allowing p",
+   "real": false,
+   "votes": [
+    false,
+    false,
+    false
+   ],
+   "unanimous": true
   }
  ]
 }

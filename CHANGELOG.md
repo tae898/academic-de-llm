@@ -25,9 +25,11 @@ mapping:
 ## 0.4.0 (2026-08-06)
 
 **Finders retiered on measurement rather than judgement.** Recall went from 8%
-to 52%; precision from 32% to 42%. Method: one judge panel labelled every regex
-hit real or false (2,103 calls, 701 labels), a second panel read the same texts
-cold and listed what it found.
+to **74%**; precision from 32% to **51%**. Method: one judge panel labels every
+regex hit real or a words-matched false positive, a second panel reads the same
+texts cold and lists what it finds. Every figure in this release was re-measured
+on a single model configuration after the panel changed; see `research/EVAL.md`
+for how much moved.
 
 Three defects, none conceptual:
 

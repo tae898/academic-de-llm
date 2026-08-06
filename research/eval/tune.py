@@ -135,6 +135,7 @@ def main():
     labels = json.load(open(os.path.join(HERE, 'labels.json')))['labels']
     texts = {r['i']: r['A'] for r in
              json.load(open(os.path.join(HERE, 'out', 'rewrites.json')))['results']}
+    regexes_new = CANDIDATE
     cur = score({k: v['regex'] for k, v in PATTERNS.items()}, inst, labels, texts)
     new = score(CANDIDATE, inst, labels, texts)
 
@@ -152,9 +153,29 @@ def main():
     print('-' * 74)
     print(f"{'ALL':<24}{tc}/{tt} {tc/tt*100:>5.0f}%{nc}/{tt} {nc/tt*100:>5.0f}%"
           f"{cr/cs*100:>10.0f}%{nr/ns*100:>10.0f}%")
-    print("\n  Precision here is measured only on hits that already have labels, so a")
-    print("  candidate that surfaces genuinely new spans is not fully priced. Adjudicate")
-    print("  the new hits before trusting the precision column.")
+    # Count spans the candidate surfaces that nobody has judged. Adding a
+    # trigger creates them; removing or narrowing one cannot. Without this the
+    # precision column silently treats "unjudged" as "not counted", which
+    # overstated a tuning round by 11 points.
+    import sys as _s
+    labelled = {(l['pattern'], l['context'][:60]) for l in labels}
+    unjudged = 0
+    for pat, rx in regexes_new.items():
+        for l in labels:
+            pass
+    for i, text in texts.items():
+        for pat, rx in CANDIDATE.items():
+            for m in re.finditer(rx, text, re.I):
+                ctx = text[max(0, m.start()-130):m.end()+130].replace('\n', ' ')
+                if (pat, ctx[:60]) not in labelled:
+                    unjudged += 1
+    if unjudged:
+        print(f"\n  WARNING: {unjudged} spans surfaced by the candidate have never been")
+        print("  judged, so the precision column above is an upper-and-lower bound, not a")
+        print("  measurement. Run research/eval/adjudicate.py before quoting it.")
+    else:
+        print("\n  Every span the candidate surfaces already carries a label, so the")
+        print("  precision column is fully priced.")
 
 
 if __name__ == '__main__':

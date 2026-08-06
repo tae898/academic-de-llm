@@ -114,13 +114,18 @@ re-scores a candidate pattern against the collected data for free.
 
 | Pattern | Precision | Recall |
 |---|---|---|
-| Undue emphasis | 8/9 (89%) | 13/18 (72%) |
-| Copula avoidance | 15/35 (43%) | 20/25 (80%) |
-| Superficial `-ing` | 12/44 (27%) | 29/50 (58%) |
+| Undue emphasis | 8/10 (80%) | 15/18 (83%) |
+| Copula avoidance | 17/37 (46%) | 20/25 (80%) |
+| Superficial `-ing` | 16/52 (31%) | 34/50 (68%) |
 | Negative parallelism | 0/3 (0%) | 1/2 (50%) |
+| **Overall** | **51%** | **74%** |
 
-Against the finders as they shipped in v0.3.1, which caught **8%** of real
-instances overall at 32% precision. The retier roughly quadrupled recall.
+Against the finders as they shipped in v0.3.1: **8% recall at 32% precision**.
+Recall roughly quadrupled.
+
+Overall precision counts only labels the current patterns still match. Across
+every label ever collected, including hits from triggers since removed, it is
+40% — that figure describes the history, not the current behaviour.
 
 ### What was actually wrong
 
@@ -169,7 +174,7 @@ runs the wrong way. Kept in `research/eval/tune.py` so it is not retried.
 
 ### Still unresolved
 
-Negative parallelism has 75% recall and **0% precision**: the cold-reading panel
+Negative parallelism has 50% recall and **0% precision**: the cold-reading panel
 finds instances, and the adjudicating panel then calls every matched hit false.
 Two panels, same definition, opposite verdicts. Until that is understood the
 pattern should be read as a hint, not a finding.

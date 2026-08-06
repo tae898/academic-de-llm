@@ -76,11 +76,21 @@ def recall_stats():
                 continue                       # one judge only: not confirmed
             s = stats[pat]
             s['confirmed'] += 1
-            # did the regex match anywhere inside the quoted span?
-            span = next((text[max(0, m.start()-10):m.end()+10]
-                         for m in re.finditer(re.escape(q[:40]), norm(text))), '')
+            # Did the regex match the quote, or its neighbourhood in the source?
+            # The neighbourhood check matters because judges quote without the
+            # leading comma: "sensor signals enabling precise detection" would
+            # score as a miss against a comma-anchored pattern that in fact
+            # matches the document.
+            #
+            # Search and slice the SAME normalised string. An earlier version
+            # searched norm(text) and then sliced text with those indices, which
+            # do not correspond once punctuation is stripped, so the span was
+            # nonsense and recall was undercounted by about five points.
+            nt = norm(text)
+            pos = nt.find(q[:40])
+            span = nt[max(0, pos - 3):pos + len(q) + 3] if pos >= 0 else ''
             hit = bool(re.search(PATTERNS[pat]['regex'], q, re.I)) or \
-                  bool(re.search(PATTERNS[pat]['regex'], span, re.I))
+                  bool(span and re.search(PATTERNS[pat]['regex'], span, re.I))
             if hit:
                 s['caught'] += 1
             else:

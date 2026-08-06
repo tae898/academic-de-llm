@@ -27,17 +27,18 @@ Highest yield. Percentages are files affected across 35 agent-era READMEs, 51k w
 
 Model-level habits, so they survive across vendors and model generations.
 
-These four were re-scored against 60 abstracts in 2026-08, with a judge panel
-labelling every hit and a second panel reading the same texts cold to find what
-the patterns missed. Recall rose from 8% to 52% without costing precision. The
-measured trigger strengths are in the notes column; see `research/EVAL.md`.
+These four are re-scored every review cycle: one judge panel labels every hit
+real or a words-matched false positive, a second panel reads the same texts cold
+to find what the patterns missed. Currently **74% recall at 51% precision**,
+against 8% and 32% for the version that shipped in v0.3.1. Per-trigger strengths
+are in the notes column; see `research/EVAL.md`.
 
 | Pattern | Regex | A real hit |
 |---|---|---|
-| Copula avoidance | `\b(serves? as\|serving as\|stands? as\|functions? as\|boasts?\|offers?\|provides?\|remains?\|positions? \w+ as\|presents? a)\b` | A plain `is` or `are` dressed up. `serves as` is 9/9 real; `offers` only 1 in 5. Not a hit when the verb does real work: "maintains 35 FPS" is behaviour over time, not identity |
-| Superficial `-ing` analysis | `[, ](highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|providing\|enhancing\|enabling\|allowing\|thereby \w+ing)\b` | An `-ing` clause that editorialises about the sentence it hangs off. **The space alternative is load-bearing**: requiring a comma missed "sensor signals enabling precise detection" and cost most of this pattern's recall. `highlighting` and `underscoring` are 100% real; `enabling` and `allowing` under 20% |
-| Negative parallelism | `not just .{0,60} but`, `not only .{0,60} but`, `unlike .{0,80}?\b(this work\|this study\|we\|our)\b` | A false contrast erected so the next clause can knock it down. The `unlike X, this work Y` form is the one that actually occurs; without it this pattern found nothing real in 14 matches |
-| Undue emphasis | `\bpivotal\b\|\bis (crucial\|essential\|vital\|critical)\b\|plays a (crucial\|pivotal\|vital) role\|is a testament\|significant potential\|highlighting the importance` | Generic importance where a specific fact belongs. The strongest of the four at 73% real. Bare `pivotal` is only 40% but is kept, because it catches "are pivotal to classification performance" and a miss costs more than a false positive |
+| Copula avoidance | `\b(serves? as\|serving as\|stands? as\|functions? as\|boasts?\|offers?\|remains?\|positions? \w+ as\|presents? a\|provides? an? [\w\s]{0,24}?(solution\|approach\|framework\|means\|basis))\b` | A plain `is` or `are` dressed up. `serves as` is real every time. `provides` only in the copular form (`provides an effective solution`), which is why it is narrowed: bare, it scored 1 in 6. Not a hit when the verb does real work, since "maintains 35 FPS" is behaviour over time |
+| Superficial `-ing` analysis | `[, ](highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|providing\|enhancing\|allowing\|helping\|supporting\|maintaining\|thereby \w+ing)\b` | An `-ing` clause that editorialises about the sentence it hangs off. **The space alternative is load-bearing**: requiring a comma missed "sensor signals enabling precise detection". `enabling` was dropped after 0 real in 16 matches; `helping`, `supporting`, `maintaining` were added from confirmed misses |
+| Negative parallelism | `not just .{0,60} but\|not only .{0,60} but\|unlike .{0,80}?\b(this work\|this study\|we\|our)\b` | A false contrast erected so the next clause can knock it down. `unlike X, this work Y` is the form that occurs. **Precision 0% on this corpus**: the cold-reading panel finds instances the adjudicating panel then rejects. Treat hits as a hint, not a finding |
+| Undue emphasis | `\b(pivotal\|invaluable)\b\|\bis (crucial\|essential\|vital\|critical)\b\|plays a (crucial\|pivotal\|vital) role\|is a testament\|significant potential\|highlighting the importance` | Generic importance where a specific fact belongs. The strongest of the four at 89% real. `is crucial` and `is essential` are near-certain. Bare `pivotal` is weaker and kept anyway, because a miss costs more than a false positive |
 | Vague attribution | `Observers have`, `Experts (argue\|say)`, `Industry reports`, `several sources`, `it is widely` | Attribution to nobody. Name them or drop the claim |
 | False ranges | `from .{0,40} to .{0,40}, from` | "from X to Y" where X and Y are not on a common scale |
 | Challenges formula | `[Dd]espite .* (faces\|challenges)` | "Despite its X, it faces several challenges", then vague optimism |

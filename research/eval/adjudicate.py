@@ -27,8 +27,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # them. Each carries the false positive that actually occurred in practice.
 PATTERNS = {
     'copula avoidance': dict(
+        # `provides?` bare was 1/6 and mostly noise ("the tool provides X" is a
+        # real verb). Narrowed to the copular form it keeps the one real instance
+        # it was there for, "GeoSeqNet provides an effective and reliable
+        # solution", and drops the five false positives: 43% -> 58% precision
+        # with no recall lost.
         regex=r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
-              r'provides?|remains?|positions? \w+ as|presents? a)\b',
+              r'remains?|positions? \w+ as|presents? a|'
+              r'provides? an? [\w\s]{0,24}?(solution|approach|framework|means|basis))\b',
         definition="A plain `is` or `are` dressed up in a fancier verb. "
                    "'This model serves as a proof of concept' means 'is a proof of concept'.",
         not_a_hit="The verb is doing real work and cannot be replaced by 'is'. "
@@ -36,7 +42,8 @@ PATTERNS = {
                   "over time, not identity. 'offers three modes' means it provides them."),
     'superficial -ing': dict(
         regex=r'[, ](highlighting|underscoring|emphasizing|ensuring|reflecting|'
-              r'contributing to|providing|enhancing|enabling|allowing|thereby \w+ing)\b',
+              r'contributing to|providing|enhancing|allowing|helping|supporting|'
+              r'maintaining|thereby \w+ing)\b',
         definition="A participial clause after a comma that attaches vague interpretation "
                    "to the fact before it, adding no information. "
                    "'The cache is checked first, improving performance.'",
@@ -48,7 +55,7 @@ PATTERNS = {
         # pattern to 90%. It also lost two real instances ("are pivotal to
         # classification performance"). For a finder whose hits an agent reads
         # anyway, a miss costs more than a false positive, so it stays.
-        regex=r'\bpivotal\b|\bis (crucial|essential|vital|critical)\b|'
+        regex=r'\b(pivotal|invaluable)\b|\bis (crucial|essential|vital|critical)\b|'
               r'plays a (crucial|pivotal|vital) role|is a testament|'
               r'significant potential|highlighting the importance',
         definition="Generic assertion of importance standing in for a specific fact. "

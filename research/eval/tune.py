@@ -35,15 +35,27 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # third person singular is the tell and the base form is an ordinary verb.
 #   remains 87% vs remain 25%   provides 36% vs provide 11%   offers 35% vs offer 0%
 # "the framework provides X" dresses up "is". "we provide X" does not.
+# Round 4, from the clean-panel scores.
+#
+#   -ing:   `enabling` is 0/16. Zero real instances, and 36% of everything the
+#           pattern matches. Dropping it is free. The misses name replacements:
+#           "helping to maintain independence", "supporting reproducibility",
+#           "maintaining methodological transparency".
+#   copula: `provide` 0/5 and `provides` 1/6 are the noise; serve/serves/serving
+#           as are 100% and `remains` is 80%.
+#   emphasis: "offers an invaluable solution" was missed. `invaluable` is the
+#           marker there, not `offers`.
 CANDIDATE = {
     'copula avoidance':
-        r'\b(serves? as|serving as|stands? as|functions? as|remains?|'
-        r'provides?|offers|presents? a)\b',
+        r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
+        r'remains?|positions? \w+ as|presents? a|'
+        r'provides? an? [\w\s]{0,24}?(solution|approach|framework|means|basis))\b',
     'superficial -ing':
         r'[, ](highlighting|underscoring|emphasizing|ensuring|reflecting|'
-        r'contributing to|providing|enhancing|enabling|allowing|thereby \w+ing)\b',
+        r'contributing to|providing|enhancing|allowing|helping|supporting|'
+        r'maintaining|thereby \w+ing)\b',
     'undue emphasis':
-        r'\bpivotal\b|\bis (crucial|essential|vital|critical)\b|'
+        r'\b(pivotal|invaluable)\b|\bis (crucial|essential|vital|critical)\b|'
         r'plays a (crucial|pivotal|vital) role|is a testament|'
         r'significant potential|highlighting the importance',
     'negative parallelism':

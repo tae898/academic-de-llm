@@ -150,6 +150,38 @@ Em dash use roughly doubled in academic prose, and the 2026 instances are the pa
 
 ---
 
+## 4b. The register table (2026-08-06)
+
+The figures behind the register branch in `SKILL.md`, as the mean of
+per-document rates per 10k words. Arrows are pre-ChatGPT to now, in the same
+venue, and for READMEs the same repositories sampled twice.
+
+| Tell | Abstracts | Papers | Maintained READMEs | Agent-written READMEs |
+|---|---|---|---|---|
+| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** | 4.5 → 5.3 | 0.0 |
+| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** | 7.5 → 9.7 | 4.0 |
+| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** | 4.4 → 7.4 | 13.1 |
+| Inline-header bold list | n/a | n/a | 5.0 → **12.7** | 43.4 |
+| Em dash | not measurable | 3.1 → 4.9 | 11.2 → **7.0** | 103.7 |
+| Title case headings | n/a | not measurable | 35.7 → 33.4 | 67.6 |
+
+Three things this decides:
+
+- **Structure and vocabulary rise everywhere with a baseline**, two to four
+  times. That is why Tier 2 and Tier 3 are the tiers to trust in any register.
+- **The inline-header bold list is the only formatting tell that rises against
+  its own baseline**, 5.0 to 12.7, a 2.5x increase in the same repositories.
+- **Em dash falls in maintained repositories**, 11.2 to 7.0, and title case is
+  flat. Both are house style, not authorship. They are loud only in READMEs an
+  agent wrote end to end, where there is no baseline to compare against.
+
+The agent-written column is prevalence, not excess: those repositories did not
+exist before ChatGPT. `not measurable` means the corpus cannot carry the
+measurement, not that the rate is zero. PubMed normalises every dash to an ASCII
+hyphen; the paper corpus does not preserve heading markup.
+
+---
+
 ## 5. Method correction: pooled rates overstate (2026-08-06)
 
 Every figure in sources 3, 4 and the first version of 5 was a **pooled** rate:

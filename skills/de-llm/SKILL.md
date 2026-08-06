@@ -25,59 +25,29 @@ metadata:
 
 Generated prose is rarely wrong. It is recognizable. This skill removes what makes it recognizable.
 
-Everything here comes from a published source, a community screening guide, or a measurement recorded in `references/sources.md`. Where a claim is unsourced, it says so.
-
-| Source | What it is | What it gives |
-|---|---|---|
-| Kobak et al. 2025, *Science Advances* [10.1126/sciadv.adt3813](https://doi.org/10.1126/sciadv.adt3813), "Delving into LLM-assisted writing in biomedical publications through excess vocabulary" ([arXiv:2406.07016](https://arxiv.org/abs/2406.07016), [data](https://github.com/berenslab/llm-excess-vocab)) | 15.1M English-language PubMed abstracts, 2010 to 2024. Measures 2024 word frequencies against a counterfactual projected from 2021 to 2022, so "excess" is a measured quantity. | The vocabulary list, with frequency ratios |
-| [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Maintained by editors who screen AI text at volume across millions of articles | The structural and formatting patterns, and the paste-era artifacts |
-| Own prevalence measurement, 2026-08 | 35 agent-era plugin READMEs (51k words) and 2,298 plugin descriptions (116k words). No baseline, so it measures prevalence, not excess. | The README column below |
-| Own before-and-after measurement, 2026-08 | *Sensors* (MDPI) abstracts from PubMed in four windows, 2019 to 2021 through 2026, 251k words. Same journal throughout, so this one is excess against a real baseline. | The register split, and the decay of the vocabulary tier |
+Every claim here is measured or cited, and `references/sources.md` says which,
+including what each source does **not** establish and which claims have no source
+at all.
 
 ## Read the register first, then pick a tier
 
-The tells are not universal. They split cleanly by whether the document has markup, and running the wrong tier first wastes the pass. Occurrences per 10k words:
+The tells are not universal, and running the wrong tier first wastes the pass.
 
-| Tell | Abstracts | Papers | Maintained READMEs | Agent-written READMEs |
-|---|---|---|---|---|
-| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** | 4.5 → 5.3 | 0.0 |
-| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** | 7.5 → 9.7 | 4.0 |
-| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** | 4.4 → 7.4 | 13.1 |
-| Inline-header bold list | n/a | n/a | 5.0 → **12.7** | 43.4 |
-| Em dash | not measurable | 3.1 → 4.9 | 11.2 → **7.0** | 103.7 |
-| Title case headings | n/a | not measurable | 35.7 → 33.4 | 67.6 |
+**Structure and vocabulary rise in every register with a baseline**, two to four
+times. Tier 2 and Tier 3 are the ones to trust everywhere.
 
-Per 10k words, as the mean of per-document rates. Arrows are pre-ChatGPT to now
-in the same venue, and for READMEs the same repositories. The agent-written
-column has no baseline: those repositories did not exist before ChatGPT, so it
-is prevalence, not excess.
+**Formatting is register-specific and usually is not a tell.** Decide by how the
+document was written, not by whether it contains markup:
 
-**Structure and vocabulary rise everywhere.** Two to four times, in every
-register that has a baseline. That is the durable finding and it is why Tier 2
-and Tier 3 are the ones to trust.
+| Document | Start at | Because |
+|---|---|---|
+| Written end to end by an agent | **Tier 1** | em dashes and bold lists run about ten times a maintained repository |
+| A README a human maintains | **Tier 2** | em dashes have *fallen* since 2022 and title case is flat; both are house style. Check the inline-header bold list first, the one formatting tell that rose |
+| An academic paper | **Tier 2** | section headings are journal template, not authorship. "2. Materials and Methods" is what the form requires |
+| Plain prose: abstracts, email, commit bodies | **Tier 2** | only the em dash carries over from Tier 1. The rest needs markup to exist |
 
-**Formatting is register-specific and mostly is not a tell.** In maintained
-repositories em dashes have *fallen* (11.2 to 7.0) and title case is flat.
-Neither is evidence of machine authorship in a project someone has been editing
-for years. The one formatting tell that does rise against its own baseline is
-the inline-header bold list, 2.5x.
-
-**Freshly agent-generated Markdown is the exception.** Em dashes at 103.7 and
-bold lists at 43.4 per 10k, roughly ten times a maintained repository. If a
-README was written end to end by an agent, formatting is the loudest signal in
-it. If a human has been maintaining it, formatting says almost nothing.
-
-**On a README or document an agent wrote end to end**, start at Tier 1. Formatting is the loudest signal in that case, ten times what a maintained repository shows.
-
-**On a README a human has been maintaining**, do not start there. Em dashes and title case are that project's house style and have not moved since before ChatGPT. Check the inline-header bold list, which has risen 2.5x, then go to Tier 2.
-
-**On an academic paper, skip Tier 1 even though it has headings.** Section headings are journal house style: "2. Materials and Methods" is what the template requires, not a tell. Em dash use is low either way. Go to Tier 2, where 538k words of open-access full text show the superficial `-ing` clause rising more than fourfold and copula avoidance and vocabulary both rising two and a half times.
-
-**On plain prose**, meaning abstracts, emails, and commit bodies, only the em dash carries over from Tier 1. It roughly doubled in arXiv abstracts between 2020 and 2026, so it is worth a pass. Bold lists, headings and emoji are `n/a` because they cannot occur in a document with no markup, which is a fact about the format and not a measurement. Then go to Tier 2, where the superficial `-ing` clause is the strongest signal at 6.9x its pre-ChatGPT baseline.
-
-Both published sources predate widely used coding agents, and neither measured the split. Kobak measured 2024 biomedical abstracts. Wikipedia screens encyclopedia edits, where most AI text arrives pasted out of a chat window.
-
-The prose columns are before-and-after against a real baseline, from two corpora: PubMed for the vocabulary and structure figures, arXiv for the em dash, because PubMed normalises every dash to an ASCII hyphen and cannot measure it at all. The README column has no baseline and is prevalence only. See `references/sources.md`.
+Figures, corpora and the before-and-after comparisons behind this table are in
+`references/sources.md`.
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
 
@@ -85,25 +55,15 @@ Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). U
 
 **Delete the tell, keep the claim.** A rewrite that makes a sentence claim more than the evidence supports has broken the text to pass a style check. That is worse than the tell.
 
-**Delete the tell, keep the rhythm.** This one is here because the skill failed it. Measured against a naive "make this sound less AI-generated" prompt on the same texts, guidance from this file made the result *flatter* four times as often (20% against 5%) and produced edits judged outright worse 13% of the time where the naive prompt produced none. Independent judges described the same failure repeatedly:
+**Delete the tell, keep the rhythm.** Applied thoroughly, the tiers below produce short declaratives sharing a subject: every tell gone and the cadence gone with them. That is measured, not hypothetical, which is why these four rules override the tier guidance wherever they conflict with it.
 
-> chops complex academic sentences into a series of short, repetitive structures that make the rhythm flat and monotonous
-
-> uniformly flat We-led prose with no gain in rhythm, voice, or precision
-
-> discards useful framing such as "remains", "This work presents", "Beyond implementation"
-
-The mechanism is this file applied thoroughly. Tier 2 says to break participial clauses into separate sentences. Tier 3 flags connective vocabulary. Do both across a paragraph and you get short declaratives, most of them starting with the same subject, with every tell gone and every trace of cadence gone with it.
-
-So, three rules that override the tier guidance when they conflict with it:
-
-**Do not split a long sentence into three short ones just because the join was a participle.** Rewrite the participle in place, or promote the clause to a subordinate one. One long sentence among short ones is what a human paragraph looks like.
+**Do not split a long sentence into three short ones just because the join was a participle.** Rewrite the participle in place, or make the clause subordinate. One long sentence among short ones is what a human paragraph looks like.
 
 **Do not start consecutive sentences with the same subject.** If a fix produces "We do X. We do Y. We do Z", the fix is worse than what it replaced, whatever the pattern count says.
 
-**Keep the connective tissue.** This was the judges' most repeated complaint, named directly: the pass "discards useful framing such as `remains`, `This work presents`, `Beyond implementation`" and "strips connective framing". Phrases that signal what a sentence is doing, contrasting, conceding, moving on, are how a reader follows an argument. Several of them sit on trigger lists. Removing them scores well and reads worse.
+**Keep the connective tissue.** Phrases that signal what a sentence is doing, contrasting, conceding, moving on, are how a reader follows an argument. Several sit on trigger lists. Removing them scores well and reads worse.
 
-**A high-scoring trigger is not automatically worth removing.** `remains` is a real tell 87% of the time and the judges still flagged its removal as a loss of framing. Precision measures how reliably a pattern indicates machine authorship. It says nothing about whether the phrase is earning its place for the reader. Those are different questions and only you can answer the second.
+**A high-scoring trigger is not automatically worth removing.** Precision measures how reliably a pattern indicates machine authorship. It says nothing about whether the phrase earns its place for the reader. Only you can answer the second question.
 
 After any pass, read the result aloud. If every sentence is the same length, put one back.
 
@@ -227,20 +187,16 @@ Wikipedia's independently compiled list overlaps heavily, which is the useful pa
 
 Do not blanket-replace these. Every one is a legitimate English word, and a banned-word list is the failure mode of every other tool in this space. `Crucial` in a sentence that establishes why something is crucial is fine. The signal is density and co-occurrence: several of them in one paragraph, doing no work.
 
-**This list is decaying, and it has been measured decaying.** Same journal, tells per 10k words:
+**This list decays, and the decay is measured.** In one journal `crucial` fell
+from 5.9 per 10k in 2024 to 0.9 in 2026, back to its pre-ChatGPT level, and
+`delve` effectively vanished. Both were the most publicised markers, and
+publicity is what kills a word-level tell. `robust` went the other way and is
+still climbing. Excess vocabulary shifts rather than disappearing, so a fixed
+list ages badly in both directions.
 
-| Word | 2019-21 | 2024 | 2025 | 2026 |
-|---|---|---|---|---|
-| `crucial` | 1.5 | 5.9 | 3.9 | **0.9** |
-| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | 1.3 | **0.3** |
-| `pivotal` | 0.3 | 1.0 | 1.4 | **0.4** |
-| `robust` | 4.4 | 9.3 | 17.4 | **13.9** |
-
-`crucial` is back to its pre-ChatGPT baseline. `delve` is effectively gone. Those two were the most publicized, and publicity is what kills a word-level tell: it gets trained out, or authors edit it out on purpose.
-
-`robust` went the other way, still 3.2x baseline and up 50% since 2024. Excess vocabulary shifts rather than disappearing, so a fixed list ages badly in both directions.
-
-Treat Kobak's method as the durable part and this specific list as perishable. Over the same window the structural tells in Tier 2 held: the superficial `-ing` clause is still 6.9x its pre-ChatGPT baseline in 2026, and copula avoidance is still rising. **If you only have attention for one tier on prose, use Tier 2.**
+Treat Kobak's method as the durable part and this list as a snapshot. Over the
+same window the structural tells in Tier 2 held. **If you only have attention for
+one tier on prose, use Tier 2.** Figures in `references/sources.md`.
 
 ## Tier 4: Paste-era artifacts
 

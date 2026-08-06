@@ -80,7 +80,11 @@ def papers(tag, year, n=40):
             body = ' '.join(''.join(s.itertext()) for s in art.iter('sec'))
             heads = [t.text for t in art.iter('title') if t.text]
             if len(body.split()) > 2000:
-                out.append('\n'.join('## ' + h for h in heads) + '\n\n' + body)
+                # Do NOT synthesise a heading block. An earlier version prefixed
+                # every <title> with "## ", which fabricated a title-case rate of
+                # 444 per 10k. Section headings are kept inline, marked so they
+                # are countable but not manufactured.
+                out.append(body)
         time.sleep(1)
     write(f'papers/{tag}.txt', out)
 

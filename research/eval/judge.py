@@ -21,7 +21,7 @@ import argparse, json, os, random, re, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import JUDGES, SEED, Incremental, call, load, manifest   # noqa: E402
+from common import JUDGES, OUT, SEED, Incremental, call, load, manifest   # noqa: E402
 
 STYLE_Q = """You are judging writing style. Below are two versions of the same scientific abstract.
 
@@ -108,6 +108,27 @@ def parse(s):
         return None
 
 
+def resume(name, jobs, keyfn):
+    """Drop jobs already answered successfully, and carry the old results over.
+
+    judge.py had no resume, so any interruption cost the whole stage. It has now
+    been interrupted by an exhausted account, a SIGTERM from an over-long wait,
+    and a `| head -3` that SIGPIPEd the process after three lines of output.
+    Only SUCCESSFUL calls count as done, or a transient failure becomes
+    permanent.
+    """
+    import os as _os
+    p = _os.path.join(OUT, name)
+    if not _os.path.exists(p):
+        return jobs, []
+    allprev = json.load(open(p))['results']
+    prev = [r for r in allprev if r.get('parsed')]
+    if len(allprev) - len(prev):
+        print(f'  retrying {len(allprev)-len(prev)} failed calls', flush=True)
+    done = {keyfn(r) for r in prev}
+    return [j for j in jobs if keyfn(j) not in done], prev
+
+
 def run_jobs(jobs, out):
     def work(job):
         job['raw'] = call(job['judge'], job.pop('prompt'), max_tokens=3000)
@@ -148,8 +169,11 @@ def main():
                 for j in JUDGES:
                     jobs.append(dict(kind='style', i=r['i'], era=r['era'], pair=pair,
                                      judge=j, flip=flip, prompt=STYLE_Q.format(t1=t1, t2=t2)))
-        print(f'style: {len(jobs)} calls', flush=True)
-        run_jobs(jobs, Incremental('style.json', manifest(corpus, stage='judge-style')))
+        jobs, prev = resume('style.json', jobs, lambda r: (r['i'], r['pair'], r['judge']))
+        print(f'style: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
+        out = Incremental('style.json', manifest(corpus, stage='judge-style'))
+        out.data['results'].extend(prev); out.flush()
+        run_jobs(jobs, out)
 
     if a.fidelity:
         jobs = []
@@ -158,8 +182,11 @@ def main():
                 for j in JUDGES:
                     jobs.append(dict(kind='fidelity', i=r['i'], era=r['era'], arm=arm,
                                      judge=j, prompt=FIDELITY_Q.format(orig=r['A'], rw=r[arm])))
-        print(f'fidelity: {len(jobs)} calls', flush=True)
-        run_jobs(jobs, Incremental('fidelity.json', manifest(corpus, stage='judge-fidelity')))
+        jobs, prev = resume('fidelity.json', jobs, lambda r: (r['i'], r['arm'], r['judge']))
+        print(f'fidelity: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
+        out = Incremental('fidelity.json', manifest(corpus, stage='judge-fidelity'))
+        out.data['results'].extend(prev); out.flush()
+        run_jobs(jobs, out)
 
     if a.quality:
         # Style asks "does it read as machine-written". Fidelity asks "are the
@@ -171,8 +198,11 @@ def main():
                 for j in JUDGES:
                     jobs.append(dict(kind='quality', i=r['i'], era=r['era'], arm=arm,
                                      judge=j, prompt=QUALITY_Q.format(orig=r['A'], rw=r[arm])))
-        print(f'quality: {len(jobs)} calls', flush=True)
-        run_jobs(jobs, Incremental('quality.json', manifest(corpus, stage='judge-quality')))
+        jobs, prev = resume('quality.json', jobs, lambda r: (r['i'], r['arm'], r['judge']))
+        print(f'quality: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
+        out = Incremental('quality.json', manifest(corpus, stage='judge-quality'))
+        out.data['results'].extend(prev); out.flush()
+        run_jobs(jobs, out)
 
     print('next: python3 research/eval/analyse.py')
 

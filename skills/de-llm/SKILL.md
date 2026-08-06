@@ -38,19 +38,40 @@ Everything here comes from a published source, a community screening guide, or a
 
 The tells are not universal. They split cleanly by whether the document has markup, and running the wrong tier first wastes the pass. Occurrences per 10k words:
 
-| Tell | Prose, before | Prose, now | Papers, before | Papers, now | READMEs |
-|---|---|---|---|---|---|
-| Em dash | 3.7 | 7.8 | 6.1 | 4.7 | 122.4 |
-| Superficial `-ing` | 1.0 | 6.9 | 2.9 | 14.6 | 0.0 |
-| Copula avoidance | 1.6 | 4.6 | 9.8 | 24.4 | 1.0 |
-| Excess vocabulary | 15.7 | 39.5 | 9.7 | 33.8 | 13.3 |
-| Inline-header bold list | n/a | n/a | n/a | n/a | 46.4 |
-| Title case headings | n/a | n/a | 10.9 | 11.7 | 59.2 |
-| Vendor paste artifacts | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Tell | Abstracts | Papers | Maintained READMEs | Agent-written READMEs |
+|---|---|---|---|---|
+| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** | 4.5 → 5.3 | 0.0 |
+| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** | 7.5 → 9.7 | 4.0 |
+| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** | 4.4 → 7.4 | 13.1 |
+| Inline-header bold list | n/a | n/a | 5.0 → **12.7** | 43.4 |
+| Em dash | not measurable | 3.1 → 4.9 | 11.2 → **7.0** | 103.7 |
+| Title case headings | n/a | not measurable | 35.7 → 33.4 | 67.6 |
 
-**On READMEs, documentation, and anything written in Markdown**, start at Tier 1. Formatting beats everything else by ten to fifty times there.
+Per 10k words, as the mean of per-document rates. Arrows are pre-ChatGPT to now
+in the same venue, and for READMEs the same repositories. The agent-written
+column has no baseline: those repositories did not exist before ChatGPT, so it
+is prevalence, not excess.
 
-**On an academic paper, skip Tier 1 even though it has headings.** Measured across 538k words of open-access full text, title case headings sit at 10.9 per 10k in 2021 and 11.7 in 2026, and em dashes actually *fell*, 6.1 to 4.7. Both are journal house style, not machine authorship. "2. Materials and Methods" is what the template requires. Flagging those is the single easiest way to waste a pass on a paper. Go to Tier 2, where the same corpus shows the superficial `-ing` clause rising fivefold and copula avoidance two and a half times.
+**Structure and vocabulary rise everywhere.** Two to four times, in every
+register that has a baseline. That is the durable finding and it is why Tier 2
+and Tier 3 are the ones to trust.
+
+**Formatting is register-specific and mostly is not a tell.** In maintained
+repositories em dashes have *fallen* (11.2 to 7.0) and title case is flat.
+Neither is evidence of machine authorship in a project someone has been editing
+for years. The one formatting tell that does rise against its own baseline is
+the inline-header bold list, 2.5x.
+
+**Freshly agent-generated Markdown is the exception.** Em dashes at 103.7 and
+bold lists at 43.4 per 10k, roughly ten times a maintained repository. If a
+README was written end to end by an agent, formatting is the loudest signal in
+it. If a human has been maintaining it, formatting says almost nothing.
+
+**On a README or document an agent wrote end to end**, start at Tier 1. Formatting is the loudest signal in that case, ten times what a maintained repository shows.
+
+**On a README a human has been maintaining**, do not start there. Em dashes and title case are that project's house style and have not moved since before ChatGPT. Check the inline-header bold list, which has risen 2.5x, then go to Tier 2.
+
+**On an academic paper, skip Tier 1 even though it has headings.** Section headings are journal house style: "2. Materials and Methods" is what the template requires, not a tell. Em dash use is low either way. Go to Tier 2, where 538k words of open-access full text show the superficial `-ing` clause rising more than fourfold and copula avoidance and vocabulary both rising two and a half times.
 
 **On plain prose**, meaning abstracts, emails, and commit bodies, only the em dash carries over from Tier 1. It roughly doubled in arXiv abstracts between 2020 and 2026, so it is worth a pass. Bold lists, headings and emoji are `n/a` because they cannot occur in a document with no markup, which is a fact about the format and not a measurement. Then go to Tier 2, where the superficial `-ing` clause is the strongest signal at 6.9x its pre-ChatGPT baseline.
 

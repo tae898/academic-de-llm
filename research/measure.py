@@ -22,6 +22,8 @@ import io, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.environ.get('DELLM_DATA', os.path.join(HERE, 'data'))
 
+DOC_SEP = '\n\n'
+
 PUBMED_WINDOWS = [('ypre', '2019-21'), ('y2024', '2024'), ('y2025', '2025'), ('y2026', '2026')]
 
 PATTERNS = [
@@ -51,7 +53,25 @@ def load(name):
 
 
 def rate(text, pat):
-    return len(re.findall(pat, text, re.I)) / max(len(text.split()), 1) * 10000
+    """Mean of per-document rates, not a pooled total.
+
+    Pooling (all matches / all words) lets one enormous document dominate. In
+    the paired README corpus two link-list files held 97% of the pooled em
+    dashes and produced 39.7 per 10k, when the mean per document was 11.2 and
+    the median was zero. Every README figure published before 2026-08-06 used
+    the pooled form and overstated.
+    """
+    docs = [d for d in text.split(DOC_SEP) if len(d.split()) >= 80] or [text]
+    rates = [len(re.findall(pat, d, re.I)) / max(len(d.split()), 1) * 10000 for d in docs]
+    return sum(rates) / len(rates)
+
+
+def concentration(text, pat):
+    """Share of all matches held by the single worst document. Above ~25% the
+    pooled figure is being driven by outliers and should not be quoted."""
+    docs = [d for d in text.split(DOC_SEP) if len(d.split()) >= 80] or [text]
+    counts = [len(re.findall(pat, d, re.I)) for d in docs]
+    return max(counts) / sum(counts) * 100 if sum(counts) else 0.0
 
 
 def table(title, corpora, patterns, note=''):

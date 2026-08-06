@@ -150,7 +150,40 @@ Em dash use roughly doubled in academic prose, and the 2026 instances are the pa
 
 ---
 
-## 5. Own decay measurement, 2024 to 2026 (2026-08)
+## 5. Method correction: pooled rates overstate (2026-08-06)
+
+Every figure in sources 3, 4 and the first version of 5 was a **pooled** rate:
+all matches divided by all words. That lets one enormous document dominate.
+
+Found when building the paired README corpus. Pooled, em dashes ran at 39.7 per
+10k in pre-2022 READMEs. **Two link-list documents held 1,345 of the 1,388
+matches**, 97% of them, and only 19 of 120 documents contained any at all. The
+mean per document was 11.2 and the median was zero.
+
+All rates are now the **mean of per-document rates**, and `research/measure.py`
+also reports what share of matches the single worst document holds. Above
+roughly 25%, a figure is being driven by outliers and should not be quoted.
+
+What survived the recomputation and what did not:
+
+- **The abstract corpus is unaffected.** Documents there are all about 200
+  words, so pooled and per-document means agree to within 2% (15.7 against
+  15.5). Every finding in sources 4 and 5 stands.
+- **The README figures were overstated.** Em dash in agent-written READMEs was
+  published as 122.4 and is 103.7 as a per-document mean.
+- **One claim reversed.** Em dash in full papers was reported as falling, 6.1 to
+  4.7 pooled. Per document it rises, 3.1 to 4.9. Both are small and heavily
+  concentrated (one document holds a third of the matches either way), so the
+  honest statement is that em dash is not a usable signal in papers rather than
+  that it moves in either direction.
+- **One figure was fabricated by the collection code.** Papers appeared to show
+  title case headings at 444 per 10k. `fetch.py` had been prepending `## ` to
+  every `<title>` element when assembling the text, manufacturing the headings
+  it then counted. Removed.
+
+---
+
+## 6. Own decay measurement, 2024 to 2026 (2026-08)
 
 The skill has always claimed word-level tells decay faster than structural ones. This tests it.
 
@@ -187,7 +220,7 @@ The skill has always claimed word-level tells decay faster than structural ones.
 
 ---
 
-## 6. Consulted and not used
+## 7. Consulted and not used
 
 **"Explaining Generalization of AI-Generated Text Detectors Through Linguistic Analysis"** (arXiv:2601.07974). Fetched 2026-08. Discusses clause types, participles, coordination, lexical diversity and punctuation, and reports that some markers generalize across models while others are domain-sensitive. **No usable numbers were extracted**, so nothing in `SKILL.md` cites it. Worth a proper read if this skill is revised.
 

@@ -16,7 +16,7 @@ labels in `handlabels.json` before its verdicts are used for anything.
     python3 research/eval/adjudicate.py --calibrate   # agreement vs hand labels only
 """
 import argparse, json, os, re, sys
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import JUDGES, Incremental, call, load, manifest   # noqa: E402
@@ -27,14 +27,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # them. Each carries the false positive that actually occurred in practice.
 PATTERNS = {
     'copula avoidance': dict(
-        regex=r'\b(serves as|stands as|functions as|boasts|offers|maintains)\b',
+        regex=r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
+              r'provides?|remains?|positions? \w+ as|presents? a)\b',
         definition="A plain `is` or `are` dressed up in a fancier verb. "
                    "'This model serves as a proof of concept' means 'is a proof of concept'.",
         not_a_hit="The verb is doing real work and cannot be replaced by 'is'. "
                   "'maintains a high execution speed of 35 FPS' describes sustained behaviour "
                   "over time, not identity. 'offers three modes' means it provides them."),
     'superficial -ing': dict(
-        regex=r', (highlighting|underscoring|emphasizing|ensuring|reflecting|contributing to|allowing|enabling|focusing on)\b',
+        regex=r'[, ](highlighting|underscoring|emphasizing|ensuring|reflecting|'
+              r'contributing to|providing|enhancing|enabling|allowing|thereby \w+ing)\b',
         definition="A participial clause after a comma that attaches vague interpretation "
                    "to the fact before it, adding no information. "
                    "'The cache is checked first, improving performance.'",
@@ -42,13 +44,20 @@ PATTERNS = {
                   "'..., enabling real-time synchronisation between the virtual and physical cell' "
                   "names a concrete capability. Also not a hit if the -ing word is a noun."),
     'undue emphasis': dict(
-        regex=r'\bpivotal\b|is critical for|plays a (crucial|pivotal|vital) role|is a testament',
+        # `pivotal` alone scores only 40% precision, and dropping it lifted the
+        # pattern to 90%. It also lost two real instances ("are pivotal to
+        # classification performance"). For a finder whose hits an agent reads
+        # anyway, a miss costs more than a false positive, so it stays.
+        regex=r'\bpivotal\b|\bis (crucial|essential|vital|critical)\b|'
+              r'plays a (crucial|pivotal|vital) role|is a testament|'
+              r'significant potential|highlighting the importance',
         definition="Generic assertion of importance standing in for a specific fact. "
                    "'X plays a vital role in Y' tells the reader nothing about X.",
         not_a_hit="The importance claim is immediately substantiated, or the word is used "
                   "in a precise technical sense."),
     'negative parallelism': dict(
-        regex=r'not just .{0,60} but|not only .{0,60} but',
+        regex=r'not just .{0,60} but|not only .{0,60} but|'
+              r'unlike .{0,80}?\b(this work|this study|we|our)\b',
         definition="A false contrast erected so the next clause can knock it down, where the "
                    "first half was never in question.",
         not_a_hit="It corrects a real prior claim, or both halves carry distinct information "
@@ -124,7 +133,7 @@ def main():
     out.flush()
 
     def work(job):
-        raw = call(job['judge'], job.pop('prompt'), max_tokens=1500)
+        raw = call(job['judge'], job.pop('prompt'), max_tokens=6000, timeout=300)
         m = re.search(r'\{.*\}', raw, re.S)
         try:
             job['parsed'] = json.loads(m.group(0)) if m else None
@@ -134,10 +143,14 @@ def main():
             job['raw'] = raw[:200]                   # so a failure is diagnosable
         return job
 
-    with ThreadPoolExecutor(max_workers=12) as ex:
-        for n, r in enumerate(ex.map(work, jobs), 1):
-            out.append(r)
-            if n % 50 == 0:
+    # as_completed, not map: map yields in submission order, so one slow judge
+    # blocks every finished result behind it. That makes the incremental write
+    # non-incremental and looks like a stall.
+    with ThreadPoolExecutor(max_workers=24) as ex:
+        futs = [ex.submit(work, j) for j in jobs]
+        for n, f in enumerate(as_completed(futs), 1):
+            out.append(f.result())
+            if n % 100 == 0:
                 print(f'  {n}/{len(jobs)}', flush=True)
     print(f'wrote {out.path}\nnext: python3 research/eval/analyse.py --adjudicated')
 

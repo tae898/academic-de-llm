@@ -27,12 +27,17 @@ Highest yield. Percentages are files affected across 35 agent-era READMEs, 51k w
 
 Model-level habits, so they survive across vendors and model generations.
 
+These four were re-scored against 60 abstracts in 2026-08, with a judge panel
+labelling every hit and a second panel reading the same texts cold to find what
+the patterns missed. Recall rose from 8% to 52% without costing precision. The
+measured trigger strengths are in the notes column; see `research/EVAL.md`.
+
 | Pattern | Regex | A real hit |
 |---|---|---|
-| Copula avoidance (34%) | `\b(serves as\|stands as\|functions as\|boasts\|features\|maintains\|offers)\b` | A plain `is` or `are` dressed up |
-| Superficial `-ing` analysis | `, (highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|allowing\|enabling)` | An `-ing` clause after a comma that editorializes about the sentence it hangs off. Not a hit when the word is a noun, as in "the logging config" |
-| Negative parallelism | `not just .* but`, `not .*, but rather`, `rather than simply` | A false contrast erected so the next clause can knock it down. Not a hit when correcting a real prior claim |
-| Undue emphasis | `stands as`, `is a testament`, `plays a (crucial\|pivotal\|vital) role`, `indelible mark` | Generic importance where a specific fact belongs |
+| Copula avoidance | `\b(serves? as\|serving as\|stands? as\|functions? as\|boasts?\|offers?\|provides?\|remains?\|positions? \w+ as\|presents? a)\b` | A plain `is` or `are` dressed up. `serves as` is 9/9 real; `offers` only 1 in 5. Not a hit when the verb does real work: "maintains 35 FPS" is behaviour over time, not identity |
+| Superficial `-ing` analysis | `[, ](highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|providing\|enhancing\|enabling\|allowing\|thereby \w+ing)\b` | An `-ing` clause that editorialises about the sentence it hangs off. **The space alternative is load-bearing**: requiring a comma missed "sensor signals enabling precise detection" and cost most of this pattern's recall. `highlighting` and `underscoring` are 100% real; `enabling` and `allowing` under 20% |
+| Negative parallelism | `not just .{0,60} but`, `not only .{0,60} but`, `unlike .{0,80}?\b(this work\|this study\|we\|our)\b` | A false contrast erected so the next clause can knock it down. The `unlike X, this work Y` form is the one that actually occurs; without it this pattern found nothing real in 14 matches |
+| Undue emphasis | `\bpivotal\b\|\bis (crucial\|essential\|vital\|critical)\b\|plays a (crucial\|pivotal\|vital) role\|is a testament\|significant potential\|highlighting the importance` | Generic importance where a specific fact belongs. The strongest of the four at 73% real. Bare `pivotal` is only 40% but is kept, because it catches "are pivotal to classification performance" and a miss costs more than a false positive |
 | Vague attribution | `Observers have`, `Experts (argue\|say)`, `Industry reports`, `several sources`, `it is widely` | Attribution to nobody. Name them or drop the claim |
 | False ranges | `from .{0,40} to .{0,40}, from` | "from X to Y" where X and Y are not on a common scale |
 | Challenges formula | `[Dd]espite .* (faces\|challenges)` | "Despite its X, it faces several challenges", then vague optimism |

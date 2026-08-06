@@ -115,6 +115,81 @@ candidates, not violations, and someone has to read each hit. An automated
 density table cannot do that, so read this table as a mechanism check and
 nothing more.
 
+## Pattern quality: precision and recall per finder
+
+The eval above asks whether the skill's guidance helps a model. This asks
+whether the finders themselves work, which turns out to be a different and
+harsher question.
+
+Method: 60 abstracts. One judge panel labels every regex hit real or a
+words-matched false positive (2,103 calls, 701 labels). A second panel reads the
+same texts **cold**, never shown a regex, and lists what it finds; an instance
+counts when two of three judges quote the same span. Precision is the first
+number, recall the second. `make eval` reproduces it; `research/eval/tune.py`
+re-scores a candidate pattern against the collected data for free.
+
+| | Recall | Precision |
+|---|---|---|
+| Patterns as shipped in v3.1.0 | **8%** | 32% |
+| After retiering on this data | **52%** | **42%** |
+
+**Recall was the real problem, not precision.** The v3.1.0 finders caught about
+one real instance in twelve. A 32% precision rate is defensible for a triage
+filter whose hits an agent reads; a 8% recall rate is not defensible as
+anything.
+
+### What was actually wrong
+
+Three specific defects, none of them conceptual:
+
+**A comma.** `, enabling` required one. "sensor signals enabling precise and
+robust detection" has none, and that single character cost most of the recall on
+the highest-volume pattern.
+
+**Missing inflections.** `serves as` was listed and `serve as` was not, so
+"is intended to serve as a reproducible reference" was invisible.
+
+**The wrong form entirely.** Negative parallelism searched for `not just X but`.
+Across 60 abstracts that matched 14 times and not one was real. Every genuine
+instance used `unlike traditional studies that optimise accuracy, this work...`.
+
+### Trigger strength, measured
+
+Precision varies more **within** a pattern than between patterns, which is why
+the skill now publishes per-trigger strength instead of a flat list:
+
+| Trigger | Real / matched | |
+|---|---|---|
+| `is crucial` | 13/14 | 93% |
+| `is essential` | 8/9 | 89% |
+| `remains` | 13/15 | 87% |
+| `serves as` / `serve as` / `serving as` | 11/11 | 100% |
+| `thereby <verb>ing` | 6/8 | 75% |
+| `enhancing` | 18/29 | 62% |
+| `providing` | 8/23 | 35% |
+| `enabling` | 5/36 | 14% |
+| `offer` | 0/7 | 0% |
+| `maintains` | 0/11 | 0% |
+
+**Third person singular is the tell; the base form is an ordinary verb.**
+`remains` 87% against `remain` 25%, `provides` 36% against `provide` 11%,
+`offers` 35% against `offer` 0%. "The framework provides X" dresses up "is".
+"We provide X" does not. That distinction is not in either published source.
+
+### What was tried and rejected
+
+Dropping every weak trigger raised precision to 40% and dropped recall to 46%.
+Rejected: on a finder whose hits an agent reads, a false positive costs a glance
+and a miss costs the fix. Recall is the metric that matters and the tradeoff
+runs the wrong way. Kept in `research/eval/tune.py` so it is not retried.
+
+### Still unresolved
+
+Negative parallelism has 75% recall and **0% precision**: the cold-reading panel
+finds instances, and the adjudicating panel then calls every matched hit false.
+Two panels, same definition, opposite verdicts. Until that is understood the
+pattern should be read as a hint, not a finding.
+
 ## Two findings that reversed
 
 Recorded because they are the reason the limits section exists.

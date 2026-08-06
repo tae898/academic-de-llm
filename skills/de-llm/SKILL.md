@@ -115,20 +115,26 @@ Model-level generation habits rather than interface artifacts, so they survive a
 
 ### Copula avoidance
 
-34% of READMEs, and 2.6x excess in journal abstracts after ChatGPT. A plain `is` or `are` dressed up as `serves as`, `stands as`, `functions as`, `boasts`, `features`, `maintains`, `offers`.
+34% of READMEs, and 2.6x excess in journal abstracts after ChatGPT. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `provides`, `remains`, `positions X as`, `presents a`.
+
+Measured on 60 abstracts: `serves as` is a real instance 9 times out of 9. `offers` only 1 time in 5. `maintains` never was, across 11 matches, because "maintains 35 FPS" is behaviour over time rather than identity. Read the verb: if `is` cannot replace it, leave it.
 
 ### Superficial analysis via -ing
 
 **The strongest tell of any kind in plain prose, and it does not occur in READMEs at all.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 8.7 in 2024, peaked at 12.2 in 2025, and sits at 6.9 in 2026. Still nearly 7x baseline after two years, while the vocabulary markers decayed.
 
-A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`.
+A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`, `providing`, `enhancing`, `enabling`, `allowing`, `thereby ...ing`.
+
+**It does not need a comma.** "sensor signals enabling precise and robust detection" is the same pattern without punctuation, and looking only after commas missed most of them. `highlighting` and `underscoring` are real every time; `enabling` and `allowing` under one time in five.
 
 > Before: The cache is checked first, reducing round trips and improving latency.
 > After: The cache is checked first. That removes one round trip.
 
 ### Negative parallelism
 
-Three variants: `not just X, but Y`, `not X, but Y`, `X rather than Y`.
+Four variants: `not just X, but Y`, `not X, but Y`, `X rather than Y`, and `unlike X, this work Y`.
+
+The last one is the one that actually occurs. Searching only for the `not just` forms found 14 matches across 60 abstracts and not one was real, while every genuine instance took the `unlike traditional studies that optimise accuracy, this work emphasises...` shape.
 
 > Before: This is not about speed. It is about correctness.
 > After: The change corrects the result. It does not make it faster.
@@ -139,7 +145,9 @@ Triplet adjectives or phrases. Not every triad is a tell; three real things are 
 
 ### Undue emphasis on significance
 
-`stands as`, `is a testament to`, `plays a crucial role`, `reflects broader`, `left an indelible mark`. Generic importance replacing a specific fact.
+`pivotal`, `is crucial`, `is essential`, `is vital`, `plays a crucial role`, `is a testament to`, `significant potential`, `highlighting the importance of`. Generic importance replacing a specific fact.
+
+The most reliable of the structural patterns: about 3 matches in 4 are real. Bare `pivotal` is weaker at 2 in 5, and is kept anyway because it catches "are pivotal to classification performance", and on a finder whose hits get read a miss costs more than a false positive.
 
 ### Vague attribution
 

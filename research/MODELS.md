@@ -31,17 +31,52 @@ a year stale (see below).
 Arms B and C differ only by whether `SKILL.md` is in the prompt. Two different
 rewriters would confound the thing being measured.
 
-## Current panel (2026-08)
+## Rule 6: price the panel on the invoice, not on one measured call
 
-| Role | Model | Lab |
-|---|---|---|
-| Rewriter, arms B and C | `openai/gpt-5.6-terra` | OpenAI |
-| Judge | `qwen/qwen3.8-max` | Alibaba |
-| Judge | `z-ai/glm-5.2` | Zhipu |
-| Judge | `x-ai/grok-4.5` | xAI |
-| Judge | `google/gemini-3.6-flash` | Google |
+Added after a 24-hour bill came to $61.98 against an estimate of about $10. The
+estimate came from timing a single call and multiplying. Reasoning token counts
+vary by an order of magnitude between calls, so that method cannot work.
 
-Override with `DELLM_REWRITER` and `DELLM_JUDGES` (comma-separated).
+What the invoice showed, and none of it was visible from a sample of one:
+
+- **Reasoning is 94% of all completion tokens.** 6.4M of 6.9M. It bills at output
+  rates, which is why judge choice dominates everything else.
+- **`qwen3.8-max` was 36% of the bill**, $22.38, at 1,626 reasoning tokens per
+  call. A single measured call had shown 141.
+- **Prompt caching only discounts input**, so it caps out around a fifth of the
+  bill. It is not the lever it looks like. grok cached 1,611 of 1,640 calls and
+  still cost $10.23.
+- **The rewriter is priced by prompt size.** `SKILL.md` is ~13,300 tokens and
+  rides in every arm-C call, so input price is what matters, not output.
+
+Download the CSV from the OpenRouter dashboard and read it before assuming a
+panel is affordable.
+
+## Current panel (2026-08-06)
+
+| Role | Model | Lab | $/call |
+|---|---|---|---|
+| Rewriter, arms B and C | `openai/gpt-5.6-luna` | OpenAI | 0.0016 |
+| Judge | `x-ai/grok-4.5` | xAI | 0.0062 |
+| Judge | `z-ai/glm-5.2` | Zhipu | 0.0016 |
+| Judge | `deepseek/deepseek-v4-flash-0731` | DeepSeek | 0.0001 |
+
+A 30-abstract cycle costs about **$1.50**, against $9.73 on the panel this
+replaced. Override with `DELLM_REWRITER` and `DELLM_JUDGES` (comma-separated).
+
+`deepseek-v4-flash` is conservative alone: tested against the frontier panel it
+agreed 82% of the time and under-called real instances. Majority voting against
+two stronger judges absorbs that. It would not be safe as a sole judge.
+
+Before switching the rewriter, luna, `meituan/longcat-2.0` and
+`openai/gpt-5.6-terra` were run on the same abstract with the full skill. All
+three stripped the same tells, produced comparable length, and landed within 0.2
+of each other on sentence-length variance. For a headline number worth
+publishing, confirm on the top tier:
+
+```bash
+DELLM_REWRITER=openai/gpt-5.6-sol-pro make eval
+```
 
 ## Superseded panel (2026-08-05, archived)
 

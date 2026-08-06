@@ -64,22 +64,33 @@ PATTERNS = {
                   "the reader needs."),
 }
 
-PROMPT = """You are checking whether a text fragment is a real instance of a writing pattern.
+# Structured for prompt caching: the invariant block comes first and everything
+# that varies per hit comes last. On the 24-hour bill, grok cached 1,611 of 1,640
+# calls while qwen cached 21 of 2,025, because a short or variable prefix never
+# reaches the provider's minimum cacheable length. Do not move the context up.
+PREAMBLE = """You are checking whether text fragments are real instances of writing patterns.
 
-PATTERN: {name}
+A search matched some words. Your job is to say whether the match is a genuine
+instance of the pattern, or whether the words merely coincided.
 
-WHAT IT IS: {definition}
+The patterns and their definitions:
 
-WHAT IT IS NOT: {not_a_hit}
+{catalogue}
 
-The matched phrase is "{match}". Here it is in context:
+Judge only the single fragment given below, against the single pattern named.
+Answer with strict JSON and nothing else: {{"real": true or false, "why": "one short sentence"}}
+"""
 
-...{context}...
+CATALOGUE = '\n\n'.join(
+    f"{n.upper()}\n  IS: {v['definition']}\n  IS NOT: {v['not_a_hit']}"
+    for n, v in PATTERNS.items())
 
-Is this a real instance of the pattern, or did the search merely match the words?
-
-Strict JSON only:
-{{"real": true or false, "why": "one short sentence"}}"""
+PROMPT = PREAMBLE + """
+---
+PATTERN TO JUDGE: {name}
+MATCHED PHRASE: "{match}"
+CONTEXT: ...{context}...
+"""
 
 
 def hits(text, regex):
@@ -104,8 +115,8 @@ def main():
                     for j in JUDGES[:3]:            # 3 is enough for a majority
                         jobs.append(dict(i=r['i'], era=r['era'], arm=arm, pattern=name,
                                          match=match, context=ctx, judge=j,
-                                         prompt=PROMPT.format(name=name, match=match, context=ctx,
-                                                              **{k: spec[k] for k in ('definition', 'not_a_hit')})))
+                                         prompt=PROMPT.format(catalogue=CATALOGUE, name=name,
+                                                              match=match, context=ctx)))
     # Resume: a killed run costs nothing but the calls already made.
     done = set()
     prev = []

@@ -101,6 +101,8 @@ So, three rules that override the tier guidance when they conflict with it:
 
 **Do not start consecutive sentences with the same subject.** If a fix produces "We do X. We do Y. We do Z", the fix is worse than what it replaced, whatever the pattern count says.
 
+**Keep the connective tissue.** This was the judges' most repeated complaint, named directly: the pass "discards useful framing such as `remains`, `This work presents`, `Beyond implementation`" and "strips connective framing". Phrases that signal what a sentence is doing, contrasting, conceding, moving on, are how a reader follows an argument. Several of them sit on trigger lists. Removing them scores well and reads worse.
+
 **A high-scoring trigger is not automatically worth removing.** `remains` is a real tell 87% of the time and the judges still flagged its removal as a loss of framing. Precision measures how reliably a pattern indicates machine authorship. It says nothing about whether the phrase is earning its place for the reader. Those are different questions and only you can answer the second.
 
 After any pass, read the result aloud. If every sentence is the same length, put one back.

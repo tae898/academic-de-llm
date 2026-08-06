@@ -62,6 +62,12 @@ def main():
     ap.add_argument('--pool', default='',
                     help='override the 2026 corpus with a larger pool file, for when '
                          'the default 12 gives too few real hits to say anything')
+    ap.add_argument('--eras', default='2026,2024,pre-2022',
+                    help='comma-separated. Narrow this rather than cutting n: the unit '
+                         'of analysis is the document, so 15 documents is 15, not 45.')
+    ap.add_argument('--arm', default='BC', choices=['BC', 'C'],
+                    help="C reuses arm B from the previous run. Arm B's prompt has no "
+                         "SKILL.md in it, so a change to the skill cannot alter it.")
     ap.add_argument('--control', type=int, default=4,
                     help='pre-2022 abstracts. These cannot be AI-generated, so '
                          'they bound what the style metric actually measures.')
@@ -74,17 +80,29 @@ def main():
     # so testing only on 2024 would measure the skill against a dead target.
     # pre-2022 cannot be AI-generated and bounds what the style metric means.
     pool2026 = a.pool or f'{DATA}/pubmed/y2026.txt'
-    sample = ([{'era': '2026', 'text': t} for t in pick(pool2026, a.n)] +
-              [{'era': '2024', 'text': t} for t in pick(f'{DATA}/pubmed/y2024.txt', a.n)] +
-              [{'era': 'pre-2022', 'text': t} for t in pick(f'{DATA}/pubmed/ypre.txt', a.control)])
+    eras = [e.strip() for e in a.eras.split(',') if e.strip()]
+    src = {'2026': (pool2026, a.n), '2024': (f'{DATA}/pubmed/y2024.txt', a.n),
+           'pre-2022': (f'{DATA}/pubmed/ypre.txt', a.control)}
+    sample = [{'era': e, 'text': t} for e in eras for t in pick(*src[e])]
 
-    corpus = f'pubmed/sensors 2026 n={a.n} + 2024 n={a.n} + pre-2022 n={a.control}'
+    corpus = 'pubmed/sensors ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras)
     out = Incremental('rewrites.json', manifest(corpus, stage='rewrite'))
     print(f'{len(sample)} abstracts, rewriter={REWRITER}', flush=True)
 
+    prevB = {}
+    if a.arm == 'C':
+        import glob as _g
+        for f in sorted(_g.glob(os.path.join(os.path.dirname(out.path), 'archive-*', 'rewrites.json')) +
+                        [os.path.join(os.path.dirname(out.path), 'rewrites-prev.json')]):
+            if os.path.exists(f):
+                for r in json.load(open(f))['results']:
+                    prevB.setdefault(r['A'][:120], r['B'])
+        print(f'  reusing {len(prevB)} arm-B rewrites', flush=True)
+
     def work(item):
         i, s = item
-        return i, s, call(REWRITER, NAIVE + s['text']), call(REWRITER, SKILLED + s['text'])
+        b = prevB.get(s['text'][:120]) if a.arm == 'C' else None
+        return i, s, b or call(REWRITER, NAIVE + s['text']), call(REWRITER, SKILLED + s['text'])
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         for i, s, b, c in ex.map(work, list(enumerate(sample))):

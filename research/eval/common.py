@@ -15,16 +15,42 @@ import json, os, sys, time, urllib.request
 URL = 'https://openrouter.ai/api/v1/chat/completions'
 
 # The rewriter produces both rewrite arms, so the skill is the only variable.
-REWRITER = os.environ.get('DELLM_REWRITER', 'openai/gpt-5.6-sol-pro')
+#
+# Cost here is dominated by PROMPT tokens, not output: SKILL.md is roughly 13,300
+# tokens and rides in every arm-C call. sol-pro bills input at $5/M, so it cost
+# $0.0814 a call and was the largest single line on the 24-hour invoice, $20.57
+# for 219 calls. luna bills input at $0.10/M: $0.0016 a call, 50x less.
+#
+# Checked before switching, on the same abstract: luna, longcat-2.0 and terra all
+# stripped the same tells (-ing 4 -> 0), produced comparable length, and landed
+# within 0.2 of each other on sentence-length variance. Following a 14KB
+# instruction file is not what separates these tiers.
+#
+# This gets re-run every review cycle, so it has to be cheap. For a headline
+# number worth publishing, confirm on the top tier:
+#     DELLM_REWRITER=openai/gpt-5.6-sol-pro make eval
+REWRITER = os.environ.get('DELLM_REWRITER', 'openai/gpt-5.6-luna')
 
 # Judges must exclude the family that authored the skill (Anthropic) and the lab
 # that produced the rewrites (OpenAI). Four labs, four countries of origin, so a
 # shared house style cannot carry the result. See research/MODELS.md.
+# Panel rebuilt 2026-08-06 on the actual bill rather than an estimate.
+# A 24-hour invoice showed qwen3.8-max at $22.38 of $61.98, 36% of everything,
+# because it spends 1,626 reasoning tokens per call and its prompts share no
+# long prefix, so only 21 of 2,025 calls hit the cache. Dropped.
+#
+#   per adjudication call, measured:
+#     qwen3.8-max     $0.0111      grok-4.5     $0.0062
+#     gemini-3.6-flash $0.0080     glm-5.2      $0.0016
+#     deepseek-v4-flash $0.0001
+#
+# Three labs, all models shipped within six weeks. deepseek-v4-flash is
+# conservative on its own (it agreed with the frontier panel 82% and under-called
+# real instances), which majority voting against two stronger judges absorbs.
 JUDGES = os.environ.get('DELLM_JUDGES', ','.join([
-    'qwen/qwen3.8-max',        # Alibaba
-    'z-ai/glm-5.2',            # Zhipu
-    'x-ai/grok-4.5',           # xAI
-    'google/gemini-3.6-flash',  # Google
+    'x-ai/grok-4.5',                     # xAI       $0.0062
+    'z-ai/glm-5.2',                      # Zhipu     $0.0016
+    'deepseek/deepseek-v4-flash-0731',   # DeepSeek  $0.0001
 ])).split(',')
 
 SEED = 20260805

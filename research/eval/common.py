@@ -53,6 +53,8 @@ JUDGES = os.environ.get('DELLM_JUDGES', ','.join([
     'deepseek/deepseek-v4-flash-0731',   # DeepSeek  $0.0001
 ])).split(',')
 
+REASONING_EFFORT = os.environ.get('DELLM_REASONING', 'low')  # '' disables
+
 SEED = 20260805
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.environ.get('DELLM_EVAL_OUT', os.path.join(HERE, 'out'))
@@ -86,9 +88,20 @@ def call(model, prompt, max_tokens=4000, retries=3, timeout=180):
     budget = max_tokens
     for i in range(retries):
         try:
-            body = json.dumps({'model': model,
-                               'messages': [{'role': 'user', 'content': prompt}],
-                               'max_tokens': budget}).encode()
+            # Reasoning was 94% of all completion tokens on the 24-hour invoice
+            # and bills at output rates, so it is the whole cost. `effort: low`
+            # roughly halves it: grok 609 -> 328 reasoning tokens, glm 652 -> 317.
+            #
+            # Checked before adopting, against the frozen labels: the panel
+            # majority agreed 44/50 either way. Same answers, 20% cheaper. Note
+            # this only works with an adequate max_tokens; a starved call spends
+            # the whole budget reasoning and returns nothing regardless of effort.
+            payload = {'model': model,
+                       'messages': [{'role': 'user', 'content': prompt}],
+                       'max_tokens': budget}
+            if REASONING_EFFORT:
+                payload['reasoning'] = {'effort': REASONING_EFFORT}
+            body = json.dumps(payload).encode()
             req = urllib.request.Request(URL, data=body, headers={
                 'Authorization': f'Bearer {key()}', 'Content-Type': 'application/json'})
             with urllib.request.urlopen(req, timeout=timeout) as r:

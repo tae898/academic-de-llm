@@ -26,6 +26,18 @@ that formatting tells only occur in documents with markup. That was wrong, and
 the arXiv numbers are the correction: em dash use roughly doubled in academic
 prose between 2020 and 2026.
 
+## Reproducing means matching the configuration
+
+`make eval` reproduces the eval figures only on the panel that produced them.
+Changing the rewriter or the judges changes the answers: swapping
+`gpt-5.6-sol-pro` for `gpt-5.6-luna` and one judge for another moved the skill's
+style advantage from 85/15 to 72/28 on identical inputs, and moved per-pattern
+precision by up to 11 points in both directions.
+
+The current configuration is in `research/eval/common.py` and named in the
+manifest of every output file. If you change it, re-run everything rather than
+comparing across panels.
+
 ## What these numbers are not
 
 None of them is a counterfactual projection. Kobak et al. project an expected

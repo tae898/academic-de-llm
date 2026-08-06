@@ -262,6 +262,37 @@ against the original's 8.4.
 **Not yet re-measured after that change.** The 20% figure describes the skill as
 it was when the eval ran.
 
+## How much of this is about the judges?
+
+Every number here was re-measured after the model panel changed on 2026-08-06,
+and the answers moved. Same corpus, same skill, same prompts:
+
+| | sol-pro rewriter, 4 judges | luna rewriter, 3 judges |
+|---|---|---|
+| Skill vs naive on style | 15.1% / 84.9% | **28.1% / 71.9%** |
+| Copula avoidance precision | 37% | **43%** |
+| Superficial `-ing` precision | 38% | **27%** |
+| Undue emphasis precision | 81% | **89%** |
+
+The direction of every finding survived. The magnitudes did not.
+
+Two causes, and they are different:
+
+**The rewriter.** Both arms use the same model, so a weaker rewriter does not
+handicap the skill directly. What it does is apply the skill less faithfully,
+which moves arm C toward arm B and narrows the gap. The skill's benefit scales
+with how well the model follows a 14KB instruction file. That is worth knowing
+before quoting any single figure as the skill's effect size.
+
+**The judges.** `deepseek-v4-flash` is more conservative than the `qwen3.8-max`
+it replaced, so fewer matched hits get labelled real. Precision moved in both
+directions by up to 11 points depending on the pattern, which is the range within
+which no precision figure here should be treated as precise.
+
+**Treat every number in this file as configuration-dependent.** The manifest in
+each output file under `research/eval/out/` names the models that produced it.
+A finding that only holds on one panel is a finding about the panel.
+
 ## Limits
 
 - **Small.** 28 abstracts, four judges. Differences of a few percentage points

@@ -1,6 +1,6 @@
 ---
 name: de-llm
-version: 3.1.0
+version: 0.4.0
 description: |
   Strip the surface markers that make text read as machine-generated, without
   flattening its meaning. Use when the user says "de-LLM", "de-slop", "remove
@@ -17,6 +17,7 @@ metadata:
     Wikipedia:Signs of AI writing (community-maintained);
     own corpus measurements, 2026-08 (see references/sources.md)
   last_reviewed: 2026-08
+  changelog: CHANGELOG.md
   review_process: research/REVIEW.md
 ---
 
@@ -37,19 +38,21 @@ Everything here comes from a published source, a community screening guide, or a
 
 The tells are not universal. They split cleanly by whether the document has markup, and running the wrong tier first wastes the pass. Occurrences per 10k words:
 
-| Tell | Prose, before | Prose, now | Agent-written READMEs |
-|---|---|---|---|
-| Em dash | 3.7 | 7.8 | 122.4 |
-| Superficial `-ing` | 1.0 | 6.9 | 0.0 |
-| Copula avoidance | 1.6 | 4.6 | 1.0 |
-| Excess vocabulary | 15.7 | 39.5 | 13.3 |
-| Inline-header bold list | n/a | n/a | 46.4 |
-| Title case headings | n/a | n/a | 59.2 |
-| Vendor paste artifacts | 0.0 | 0.0 | 0.0 |
+| Tell | Prose, before | Prose, now | Papers, before | Papers, now | READMEs |
+|---|---|---|---|---|---|
+| Em dash | 3.7 | 7.8 | 6.1 | 4.7 | 122.4 |
+| Superficial `-ing` | 1.0 | 6.9 | 2.9 | 14.6 | 0.0 |
+| Copula avoidance | 1.6 | 4.6 | 9.8 | 24.4 | 1.0 |
+| Excess vocabulary | 15.7 | 39.5 | 9.7 | 33.8 | 13.3 |
+| Inline-header bold list | n/a | n/a | n/a | n/a | 46.4 |
+| Title case headings | n/a | n/a | 10.9 | 11.7 | 59.2 |
+| Vendor paste artifacts | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 
-**On Markdown, HTML, or anything with markup**, start at Tier 1. Formatting beats everything else by ten to fifty times.
+**On READMEs, documentation, and anything written in Markdown**, start at Tier 1. Formatting beats everything else by ten to fifty times there.
 
-**On plain prose**, meaning papers, abstracts, emails, and commit bodies, only the em dash carries over from Tier 1. It roughly doubled in arXiv abstracts between 2020 and 2026, so it is worth a pass. Bold lists, headings and emoji are `n/a` because they cannot occur in a document with no markup, which is a fact about the format and not a measurement. Then go to Tier 2, where the superficial `-ing` clause is the strongest signal at 6.9x its pre-ChatGPT baseline.
+**On an academic paper, skip Tier 1 even though it has headings.** Measured across 538k words of open-access full text, title case headings sit at 10.9 per 10k in 2021 and 11.7 in 2026, and em dashes actually *fell*, 6.1 to 4.7. Both are journal house style, not machine authorship. "2. Materials and Methods" is what the template requires. Flagging those is the single easiest way to waste a pass on a paper. Go to Tier 2, where the same corpus shows the superficial `-ing` clause rising fivefold and copula avoidance two and a half times.
+
+**On plain prose**, meaning abstracts, emails, and commit bodies, only the em dash carries over from Tier 1. It roughly doubled in arXiv abstracts between 2020 and 2026, so it is worth a pass. Bold lists, headings and emoji are `n/a` because they cannot occur in a document with no markup, which is a fact about the format and not a measurement. Then go to Tier 2, where the superficial `-ing` clause is the strongest signal at 6.9x its pre-ChatGPT baseline.
 
 Both published sources predate widely used coding agents, and neither measured the split. Kobak measured 2024 biomedical abstracts. Wikipedia screens encyclopedia edits, where most AI text arrives pasted out of a chat window.
 

@@ -18,7 +18,7 @@ FIDELITY  does the rewrite preserve the substance. This prompt separates
     python3 research/eval/judge.py [--style] [--fidelity]
 """
 import argparse, json, os, random, re, sys
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import JUDGES, SEED, Incremental, call, load, manifest   # noqa: E402
@@ -77,6 +77,29 @@ Strict JSON only:
   "severity": "none"|"minor"|"major"}}"""
 
 
+QUALITY_Q = """You are a careful copy editor. Below is an ORIGINAL passage and an EDITED version.
+
+Ignore whether either sounds machine-written. Judge only whether the edit is an
+improvement a professional editor would accept.
+
+Consider: is it clearer? Does it read naturally, with varied rhythm rather than
+uniform flat sentences? Was anything worth keeping thrown away, such as a useful
+qualifier, a specific detail, or the author's voice? Is it now bland?
+
+An edit that removes stock phrasing but leaves lifeless prose is NOT an
+improvement. Say so if that is what happened.
+
+ORIGINAL:
+{orig}
+
+EDITED:
+{rw}
+
+Strict JSON only:
+{{"verdict": "better"|"same"|"worse", "flatter": true or false,
+  "lost_something_worth_keeping": true or false, "why": "one sentence"}}"""
+
+
 def parse(s):
     m = re.search(r'\{.*\}', s, re.S)
     try:
@@ -91,10 +114,11 @@ def run_jobs(jobs, out):
         job['parsed'] = parse(job['raw'])
         job['raw'] = job['raw'][:400]
         return job
-    with ThreadPoolExecutor(max_workers=8) as ex:
-        for n, r in enumerate(ex.map(work, jobs), 1):
-            out.append(r)
-            if n % 20 == 0:
+    with ThreadPoolExecutor(max_workers=24) as ex:
+        futs = [ex.submit(work, j) for j in jobs]
+        for n, f in enumerate(as_completed(futs), 1):
+            out.append(f.result())
+            if n % 50 == 0:
                 print(f'  {n}/{len(jobs)}', flush=True)
 
 
@@ -102,9 +126,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--style', action='store_true')
     ap.add_argument('--fidelity', action='store_true')
+    ap.add_argument('--quality', action='store_true')
     a = ap.parse_args()
-    if not (a.style or a.fidelity):
-        a.style = a.fidelity = True
+    if not (a.style or a.fidelity or a.quality):
+        a.style = a.fidelity = a.quality = True
 
     rw = load('rewrites.json')
     rows = [r for r in rw['results']
@@ -135,6 +160,19 @@ def main():
                                      judge=j, prompt=FIDELITY_Q.format(orig=r['A'], rw=r[arm])))
         print(f'fidelity: {len(jobs)} calls', flush=True)
         run_jobs(jobs, Incremental('fidelity.json', manifest(corpus, stage='judge-fidelity')))
+
+    if a.quality:
+        # Style asks "does it read as machine-written". Fidelity asks "are the
+        # facts intact". Neither asks whether the result is any GOOD, and a
+        # de-slopped passage can pass both while being flat and lifeless.
+        jobs = []
+        for r in rows:
+            for arm in ('B', 'C'):
+                for j in JUDGES:
+                    jobs.append(dict(kind='quality', i=r['i'], era=r['era'], arm=arm,
+                                     judge=j, prompt=QUALITY_Q.format(orig=r['A'], rw=r[arm])))
+        print(f'quality: {len(jobs)} calls', flush=True)
+        run_jobs(jobs, Incremental('quality.json', manifest(corpus, stage='judge-quality')))
 
     print('next: python3 research/eval/analyse.py')
 

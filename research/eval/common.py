@@ -15,7 +15,7 @@ import json, os, sys, time, urllib.request
 URL = 'https://openrouter.ai/api/v1/chat/completions'
 
 # The rewriter produces both rewrite arms, so the skill is the only variable.
-REWRITER = os.environ.get('DELLM_REWRITER', 'openai/gpt-5.6-terra')
+REWRITER = os.environ.get('DELLM_REWRITER', 'openai/gpt-5.6-sol-pro')
 
 # Judges must exclude the family that authored the skill (Anthropic) and the lab
 # that produced the rewrites (OpenAI). Four labs, four countries of origin, so a

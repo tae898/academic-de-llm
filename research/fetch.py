@@ -50,6 +50,41 @@ def pubmed(tag, window, retmax=320):
           '   <- why dashes are unmeasurable in PubMed')
 
 
+def papers(tag, year, n=40):
+    """Open-access FULL TEXT from PMC, not abstracts.
+
+    A different register again: sections, numbered headings, 12k words instead
+    of 200. Journal section headings are conventionally Title Case
+    ("2. Materials and Methods"), which the Markdown-derived title-case rule
+    would flag wrongly, so this corpus exists to catch that class of error.
+    """
+    term = urllib.parse.quote(f'open access[filter] AND {year}[dp] AND sensors[journal]')
+    ids = json.loads(get(f'{EUTILS}/esearch.fcgi?db=pmc&retmax={n}&retmode=json'
+                         f'&term={term}'))['esearchresult']['idlist']
+    out = []
+    # Full texts run to ~100KB each. Batching ten of them overruns the chunked
+    # response and raises IncompleteRead partway through, so fetch in threes and
+    # keep whatever arrived rather than losing the batch.
+    for i in range(0, len(ids), 3):
+        try:
+            xml = get(f'{EUTILS}/efetch.fcgi?db=pmc&id={",".join(ids[i:i+3])}&retmode=xml', 180)
+        except Exception as e:                       # noqa: BLE001
+            xml = getattr(e, 'partial', b'') or b''
+            if not xml:
+                continue
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            continue
+        for art in root.iter('article'):
+            body = ' '.join(''.join(s.itertext()) for s in art.iter('sec'))
+            heads = [t.text for t in art.iter('title') if t.text]
+            if len(body.split()) > 2000:
+                out.append('\n'.join('## ' + h for h in heads) + '\n\n' + body)
+        time.sleep(1)
+    write(f'papers/{tag}.txt', out)
+
+
 def arxiv(tag, lo, hi, n=300):
     q = urllib.parse.urlencode({
         'search_query': f'cat:cs.LG AND submittedDate:[{lo} TO {hi}]',
@@ -73,6 +108,11 @@ def main():
     for tag, window in WINDOWS.items():
         pubmed(tag, window)
         time.sleep(1)          # NCBI asks for <=3 req/sec without a key
+    print('\nPMC full-text papers:')
+    papers('y2026', 2026)
+    time.sleep(1)
+    papers('ypre', 2021)
+
     print('\narXiv cs.LG:')
     arxiv('pre',   '202001010000', '202012310000')
     time.sleep(3)              # arXiv asks for one request per 3 seconds

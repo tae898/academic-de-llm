@@ -128,6 +128,14 @@ signal is density and co-occurrence, not presence.
 
 It does not make text true, well argued, or worth reading.
 
+## Status
+
+**0.4.0.** Below 1.0.0 on purpose: the patterns and tier ordering have changed
+materially twice in the last day, both times because a measurement contradicted
+the previous version. v0.3.1 shipped finders that caught 8% of real instances,
+which was only found by measuring afterwards. 1.0.0 is for when a review cycle
+passes without a finding that forces a rewrite. See [CHANGELOG.md](CHANGELOG.md).
+
 ## Requirements
 
 None to use it.

@@ -101,12 +101,21 @@ A participial clause that attaches vague interpretation to a fact: `highlighting
 
 ### Negative parallelism
 
-Four variants: `not just X, but Y`, `not X, but Y`, `X rather than Y`, and `unlike X, this work Y`.
+The form that occurs in academic prose is `unlike X, this Y`: "unlike traditional
+studies that optimise accuracy, this work emphasises...". A contrast is set up
+against unnamed prior work so the next clause can knock it down.
 
-The last one is the one that actually occurs. Searching only for the `not just` forms found 14 matches across 60 abstracts and not one was real, while every genuine instance took the `unlike traditional studies that optimise accuracy, this work emphasises...` shape.
+**`not only X, but Y` is not this pattern**, and was removed after being measured.
+It asserts that two things are both true, which is ordinary English: "can not
+only recognise terrain types but also estimate slip" is two real capabilities,
+not a false contrast. Every judge who read one rejected it.
 
 > Before: Unlike prior work that optimises accuracy in isolation, this study emphasises the accuracy-latency tradeoff.
 > After: Prior work optimises accuracy in isolation. This study measures accuracy against latency.
+
+This is the weakest finder here. Three matches across thirty abstracts is not
+enough to estimate how often it is right, so read the hit and decide; do not
+treat a match as a finding.
 
 ### Rule of three
 

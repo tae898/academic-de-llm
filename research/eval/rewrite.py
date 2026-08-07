@@ -113,7 +113,11 @@ def main():
            'pre-2022': (poolpre, a.control)}
     sample = [{'era': e, 'text': t} for e in eras for t in pick(*src[e], lo=lo, hi=hi)]
 
-    corpus = f'{a.label} ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras) + f' [{lo}-{hi}w]'
+    # Record the pool paths, not just the label. A previous run recorded
+    # "pubmed/sensors 2026 n=30" while sampling from a --pool override, so the
+    # manifest could not distinguish two entirely different samples.
+    corpus = (f'{a.label} ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras)
+              + f' [{lo}-{hi}w] pools=' + ','.join(os.path.basename(src[e][0]) for e in eras))
     out = Incremental('rewrites.json', manifest(corpus, stage='rewrite'))
     print(f'{len(sample)} {a.unit}s, rewriter={REWRITER}', flush=True)
 

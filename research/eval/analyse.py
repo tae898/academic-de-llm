@@ -19,6 +19,20 @@ DENSITY = [
 ]
 
 
+UNIT = 'document'          # set from the manifest; see main()
+
+
+def unit_of(manifest):
+    """What the corpus is made of, so a table cannot mislabel its own rows.
+
+    The papers run samples paper sections, not abstracts. A header reading
+    "30 2026 abstracts" over section data is how a wrong claim gets quoted
+    later.
+    """
+    c = manifest.get('corpus', '')
+    return 'section' if 'section' in c else 'abstract'
+
+
 def show_manifest(d, label):
     m = d['manifest']
     print(f"{label}: {m['date']}  rewriter={m['rewriter']}  judges={', '.join(m['judges'])}")
@@ -80,7 +94,7 @@ def density(d):
         rows = [r for r in ok if r['era'] == era]
         if not rows:
             continue
-        print(f"=== TELL DENSITY, per 10k words, {len(rows)} {era} abstracts ===")
+        print(f"=== TELL DENSITY, per 10k words, {len(rows)} {era} {UNIT}s ===")
         print("    objective, no judge involved. partly circular for arm C.\n")
         print(f"{'pattern':<24}{'original':>10}{'naive':>10}{'skill':>10}")
         print('-' * 54)
@@ -127,7 +141,7 @@ def adjudicated(d, rw):
         if not any(e == era for e, _p, _a in raw):
             continue
         n = sum(1 for x in rw['results'] if x['era'] == era)
-        print(f"  -- {era}, {n} abstracts --")
+        print(f"  -- {era}, {n} {UNIT}s --")
         print(f"     {'pattern':<22}{'original':>18}{'naive':>16}{'skill':>16}")
         for pat in pats:
             cells = []
@@ -179,6 +193,8 @@ def calibrate(d):
 
 def main():
     rw = load('rewrites.json')
+    global UNIT
+    UNIT = unit_of(rw['manifest'])
     show_manifest(rw, 'rewrites')
     density(rw)
     try:

@@ -63,8 +63,15 @@ PATTERNS = {
         not_a_hit="The importance claim is immediately substantiated, or the word is used "
                   "in a precise technical sense."),
     'negative parallelism': dict(
-        regex=r'not just .{0,60} but|not only .{0,60} but|'
-              r'unlike .{0,80}?\b(this work|this study|we|our)\b',
+        # `not only X but Y` retired 2026-08-08: it asserts two true things
+        # rather than erecting a false contrast, which is a different
+        # construction entirely. It was 2 of 3 hits on the labelled corpus
+        # and 0 of 6 judge votes called it real. The `unlike` tail was
+        # widened from (this work|this study|we|our) to (this|our|we): the
+        # cold panel found `unlike ..., this module` and `..., this method`,
+        # which the narrow list missed. 1 of 3 real instances caught before,
+        # 3 of 3 after, with both false positives dropped.
+        regex=r'not just .{0,60} but|unlike .{0,80}?\b(this|our|we)\b',
         definition="A false contrast erected so the next clause can knock it down, where the "
                    "first half was never in question.",
         not_a_hit="It corrects a real prior claim, or both halves carry distinct information "

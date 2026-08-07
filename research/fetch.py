@@ -30,6 +30,14 @@ def get(url, timeout=90):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout).read()
 
 
+# The eval samples from a deliberately larger 2026 pool: rewrite.py keeps only
+# the densest n documents, and picking the densest 30 of 320 measures something
+# different from the densest 30 of 1,200. The eval used to be run against an
+# ad-hoc file that no script here produced and no document mentioned, so its
+# sample could not be reconstructed by anyone, including its author.
+BIG = ('y2026_big', '2026[dp]', 1200)
+
+
 def pubmed(tag, window, retmax=320):
     term = urllib.parse.quote(f'{JOURNAL} AND {window} AND hasabstract')
     ids = json.loads(get(f'{EUTILS}/esearch.fcgi?db=pubmed&retmax={retmax}'
@@ -131,6 +139,9 @@ def main():
     for tag, window in WINDOWS.items():
         pubmed(tag, window)
         time.sleep(1)          # NCBI asks for <=3 req/sec without a key
+    pubmed(*BIG[:2], retmax=BIG[2])
+    time.sleep(1)
+
     print('\nPMC full-text papers:')
     papers('y2026', 2026)
     time.sleep(1)

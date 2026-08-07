@@ -140,11 +140,9 @@ Rotating synonyms to avoid repeating a word, an artifact of repetition penalties
 
 **Run this on every document too, and trust it less.** It is the only section with a *published* measurement behind it and the only one measured to decay.
 
-Kobak et al. found 2024's excess vocabulary is overwhelmingly stylistic, not topical: of 379 excess style words, 66% were verbs and 14% adjectives. That is the opposite of a real event like Covid, whose excess words were content nouns (79.2% of content words were nouns).
+Kobak et al.'s ten strongest markers: `across`, `additionally`, `comprehensive`, `crucial`, `enhancing`, `exhibited`, `insights`, `notably`, `particularly`, `within`. The strongest single words were `delves`, `underscores` and `showcasing`.
 
-Highest frequency ratios (r = 2024 frequency ÷ counterfactual): `delves` 28.0, `underscores` 13.8, `showcasing` 10.7. Highest absolute gaps: `potential` 0.052, `findings` 0.041, `crucial` 0.037.
-
-The authors' ten strongest combined markers: `across`, `additionally`, `comprehensive`, `crucial`, `enhancing`, `exhibited`, `insights`, `notably`, `particularly`, `within`.
+The finding under it, which is what makes the list worth having: the excess is **stylistic, not topical**. Two thirds of it is verbs. A real subject-matter shift moves nouns instead, so a paragraph heavy in these is a paragraph where the *manner* changed, not the topic. Method and figures in `references/sources.md`.
 
 Wikipedia's independently compiled list overlaps heavily, which is the useful part, two methods converging: `delve`, `underscore`, `showcase`, `crucial`, `pivotal`, `intricate`, `meticulous`, `robust`, `testament`, `tapestry`, `landscape`, `realm`, `align with`, `foster`, `garner`, `enhance`, `interplay`, `vibrant`, `enduring`, `commendable`.
 

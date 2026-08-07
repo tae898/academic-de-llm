@@ -87,6 +87,35 @@ def fidelity(d):
         print()
 
 
+def quality(d):
+    """Is the edit any GOOD, separately from whether it reads as machine-written.
+
+    judge.py has always produced quality.json and analyse.py never read it, so
+    every run paid for this and threw it away. `flatter` is the metric the
+    second directive in SKILL.md exists to control: a pass can strip every tell,
+    keep every claim, and leave uniform lifeless declaratives. Style and
+    fidelity both score that as a success.
+    """
+    ok = [r for r in d['results'] if r.get('parsed')]
+    print(f"=== QUALITY: would an editor accept the edit? {len(ok)} parsed ===\n")
+    print(f"  {'':<9} {'':<9} {'better':>8}{'same':>7}{'worse':>7}{'FLATTER':>9}{'lost sth':>10}")
+    for era in ('2026', '2024', 'pre-2022'):
+        for arm in ('B', 'C'):
+            sub = [r for r in ok if r['arm'] == arm and r['era'] == era]
+            if not sub:
+                continue
+            v = collections.Counter(str(r['parsed'].get('verdict')) for r in sub)
+            flat = sum(1 for r in sub if r['parsed'].get('flatter') is True)
+            lost = sum(1 for r in sub if r['parsed'].get('lost_something_worth_keeping') is True)
+            n = len(sub)
+            print(f"  {era:<9} {ARM[arm]:<9} {v['better']/n*100:>7.0f}%{v['same']/n*100:>6.0f}%"
+                  f"{v['worse']/n*100:>6.0f}%{flat/n*100:>8.0f}%{lost/n*100:>9.0f}%   (n={n})")
+        print()
+    print("  'flatter' is the skill's own measured failure mode. A rise here at")
+    print("  constant style and fidelity means the pass is winning on the metrics")
+    print("  and losing on the page.\n")
+
+
 def density(d):
     ok = [r for r in d['results']
           if not r['B'].startswith('__ERROR__') and not r['C'].startswith('__ERROR__')]
@@ -203,7 +232,8 @@ def main():
         calibrate(adj)
     except SystemExit:
         print("  (adjudicated.json not found, run research/eval/adjudicate.py)\n")
-    for name, fn in (('style.json', style), ('fidelity.json', fidelity)):
+    for name, fn in (('style.json', style), ('fidelity.json', fidelity),
+                     ('quality.json', quality)):
         try:
             fn(load(name))
         except SystemExit:

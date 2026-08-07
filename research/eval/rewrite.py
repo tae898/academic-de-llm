@@ -20,7 +20,7 @@ from common import REWRITER, SEED, Incremental, call, manifest   # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
 DATA = os.environ.get('DELLM_DATA', os.path.join(REPO, 'research', 'data'))
-SKILL = io.open(os.path.join(REPO, 'skills', 'de-llm', 'SKILL.md'), encoding='utf-8').read()
+SKILL = io.open(os.path.join(REPO, 'skills', 'academic-de-llm', 'SKILL.md'), encoding='utf-8').read()
 
 NAIVE = ("Rewrite the following abstract so that it does not read as AI-generated. "
          "Preserve every factual claim exactly. Do not add claims. Do not change the findings. "

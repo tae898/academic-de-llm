@@ -40,8 +40,8 @@ are in the notes column; see `research/EVAL.md`.
 ## Vocabulary
 
 Source: Kobak et al. 2025, measured against a 2021 to 2022 counterfactual over
-15.1M abstracts. **This list is a snapshot and decays**: `crucial` fell 85% and
-`delve` vanished between 2024 and 2026, while `robust` rose 50%. Re-measure
+15.1M abstracts. **This list is a snapshot and decays**: `crucial` fell 84% and
+`delve` fell 89% between 2024 and 2026, while `robust` rose 46%. Re-measure
 before trusting it.
 
 Their strongest markers, plus the highest frequency ratios:
@@ -69,7 +69,7 @@ preserve it. See `sources.md`.
 
 | Pattern | Regex | A real hit |
 |---|---|---|
-| Em dash | `—` | Prose using a dash for emphasis or clause separation. Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon. Doubled in arXiv abstracts 2020 to 2026; flat in full papers, so it is the one entry here that applies to prose too |
+| Em dash | `—` or `---` or `&mdash;` | Prose using a dash for emphasis or clause separation. **Match the form the format uses**: a `.tex` file holds `---`, HTML holds `&mdash;`, and searching for U+2014 in either returns a false clean. Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon. Doubled in arXiv abstracts 2020 to 2026; flat in full papers, so it is the one entry here that applies to prose too |
 | Inline-header bold list | `^\s*[-*] \*\*[^*]+\*\*\s*[:—-]` | Three sentences wearing a costume. Not a hit when items are genuinely parallel and meant to be scanned, such as a parameter table. |
 | Title case heading | `^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]` | `## Getting Started With The Config`. Not a hit when the capitals are proper nouns (`Learning With Gaussian Processes`). |
 | Emoji | `\p{Emoji_Presentation}` | Emoji as bullets, separators, or heading decoration. |

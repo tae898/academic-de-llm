@@ -170,15 +170,17 @@ The em dash is the exception. It occurs in prose without any markup at all, and 
 
 ### Em dash
 
-In arXiv preprints it roughly doubled between 2020 and 2026, 3.7 to 7.8 per 10k words. In full papers it is low either way and one document holds a third of the matches, so it is worth a glance in a blog post or an abstract and rarely repays one in a paper.
+In arXiv preprints it roughly doubled between 2020 and 2026, 3.1 to 7.7 per 10k words. In full papers it is low either way and one document holds a third of the matches, so it is worth a glance in a blog post or an abstract and rarely repays one in a paper.
+
+**Search for the dash the format actually uses.** A source file rarely contains U+2014. In the arXiv corpus the LaTeX `---` went from 0.00 to 2.71 per 10k while the literal `—` stayed at exactly 0.00 in both windows, so a search for the character finds nothing and reports a clean file. LaTeX writes `---` and `--`; HTML writes `&mdash;` and `&ndash;`; a word processor writes the character. Check all of them, and check `--` against numeric and page ranges before touching it.
 
 Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitute:
 
 | Before | After |
 |---|---|
-| The build failed — the cache was stale. | The build failed. The cache was stale. |
-| Latency rose 3x — well outside run-to-run spread. | Latency rose 3x, well outside run-to-run spread. |
-| Two engines — Chroma and Qdrant — gained nothing. | Neither Chroma nor Qdrant gained anything. |
+| The model failed to converge — the learning rate was too high. | The model failed to converge. The learning rate was too high. |
+| Error fell 3x — well outside run-to-run variance. | Error fell 3x, well outside run-to-run variance. |
+| Two baselines — SARSA and Q-learning — gained nothing. | Neither SARSA nor Q-learning gained anything. |
 
 Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon.
 

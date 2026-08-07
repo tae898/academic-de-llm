@@ -61,7 +61,7 @@ def papers(tag, year, n=40):
     term = urllib.parse.quote(f'open access[filter] AND {year}[dp] AND sensors[journal]')
     ids = json.loads(get(f'{EUTILS}/esearch.fcgi?db=pmc&retmax={n}&retmode=json'
                          f'&term={term}'))['esearchresult']['idlist']
-    out = []
+    out, secs = [], []
     # Full texts run to ~100KB each. Batching ten of them overruns the chunked
     # response and raises IncompleteRead partway through, so fetch in threes and
     # keep whatever arrived rather than losing the batch.
@@ -77,16 +77,35 @@ def papers(tag, year, n=40):
         except ET.ParseError:
             continue
         for art in root.iter('article'):
-            body = ' '.join(''.join(s.itertext()) for s in art.iter('sec'))
-            heads = [t.text for t in art.iter('title') if t.text]
+            # Take <body> once. An earlier version joined every <sec> from
+            # art.iter('sec'), but iter() yields parents AND children while
+            # itertext() on a parent already contains its children, so nested
+            # sections were counted twice: 1.85x duplication, biased toward
+            # deeply subdivided Methods and away from the flat Introduction and
+            # Discussion where these tells actually concentrate.
+            #
+            # Whitespace is collapsed because the corpus is split on a blank
+            # line, so a newline pair inside the body would make one paper look
+            # like several documents and skew every per-document mean.
+            el = art.find('.//body')
+            body = ' '.join(''.join(el.itertext()).split()) if el is not None else ''
             if len(body.split()) > 2000:
                 # Do NOT synthesise a heading block. An earlier version prefixed
                 # every <title> with "## ", which fabricated a title-case rate of
                 # 444 per 10k. Section headings are kept inline, marked so they
                 # are countable but not manufactured.
                 out.append(body)
+                # Top-level sections, as their own corpus. A whole paper is the
+                # wrong unit for the eval: nobody polishes 8,000 words in one
+                # pass, and a pairwise judge cannot read two of them carefully.
+                # A section is what an author actually runs this on.
+                for sec in el.findall('sec'):
+                    s = ' '.join(''.join(sec.itertext()).split())
+                    if 150 < len(s.split()) < 1200:
+                        secs.append(s)
         time.sleep(1)
     write(f'papers/{tag}.txt', out)
+    write(f'papers/{tag}_sections.txt', secs)
 
 
 def arxiv(tag, lo, hi, n=300):

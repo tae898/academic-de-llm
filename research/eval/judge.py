@@ -17,7 +17,7 @@ FIDELITY  does the rewrite preserve the substance. This prompt separates
 
     python3 research/eval/judge.py [--style] [--fidelity]
 """
-import argparse, json, os, random, re, sys
+import argparse, hashlib, json, os, random, re, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -108,6 +108,22 @@ def parse(s):
         return None
 
 
+def sig(*texts):
+    """Short content hash of everything a judgement depends on.
+
+    The resume key used to be (i, arm, judge). That is the document INDEX, so
+    re-running arm C against a changed SKILL.md reused every old judgement and
+    reported 0 calls remaining: the numbers would have described the previous
+    skill while claiming to describe the new one. Keying on content means a
+    changed arm invalidates exactly the judgements that saw it, and leaves the
+    unchanged A-vs-B pairs cached, which is where the saving actually is.
+    """
+    h = hashlib.sha256()
+    for t in texts:
+        h.update(t.encode('utf-8', 'replace')); h.update(b'\x00')
+    return h.hexdigest()[:12]
+
+
 def resume(name, jobs, keyfn):
     """Drop jobs already answered successfully, and carry the old results over.
 
@@ -116,15 +132,27 @@ def resume(name, jobs, keyfn):
     and a `| head -3` that SIGPIPEd the process after three lines of output.
     Only SUCCESSFUL calls count as done, or a transient failure becomes
     permanent.
+
+    A carried-over result must also ANSWER one of the jobs about to run. It is
+    not enough to drop the job: an old result whose key no longer matches
+    anything is a judgement of text that is no longer in the run, and keeping
+    it alongside the fresh one leaves the file holding two verdicts per
+    (document, judge) from two different versions of the skill. analyse.py
+    would average them and report a blend of both.
     """
     import os as _os
     p = _os.path.join(OUT, name)
     if not _os.path.exists(p):
         return jobs, []
     allprev = json.load(open(p))['results']
-    prev = [r for r in allprev if r.get('parsed')]
-    if len(allprev) - len(prev):
-        print(f'  retrying {len(allprev)-len(prev)} failed calls', flush=True)
+    wanted = {keyfn(j) for j in jobs}
+    prev = [r for r in allprev if r.get('parsed') and keyfn(r) in wanted]
+    stale = sum(1 for r in allprev if r.get('parsed') and keyfn(r) not in wanted)
+    if stale:
+        print(f'  dropping {stale} results that answer no current job', flush=True)
+    failed = len(allprev) - len(prev) - stale
+    if failed:
+        print(f'  retrying {failed} failed calls', flush=True)
     done = {keyfn(r) for r in prev}
     return [j for j in jobs if keyfn(j) not in done], prev
 
@@ -168,8 +196,10 @@ def main():
                 t1, t2 = (y, x) if flip else (x, y)
                 for j in JUDGES:
                     jobs.append(dict(kind='style', i=r['i'], era=r['era'], pair=pair,
-                                     judge=j, flip=flip, prompt=STYLE_Q.format(t1=t1, t2=t2)))
-        jobs, prev = resume('style.json', jobs, lambda r: (r['i'], r['pair'], r['judge']))
+                                     judge=j, flip=flip, sig=sig(t1, t2),
+                                     prompt=STYLE_Q.format(t1=t1, t2=t2)))
+        jobs, prev = resume('style.json', jobs,
+                            lambda r: (r['i'], r['pair'], r['judge'], r.get('sig')))
         print(f'style: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
         out = Incremental('style.json', manifest(corpus, stage='judge-style'))
         out.data['results'].extend(prev); out.flush()
@@ -181,8 +211,10 @@ def main():
             for arm in ('B', 'C'):
                 for j in JUDGES:
                     jobs.append(dict(kind='fidelity', i=r['i'], era=r['era'], arm=arm,
-                                     judge=j, prompt=FIDELITY_Q.format(orig=r['A'], rw=r[arm])))
-        jobs, prev = resume('fidelity.json', jobs, lambda r: (r['i'], r['arm'], r['judge']))
+                                     judge=j, sig=sig(r['A'], r[arm]),
+                                     prompt=FIDELITY_Q.format(orig=r['A'], rw=r[arm])))
+        jobs, prev = resume('fidelity.json', jobs,
+                            lambda r: (r['i'], r['arm'], r['judge'], r.get('sig')))
         print(f'fidelity: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
         out = Incremental('fidelity.json', manifest(corpus, stage='judge-fidelity'))
         out.data['results'].extend(prev); out.flush()
@@ -197,8 +229,10 @@ def main():
             for arm in ('B', 'C'):
                 for j in JUDGES:
                     jobs.append(dict(kind='quality', i=r['i'], era=r['era'], arm=arm,
-                                     judge=j, prompt=QUALITY_Q.format(orig=r['A'], rw=r[arm])))
-        jobs, prev = resume('quality.json', jobs, lambda r: (r['i'], r['arm'], r['judge']))
+                                     judge=j, sig=sig(r['A'], r[arm]),
+                                     prompt=QUALITY_Q.format(orig=r['A'], rw=r[arm])))
+        jobs, prev = resume('quality.json', jobs,
+                            lambda r: (r['i'], r['arm'], r['judge'], r.get('sig')))
         print(f'quality: {len(jobs)} calls remaining ({len(prev)} done)', flush=True)
         out = Incremental('quality.json', manifest(corpus, stage='judge-quality'))
         out.data['results'].extend(prev); out.flush()

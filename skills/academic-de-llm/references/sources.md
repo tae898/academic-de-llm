@@ -143,22 +143,41 @@ The figures behind the document branch in `SKILL.md`, as the mean of
 per-document rates per 10k words. Arrows are pre-ChatGPT to now, in the same
 venue. Abstracts are PubMed *Sensors*; papers are PMC open-access full texts.
 
-**This table uses the regexes shipped in `patterns.md`**, unlike source 3 above,
-which uses the narrow ones in `measure.py`. See the open item there. The columns
-are internally consistent and comparable to each other, not to source 3.
+**Corrected 2026-08-08.** Every figure in this table was wrong, twice over, and
+both faults were in the collection code rather than the analysis:
+
+- Half the "documents" were tables of contents. The corpus on disk predated the
+  fix for the fabricated title-case rate, and still carried a synthesised
+  heading block per paper. Weighted equally with 8,000-word bodies in a
+  per-document mean, they held every rate down by 64 to 73%.
+- The bodies were duplicated 1.85x. `art.iter('sec')` yields parent and child
+  `<sec>` elements while `itertext()` on a parent already contains its
+  children, so nested sections were counted twice. That biased the corpus
+  toward deeply subdivided Methods and away from the flat Introduction and
+  Discussion, which is where these tells concentrate.
+
+Re-fetched with `<body>` taken once and whitespace collapsed, so one paper is
+one document: 40 papers pre-2022 (227k words) and 39 from 2026 (269k).
 
 | Tell | Abstracts | Full papers |
 |---|---|---|
-| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** |
-| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** |
-| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** |
+| Excess vocabulary (Kobak's ten) | 15.5 → **50.9** | 12.0 → **39.0** |
+| Superficial `-ing`, probe | 1.0 → **9.2** | 1.0 → **5.7** |
+| Superficial `-ing`, shipped | 7.1 → **26.4** | 4.4 → **16.3** |
+| Copula avoidance, probe | 1.7 → **4.1** | 1.2 → **3.9** |
+| Copula avoidance, shipped | 10.2 → **17.2** | 3.6 → **12.7** |
+| Undue emphasis, shipped | 4.0 → 9.7 | 0.7 → 1.3 |
+| Negative parallelism, shipped | 1.2 → 1.8 | 1.4 → 1.3 |
 | Em dash | not measurable | 3.1 → 4.9 |
 | Title case headings | n/a | not measurable |
 
 Two things this decides:
 
-- **Structure and vocabulary rise in both**, two to four times, and by the same
-  ordering. Nothing about the document type changes which of them to trust.
+- **Structure and vocabulary rise in both**, three to four times, and by the
+  same ordering. Nothing about the document type changes which of them to
+  trust. Full papers run at roughly two thirds the rate of abstracts across
+  every pattern, which is what you would expect: an abstract is the most
+  compressed and most rewritten part of a paper.
 - **Em dash barely moves in papers**, 3.1 to 4.9, on a base so small that one
   document holds a third of the matches. It is not a usable signal in a paper.
   The arXiv figures in source 3 are the ones to quote for prose.

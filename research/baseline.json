@@ -76,6 +76,38 @@
    "--- (LaTeX em dash)": 2.71,
    "U+2014 literal": 0.0,
    "spaced \" - \"": 3.37
+  },
+  "papers-2026": {
+   "Copula avoidance": 3.87,
+   "Copula avoidance (shipped)": 12.7,
+   "Kobak's ten markers": 39.0,
+   "Negative parallelism": 0.69,
+   "Negative parallelism (shipped)": 1.27,
+   "Superficial -ing": 5.73,
+   "Superficial -ing (shipped)": 16.25,
+   "Undue emphasis": 0.13,
+   "Undue emphasis (shipped)": 1.27,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 0.81,
+   "delve/showcase/underscore": 0.18,
+   "pivotal": 0.06,
+   "robust": 7.32
+  },
+  "papers-pre": {
+   "Copula avoidance": 1.2,
+   "Copula avoidance (shipped)": 3.58,
+   "Kobak's ten markers": 12.04,
+   "Negative parallelism": 0.8,
+   "Negative parallelism (shipped)": 1.4,
+   "Superficial -ing": 1.05,
+   "Superficial -ing (shipped)": 4.45,
+   "Undue emphasis": 0.04,
+   "Undue emphasis (shipped)": 0.67,
+   "Vendor paste artifacts": 0.0,
+   "crucial": 0.61,
+   "delve/showcase/underscore": 0.12,
+   "pivotal": 0.0,
+   "robust": 2.57
   }
  },
  "recorded": "2026-08"

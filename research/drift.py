@@ -28,6 +28,12 @@ def rates():
             sys.exit(f'missing {p}\nrun: make fetch')
         t = io.open(p, encoding='utf-8', errors='replace').read()
         out[label] = {n.strip(): round(rate(t, pat), 2) for n, pat in PATTERNS}
+    for tag, label in (('ypre', 'papers-pre'), ('y2026', 'papers-2026')):
+        p = os.path.join(DATA, f'papers/{tag}.txt')
+        if not os.path.exists(p):
+            continue
+        t = io.open(p, encoding='utf-8', errors='replace').read()
+        out[label] = {n.strip(): round(rate(t, pat), 2) for n, pat in PATTERNS}
     for tag, label in (('pre', 'arxiv-2020'), ('y2026', 'arxiv-2026')):
         p = os.path.join(DATA, f'arxiv/{tag}.txt')
         if not os.path.exists(p):

@@ -22,13 +22,20 @@ REPO = os.path.dirname(os.path.dirname(HERE))
 DATA = os.environ.get('DELLM_DATA', os.path.join(REPO, 'research', 'data'))
 SKILL = io.open(os.path.join(REPO, 'skills', 'academic-de-llm', 'SKILL.md'), encoding='utf-8').read()
 
-NAIVE = ("Rewrite the following abstract so that it does not read as AI-generated. "
-         "Preserve every factual claim exactly. Do not add claims. Do not change the findings. "
-         "Output only the rewritten abstract, no preamble.\n\nABSTRACT:\n")
+def prompts(unit):
+    """Both arms, with the unit noun substituted.
 
-SKILLED = (SKILL + "\n\n---\n\nApply the guidance above to the following abstract. "
-           "Preserve every factual claim exactly. Do not add claims. Do not change the findings. "
-           "Output only the rewritten abstract, no preamble.\n\nABSTRACT:\n")
+    The noun matters: telling a model to rewrite "the following abstract" when
+    it is holding a Related Work section invites it to compress the section
+    into an abstract, which would read as a fidelity failure caused by the
+    harness rather than by the skill.
+    """
+    tail = (f"Preserve every factual claim exactly. Do not add claims. Do not change "
+            f"the findings. Output only the rewritten {unit}, no preamble."
+            f"\n\n{unit.upper()}:\n")
+    naive = f"Rewrite the following {unit} so that it does not read as AI-generated. " + tail
+    skilled = SKILL + f"\n\n---\n\nApply the guidance above to the following {unit}. " + tail
+    return naive, skilled
 
 # Density scoring picks the abstracts with something to fix. Sampling at random
 # would mostly select text the skill correctly leaves alone, which tests the
@@ -47,11 +54,19 @@ def score(t):
     return sum(len(re.findall(p, t, re.I)) for p in DENSITY) / max(len(t.split()), 1) * 1000
 
 
-def pick(path, n):
+def pick(path, n, lo=140, hi=330):
+    """Densest n documents in the word-count band.
+
+    The band defaults to abstract length. A paper section runs longer, so the
+    papers eval widens it: the unit an author actually polishes is a section,
+    not an 8,000-word manuscript that no pairwise judge can read carefully.
+    """
     if not os.path.exists(path):
         sys.exit(f'missing {path}\nrun: python3 research/fetch.py')
     rows = [(score(a), a) for a in io.open(path, encoding='utf-8').read().split('\n\n')
-            if 140 < len(a.split()) < 330]
+            if lo < len(a.split()) < hi]
+    if not rows:
+        sys.exit(f'{path}: no documents between {lo} and {hi} words')
     rows.sort(key=lambda r: (-r[0], r[1]))         # deterministic on ties
     return [a for _, a in rows[:n]]
 
@@ -71,8 +86,19 @@ def main():
     ap.add_argument('--control', type=int, default=4,
                     help='pre-2022 abstracts. These cannot be AI-generated, so '
                          'they bound what the style metric actually measures.')
+    ap.add_argument('--control-pool', default='',
+                    help='override the pre-2022 corpus, so the control comes '
+                         'from the same register as the treatment')
+    ap.add_argument('--words', default='140,330',
+                    help='lo,hi word band. Abstract length by default; widen '
+                         'for paper sections (e.g. 250,900)')
+    ap.add_argument('--label', default='pubmed/sensors',
+                    help='corpus name recorded in the manifest')
+    ap.add_argument('--unit', default='abstract',
+                    help="what the model is holding: 'abstract' or 'section'")
     a = ap.parse_args()
     random.seed(SEED)
+    NAIVE, SKILLED = prompts(a.unit)
 
     # 2026 is the era that matters: it is what the skill will actually meet.
     # 2024 is kept because its slop profile is different and largely extinct
@@ -80,14 +106,16 @@ def main():
     # so testing only on 2024 would measure the skill against a dead target.
     # pre-2022 cannot be AI-generated and bounds what the style metric means.
     pool2026 = a.pool or f'{DATA}/pubmed/y2026.txt'
+    poolpre = a.control_pool or f'{DATA}/pubmed/ypre.txt'
+    lo, hi = (int(x) for x in a.words.split(','))
     eras = [e.strip() for e in a.eras.split(',') if e.strip()]
     src = {'2026': (pool2026, a.n), '2024': (f'{DATA}/pubmed/y2024.txt', a.n),
-           'pre-2022': (f'{DATA}/pubmed/ypre.txt', a.control)}
-    sample = [{'era': e, 'text': t} for e in eras for t in pick(*src[e])]
+           'pre-2022': (poolpre, a.control)}
+    sample = [{'era': e, 'text': t} for e in eras for t in pick(*src[e], lo=lo, hi=hi)]
 
-    corpus = 'pubmed/sensors ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras)
+    corpus = f'{a.label} ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras) + f' [{lo}-{hi}w]'
     out = Incremental('rewrites.json', manifest(corpus, stage='rewrite'))
-    print(f'{len(sample)} abstracts, rewriter={REWRITER}', flush=True)
+    print(f'{len(sample)} {a.unit}s, rewriter={REWRITER}', flush=True)
 
     prevB = {}
     if a.arm == 'C':

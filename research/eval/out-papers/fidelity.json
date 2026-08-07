@@ -2854,6 +2854,89 @@
     "substantively_faithful": false,
     "severity": "minor"
    }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4b967914a266",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original states 'exponential complexity of the applications', but the rewrite says 'increasing complexity of applications', losing the specific 'exponential' magnitude.\",\n    \"The original says 'cost-effectiveness and energy efficiency could still pose great research challenges', using 'could' as a hedge; the rewrite changes to 'will remain significant research",
+   "parsed": {
+    "substantive_losses": [
+     "The original states 'exponential complexity of the applications', but the rewrite says 'increasing complexity of applications', losing the specific 'exponential' magnitude.",
+     "The original says 'cost-effectiveness and energy efficiency could still pose great research challenges', using 'could' as a hedge; the rewrite changes to 'will remain significant research challenges', removing the hedge and asserting certainty not present in the original."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "80abe88e9da2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 11, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 11,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "88f5191919ec",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 9, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a8a91d6014be",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ccc1e675a537",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
   }
  ]
 }

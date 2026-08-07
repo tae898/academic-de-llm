@@ -17,19 +17,34 @@ reversed once the models and the corpus were made current.
 
 One rewriter model produces both B and C, so the skill is the only variable.
 
-Corpus: 28 *Sensors* (Basel) abstracts from PubMed, chosen by tell density.
-Twelve from **2026** (the text the skill actually meets), twelve from **2024**
-(whose slop profile is largely extinct), four from **pre-2022** as a control.
-The control predates ChatGPT and cannot be machine-generated, so whatever the
-judges say about it bounds what the style metric means.
+Two corpora, both *Sensors* (Basel), both chosen by tell density:
 
-Judges: four models from four labs, none from Anthropic (which authored the
+- **Abstracts**, 30 from 2026, in `research/eval/out/`. What the eval has
+  always used.
+- **Paper sections**, 24 from 2026 plus 6 from pre-2022 as a control, in
+  `research/eval/out-papers/`. Top-level sections of PMC open-access full
+  texts, 250 to 900 words, mean 534. This is the register the skill exists for
+  and it had never been evaluated until 2026-08-08. A whole paper is the wrong
+  unit: nobody polishes 8,000 words in one pass and a pairwise judge cannot
+  read two of them carefully.
+
+The pre-2022 control predates ChatGPT and cannot be machine-generated, so
+whatever the judges say about it bounds what the style metric means.
+
+Judges: three models from three labs, none from Anthropic (which authored the
 skill) and none from OpenAI (which produced the rewrites). See
 [`MODELS.md`](MODELS.md). Blind, position-randomised, never told a skill exists.
-560 calls, 520 parsed.
 
-Reproduce with `make eval`. Raw output in `research/eval/out/`, each file
-carrying a manifest of model ids, date, corpus and seed.
+Reproduce with `make eval`; the sections run adds `--pool`, `--words` and
+`DELLM_EVAL_OUT`. Raw output carries a manifest of model ids, date, corpus,
+pool paths and seed.
+
+**These two runs sample different documents from those the archived runs used.**
+The earlier eval sampled through a `--pool` override at a file no script
+produced and no document named, and the manifest recorded the same corpus
+string either way. That is fixed, and the consequence is that today's numbers
+are a fresh measurement rather than a paired before-and-after against the
+archive.
 
 ## Results
 
@@ -41,22 +56,86 @@ more useful things this repo knows.
 
 ### Head to head
 
-| | Naive prompt | de-llm |
+Two corpora now. Abstracts are what the eval has always used; **paper sections
+are the register the skill exists for and had never been tested on.**
+
+| Measure | Abstracts, naive | Abstracts, **skill** | Sections, naive | Sections, **skill** |
+|---|---|---|---|---|
+| Reads more machine-like of the pair | 77.8% | **22.2%** | 70.4% | **29.6%** |
+| Substantively faithful | **99%** | 96% | **97%** | 92% |
+| Major content losses | **0** | **0** | **0** | **0** |
+| Edit judged better | **94%** | 91% | **100%** | **100%** |
+| Edit judged worse | **0%** | 7% | **0%** | **0%** |
+| Made prose flatter | **3%** | 16% | **0%** | 6% |
+| Lost something worth keeping | **2%** | 16% | **0%** | 3% |
+
+30 abstracts and 24 sections, all 2026. Bold is the better column of a pair.
+
+**The skill wins on the thing it is for, on both registers.** It is somewhat
+weaker on sections (29.6% against 22.2%), which is the expected direction: a
+534-word section holds more legitimate prose to preserve than a 200-word
+abstract.
+
+**The quality cost is length-dependent, and that is new.** On abstracts the
+skill is judged flatter 16% of the time against the naive prompt's 3%, and
+discards something worth keeping 16% against 2%. On sections both collapse to
+6% and 3%, with nothing judged worse at all. A 200-word abstract is already
+compressed; removing tells from it leaves little room for varied rhythm. A
+section has room. If you run this on one thing, run it on a section, not on an
+abstract you have already cut to the bone.
+
+The rhythm directive has moved the absolute number (it was ~20% before the
+directive existed) but **not the ratio**: the skill still flattens roughly five
+times as often as simply asking. It has not solved the problem it was written
+for.
+
+### The copula finding: the skill relocates the tell rather than removing it
+
+The clearest defect this eval has surfaced, and it replicates on both corpora.
+
+Net change in *adjudicated* real instances, skill arm against the original, 30
+abstracts:
+
+| Pattern | original | skill | net |
+|---|---|---|---|
+| Superficial `-ing` | 16 | 6 | **-62%** |
+| Undue emphasis | 8 | 3 | **-62%** |
+| Copula avoidance | 17 | 14 | **-18%** |
+
+Broken down by trigger, copula avoidance is not uniformly weak. It is two
+triggers moving the wrong way:
+
+| trigger | original | skill |
 |---|---|---|
-| Reads machine-generated | 72% | **28%** |
-| Tells remaining per 10k words | 58.6 | **27.5** |
-| Substantively faithful | **100%** | 99% |
-| Major content losses | **0** | **0** |
-| Edit judged better | **92%** | 90% |
-| Edit judged worse | **4%** | 7% |
-| Made prose flatter | **9%** | 13% |
+| `serve as` / `serving as` | 6 | **2** |
+| `offers` | 2 | 1 |
+| `positions X as` | 1 | 0 |
+| `remains` | 4 | **6** |
+| `provides` | 3 | **4** |
 
-Original text: 70.1 tells per 10k words. The skill removes 61% of them, the
-naive prompt 16%.
+The triggers the skill removes cleanly are the ones `SKILL.md` is decisive
+about: "`serves as` is a real instance every time it appears." The two that
+*grow* are the two it hedges — "bare `provides` was only 1 in 6" — and
+`remains`, which is listed with no rewrite guidance at all. **Ten of the
+fourteen survivors sit on hedged triggers.**
 
-The quality columns run consistently a few points against the skill across every
-run today. At n=30 each is close to noise, but the direction does not vary, so
-treat it as a real and small cost rather than as measurement error.
+The mechanism this suggests: when the rewriter removes `serves as` it needs a
+replacement verb, and reaches for another verb on the same list that the skill
+has told it is usually acceptable. The tell moves rather than leaving.
+
+Raw density on paper sections replicates the direction independently. Copula
+avoidance goes 7.7 → **8.1** per 10k in the skill arm, the only pattern that
+does not fall, while superficial `-ing` goes 14.7 → 4.0.
+
+Two caveats. The per-trigger movements are 1 to 4 instances on a base of 17, so
+the direction is consistent but n is small. And the section figure is raw regex
+counts, which this file warns against quoting unadjudicated.
+
+It matters more than its size suggests, because copula avoidance is the one
+tell measured here that **has not peaked**: it rises in every window through
+2026. The obvious fix is one sentence saying the replacement must be `is` or
+`are` and not another verb from the list, and it should be A/B tested rather
+than assumed.
 
 ### The skill's advantage is conditional on the model
 

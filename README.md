@@ -198,25 +198,27 @@ the rewriting).
 
 | | Naive prompt | **de-llm** |
 |---|---|---|
-| Reads machine-generated | 72% | **28%** |
-| Tells remaining, per 10k words | 58.6 | **27.5** |
-| Substantively faithful | **100%** | 99% |
-| Major content losses | **0** | **0** |
-| Edit judged better | **92%** | 90% |
-| Edit judged worse | **4%** | 7% |
-| Made prose flatter | **9%** | 13% |
+| Reads machine-generated, abstracts | 78% | **22%** |
+| Reads machine-generated, paper sections | 70% | **30%** |
+| Substantively faithful | **99%** | 96% |
+| Made prose flatter | **3%** | 16% |
 
-The original text carries 70.1 tells per 10k words, so the skill removes 61% of
-them against the naive prompt's 16%, and its output reads as human roughly three
-times in four. It costs a little polish doing it: a few points more flattening
-and a few more edits judged worse. Content is safe either way.
+**It works on full-paper sections, which is what it is for.** That register had
+never been evaluated until 2026-08-08; everything before that was 200-word
+abstracts.
 
-Two things that bound this. It is one genre and one length: *Sensors* abstracts,
-about 200 words each, and the eval has never been run on a full paper, which is
-what the skill is actually for. And it is the conservative estimate: on a
-top-tier rewriter the same skill scored 97% better against the naive prompt's
-94%, because the benefit scales with how well a model follows a 17KB instruction
-file.
+**And it costs something.** On abstracts the skill flattens the prose five times
+as often as simply asking, and discards something worth keeping eight times as
+often. On sections both costs mostly disappear (6% and 3%), because a 534-word
+section has room for varied rhythm that a compressed abstract does not. The
+rhythm directive in `SKILL.md` exists because of this measurement and has not
+yet fixed it.
+
+One defect worth knowing before you trust the output: on copula avoidance the
+skill **relocates** the tell rather than removing it. `serves as` falls 6 to 2,
+while `remains` rises 4 to 6 and `provides` 3 to 4 — the two triggers the skill
+hedges. Net removal is 18% against 62% for every other structural pattern, and
+this is the one tell still rising in 2026.
 
 Full numbers, both configurations, and the limits in
 [`research/EVAL.md`](research/EVAL.md). Reproduce with `make eval`.

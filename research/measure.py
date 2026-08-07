@@ -91,9 +91,14 @@ def main():
           pm, PATTERNS,
           "Sources 3 and 5 in references/sources.md. Dashes are NOT measurable here.")
 
+    pp = [(load('papers/ypre.txt'), 'pre'), (load('papers/y2026.txt'), '2026')]
+    table("PMC open-access full texts. Tells per 10k words.", pp, PATTERNS,
+          "Source 3b. Full papers, not abstracts. Heading markup is NOT preserved,\n"
+          "so nothing here says whether a paper's headings are title case.")
+
     ax = [(load('arxiv/pre.txt'), '2020'), (load('arxiv/y2026.txt'), '2026')]
     table("arXiv cs.LG abstracts. Dash forms per 10k words.", ax, DASHES,
-          "The em dash correction in source 4. arXiv preserves LaTeX dash markup.")
+          "The em dash correction in source 3. arXiv preserves LaTeX dash markup.")
 
     print("\nEvery figure above is prevalence or before-and-after, never a")
     print("counterfactual projection. Only Kobak et al. do the projection.")

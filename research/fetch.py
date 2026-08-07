@@ -122,8 +122,6 @@ def main():
     time.sleep(3)              # arXiv asks for one request per 3 seconds
     arxiv('y2026', '202601010000', '202607310000')
     print(f'\nwrote to {DATA}\nnow run: python3 research/measure.py')
-    print('\nNote: the README corpus (source 3) is not fetched here. It is 35 repos'
-          '\nfrom the Claude Code community marketplace and the set will have moved on.')
 
 
 if __name__ == '__main__':

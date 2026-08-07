@@ -55,11 +55,10 @@ def load(name):
 def rate(text, pat):
     """Mean of per-document rates, not a pooled total.
 
-    Pooling (all matches / all words) lets one enormous document dominate. In
-    the paired README corpus two link-list files held 97% of the pooled em
-    dashes and produced 39.7 per 10k, when the mean per document was 11.2 and
-    the median was zero. Every README figure published before 2026-08-06 used
-    the pooled form and overstated.
+    Pooling (all matches / all words) lets one enormous document dominate. It
+    reversed a published direction once: em dash in full papers looked like it
+    was falling, 6.1 to 4.7 pooled, and rises 3.1 to 4.9 per document. Every
+    figure published before 2026-08-06 used the pooled form.
     """
     docs = [d for d in text.split(DOC_SEP) if len(d.split()) >= 80] or [text]
     rates = [len(re.findall(pat, d, re.I)) / max(len(d.split()), 1) * 10000 for d in docs]
@@ -90,24 +89,11 @@ def main():
     pm = [(load(f'pubmed/{f}.txt'), l) for f, l in PUBMED_WINDOWS]
     table("Sensors (Basel), PubMed. Tells per 10k words. Same journal throughout.",
           pm, PATTERNS,
-          "Sources 4 and 5 in references/sources.md. Dashes are NOT measurable here.")
+          "Sources 3 and 5 in references/sources.md. Dashes are NOT measurable here.")
 
     ax = [(load('arxiv/pre.txt'), '2020'), (load('arxiv/y2026.txt'), '2026')]
     table("arXiv cs.LG abstracts. Dash forms per 10k words.", ax, DASHES,
           "The em dash correction in source 4. arXiv preserves LaTeX dash markup.")
-
-    rm_dir = os.path.join(DATA, 'readmes')
-    if os.path.isdir(rm_dir):
-        import glob
-        blob = ''.join(io.open(f, encoding='utf-8', errors='replace').read()
-                       for f in glob.glob(os.path.join(rm_dir, '*.md')))
-        md = [("Em dash", r'—'),
-              ("Inline-header bold list", r'(?m)^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'),
-              ("Title case headings", r'(?m)^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'),
-              ("Emoji", r'[\U0001F300-\U0001FAFF]')]
-        table("Agent-written plugin READMEs. Per 10k words.",
-              [(blob, 'READMEs')], md + PATTERNS[:1] + PATTERNS[5:7],
-              "Source 3. Prevalence only: there is no baseline for this corpus.")
 
     print("\nEvery figure above is prevalence or before-and-after, never a")
     print("counterfactual projection. Only Kobak et al. do the projection.")

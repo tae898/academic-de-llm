@@ -82,9 +82,9 @@ python3 research/eval/recall.py        # judges read cold, find what the regex m
 python3 research/eval/score.py         # precision and recall per trigger word
 ```
 
-Then retier. A trigger below roughly 20% precision is noise and should come out
-of the regex; one that the judges keep finding but the regex misses should go
-in. When the tiers change, refreeze and reset the floors **deliberately**:
+Then revise the triggers. One below roughly 20% precision is noise and should
+come out of the regex; one the judges keep finding but the regex misses should
+go in. When the triggers change, refreeze and reset the floors **deliberately**:
 
 ```bash
 python3 research/eval/score.py --freeze          # new labels.json
@@ -94,13 +94,34 @@ python3 research/eval/regress.py --set-floors    # new floors.json
 Never reset the floors to make a red test green. That is the one move that turns
 this whole apparatus back into taste.
 
+## 5b. Open item: two regex sets
+
+`research/measure.py` measures excess with the narrow pre-0.4.0 regexes.
+`references/patterns.md` ships the retiered ones, tuned for precision and recall
+rather than for excess. The wider set fires on pre-ChatGPT prose too, so it
+raises the baseline and shrinks every ratio.
+
+Decide which is the measurement of record, then make it the only one:
+
+- If excess is what the tables claim, keep the narrow set in `measure.py`, and
+  say in `patterns.md` that the shipped regexes are finders and not the thing
+  the ratios were computed on.
+- If the shipped set is what should be tracked, import `PATTERNS` from
+  `research/eval/adjudicate.py` into `measure.py`, re-record `baseline.json`,
+  and republish sources 3 and 5. The headline `-ing` figure becomes 3.7x rather
+  than 8.9x, and copula avoidance changes from +9% to +59%.
+
+Whichever way it goes, one set. Two is how the tables drifted apart.
+
 ## 6. Update the skill
 
-- Reorder tiers if the ranking changed. The ordering is a measurement, not a
-  preference.
+- Reorder the sections if the ranking changed. Structure leads because it
+  measured highest and held; that is a measurement, not a preference.
 - Move a decayed pattern down; note the decay rather than deleting it, so the
   next reviewer can see the trend.
-- Refresh the register table in `SKILL.md`.
+- Re-check the markup section's scope. It has no measured rate behind it and
+  rests on the argument that a paper's formatting belongs to the venue. If the
+  full-text corpus ever preserves heading markup, measure it instead.
 - Bump `version` and `last_reviewed` in `skills/academic-de-llm/SKILL.md`, and mirror the
   version in `.claude-plugin/plugin.json`.
 - Update `research/baseline.json` to the new numbers, with the new date.

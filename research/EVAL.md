@@ -223,9 +223,12 @@ A finding that only holds on one panel is a finding about the panel.
 
 - **Small.** 28 abstracts, four judges. Differences of a few percentage points
   are noise.
-- **One genre, one journal, one publisher.** *Sensors* abstracts. Nothing here
-  covers READMEs, commit messages, documentation or email, which is most of the
-  skill's claimed range. This is the largest gap and the most valuable follow-up.
+- **Abstracts only, one journal, one publisher.** *Sensors* abstracts, ~200
+  words each. The skill's main target is a full paper, and nothing here has been
+  run on one: a paper has sections, citations, equations and a related-work
+  register that an abstract does not. The PMC full-text corpus is already
+  fetched by `research/fetch.py` and unused by the eval. This is the largest
+  gap and the most valuable follow-up.
 - **One rewriter.** The two reversals above both came from changing the model.
   Assume every number here is specific to `gpt-5.6-terra`.
 - **The density table is partly circular** for the skill arm.

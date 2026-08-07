@@ -1,0 +1,29 @@
+% Related work, drafted with an assistant and not yet edited.
+% The fixture for the paper branch: the markup section does NOT apply here.
+
+\section{Related Work}
+\label{sec:related}
+
+Reinforcement learning has emerged as a comprehensive framework for adaptive
+traffic signal control, and a substantial body of work underscores its potential
+in this domain~\cite{genders2016,wei2019}. Early value-based methods serve as
+the foundation for much of what followed, providing a robust basis for the
+actor-critic designs that came later~\cite{mnih2015}.
+
+Tabular $Q$-learning remains the canonical starting point, offering an
+interpretability that deep methods sacrifice, and it is crucial for establishing
+baselines on small intersection topologies~\cite{abdulhai2003}. Function
+approximation was subsequently introduced, thereby enabling generalisation
+across unseen states and significantly improving sample efficiency. Notably, the
+resulting methods exhibited stable convergence on networks of 4--9
+intersections, highlighting the importance of careful reward shaping.
+
+Unlike prior studies that optimise average delay in isolation, this work
+emphasises the interplay between queue length and phase stability---a
+distinction that has received comparatively little attention.
+
+Despite its comprehensive coverage of the single-intersection case, the
+literature faces several challenges when scaled to corridors. Observers have
+noted that coordination overhead may potentially dominate at higher flow
+densities, although the effect is robust to sensor dropout in the two studies
+that measured it~\cite{chu2020}.

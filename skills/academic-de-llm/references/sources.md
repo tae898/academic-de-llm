@@ -56,50 +56,9 @@ Every measured number below is reproducible: `python3 research/fetch.py && pytho
 
 ---
 
-## 3. Own prevalence measurement, agent-written READMEs (2026-08)
+## 3. Own before-and-after measurement, journal abstracts (2026-08)
 
-Not published, not peer-reviewed, and reported here so it can be checked.
-
-**Method.** Two corpora of 2026 developer prose, both largely AI-assisted:
-
-- 35 README files from Claude Code community-marketplace plugin repositories, 51,055 words.
-- 2,298 plugin descriptions from the same marketplace, 115,993 words.
-
-Each pattern from `SKILL.md` was matched against both and reported as files affected and occurrences per 10k words.
-
-**Result, on the README corpus**
-
-| Tell | Files | Per 10k words |
-|---|---|---|
-| Em dash | 91% | 122.4 |
-| Title case headings | 83% | 22.3 |
-| Inline-header bold list | 49% | 46.4 |
-| Copula avoidance | 34% | 3.1 |
-| Excess vocabulary | 26% | 2.4 |
-| Emoji | 11% | 2.7 |
-| Curly quotes | 0% | 0.0 |
-| Vendor paste artifacts | 0% | 0.0 |
-
-**What it establishes**
-
-- Formatting tells dominate agent-written developer prose by a factor of ten to fifty over vocabulary tells.
-- Vendor paste artifacts fire zero times across 167k words of it. They are web-interface citation renderings and cannot appear in text an agent writes directly to a file.
-- This is the basis for the tier ordering in `SKILL.md`, which inverts the order both published sources imply.
-
-**What it does NOT establish**
-
-- **There is no baseline.** This measures prevalence, not excess. Kobak's counterfactual design is what separates "common" from "more common than it should be", and none of that is done here. A 91% em dash rate is not evidence of machine authorship, only of frequency.
-- Structural patterns are undercounted. The description corpus averages ~50 words per item, too short for negative parallelism or the challenges formula to appear, so their near-zero rates there are partly an artifact of document length.
-- The em dash count does not exclude code blocks or tables. The paper measurement in `patterns.md` suggests roughly a quarter of raw hits are real prose, which would put the true rate near 30 per 10k. Still the largest by a wide margin.
-- One genre, one month, one language.
-
-**The obvious next step**, not done: apply Kobak's counterfactual method to a timestamped GitHub corpus, projecting 2026 README and commit-message word frequencies from a 2019 to 2021 baseline. That would turn prevalence into measured excess for the README register too.
-
----
-
-## 4. Own before-and-after measurement, journal abstracts (2026-08)
-
-The measurement above has no baseline. This one does, and it is the only figure in this skill that separates "common" from "more common than it should be" outside Kobak's own work.
+Not published, not peer-reviewed, and reported here so it can be checked. It has a baseline, and it is the only figure in this skill that separates "common" from "more common than it should be" outside Kobak's own work.
 
 **Method.** All abstracts from *Sensors* (Basel, MDPI) indexed in PubMed, split into a pre-ChatGPT window and a post window, same journal and same genre on both sides:
 
@@ -112,22 +71,22 @@ The measurement above has no baseline. This one does, and it is the only figure 
 
 | Pattern | pre-2022 | 2024 | ratio |
 |---|---|---|---|
-| Superficial `-ing` clause | 0.98 | 8.72 | **8.9x** |
-| `crucial` | 1.5 | 5.9 | 4.0x |
-| Kobak's ten markers, combined | 15.7 | 50.0 | **3.2x** |
-| `insights` | 1.0 | 3.3 | 3.4x |
-| Undue emphasis | 0.3 | 0.9 | 2.7x |
-| Copula avoidance | 1.6 | 4.2 | 2.6x |
-| Negative parallelism | 0.5 | 1.2 | 2.5x |
-| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | absent, then present |
+| Superficial `-ing` clause | 1.03 | 9.19 | **8.9x** |
+| `insights` | 0.85 | 3.40 | 4.0x |
+| `crucial` | 1.56 | 6.04 | 3.9x |
+| Kobak's ten markers, combined | 15.46 | 50.87 | **3.3x** |
+| Undue emphasis | 0.36 | 0.97 | 2.7x |
+| Copula avoidance | 1.73 | 4.14 | 2.4x |
+| Negative parallelism | 0.61 | 1.11 | 1.8x |
+| `delve` / `showcase` / `underscore` | 0.00 | 2.04 | absent, then present |
 | Em dash | 0.0 | 0.0 | no change |
 | Paste artifacts | 0.0 | 0.0 | no change |
 
 **What it establishes**
 
-- **Kobak's vocabulary finding replicates on a sample they did not use.** Their ten markers rose 3.2x in a journal they measured independently.
-- **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x by 2024, higher than any vocabulary marker here (it has since fallen to 6.9x baseline, see source 5). Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
-- **Markdown-specific formatting cannot be measured here and is not claimed.** Inline-header lists and title case headings require markup, so their absence from abstracts is definitional rather than a finding.
+- **Kobak's vocabulary finding replicates on a sample they did not use.** Their ten markers rose 3.3x in a journal they measured independently.
+- **Structural patterns show excess too, and the largest one is structural.** The superficial `-ing` clause rose 8.9x by 2024, higher than any vocabulary marker here (it has since fallen to 6.4x baseline, see source 5). Kobak measured only vocabulary; Wikipedia lists structural patterns with no numbers at all. As far as this file's authors know, that 8.9x is the first excess figure published for a structural tell.
+- **Markup-specific formatting cannot be measured here and is not claimed.** Inline-header lists and title case headings require markup, so their absence from abstracts is definitional rather than a finding.
 
 **Correction, 2026-08-05.** An earlier version of this section reported em dash at 0.0 per 10k in abstracts in both windows and concluded that formatting tells track markup rather than machine authorship. **That was a data artifact and the conclusion was wrong.** PubMed normalises every dash to an ASCII hyphen: the raw XML contains zero U+2014 and zero U+2013 characters in all four windows, including pre-2022. Em dash is simply not measurable in that corpus.
 
@@ -135,11 +94,34 @@ Measured instead on arXiv `cs.LG` abstracts, which preserve LaTeX dash markup, 2
 
 | Form | 2020 | 2026 |
 |---|---|---|
-| `---` (LaTeX em dash) | 0.0 | 2.7 |
-| `--` | 3.7 | 7.8 |
-| spaced ` - ` | 1.4 | 3.7 |
+| `---` (LaTeX em dash) | 0.00 | 2.71 |
+| `--` | 3.14 | 7.73 |
+| spaced ` - ` | 1.40 | 3.37 |
 
 Em dash use roughly doubled in academic prose, and the 2026 instances are the parenthetical clause-separator pattern ("five influential benchmarks -- MMLU, ARC, ... -- revealing"). It is a real tell in prose, not only in Markdown. Two of the raw hits were a numeric range (`folds-1--5`) and a compound surname (`Kullback--Leibler`), at the false-positive rate this skill documents elsewhere.
+
+**Open: the excess figures and the shipped regexes are not the same regexes.**
+Found 2026-08-07 and not yet resolved. `research/measure.py` carries the narrow
+pre-0.4.0 patterns; `patterns.md` ships the retiered ones, which were tuned for
+precision and recall on an editing task rather than for measuring excess. The
+wider regexes fire on pre-ChatGPT prose too, so they raise the baseline and
+shrink the ratio:
+
+| Pattern | narrow (measured above) | shipped in `patterns.md` |
+|---|---|---|
+| Superficial `-ing` | 1.03 → 9.19, **8.9x** | 7.10 → 26.36, **3.7x** |
+| Copula avoidance | 1.73 → 4.14, 2.4x | 10.17 → 17.22, 1.7x |
+| Undue emphasis | 0.36 → 0.97, 2.7x | 3.97 → 9.67, 2.4x |
+| Negative parallelism | 0.61 → 1.11, 1.8x | 1.19 → 1.82, 1.5x |
+
+Both are real and they answer different questions. A high excess ratio means the
+pattern separates eras; high recall means it finds instances worth reading. The
+tuned regexes trade the first for the second, and 3.7x is still the largest
+structural excess measured here. **The 8.9x figure above is the narrow regex and
+should be quoted as such.** Under the shipped regex copula avoidance also stops
+looking flat and rises 59% from 2024 to 2026 rather than 9%, which would change
+what source 5 concludes. Deciding which set is the measurement of record is the
+next review's job; until then this file reports the narrow one and says so.
 
 **What it does NOT establish**
 
@@ -150,47 +132,47 @@ Em dash use roughly doubled in academic prose, and the 2026 instances are the pa
 
 ---
 
-## 4b. The register table (2026-08-06)
+## 3b. Abstracts against full texts (2026-08-06)
 
-The figures behind the register branch in `SKILL.md`, as the mean of
+The figures behind the document branch in `SKILL.md`, as the mean of
 per-document rates per 10k words. Arrows are pre-ChatGPT to now, in the same
-venue, and for READMEs the same repositories sampled twice.
+venue. Abstracts are PubMed *Sensors*; papers are PMC open-access full texts.
 
-| Tell | Abstracts | Papers | Maintained READMEs | Agent-written READMEs |
-|---|---|---|---|---|
-| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** | 4.5 → 5.3 | 0.0 |
-| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** | 7.5 → 9.7 | 4.0 |
-| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** | 4.4 → 7.4 | 13.1 |
-| Inline-header bold list | n/a | n/a | 5.0 → **12.7** | 43.4 |
-| Em dash | not measurable | 3.1 → 4.9 | 11.2 → **7.0** | 103.7 |
-| Title case headings | n/a | not measurable | 35.7 → 33.4 | 67.6 |
+**This table uses the regexes shipped in `patterns.md`**, unlike source 3 above,
+which uses the narrow ones in `measure.py`. See the open item there. The columns
+are internally consistent and comparable to each other, not to source 3.
 
-Three things this decides:
+| Tell | Abstracts | Full papers |
+|---|---|---|
+| Superficial `-ing` | 6.0 → **21.0** | 1.9 → **8.2** |
+| Copula avoidance | 16.3 → **38.5** | 5.3 → **13.9** |
+| Excess vocabulary | 15.5 → **39.4** | 6.9 → **23.5** |
+| Em dash | not measurable | 3.1 → 4.9 |
+| Title case headings | n/a | not measurable |
 
-- **Structure and vocabulary rise everywhere with a baseline**, two to four
-  times. That is why Tier 2 and Tier 3 are the tiers to trust in any register.
-- **The inline-header bold list is the only formatting tell that rises against
-  its own baseline**, 5.0 to 12.7, a 2.5x increase in the same repositories.
-- **Em dash falls in maintained repositories**, 11.2 to 7.0, and title case is
-  flat. Both are house style, not authorship. They are loud only in READMEs an
-  agent wrote end to end, where there is no baseline to compare against.
+Two things this decides:
 
-The agent-written column is prevalence, not excess: those repositories did not
-exist before ChatGPT. `not measurable` means the corpus cannot carry the
-measurement, not that the rate is zero. PubMed normalises every dash to an ASCII
-hyphen; the paper corpus does not preserve heading markup.
+- **Structure and vocabulary rise in both**, two to four times, and by the same
+  ordering. Nothing about the document type changes which of them to trust.
+- **Em dash barely moves in papers**, 3.1 to 4.9, on a base so small that one
+  document holds a third of the matches. It is not a usable signal in a paper.
+  The arXiv figures in source 3 are the ones to quote for prose.
+
+`not measurable` means the corpus cannot carry the measurement, not that the
+rate is zero. PubMed normalises every dash to an ASCII hyphen; the paper corpus
+does not preserve heading markup, so nothing here says whether a paper's
+headings are title case. That gap is why the markup pass is scoped by who chose
+the formatting rather than by a measured rate.
 
 ---
 
-## 5. Method correction: pooled rates overstate (2026-08-06)
+## 4. Method correction: pooled rates overstate (2026-08-06)
 
-Every figure in sources 3, 4 and the first version of 5 was a **pooled** rate:
-all matches divided by all words. That lets one enormous document dominate.
-
-Found when building the paired README corpus. Pooled, em dashes ran at 39.7 per
-10k in pre-2022 READMEs. **Two link-list documents held 1,345 of the 1,388
-matches**, 97% of them, and only 19 of 120 documents contained any at all. The
-mean per document was 11.2 and the median was zero.
+Every figure in source 3 and the first version of source 5 was a **pooled**
+rate: all matches divided by all words. That lets one enormous document
+dominate. In one corpus two link-list documents held 97% of all em dash matches
+and only 19 of 120 documents contained any at all; the pooled rate was 39.7 per
+10k and the median document was zero.
 
 All rates are now the **mean of per-document rates**, and `research/measure.py`
 also reports what share of matches the single worst document holds. Above
@@ -198,16 +180,15 @@ roughly 25%, a figure is being driven by outliers and should not be quoted.
 
 What survived the recomputation and what did not:
 
-- **The abstract corpus is unaffected.** Documents there are all about 200
-  words, so pooled and per-document means agree to within 2% (15.7 against
-  15.5). Every finding in sources 4 and 5 stands.
-- **The README figures were overstated.** Em dash in agent-written READMEs was
-  published as 122.4 and is 103.7 as a per-document mean.
+- **The abstract corpus barely moves.** Documents there are all about 200
+  words, so the two agree closely: Kobak's ten markers give 15.69 pooled against
+  15.46 per document. The largest gap is the superficial `-ing` clause at 8.74
+  against 9.19, about 5%. Every ratio in sources 3 and 5 survives the switch,
+  and the 2024-to-2026 decay percentages move by at most 7 points.
 - **One claim reversed.** Em dash in full papers was reported as falling, 6.1 to
   4.7 pooled. Per document it rises, 3.1 to 4.9. Both are small and heavily
-  concentrated (one document holds a third of the matches either way), so the
-  honest statement is that em dash is not a usable signal in papers rather than
-  that it moves in either direction.
+  concentrated, so the honest statement is that em dash is not a usable signal
+  in papers rather than that it moves in either direction.
 - **One figure was fabricated by the collection code.** Papers appeared to show
   title case headings at 444 per 10k. `fetch.py` had been prepending `## ` to
   every `<title>` element when assembling the text, manufacturing the headings
@@ -215,44 +196,51 @@ What survived the recomputation and what did not:
 
 ---
 
-## 6. Own decay measurement, 2024 to 2026 (2026-08)
+## 5. Own decay measurement, 2024 to 2026 (2026-08)
 
 The skill has always claimed word-level tells decay faster than structural ones. This tests it.
 
-**Method.** The same *Sensors* (Basel) PubMed corpus as source 4, extended to four windows: 2019-2021 (61k words), 2024 (57k), 2025 (64k), 2026 (69k, partial year through August). Same journal throughout, so genre and venue are held constant.
+**Method.** The same *Sensors* (Basel) PubMed corpus as source 3, extended to four windows: 2019-2021 (61k words), 2024 (57k), 2025 (64k), 2026 (69k, partial year through August). Same journal throughout, so genre and venue are held constant.
 
 **Result**, tells per 10k words:
 
 | Tell | 2019-21 | 2024 | 2025 | 2026 | 2024 to 2026 |
 |---|---|---|---|---|---|
-| `crucial` | 1.5 | 5.9 | 3.9 | 0.9 | **-85%** |
-| `delve` / `showcase` / `underscore` | 0.0 | 1.9 | 1.3 | 0.3 | **-85%** |
-| `pivotal` | 0.3 | 1.0 | 1.4 | 0.4 | -59% |
-| Undue emphasis | 0.3 | 0.9 | 0.3 | 0.3 | -67% |
-| Negative parallelism | 0.5 | 1.2 | 0.8 | 0.7 | -41% |
-| Kobak's ten, combined | 15.7 | 50.0 | 50.5 | 39.5 | -21% |
-| Superficial `-ing` | 1.0 | 8.7 | 12.2 | 6.9 | -21% |
-| Copula avoidance | 1.6 | 4.2 | 6.7 | 4.6 | **+10%** |
-| `robust` | 4.4 | 9.3 | 17.4 | 13.9 | **+50%** |
+| `delve` / `showcase` / `underscore` | 0.00 | 2.04 | 1.34 | 0.23 | **-89%** |
+| `crucial` | 1.56 | 6.04 | 4.12 | 0.96 | **-84%** |
+| Undue emphasis | 0.36 | 0.97 | 0.32 | 0.33 | -66% |
+| `pivotal` | 0.34 | 1.11 | 1.45 | 0.47 | -57% |
+| Negative parallelism | 0.61 | 1.11 | 0.73 | 0.69 | -38% |
+| Superficial `-ing` | 1.03 | 9.19 | 12.15 | 6.64 | -28% |
+| Kobak's ten, combined | 15.46 | 50.87 | 50.80 | 39.41 | -23% |
+| Copula avoidance | 1.73 | 4.14 | 6.84 | 4.53 | **+9%** |
+| `robust` | 4.17 | 9.88 | 17.30 | 14.39 | **+46%** |
 
 **What it establishes**
 
 - **The famous words died.** `crucial` is back to its pre-ChatGPT level. `delve` is effectively gone. Both were the most publicized markers, and Kobak's own paper is part of why. Publicity appears to kill a word-level tell, whether by training or by authors editing it out.
-- **The structural tells did not.** Superficial `-ing` is still 6.9x its pre-ChatGPT baseline in 2026 after peaking in 2025. Copula avoidance is still climbing. The structural tier is the durable one, which is why `SKILL.md` now tells you to start there on prose.
-- **Excess vocabulary shifts rather than vanishing.** `robust` is 3.2x baseline and up 50% since 2024. A fixed word list ages badly in both directions, not just downward.
+- **The structural tells did not.** Superficial `-ing` is still 6.4x its pre-ChatGPT baseline in 2026 after peaking in 2025. Copula avoidance is still climbing. Structure is the durable section, which is why `SKILL.md` puts it first and tells you to run it on everything.
+- **Excess vocabulary shifts rather than vanishing.** `robust` is 3.5x baseline and up 46% since 2024. A fixed word list ages badly in both directions, not just downward.
 
 **What it does NOT establish**
 
 - **Cause.** MDPI introduced AI screening over this period. "Models changed their output" and "editors filtered it out" are indistinguishable in this data, and both would produce the same curve.
 - 2026 is a partial year, through August.
-- One journal, as with source 4. *Sensors* is a high-Δ venue and may respond to screening pressure faster than a typical one.
+- One journal, as with source 3. *Sensors* is a high-Δ venue and may respond to screening pressure faster than a typical one.
 - Nothing about text outside peer review. An unedited 2026 chat transcript may still be full of `crucial`.
 
-**Consequence for anyone using this skill:** re-run this measurement before trusting Tier 3. The method survives; the list is a snapshot. Tier 2 is what to lean on.
+**Consequence for anyone using this skill:** re-run this measurement before trusting the vocabulary list. The method survives; the list is a snapshot. Structure is what to lean on.
+
+**Caveat, added 2026-08-07.** The structural rows here use the narrow regexes in
+`measure.py`, not the ones `patterns.md` ships. Under the shipped regexes copula
+avoidance rises 59% from 2024 to 2026 instead of 9%, which strengthens the
+conclusion rather than weakening it, and superficial `-ing` falls 13% instead of
+28%. The vocabulary rows are unaffected: those regexes are identical in both
+sets. See the open item in source 3.
 
 ---
 
-## 7. Consulted and not used
+## 6. Consulted and not used
 
 **"Explaining Generalization of AI-Generated Text Detectors Through Linguistic Analysis"** (arXiv:2601.07974). Fetched 2026-08. Discusses clause types, participles, coordination, lexical diversity and punctuation, and reports that some markers generalize across models while others are domain-sensitive. **No usable numbers were extracted**, so nothing in `SKILL.md` cites it. Worth a proper read if this skill is revised.
 
@@ -269,7 +257,7 @@ Stated plainly so it can be challenged:
 - **Glue words opening consecutive sentences.** Kobak has `additionally` in the top ten as a *word*; the consecutive-sentence claim is mine.
 - **The measured-vs-inferred hedging rule.** From the academic-writing hedging literature, not from any source above.
 - **The 8-hits-2-real em dash figure.** One paper, one measurement, no generality claimed.
-- **The tier ordering.** From source 3 above, which has no baseline. The ordering claim is "this fires more often", not "this is stronger evidence of machine authorship". Those are different claims and only the first is supported.
+- **The whole markup section, as a rate.** Sources 3 and 3b establish that structure and vocabulary rise in academic prose. Neither can measure headings or bold lists: an abstract has no markup and the full-text corpus does not preserve it. The section is kept for academic blog posts on the argument that the author chose that formatting, which is a reason rather than a measurement.
 - **The inline-header bold list as a rewrite target.** Wikipedia lists the pattern; the rule for when to keep it (genuinely parallel, meant to be scanned) is mine.
 - **False ranges.** Taken from the `humanizer` skill, which is Wikipedia-based, so it was assumed to be Wikipedia's. It is not: checked against the page on 2026-08-05 and no such section exists. Kept because the pattern is real, listed here because the attribution was wrong.
 
@@ -283,6 +271,6 @@ Stated plainly so it can be challenged:
 
 ## Review schedule
 
-Tier 1 artifacts and Tier 2 vocabulary decay fastest; re-check them against current sources roughly twice a year. Tiers 3 and 4 have been stable across several model generations.
+Vocabulary decays fastest and is the section to re-check every cycle; source 5 measures how fast. Structure held across the same window. Paste artifacts have been stable across several model generations.
 
 Last reviewed: **2026-08**.

@@ -15,7 +15,6 @@ The skill asks readers to check its claims. This is how.
 |---|---|---|
 | PubMed, *Sensors* (Basel), 4 windows 2019 to 2026, 251k words | vocabulary and structural tells, before and after ChatGPT in one journal | anything about dashes |
 | arXiv `cs.LG`, 2020 vs 2026, 111k words | dash use, via preserved LaTeX markup | it is a different field and venue |
-| 35 plugin READMEs, 51k words | formatting tells in agent-written Markdown | no baseline, so prevalence only |
 
 **PubMed normalises every dash to an ASCII hyphen.** The raw XML holds zero
 U+2014 and zero U+2013 in all four windows, including the pre-2022 one.

@@ -1,127 +1,69 @@
 # Examples
 
-Six fixtures. They are also the test corpus for `tests/check.sh`, so they
-cannot drift from what the patterns actually do.
+Seven fixtures, one per academic register the skill claims plus a trap. They are
+also the test corpus for `tests/check.sh`, so they cannot drift from what the
+patterns actually do.
 
 | File | Role |
 |---|---|
-| `before.md` | A realistic slopped README. Nine pattern families fire. |
-| `after.md` | The same document, de-LLM'd. The diff is the demo. |
-| `prose-before.md` | A real 2026 journal abstract. The **prose** branch, where Tier 1 finds nothing. |
+| `paper-before.tex` | A LaTeX related-work section. The **paper** branch, where the markup section does not apply. |
+| `paper-after.tex` | The same section, de-LLM'd. |
+| `prose-before.md` | A real 2026 journal abstract. The **abstract** branch, where there is no markup to check. |
 | `prose-after.md` | The same abstract, de-LLM'd. |
-| `false-positive-trap.md` | Legitimate prose. Patterns fire. Correct output is no change. |
-| `slopped.md` | Pattern coverage. One planted instance of everything, including the rare ones `before.md` has no natural home for. |
+| `blog-before.md` | An academic blog post in Markdown. The **blog** branch, the only one where you chose the formatting. |
+| `blog-after.md` | The same post, de-LLM'd. |
+| `false-positive-trap.md` | Legitimate academic prose. Patterns fire. Correct output is no change. |
 
-The two pairs exist because `SKILL.md` branches on register and the branches do
-genuinely different work. See "The prose pair" below.
+Three pairs because `SKILL.md` branches on who chose the formatting, and the
+branches do genuinely different work.
 
-## before.md to after.md
+## paper-before.tex to paper-after.tex
 
-`before.md` is modelled on the densest real READMEs in the measurement corpus,
-not invented. What fires, and what happened to it:
+The fixture for the case this skill exists for. What fires, and what happens:
 
 | Pattern | before | after | |
 |---|---|---|---|
-| Em dash | 3 | **2** | one converted, two protected |
-| Inline-header bold list | 8 | **5** | three converted, five kept |
-| Title case headings | 3 | 0 | |
-| Copula avoidance | 2 | **1** | one false positive survives |
-| Superficial `-ing` | 2 | 0 | |
-| Negative parallelism | 1 | 0 | |
-| Challenges formula | 1 | 0 | |
-| Vague attribution | 1 | 0 | |
-| Stacked hedge | 1 | 0 | |
+| Copula avoidance | 2 | 0 | `serve as`, `remains`, `offering` |
+| Superficial `-ing` | 3 | 0 | `providing`, `thereby enabling`, `highlighting` |
+| Negative parallelism | 1 | 0 | `Unlike prior studies…, this work emphasises` |
+| Undue emphasis | 2 | 0 | `is crucial for`, `highlighting the importance of` |
+| Stacked hedge | 1 | 0 | `may potentially` → `may` |
+| Bare intensifier | 1 | 0 | `significantly improving` → the mechanism |
+| Excess vocabulary | 9 | **1** | one `robust` survives |
+| `---` em dash | 1 | **1** | **kept** |
+| `\section{Related Work}` | title case | **unchanged** | **kept** |
 
-The three bolded rows are the point of the fixture. A pass that drove every
-count to zero would be **wrong**.
+### The two that must NOT be touched
 
-### The two em dashes that must survive
+`\section{Related Work}` is title case and stays title case. Section headings in
+a paper are the venue's convention, not a choice the author made, and
+sentence-casing them is not de-LLMing — it is breaking the submission.
 
-```
-| Inspect latency | 4ms | 22ms | — |          <- table "not applicable" cell
-// backoff doubles each attempt — capped …    <- code comment
-```
+The `---` in `phase stability---a distinction` also stays. Em dash in full papers
+measured 3.1 to 4.9 per 10k across the ChatGPT boundary, on a base so small that
+one document holds a third of all matches. It is not a usable signal in a paper,
+and the markup section is skipped there for exactly that reason.
 
-Step zero excludes both. The third dash, in the opening line of prose, is the
-only one that should change. A tool that reports "3 em dashes fixed" on this
-file has corrupted a table and a code comment.
+Both are cases where the skill's own measurements say to do nothing, and both are
+what a naive "remove the AI tells" pass gets wrong.
 
-### The five bold list items that must survive
+### `\cite{}`, `$Q$`, `4--9`
 
-The `### Flags` list is an inline-header bold list, and the pattern cannot tell
-it apart from the hollow `## Key Features` list three sections earlier. Both
-look identical to a regex. The difference is judgment:
+Four citations, one inline math span, and a numeric range written with a LaTeX
+en dash. Step zero excludes all of them. `4--9` is the trap: it looks exactly
+like a dash tell and is a page range in disguise.
 
-- `Key Features` is three sentences wearing a costume. It becomes one sentence.
-- `Flags` is a reference table people scan for an argument name. It stays.
+### The one `robust` that survives
 
-This is the single hardest call the skill asks for, so the fixture contains one
-of each.
+`robust to sensor dropout` is a measured property with two studies behind it.
+The other eight vocabulary markers were decorative and went. That ratio, not the
+count, is the point.
 
-### The copula hit that is not a copula
-
-`after.md` still matches the copula pattern once, on the heading
-`## Key features`. The regex includes `features` as a verb; here it is a plural
-noun in a heading. Nothing to fix. It is in the tests as a permanent reminder
-that the count never reaches zero on real text.
-
-### What was preserved on purpose
-
-"this **may** vary depending on your Redis configuration" keeps its hedge.
-Stripping `may potentially` down to `may` removes the stacked hedge without
-touching the uncertainty. Deleting the hedge entirely would make the sentence
-claim more than the benchmark supports, which the first directive forbids.
-
-"pending, active, and failed" survives as a rule of three, because those are
-three real states and deleting one loses information.
-
-The challenges formula became a fact: "Despite its comprehensive feature set,
-queuectl faces several challenges around cluster mode, which the maintainers are
-actively working to address" is 22 words that say nothing. "queuectl does not
-support Redis cluster mode" is 8 words that say the thing. The vague
-attribution ("Observers have noted…") had no fact under it at all and was
-deleted rather than rewritten.
-
-## false-positive-trap.md
-
-The more important fixture. Legitimate technical prose that trips the finders
-anyway. **The correct output is no changes at all.**
-
-Eleven hits across five patterns, zero of them real:
-
-| Hits | Pattern | Why every one is rejected |
-|---|---|---|
-| 4 | em dash | table placeholder, code comment, Python string literal, quoted error |
-| 3 | inline-header bold list | a flag reference: parallel, scanned not read |
-| 2 | `crucial` | one doing real work in live prose, one inside a 2019 quotation |
-| 1 | title case | `## Amazon Web Services`, one proper noun, already correct |
-| 1 | copula `stands as` | inside the same 2019 quotation |
-
-The quoted 2019 design document is the sharpest case. It is dense with tells
-(`stands as`, `crucial`, `robust`, `serving as`, `underscoring`) and it predates
-ChatGPT by three years, so it cannot be machine-generated whatever it looks
-like. It is also someone else's words, which step zero excludes twice over.
-
-One case is worth knowing about because it is luck rather than design.
-`## Using PostgreSQL With Django` does **not** fire the title-case pattern:
-`[A-Z][a-z]+` cannot match `PostgreSQL`, because the internal capitals break the
-run. Nothing in the pattern understands proper nouns. `## Amazon Web Services`,
-right below it, fires normally. Do not mistake the first for a guard.
-
-The file also holds an en dash in a numeric range and a real rule of three.
-
-Cleaning up bad prose is easy. Correctly changing nothing is the harder test,
-and it is the one most tools in this space fail.
-
-## The prose pair
+## prose-before.md to prose-after.md
 
 `prose-before.md` is a real *Sensors* abstract from 2026, taken unedited from
-PubMed. It is here because every other fixture is Markdown, and the skill's
-prose branch had no worked example.
-
-**Tier 1 finds nothing.** No em dashes, no bold lists, no headings, because an
-abstract has no markup. On this branch the formatting tier is skipped entirely
-and Tier 2 is the whole job.
+PubMed. An abstract has no markup at all, so the structure section is the whole
+job.
 
 | Tell | before | after | |
 |---|---|---|---|
@@ -134,9 +76,7 @@ and Tier 2 is the whole job.
 
 ### Rhythm was preserved deliberately
 
-`prose-after.md` keeps a long sentence ("This paper develops a two-branch
-cooperative signal control framework for isolated signalized intersections,
-combining Expected SARSA and SARSA(λ)") next to short ones, and no two
+`prose-after.md` keeps a long sentence next to short ones, and no two
 consecutive sentences open with the same subject.
 
 That is not decoration. Measured against a naive de-slop prompt, this skill made
@@ -155,17 +95,108 @@ back to baseline. A banned-word list would strip all four.
 Read them in context and none can go. "lack of robustness" is a stated defect of
 classic RL algorithms. "hyperparameter robustness" is one of three named
 experiment types. "model robustness" is a measured outcome. The word is carrying
-a technical meaning every time, which is exactly the situation Tier 3 describes:
-the signal is density and co-occurrence, not presence.
+a technical meaning every time, which is the situation the vocabulary section
+describes: the signal is density and co-occurrence, not presence.
 
 `significantly` went in the same sentence, because no number supports it and the
 underlying claim ("improves sample utilization efficiency") survives without it.
 That is the first directive: the tell goes, the claim stays.
 
-### What was dropped, and why it is not a claim
+## blog-before.md to blog-after.md
 
-"This work offers an efficient and reliable solution for real-time adaptive
-signal control of isolated intersections." The whole sentence went. It is a
-self-assessment with no evidence behind it, and the scope it names (isolated
-signalized intersections) is already stated earlier. Nothing measurable was
-lost.
+The only register where the markup section applies, because the author chose the
+formatting. It carries one instance of every pattern in `patterns.md`, including
+the rare ones the other fixtures have no natural home for.
+
+| Pattern | before | after | |
+|---|---|---|---|
+| Em dash | 3 | **2** | one converted, two protected |
+| Inline-header bold list | 6 | **3** | three converted, three kept |
+| Title case headings | 5 | 0 | |
+| Emoji, curly quotes, thematic break, H2→H4 | 1 each | 0 | |
+| Copula avoidance | 4 | 0 | |
+| Superficial `-ing` | 3 | 0 | |
+| Negative parallelism, challenges formula | 1 each | 0 | |
+| Vague attribution, stacked hedge | 1 each | 0 | |
+| Paste artifact (`:contentReference[oaicite:3]`) | 1 | 0 | |
+| Excess vocabulary | 9 | **1** | |
+
+The bolded rows are the point. A pass that drove every count to zero would be
+**wrong**.
+
+### The two em dashes that must survive
+
+```
+| Grid 3x3 | 77.4s | — | not run |        <- table "not applicable" cell
+# credit decays by lambda each step — …   <- code comment
+```
+
+Step zero excludes both. The third, in the opening line of prose, is the only
+one that should change. A tool reporting "3 em dashes fixed" here has corrupted a
+table and a code comment.
+
+### The three bold list items that must survive
+
+The `Hyperparameters` list and the `two algorithms` list are identical to a
+regex. The difference is judgment:
+
+- the algorithm list is three sentences wearing a costume, and becomes a
+  paragraph
+- the hyperparameter list is a reference people scan for a value, and stays
+
+This is the hardest call the skill asks for, so the fixture contains one of each.
+
+### The same word, deleted once and kept once
+
+`robust convergence across every seed` is decorative and goes. `robust to 10%
+dropout and not to a dead detector` is a measured claim and stays. Both are in
+the same document, which is what "density and co-occurrence, not presence" means
+in practice.
+
+### What was preserved on purpose
+
+"Reported delay **may** vary with the demand profile you simulate" keeps its
+hedge. Stripping `may potentially` down to `may` elsewhere removes the stacked
+hedge without touching the uncertainty. Deleting a hedge entirely would make the
+sentence claim more than the evidence supports, which the first directive
+forbids.
+
+The challenges formula became a fact. "Despite its comprehensive coverage of the
+four topologies, the method faces several challenges around detector
+reliability, which we are actively working to address" is 27 words that say
+nothing. The rewrite names the failure: a dead detector reports zero flow rather
+than an error. The vague attribution ("Experts argue…") had no fact under it at
+all and was deleted rather than rewritten.
+
+## false-positive-trap.md
+
+The most important fixture. Legitimate academic prose that trips the finders
+anyway. **The correct output is no changes at all.**
+
+Eleven hits across six patterns, zero of them real:
+
+| Hits | Pattern | Why every one is rejected |
+|---|---|---|
+| 4 | em dash | table placeholder, code comment, Python string literal, quoted error |
+| 3 | inline-header bold list | a notation table: parallel, scanned not read |
+| 2 | `crucial` | one doing real work in live prose, one inside a 2019 quotation |
+| 2 | copula (`stands as`, `serving as`) | both inside the same 2019 quotation |
+| 1 | title case | `## Monte Carlo Tree Search`, capitalised by convention |
+| 1 | superficial `-ing` (`underscoring`) | inside the same quotation |
+
+The quoted 2019 design note is the sharpest case. It is dense with tells
+(`stands as`, `crucial`, `robust`, `serving as`, `underscoring`) and it predates
+ChatGPT by three years, so it cannot be machine-generated whatever it looks
+like. It is also someone else's words, which step zero excludes twice over.
+
+One case is worth knowing about because it is luck rather than design.
+`## Training BERT With PyTorch` does **not** fire the title-case pattern:
+`[A-Z][a-z]+` cannot match `BERT`, and the word before `With` ends in a capital,
+so the run breaks. Nothing in the pattern understands proper nouns.
+`## Monte Carlo Tree Search`, two headings later, fires normally. Do not mistake
+the first for a guard.
+
+The file also holds an en dash in a numeric range and a real rule of three.
+
+Cleaning up bad prose is easy. Correctly changing nothing is the harder test,
+and it is the one most tools in this space fail.

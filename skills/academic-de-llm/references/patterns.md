@@ -1,6 +1,8 @@
 # Patterns
 
-Regex strings, ordered by measured frequency in agent-written prose.
+Regex strings, ordered by what they are worth on an academic document.
+Structure first: it is the only section with a measured baseline behind it and
+the only one that applies to every document here.
 
 Two rules before you match anything.
 
@@ -8,24 +10,14 @@ Two rules before you match anything.
 
 **Every pattern is a finder, not a verdict.** Read each hit in context before changing it. The false-positive table at the bottom is what happens when you do not.
 
-## Tier 1: formatting
+**Case.** Structure and vocabulary are matched **case-insensitively**, which is how the precision and recall figures below were scored. Matching them case-sensitively silently drops every sentence-initial instance, and `Unlike prior work, this study...` is the most common form of one of them. Markup is the opposite: title case cannot be detected without case.
 
-Highest yield. Percentages are files affected across 35 agent-era READMEs, 51k words.
+## Structure
 
-| Pattern | Regex | A real hit | Measured |
-|---|---|---|---|
-| Em dash | `—` | Prose using a dash for emphasis or clause separation. Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon. | 91%, 122/10k |
-| Inline-header bold list | `^\s*[-*] \*\*[^*]+\*\*\s*[:—-]` | Three sentences wearing a costume. Not a hit when items are genuinely parallel and meant to be scanned, such as a flag reference. | 49%, 46/10k |
-| Title case heading | `^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]` | `## Getting Started With The Config`. Not a hit when the capitals are proper nouns (`Using PostgreSQL With Django`). | 83%, 22/10k |
-| Emoji | `\p{Emoji_Presentation}` | Emoji as bullets, separators, or heading decoration. | 11%, 2.7/10k |
-| Curly quotes | `[\x{201C}\x{201D}\x{2018}\x{2019}]` | Curly quotes where straight ones belong. Written as codepoint escapes because a literal pattern gets straightened by editors, which silently inverts the check. | 0% here, common from word processors |
-| Heading level skip | `(?m)^##\s.*\n(?:.*\n)*?^####\s` | H2 straight to H4. Needs multiline matching. | |
-| Thematic break | `^\*\*\*$` | A rule inserted before a heading. Do **not** match `^---$`, which hits YAML frontmatter in every Markdown file. | |
-| Excessive boldface | `\*\*[^*\n]{1,40}\*\*` | Count per file. Bolding terms mid-paragraph as "key takeaways". | |
-
-## Tier 2: structure
-
-Model-level habits, so they survive across vendors and model generations.
+Model-level habits, so they survive across vendors and model generations. The
+section with a measured baseline behind it, and the one to run on every
+document. Rises 2-4x against pre-ChatGPT text in both abstracts and full
+papers, and held while the vocabulary below decayed.
 
 These four are re-scored every review cycle: one judge panel labels every hit
 real or a words-matched false positive, a second panel reads the same texts cold
@@ -45,9 +37,12 @@ are in the notes column; see `research/EVAL.md`.
 | Rule of three | no regex | Read comma lists of exactly three. Delete a third that measures nothing |
 | Elegant variation | no regex | One thing called three names across a page. One thing, one name |
 
-## Tier 3: excess vocabulary
+## Vocabulary
 
-26% of files, 2.4 per 10k words. Source: Kobak et al. 2025, measured against a 2021 to 2022 counterfactual over 15.1M abstracts.
+Source: Kobak et al. 2025, measured against a 2021 to 2022 counterfactual over
+15.1M abstracts. **This list is a snapshot and decays**: `crucial` fell 85% and
+`delve` vanished between 2024 and 2026, while `robust` rose 50%. Re-measure
+before trusting it.
 
 Their strongest markers, plus the highest frequency ratios:
 
@@ -66,9 +61,29 @@ vibrant|enduring|commendable|garner|foster(ing)?|interplay|align with)\b
 
 **Count per paragraph rather than flagging occurrences.** Every one of these is legitimate English. One is nothing. Four in a paragraph, none doing work, is the signal. A banned-word list is the failure mode of every other tool in this space.
 
-## Tier 4: paste-era artifacts
+## Markup
 
-Zero hits across 167k words of agent-written text. These are web-interface citation renderings and only appear when a human pastes out of a chat window. Cheap to check, so check, but do not expect anything.
+Only for a document whose formatting you chose. No academic corpus can
+measure these: an abstract has no markup and the full-text corpus does not
+preserve it. See `sources.md`.
+
+| Pattern | Regex | A real hit |
+|---|---|---|
+| Em dash | `—` | Prose using a dash for emphasis or clause separation. Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon. Doubled in arXiv abstracts 2020 to 2026; flat in full papers, so it is the one entry here that applies to prose too |
+| Inline-header bold list | `^\s*[-*] \*\*[^*]+\*\*\s*[:—-]` | Three sentences wearing a costume. Not a hit when items are genuinely parallel and meant to be scanned, such as a parameter table. |
+| Title case heading | `^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]` | `## Getting Started With The Config`. Not a hit when the capitals are proper nouns (`Learning With Gaussian Processes`). |
+| Emoji | `\p{Emoji_Presentation}` | Emoji as bullets, separators, or heading decoration. |
+| Curly quotes | `[\x{201C}\x{201D}\x{2018}\x{2019}]` | Curly quotes where straight ones belong. Written as codepoint escapes because a literal pattern gets straightened by editors, which silently inverts the check. Common in text pasted through a word processor |
+| Heading level skip | `(?m)^##\s.*\n(?:.*\n)*?^####\s` | H2 straight to H4. Needs multiline matching. |
+| Thematic break | `^\*\*\*$` | A rule inserted before a heading. Do **not** match `^---$`, which hits YAML frontmatter in every Markdown file. |
+| Excessive boldface | `\*\*[^*\n]{1,40}\*\*` | Count per file. Bolding terms mid-paragraph as "key takeaways". |
+
+## Paste artifacts
+
+Zero hits across every corpus measured here. These are web-interface citation
+renderings and only appear when someone pastes out of a chat window into a
+draft, which is the one thing a manuscript does that an agent-written file does
+not. One pass, near-conclusive when it fires.
 
 ```
 contentReference|oaicite|turn0search[0-9]|\[cite: ?[0-9]+\]|
@@ -97,7 +112,6 @@ Anchor `In this section` to the start of a sentence. Mid-sentence it is usually 
 |---|---|---|---|---|
 | One LaTeX/Markdown paper | em dash | 8 | 2 | 3 code comments, 1 table placeholder, 2 numeric en dashes |
 | One LaTeX/Markdown paper | `In this section` | 1 | 0 | a legitimate scoping reference |
-| 278 marketplace entries | writing-tool keywords | 48 | 0 | `docs` matched doc tools, `write` matched SQL, `style` matched UI themes |
 | `examples/false-positive-trap.md` | em dash | 4 | 0 | table placeholder, code comment, string literal, quoted error |
 
 A pass that changed every hit would have corrupted a table and three code samples.

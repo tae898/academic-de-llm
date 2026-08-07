@@ -16,43 +16,45 @@ unsourced so you can argue with them.
 
 ## The thing nobody had measured
 
-Every "signs of AI writing" guide predates coding agents. The published research
-measured 2024 biomedical abstracts. Wikipedia's guide screens encyclopedia
-edits, where AI text mostly arrives pasted out of a chat window. Neither one
-measured what an agent writes directly into a file, which is the register most
-people now generate text in.
+The published research is about vocabulary. Kobak et al. measured which *words*
+appear more often in 2024 abstracts than a 2021-22 baseline predicts, and found
+`delves` at 28x. Wikipedia's guide lists structural patterns with no numbers at
+all. Nobody had put a baseline under the structure.
 
-So I measured it. 35 README files from Claude Code plugin repositories, 51,055
-words:
+So I did, on the same journal Kobak measured, split into four windows:
 
-| Tell | Files affected | Per 10k words |
-|---|---|---|
-| Em dash | 91% | **122.4** |
-| Inline-header bold list (`- **X**:`) | 49% | **46.4** |
-| Title case headings | 83% | **22.3** |
-| Copula avoidance (`serves as`, `boasts`) | 34% | 3.1 |
-| Excess vocabulary (`crucial`, `robust`) | 26% | 2.4 |
-| Emoji | 11% | 2.7 |
-| Curly quotes | 0% | 0.0 |
-| ChatGPT/Gemini paste artifacts | 0% | 0.0 |
+| Tell | 2019-21 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|
+| Superficial `-ing` clause | 1.0 | **9.2** | **12.2** | **6.6** |
+| Copula avoidance | 1.7 | 4.1 | 6.8 | **4.5** |
+| Kobak's ten markers, combined | 15.5 | 50.9 | 50.8 | 39.4 |
+| `crucial` | 1.6 | 6.0 | 4.1 | **1.0** |
+| `delve` / `showcase` / `underscore` | 0.0 | 2.0 | 1.3 | **0.2** |
+| `robust` | 4.2 | 9.9 | 17.3 | **14.4** |
 
-Two results worth the trouble.
+Per 10k words. Two results worth the trouble.
 
-Formatting beats vocabulary by ten to fifty times. Every guide leads with the
-word lists, and the word lists are the smallest signal in agent-written prose.
+**The largest excess tell is structural, not lexical.** The superficial `-ing`
+clause — "…, highlighting the importance of careful tuning" — rose 8.9x by 2024,
+higher than any word Kobak reports for that journal. As far as I know that is
+the first excess figure published for a structural tell.
 
-The per-vendor artifact strings (`oaicite`, `contentReference`, `grok_card`)
-fire **zero times across 167k words**. They are web-interface citation
-renderings. They exist only when a human pastes out of a chat window, and an
-agent writing to a file never produces them. Older guides call these the
-strongest evidence available, and for this register they are dead weight.
+**The famous words died and the structure did not.** `crucial` is back at its
+pre-ChatGPT level and `delve` is effectively gone, down 84% and 89% since 2024.
+Publicity kills a word-level tell. Over the same window `-ing` clauses are still
+at 6.4x baseline and copula avoidance is still climbing. Meanwhile `robust` went
+*up* 46%, so the vocabulary shifts rather than disappearing.
 
-This skill is ordered accordingly: formatting first, paste artifacts last.
+That is why the skill puts structure first and tells you to trust the word list
+least. It is also why this repo is a measurement pipeline and not just a
+document: the word list will be wrong again in a year, and `make review` is how
+you find out.
 
-**Caveat, since the skill's own standards demand it.** There is no baseline
-here. This measures prevalence, not excess. Kobak's counterfactual design is
-what separates "common" from "more common than it should be," and none of that
-is done. A 91% em dash rate is evidence of frequency and nothing more.
+**Caveat, since the skill's own standards demand it.** This is a raw
+before-and-after, not Kobak's counterfactual projection, and it cannot separate
+LLM effects from five years of drift in one journal's topics or editorial
+standards. MDPI introduced AI screening over the same period, and "models
+changed" and "editors filtered" would produce the same curve.
 `references/sources.md` lists every limitation.
 
 ## Install
@@ -61,14 +63,14 @@ As a plugin:
 
 ```
 /plugin marketplace add tae898/academic-de-llm
-/plugin install de-llm@de-llm
+/plugin install academic-de-llm@academic-de-llm
 ```
 
 Or drop the skill in directly:
 
 ```bash
 git clone https://github.com/tae898/academic-de-llm.git
-cp -r de-llm/skills/academic-de-llm ~/.claude/skills/
+cp -r academic-de-llm/skills/academic-de-llm ~/.claude/skills/
 ```
 
 Then ask for it by name, or say "de-slop this", "remove the AI tells", "this
@@ -81,19 +83,21 @@ Nothing to configure. No corpus to build, no state to store, no Python.
 The single most important thing in the repo, and the reason for
 `examples/false-positive-trap.md`.
 
-That file is legitimate technical prose. The raw em dash pattern returns 4 hits
+That file is legitimate academic prose. The raw em dash pattern returns 4 hits
 on it and **none of them are real**:
 
 ```
-11:| Chroma | 12ms | — |                              <- table placeholder
-14:# strip the prefix — the parser needs it bare      <- code comment
-15:value = line.split("—")[0]                          <- string literal
-20:Error: `connection reset by peer — retrying`        <- quoted error
+49:| Corridor | 44.2s | — |                             <- table placeholder
+55:# strip the prefix — the parser needs the bare id    <- code comment
+56:run_id = line.split("—")[0]                           <- string literal
+61:Error: `simulation reset by peer — retrying`          <- quoted error
 ```
 
 The correct output on that file is no changes at all. A tool that edited all
 four hits would corrupt a table, two lines of working Python, and an error
-string.
+string. The same file also quotes a 2019 design note that is dense with tells
+and therefore cannot be machine-generated, and a `## Monte Carlo Tree Search`
+heading that fires the title-case pattern and is already correct.
 
 Measured separately on a real LaTeX paper: 8 em dash hits, 2 worth fixing. The
 rest were three code comments, a table placeholder, and two numeric en dashes.
@@ -108,7 +112,7 @@ November 2022, and it reports what it skipped so the pass is auditable.
 |---|---|---|
 | [Kobak et al. 2025](https://doi.org/10.1126/sciadv.adt3813), *Science Advances* | 15.1M English-language PubMed abstracts. Projects a counterfactual 2024 word frequency from 2021 to 2022 data and measures the gap, so "excess" is a measured quantity. | The vocabulary list with frequency ratios (`delves` at 28.0x) |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Editors who screen AI text at volume across millions of articles | The structural and formatting taxonomy, and the paste-era artifacts |
-| This repo, 2026-08 | 35 plugin READMEs and 2,298 plugin descriptions | The ordering |
+| This repo, 2026-08 | 1.3M words: PubMed *Sensors* abstracts in four windows, PMC open-access full texts, arXiv `cs.LG` | The structural excess figures, the decay measurement, and the section ordering |
 
 `references/sources.md` says what each source does **not** establish, and lists
 every claim in the skill that has no source behind it. That list exists so the
@@ -161,12 +165,16 @@ contributors, not on users.
 sh tests/check.sh    # needs ripgrep
 ```
 
-54 assertions on six fixtures. Every pattern fires on the coverage fixture.
-The worked example asserts **exact** counts in both directions: `after.md` must
-still contain the two protected em dashes and the five-item flag reference,
-because a pass that drove every count to zero would have corrupted a table, a
-code comment, and a reference list. The trap asserts that all eleven of its hits
-are the rejectable kind. CI runs on `ubuntu-latest` and `macos-latest`.
+81 assertions on seven fixtures, one pair per register: a LaTeX paper, a journal
+abstract, and an academic blog post.
+
+Every assertion runs in **both** directions, because over-fixing is the failure
+mode this skill was built to avoid. `paper-after.tex` must still contain its
+`---` em dash and its title-case `\section{Related Work}`, since both belong to
+the venue rather than the author. `blog-after.md` must still contain two
+protected em dashes and a three-item notation list. The trap asserts that all
+eleven of its hits are the rejectable kind, and that the correct output is no
+change at all. CI runs on `ubuntu-latest` and `macos-latest`.
 
 They exist because v2 shipped four broken patterns. They passed locally only
 because the shell aliased `grep` to `ugrep`, which is permissive; on a clean
@@ -197,10 +205,11 @@ them against the naive prompt's 16%, and its output reads as human roughly three
 times in four. It costs a little polish doing it: a few points more flattening
 and a few more edits judged worse. Content is safe either way.
 
-Two things that bound this. It is one genre, journal abstracts, and nothing here
-tests READMEs or commit messages. And it is the conservative estimate: on a
+Two things that bound this. It is one genre and one length: *Sensors* abstracts,
+about 200 words each, and the eval has never been run on a full paper, which is
+what the skill is actually for. And it is the conservative estimate: on a
 top-tier rewriter the same skill scored 97% better against the naive prompt's
-94%, because the benefit scales with how well a model follows a 14KB instruction
+94%, because the benefit scales with how well a model follows a 17KB instruction
 file.
 
 Full numbers, both configurations, and the limits in

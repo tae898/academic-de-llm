@@ -2,64 +2,64 @@
  "corpus": "PubMed Sensors (Basel); arXiv cs.LG. See research/README.md",
  "rates": {
   "2019-21": {
-   "Copula avoidance": 1.63,
-   "Kobak's ten markers": 15.69,
-   "Negative parallelism": 0.49,
-   "Superficial -ing": 0.98,
-   "Undue emphasis": 0.33,
+   "Copula avoidance": 1.73,
+   "Kobak's ten markers": 15.46,
+   "Negative parallelism": 0.61,
+   "Superficial -ing": 1.03,
+   "Undue emphasis": 0.36,
    "Vendor paste artifacts": 0.0,
-   "crucial": 1.47,
+   "crucial": 1.56,
    "delve/showcase/underscore": 0.0,
-   "pivotal": 0.33,
-   "robust": 4.41
+   "pivotal": 0.34,
+   "robust": 4.17
   },
   "2024": {
-   "Copula avoidance": 4.19,
-   "Kobak's ten markers": 49.98,
-   "Negative parallelism": 1.22,
-   "Superficial -ing": 8.74,
-   "Undue emphasis": 0.87,
+   "Copula avoidance": 4.14,
+   "Kobak's ten markers": 50.87,
+   "Negative parallelism": 1.11,
+   "Superficial -ing": 9.19,
+   "Undue emphasis": 0.97,
    "Vendor paste artifacts": 0.0,
-   "crucial": 5.94,
-   "delve/showcase/underscore": 1.92,
-   "pivotal": 1.05,
-   "robust": 9.26
+   "crucial": 6.04,
+   "delve/showcase/underscore": 2.04,
+   "pivotal": 1.11,
+   "robust": 9.88
   },
   "2025": {
-   "Copula avoidance": 6.72,
-   "Kobak's ten markers": 50.5,
-   "Negative parallelism": 0.78,
-   "Superficial -ing": 12.19,
-   "Undue emphasis": 0.31,
+   "Copula avoidance": 6.84,
+   "Kobak's ten markers": 50.8,
+   "Negative parallelism": 0.73,
+   "Superficial -ing": 12.15,
+   "Undue emphasis": 0.32,
    "Vendor paste artifacts": 0.0,
-   "crucial": 3.91,
-   "delve/showcase/underscore": 1.25,
-   "pivotal": 1.41,
-   "robust": 17.35
+   "crucial": 4.12,
+   "delve/showcase/underscore": 1.34,
+   "pivotal": 1.45,
+   "robust": 17.3
   },
   "2026": {
-   "Copula avoidance": 4.63,
-   "Kobak's ten markers": 39.48,
-   "Negative parallelism": 0.72,
-   "Superficial -ing": 6.94,
-   "Undue emphasis": 0.29,
+   "Copula avoidance": 4.53,
+   "Kobak's ten markers": 39.41,
+   "Negative parallelism": 0.69,
+   "Superficial -ing": 6.64,
+   "Undue emphasis": 0.33,
    "Vendor paste artifacts": 0.0,
-   "crucial": 0.87,
-   "delve/showcase/underscore": 0.29,
-   "pivotal": 0.43,
-   "robust": 13.88
+   "crucial": 0.96,
+   "delve/showcase/underscore": 0.23,
+   "pivotal": 0.47,
+   "robust": 14.39
   },
   "arxiv-2020": {
-   "-- (LaTeX en/em)": 3.67,
+   "-- (LaTeX en/em)": 3.14,
    "--- (LaTeX em dash)": 0.0,
    "U+2014 literal": 0.0,
-   "spaced \" - \"": 1.35
+   "spaced \" - \"": 1.4
   },
   "arxiv-2026": {
-   "-- (LaTeX en/em)": 7.77,
-   "--- (LaTeX em dash)": 2.7,
+   "-- (LaTeX en/em)": 7.73,
+   "--- (LaTeX em dash)": 2.71,
    "U+2014 literal": 0.0,
-   "spaced \" - \"": 3.72
+   "spaced \" - \"": 3.37
   }
  },
  "recorded": "2026-08"

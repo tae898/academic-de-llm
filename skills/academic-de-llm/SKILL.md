@@ -31,25 +31,21 @@ Every claim here is measured or cited, and `references/sources.md` says which,
 including what each source does **not** establish and which claims have no
 source at all.
 
-## Two things move, and one mostly does not
+## What moves, and what does not
 
 **Structure and vocabulary rise everywhere.** Two to four times against a
-pre-ChatGPT baseline, in abstracts and in full texts alike. Tier 2 and Tier 3
-are where the work is, in any academic document.
+pre-ChatGPT baseline, in abstracts and in full texts alike. Those two sections
+are the skill; run them on everything.
 
-**Formatting is mostly journal template, not authorship.** In full texts,
-section headings sit flat across 2021 to 2026: "2. Materials and Methods" is
-what the form requires. Em dash use is low either way.
+**Formatting is mostly the venue's, not yours.** In full texts, section headings
+sit flat across 2021 to 2026, because "2. Materials and Methods" is what the
+form requires. So the markup section is scoped by a question rather than a rate:
+**did you choose this formatting?** In a journal template or a LaTeX class, no,
+and you should skip it. In a blog post you wrote in Markdown, yes, and the em
+dashes and bold lists are yours to answer for.
 
-So:
-
-| Document | Start at | Because |
-|---|---|---|
-| A paper, LaTeX or journal template | **Tier 2** | headings and numbering are the venue's, not yours. Skip Tier 1 even though the file has markup |
-| An abstract, or a submission field | **Tier 2** | there is no markup to check |
-| An academic blog post in Markdown or HTML | **Tier 1**, briefly | you chose the formatting, so em dashes and inline-header bold lists are yours to answer for. Then Tier 2 |
-
-Figures and corpora behind this are in `references/sources.md`.
+Figures and corpora behind this are in `references/sources.md`, which also says
+plainly that no academic corpus here can measure markup at all.
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100).
 Use that when a reader might misread the text. Use this one when a reader might
@@ -60,7 +56,7 @@ modals that carry your certainty.
 
 **Delete the tell, keep the claim.** A rewrite that makes a sentence claim more than the evidence supports has broken the text to pass a style check. That is worse than the tell.
 
-**Delete the tell, keep the rhythm.** Applied thoroughly, the tiers below produce short declaratives sharing a subject: every tell gone and the cadence gone with them. That is measured, not hypothetical, which is why these four rules override the tier guidance wherever they conflict with it.
+**Delete the tell, keep the rhythm.** Applied thoroughly, the sections below produce short declaratives sharing a subject: every tell gone and the cadence gone with them. That is measured, not hypothetical, which is why these four rules override everything below wherever they conflict with it.
 
 **Do not split a long sentence into three short ones just because the join was a participle.** Rewrite the participle in place, or make the clause subordinate. One long sentence among short ones is what a human paragraph looks like.
 
@@ -80,59 +76,21 @@ Fenced code blocks and inline code spans. YAML, TOML, and JSON frontmatter or co
 
 Say what you skipped when you report back ("skipped: 3 code blocks, 1 table, frontmatter"). It makes the pass auditable and it is the main defense against the false-positive rate documented below.
 
-## Tier 1: Formatting
+## Structure
 
-Highest yield **in documents with markup**, and the tier older guides bury.
-
-On plain prose only the em dash below applies. Everything else in this tier needs markup to exist, so it cannot occur.
-
-### Em dash
-
-The one Tier 1 pattern that occurs in prose without markup. In arXiv preprints it roughly doubled between 2020 and 2026, 3.7 to 7.8 per 10k words. In full texts it is low either way, so it is worth a glance in a blog post and rarely repays one in a paper.
-
-Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitute:
-
-| Before | After |
-|---|---|
-| The build failed — the cache was stale. | The build failed. The cache was stale. |
-| Latency rose 3x — well outside run-to-run spread. | Latency rose 3x, well outside run-to-run spread. |
-| Two engines — Chroma and Qdrant — gained nothing. | Neither Chroma nor Qdrant gained anything. |
-
-Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon.
-
-### Inline-header bold lists
-
-49% of files, 46 per 10k words. The shape is `- **Term**: explanation`, repeated down a list where prose belongs.
-
-> Before:
-> - **Fast**: Runs in under a second.
-> - **Portable**: No dependencies.
->
-> After: It runs in under a second and has no dependencies.
-
-Keep the list when the items are genuinely parallel and a reader will scan rather than read, such as a flag reference. Convert it when the "list" is three sentences wearing a costume.
-
-### Title case headings
-
-83% of files, 22 per 10k words. `## Getting Started With The Config` becomes `## Getting started with the config`. Sentence case throughout, except for proper nouns.
-
-### Lower-frequency formatting
-
-Excessive boldface, especially bolding terms mid-paragraph as "key takeaways". Emoji as bullets, separators, or heading decoration (11% of files). Heading levels that skip, H2 straight to H4. Thematic breaks before headings. Markdown leaking into a format that is not Markdown. Curly quotes where straight ones belong, which measured 0% here but still appears in text pasted from word processors.
-
-## Tier 2: Structure
+**Run this on every document.** It is the only section with a measured baseline behind it, it rises 2-4x against pre-ChatGPT academic text in both abstracts and full papers, and it held across 2024 to 2026 while the vocabulary below decayed. If you only have attention for one section, this is it.
 
 Model-level generation habits rather than interface artifacts, so they survive across vendors and model generations. Wikipedia's categories and terminology, except false ranges, which is noted below.
 
 ### Copula avoidance
 
-2.6x excess in journal abstracts after ChatGPT, 2.6x in full texts. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
+2.4x excess in journal abstracts after ChatGPT, and rising again in 2026. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
 
 `serves as` is a real instance every time it appears. Bare `provides` was only 1 in 6, because "the tool provides X" is an ordinary verb, so it is narrowed to the copular form: "provides an effective solution" means "is an effective solution". `maintains` was never real across 11 matches. Read the verb: if `is` cannot replace it, leave it.
 
 ### Superficial analysis via -ing
 
-**The strongest tell of any kind in academic prose.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 8.7 in 2024, peaked at 12.2 in 2025, and sits at 6.9 in 2026. Full texts show the same shape, 1.9 to 8.2. Still nearly 7x baseline after two years, while the vocabulary markers decayed.
+**The strongest tell of any kind in academic prose.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 9.2 in 2024, peaked at 12.2 in 2025, and sits at 6.6 in 2026. Full texts show the same shape. Still 6.4x baseline after two years, while the vocabulary markers decayed.
 
 A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`, `providing`, `enhancing`, `allowing`, `helping`, `supporting`, `maintaining`, `thereby ...ing`.
 
@@ -168,7 +126,7 @@ The most reliable of the structural patterns: about 3 matches in 4 are real. Bar
 
 `from X to Y` where X and Y are not on a common scale. "from the birth of stars to the enigmatic dance of dark matter" is a shape, not a range.
 
-Unsourced. Not on the Wikipedia page, unlike the rest of this tier. See `references/sources.md`.
+Unsourced. Not on the Wikipedia page, unlike the rest of this section. See `references/sources.md`.
 
 ### The challenges formula
 
@@ -178,9 +136,9 @@ Unsourced. Not on the Wikipedia page, unlike the rest of this tier. See `referen
 
 Rotating synonyms to avoid repeating a word, an artifact of repetition penalties. In technical text this is actively harmful: one thing, one name.
 
-## Tier 3: Excess vocabulary
+## Vocabulary
 
-26% of files, 2.4 per 10k words. Lower frequency than formatting, but the only tier with a published measurement behind it.
+**Run this on every document too, and trust it less.** It is the only section with a *published* measurement behind it and the only one measured to decay.
 
 Kobak et al. found 2024's excess vocabulary is overwhelmingly stylistic, not topical: of 379 excess style words, 66% were verbs and 14% adjectives. That is the opposite of a real event like Covid, whose excess words were content nouns (79.2% of content words were nouns).
 
@@ -193,21 +151,62 @@ Wikipedia's independently compiled list overlaps heavily, which is the useful pa
 Do not blanket-replace these. Every one is a legitimate English word, and a banned-word list is the failure mode of every other tool in this space. `Crucial` in a sentence that establishes why something is crucial is fine. The signal is density and co-occurrence: several of them in one paragraph, doing no work.
 
 **This list decays, and the decay is measured.** In one journal `crucial` fell
-from 5.9 per 10k in 2024 to 0.9 in 2026, back to its pre-ChatGPT level, and
+from 6.0 per 10k in 2024 to 1.0 in 2026, back to its pre-ChatGPT level, and
 `delve` effectively vanished. Both were the most publicised markers, and
 publicity is what kills a word-level tell. `robust` went the other way and is
 still climbing. Excess vocabulary shifts rather than disappearing, so a fixed
 list ages badly in both directions.
 
 Treat Kobak's method as the durable part and this list as a snapshot. Over the
-same window the structural tells in Tier 2 held. **If you only have attention for
-one tier on prose, use Tier 2.** Figures in `references/sources.md`.
+same window the structural tells held. Figures in `references/sources.md`.
 
-## Tier 4: Paste-era artifacts
+## Markup, if you chose it
+
+**Skip this section for a paper.** In a journal template or a LaTeX class the headings, numbering and list style are the venue's, and changing them is not de-LLMing, it is breaking the submission. Full texts show heading style flat across 2021 to 2026 for exactly that reason.
+
+Run it on an academic blog post, where you picked the formatting yourself. Nothing here has an academic baseline: an abstract has no markup and the full-text corpus does not preserve it, so this section rests on that argument rather than on a rate.
+
+The em dash is the exception. It occurs in prose without any markup at all, and it is the one item here with a measurement.
+
+### Em dash
+
+In arXiv preprints it roughly doubled between 2020 and 2026, 3.7 to 7.8 per 10k words. In full papers it is low either way and one document holds a third of the matches, so it is worth a glance in a blog post or an abstract and rarely repays one in a paper.
+
+Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitute:
+
+| Before | After |
+|---|---|
+| The build failed — the cache was stale. | The build failed. The cache was stale. |
+| Latency rose 3x — well outside run-to-run spread. | Latency rose 3x, well outside run-to-run spread. |
+| Two engines — Chroma and Qdrant — gained nothing. | Neither Chroma nor Qdrant gained anything. |
+
+Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon.
+
+### Inline-header bold lists
+
+The shape is `- **Term**: explanation`, repeated down a list where prose belongs.
+
+> Before:
+> - **Fast**: Runs in under a second.
+> - **Portable**: No dependencies.
+>
+> After: It runs in under a second and has no dependencies.
+
+Keep the list when the items are genuinely parallel and a reader will scan rather than read, such as a table of hyperparameters. Convert it when the "list" is three sentences wearing a costume.
+
+### Title case headings
+
+`## Getting Started With The Config` becomes `## Getting started with the config`. Sentence case throughout, except for proper nouns.
+
+### Lower-frequency formatting
+
+Excessive boldface, especially bolding terms mid-paragraph as "key takeaways". Emoji as bullets, separators, or heading decoration. Heading levels that skip, H2 straight to H4. Thematic breaks before headings. Markdown leaking into a format that is not Markdown. Curly quotes where straight ones belong, which appear whenever text passes through a word processor.
+
+## Paste artifacts
 
 Strings a model emitted that no human would type. Near-conclusive when present, and trivial to match.
 
-They measured 0% across both corpora here, because they are web-interface citation renderings. They only appear when someone pastes out of a chat window, which agent-written text never does. Keep the check, since it costs one pass, but do not lead with it.
+They measured zero across every corpus here, because they are web-interface citation renderings that only survive a copy-paste out of a chat window. That is the one thing a manuscript does and a file an agent wrote does not, so this is worth one pass on a draft even at a measured rate of zero. Do not lead with it.
 
 | Model | Artifact strings |
 |---|---|
@@ -240,9 +239,9 @@ Do not use this checklist as evidence about who wrote something. Use it to edit.
 ## Self-check
 
 1. Run the skip pass. Announce what you excluded.
-2. Fix formatting first. It is where the volume is.
-3. Read every hit from `references/patterns.md`. Fix only real ones.
-4. Count Tier 3 words per paragraph. One is nothing. Four doing no work is the signal.
+2. Decide whether the markup section applies: did you choose this formatting, or did the venue?
+3. Read every hit from `references/patterns.md`. Fix only real ones. Structure first.
+4. Count vocabulary markers per paragraph. One is nothing. Four doing no work is the signal.
 5. Read your three-item lists. Delete a third item that measures nothing.
 6. For every hedge you removed, ask whether the sentence now claims more than the evidence supports. Put back any that does.
 7. Read the first sentence of each section. If it announces the section instead of stating a fact, rewrite it.
@@ -252,7 +251,7 @@ Do not use this checklist as evidence about who wrote something. Use it to edit.
 
 This removes markers of machine authorship. It does not make text true, well argued, or worth reading, and it cannot certify authorship in either direction.
 
-It preserves voice deliberately. If the author writes long sentences by choice, the structural tiers still apply, but do not sand their register into house style.
+It preserves voice deliberately. If the author writes long sentences by choice, the structural pass still applies, but do not sand their register into house style.
 
 Voice fingerprinting, meaning a statistical profile built from the author's own corpus, is a deliberate non-goal. It requires stored state and a corpus, and "sounds like you" is not falsifiable the way the rest of this file tries to be.
 

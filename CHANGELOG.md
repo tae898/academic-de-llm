@@ -1,7 +1,7 @@
 # Changelog
 
-Versions below 1.0.0 mean the patterns, tier ordering and file layout can still
-change without notice. The version number is the *released* version: commits
+Versions below 1.0.0 mean the patterns, their ordering and the file layout can
+still change without notice. The version number is the *released* version: commits
 between releases do not touch it.
 
 ## A note on the numbering
@@ -18,15 +18,40 @@ the corrections are the useful part.
 ## 0.1.0 (2026-08-07) — first release
 
 Scope narrowed to **academic writing**: papers, abstracts and academic blog
-posts, in LaTeX, Markdown and HTML. The earlier version claimed READMEs, commit
-messages, PR descriptions and email as well, a range the evaluation never
-tested. Two registers now instead of four.
+posts, in LaTeX, Markdown and HTML. The earlier version also claimed software
+documentation, commit messages, PR descriptions and email, a range the
+evaluation never tested.
 
 Renamed from `de-llm` to `academic-de-llm` to match.
 
-The README corpora stay in `research/` as contrast evidence. They are what
-established that formatting tells are markup-specific rather than universal, and
-that finding is why a paper skips Tier 1. They no longer shape the skill.
+**Tiers replaced by named sections, ordered for academic prose.** Tier numbers
+encoded a priority that the narrowed scope inverted: Tier 1 was labelled
+"highest yield" and skipped on two of three document types, and every number
+supporting it came from a corpus that is no longer in scope. The numbering had
+already drifted once, leaving a review note in `sources.md` that named the wrong
+tiers. Sections are now **structure**, **vocabulary**, **markup if you chose
+it**, **paste artifacts**, in that order, so file order matches what to do
+first. The markup section is scoped by a question rather than a rate: did you
+choose this formatting, or did the venue?
+
+**Out-of-scope corpora and their derived numbers deleted**, not just unreferenced
+— the collection script, the prevalence section in `sources.md`, and every
+percentage in `SKILL.md` that came from them. What survives is the conclusion
+they supported, which the academic corpora support independently: heading style
+in full texts is flat across 2021 to 2026, so a paper's formatting is the
+venue's.
+
+**Fixtures rebuilt per register.** A LaTeX paper pair and an academic blog pair
+replace the software-documentation ones. The LaTeX pair is new coverage: the
+skill has claimed LaTeX since it was written and had no worked example, and it
+is the fixture that asserts `\section{Related Work}` and a `---` em dash must
+*survive* a pass. 81 assertions, up from 54.
+
+**Case sensitivity documented.** The eval scores structure and vocabulary
+case-insensitively and `patterns.md` never said so. Matching them
+case-sensitively silently drops every sentence-initial hit, including
+`Unlike prior work, this study...`, which is the most common form of negative
+parallelism.
 
 Everything below is pre-release development history.
 

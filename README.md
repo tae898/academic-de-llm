@@ -37,13 +37,19 @@ Per 10k words. Two results worth the trouble.
 **The largest excess tell is structural, not lexical.** The superficial `-ing`
 clause — "…, highlighting the importance of careful tuning" — rose 8.9x by 2024,
 higher than any word Kobak reports for that journal. As far as I know that is
-the first excess figure published for a structural tell.
+the first excess figure published for a structural tell. That figure uses a
+tight probe; the wider regex the skill ships for editing puts it at 3.7x on a
+much higher base, and `research/measure.py` prints both.
 
 **The famous words died and the structure did not.** `crucial` is back at its
 pre-ChatGPT level and `delve` is effectively gone, down 84% and 89% since 2024.
 Publicity kills a word-level tell. Over the same window `-ing` clauses are still
-at 6.4x baseline and copula avoidance is still climbing. Meanwhile `robust` went
-*up* 46%, so the vocabulary shifts rather than disappearing.
+at 6.4x baseline, and `robust` went *up* 46%, so the vocabulary shifts rather
+than disappearing.
+
+And one tell has not peaked at all. Under the regexes the skill actually ships,
+copula avoidance rises in every window — 10.2, 17.2, 25.8, **27.3** — while
+everything else fell back from 2024 or 2025.
 
 That is why the skill puts structure first and tells you to trust the word list
 least. It is also why this repo is a measurement pipeline and not just a

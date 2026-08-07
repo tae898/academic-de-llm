@@ -84,7 +84,7 @@ Model-level generation habits rather than interface artifacts, so they survive a
 
 ### Copula avoidance
 
-2.4x excess in journal abstracts after ChatGPT, and rising again in 2026. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
+2.4x excess in journal abstracts after ChatGPT, and **the one tell here that has not peaked**: on the regex below it rises in every window through 2026, while every other pattern fell back from its 2024 or 2025 high. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
 
 `serves as` is a real instance every time it appears. Bare `provides` was only 1 in 6, because "the tool provides X" is an ordinary verb, so it is narrowed to the copular form: "provides an effective solution" means "is an effective solution". `maintains` was never real across 11 matches. Read the verb: if `is` cannot replace it, leave it.
 
@@ -96,8 +96,8 @@ A participial clause that attaches vague interpretation to a fact: `highlighting
 
 **It does not need a comma.** "sensor signals enabling precise and robust detection" is the same pattern without punctuation, and looking only after commas missed most of them. `enabling` was dropped entirely: it matched 16 times and not one was a real instance, while accounting for a third of everything this pattern found.
 
-> Before: The cache is checked first, reducing round trips and improving latency.
-> After: The cache is checked first. That removes one round trip.
+> Before: Attention is computed over the full sequence, enabling long-range dependencies and improving downstream accuracy.
+> After: Attention is computed over the full sequence. That is what lets the model use tokens 400 positions back.
 
 ### Negative parallelism
 
@@ -105,8 +105,8 @@ Four variants: `not just X, but Y`, `not X, but Y`, `X rather than Y`, and `unli
 
 The last one is the one that actually occurs. Searching only for the `not just` forms found 14 matches across 60 abstracts and not one was real, while every genuine instance took the `unlike traditional studies that optimise accuracy, this work emphasises...` shape.
 
-> Before: This is not about speed. It is about correctness.
-> After: The change corrects the result. It does not make it faster.
+> Before: Unlike prior work that optimises accuracy in isolation, this study emphasises the accuracy-latency tradeoff.
+> After: Prior work optimises accuracy in isolation. This study measures accuracy against latency.
 
 ### Rule of three
 
@@ -166,9 +166,9 @@ same window the structural tells held. Figures in `references/sources.md`.
 
 Run it on an academic blog post, where you picked the formatting yourself. Nothing here has an academic baseline: an abstract has no markup and the full-text corpus does not preserve it, so this section rests on that argument rather than on a rate.
 
-The em dash is the exception. It occurs in prose without any markup at all, and it is the one item here with a measurement.
-
 ### Em dash
+
+The exception. It occurs in prose without any markup at all, and it is the one item here with a measurement.
 
 In arXiv preprints it roughly doubled between 2020 and 2026, 3.1 to 7.7 per 10k words. In full papers it is low either way and one document holds a third of the matches, so it is worth a glance in a blog post or an abstract and rarely repays one in a paper.
 
@@ -184,41 +184,21 @@ Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitu
 
 Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon.
 
-### Inline-header bold lists
+### The rest
 
-The shape is `- **Term**: explanation`, repeated down a list where prose belongs.
+Title case headings, inline-header bold lists, emoji as decoration, boldface applied mid-paragraph as "key takeaways", thematic breaks, heading levels that skip, curly quotes, and Markdown leaking into a format that is not Markdown. Each with its pattern and its keep-or-convert rule in `references/patterns.md`. They are mechanical once you have decided this section applies at all.
 
-> Before:
-> - **Fast**: Runs in under a second.
-> - **Portable**: No dependencies.
->
-> After: It runs in under a second and has no dependencies.
-
-Keep the list when the items are genuinely parallel and a reader will scan rather than read, such as a table of hyperparameters. Convert it when the "list" is three sentences wearing a costume.
-
-### Title case headings
-
-`## Getting Started With The Config` becomes `## Getting started with the config`. Sentence case throughout, except for proper nouns.
-
-### Lower-frequency formatting
-
-Excessive boldface, especially bolding terms mid-paragraph as "key takeaways". Emoji as bullets, separators, or heading decoration. Heading levels that skip, H2 straight to H4. Thematic breaks before headings. Markdown leaking into a format that is not Markdown. Curly quotes where straight ones belong, which appear whenever text passes through a word processor.
+One of them is a judgment call rather than a rule. Keep an inline-header bold list when the items are genuinely parallel and a reader will scan rather than read, such as a table of hyperparameters. Convert it when the "list" is three sentences wearing a costume.
 
 ## Paste artifacts
 
 Strings a model emitted that no human would type. Near-conclusive when present, and trivial to match.
 
-They measured zero across every corpus here, because they are web-interface citation renderings that only survive a copy-paste out of a chat window. That is the one thing a manuscript does and a file an agent wrote does not, so this is worth one pass on a draft even at a measured rate of zero. Do not lead with it.
+They measured zero across every corpus here, because they are web-interface citation renderings that only survive a copy-paste out of a chat window. That is the one thing a manuscript does and a file an agent wrote does not, so run it once on a draft even at a measured rate of zero. Do not lead with it.
 
-| Model | Artifact strings |
-|---|---|
-| ChatGPT | `contentReference`, `oaicite`, `turn0search0` |
-| Gemini | `[cite: 1]`, `[span_1](start_span)` |
-| Grok | `grok_card`, `grok_render_citation_card_json` |
-| DeepSeek | lenticular brackets `【 】`, stray dagger `†` |
-| Perplexity | `attached_file`, `ppl-ai-file-upload` |
+One pass for `contentReference`, `oaicite`, `[cite: 1]`, `grok_card`, `attached_file`, lenticular brackets `【 】`, and `utm_source=` left in a cited URL. Full list per vendor in `references/patterns.md`.
 
-Also check `utm_source=` left in cited URLs, DOIs that resolve to unrelated papers, invalid ISBNs, and named references declared but never used.
+Then the citation checks a regex cannot do: DOIs that resolve to unrelated papers, invalid ISBNs, and named references declared but never used.
 
 ## Patterns find candidates, not violations
 

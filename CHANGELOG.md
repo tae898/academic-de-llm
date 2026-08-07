@@ -53,6 +53,29 @@ case-sensitively silently drops every sentence-initial hit, including
 `Unlike prior work, this study...`, which is the most common form of negative
 parallelism.
 
+**Both regex sets are now measured.** `measure.py` had carried the narrow
+pre-0.4.0 patterns while `patterns.md` shipped the retiered ones, so the corpus
+tables tracked patterns the skill no longer used. Rather than pick one, it now
+reports a **probe** (tight definition, low baseline, interpretable ratio) and
+the **shipped** regex imported from `research/eval/adjudicate.py`, and
+`baseline.json` tracks both. They answer different questions: 8.9x is how much
+the tell rose, 3.7x is what a real pass will find.
+
+That immediately surfaced a finding the probe had hidden. **Copula avoidance is
+the only tell measured here that has not peaked** — under the shipped regex it
+rises in every window, 10.2 to 27.3 per 10k, with 2026 the highest. The probe
+showed it peaking in 2025 and falling back, because the triggers carrying the
+growth (`remains`, `presents a`, the copular `provides a`) were added in 0.4.0
+and are absent from it.
+
+**The papers corpus is measured at last.** `fetch.py` downloads 539k words of
+PMC full text, `sources.md` published figures from it, and no committed script
+read it, so that column was not reproducible.
+
+**`make eval` was broken.** `research/eval/rewrite.py` still read
+`skills/de-llm/SKILL.md` and would have raised `FileNotFoundError` on the first
+stage of every run since the rename.
+
 Everything below is pre-release development history.
 
 ## Pre-release: 0.4.0 (2026-08-06)

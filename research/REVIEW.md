@@ -94,24 +94,19 @@ python3 research/eval/regress.py --set-floors    # new floors.json
 Never reset the floors to make a red test green. That is the one move that turns
 this whole apparatus back into taste.
 
-## 5b. Open item: two regex sets
+## 5b. Both regex sets, every cycle
 
-`research/measure.py` measures excess with the narrow pre-0.4.0 regexes.
-`references/patterns.md` ships the retiered ones, tuned for precision and recall
-rather than for excess. The wider set fires on pre-ChatGPT prose too, so it
-raises the baseline and shrinks every ratio.
+`measure.py` reports two rows for each structural tell. The **probe** is a tight
+definition used for the time series; the **shipped** row imports the regex from
+`research/eval/adjudicate.py`, the one place `patterns.md`'s patterns are
+defined. Keep both. The probe answers "did this tell rise"; the shipped row
+answers "how much fires on a real draft", and in 2026 only the shipped row
+showed copula avoidance still climbing.
 
-Decide which is the measurement of record, then make it the only one:
-
-- If excess is what the tables claim, keep the narrow set in `measure.py`, and
-  say in `patterns.md` that the shipped regexes are finders and not the thing
-  the ratios were computed on.
-- If the shipped set is what should be tracked, import `PATTERNS` from
-  `research/eval/adjudicate.py` into `measure.py`, re-record `baseline.json`,
-  and republish sources 3 and 5. The headline `-ing` figure becomes 3.7x rather
-  than 8.9x, and copula avoidance changes from +9% to +59%.
-
-Whichever way it goes, one set. Two is how the tables drifted apart.
+If you retune a trigger in `adjudicate.py`, the shipped row moves and
+`baseline.json` will flag it. That is the point: a regex change is supposed to
+be visible in the time series. Re-record with `make baseline` and say in the
+changelog which triggers moved it.
 
 ## 6. Update the skill
 

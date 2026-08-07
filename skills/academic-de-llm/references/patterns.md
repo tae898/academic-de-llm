@@ -70,13 +70,14 @@ preserve it. See `sources.md`.
 | Pattern | Regex | A real hit |
 |---|---|---|
 | Em dash | `—` or `---` or `&mdash;` | Prose using a dash for emphasis or clause separation. **Match the form the format uses**: a `.tex` file holds `---`, HTML holds `&mdash;`, and searching for U+2014 in either returns a false clean. Comma if the tail is a modifier, full stop if it is its own claim, parentheses if it is an aside. Never a semicolon. Doubled in arXiv abstracts 2020 to 2026; flat in full papers, so it is the one entry here that applies to prose too |
-| Inline-header bold list | `^\s*[-*] \*\*[^*]+\*\*\s*[:—-]` | Three sentences wearing a costume. Not a hit when items are genuinely parallel and meant to be scanned, such as a parameter table. |
+| Inline-header bold list | `^\s*[-*] \*\*[^*]+\*\*\s*[:—-]` | Three sentences wearing a costume: `- **Expected SARSA**: Reduces policy variance.` down a list where a paragraph belongs. Not a hit when items are genuinely parallel and meant to be scanned, such as a hyperparameter table. This is the one call in this section a regex cannot make for you |
 | Title case heading | `^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]` | `## Getting Started With The Config`. Not a hit when the capitals are proper nouns (`Learning With Gaussian Processes`). |
 | Emoji | `\p{Emoji_Presentation}` | Emoji as bullets, separators, or heading decoration. |
 | Curly quotes | `[\x{201C}\x{201D}\x{2018}\x{2019}]` | Curly quotes where straight ones belong. Written as codepoint escapes because a literal pattern gets straightened by editors, which silently inverts the check. Common in text pasted through a word processor |
 | Heading level skip | `(?m)^##\s.*\n(?:.*\n)*?^####\s` | H2 straight to H4. Needs multiline matching. |
 | Thematic break | `^\*\*\*$` | A rule inserted before a heading. Do **not** match `^---$`, which hits YAML frontmatter in every Markdown file. |
 | Excessive boldface | `\*\*[^*\n]{1,40}\*\*` | Count per file. Bolding terms mid-paragraph as "key takeaways". |
+| Markup in the wrong format | `\*\*[^*\n]+\*\*\|^#{1,6} ` in a `.tex`; `\\[a-z]+\{` in a `.md` | Markdown leaking into LaTeX, or the reverse. A generated draft often carries the syntax of whatever the model defaulted to. |
 
 ## Paste artifacts
 
@@ -90,6 +91,14 @@ contentReference|oaicite|turn0search[0-9]|\[cite: ?[0-9]+\]|
 span_[0-9]+\]\(start_span|grok_card|grok_render_citation_card_json|
 attached_file|ppl-ai-file-upload|【|utm_source=
 ```
+
+| Vendor | Strings |
+|---|---|
+| ChatGPT | `contentReference`, `oaicite`, `turn0search0` |
+| Gemini | `[cite: 1]`, `[span_1](start_span)` |
+| Grok | `grok_card`, `grok_render_citation_card_json` |
+| DeepSeek | lenticular brackets `【 】`, stray dagger `†` |
+| Perplexity | `attached_file`, `ppl-ai-file-upload` |
 
 Also check DOIs that resolve to unrelated papers, invalid ISBNs, and named references declared but never used.
 

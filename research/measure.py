@@ -26,18 +26,45 @@ DOC_SEP = '\n\n'
 
 PUBMED_WINDOWS = [('ypre', '2019-21'), ('y2024', '2024'), ('y2025', '2025'), ('y2026', '2026')]
 
-PATTERNS = [
+# Two sets, on purpose, because they answer different questions.
+#
+#   PROBE    a tight definition of the tell, used for the time series. Low
+#            baseline, so the excess ratio is large and interpretable.
+#   SHIPPED  the regexes in references/patterns.md, imported from the one
+#            place they are defined. Tuned for recall on an editing task, so
+#            they also match ordinary academic prose. That raises the baseline
+#            and shrinks the ratio without either number being wrong.
+#
+# Reporting only the probe overstates what the skill's own finders separate.
+# Reporting only the shipped set hides that the tell itself rose sharply.
+sys.path.insert(0, os.path.join(HERE, 'eval'))
+from adjudicate import PATTERNS as _SHIPPED       # noqa: E402
+
+VOCAB = [
     ("Kobak's ten markers", r'\b(across|additionally|comprehensive|crucial|enhancing|exhibited|insights|notably|particularly|within)\b'),
     ("  crucial",           r'\bcrucial\b'),
     ("  delve/showcase/underscore", r'\b(delv|showcas|underscor)\w+\b'),
     ("  pivotal",           r'\bpivotal\b'),
     ("  robust",            r'\brobust\w*\b'),
+]
+
+PROBES = [
     ("Superficial -ing",    r', (highlighting|underscoring|emphasizing|ensuring|reflecting|contributing to|allowing|enabling)'),
     ("Copula avoidance",    r'\b(serves as|stands as|functions as|boasts|offers|maintains)\b'),
     ("Undue emphasis",      r'plays a (crucial|pivotal|vital) role|is a testament'),
     ("Negative parallelism", r'not just .{0,40} but|not only .{0,40} but'),
-    ("Vendor paste artifacts", r'contentReference|oaicite|grok_card|ppl-ai-file-upload|【'),
 ]
+
+SHIPPED = [(f'{n} (shipped)', _SHIPPED[k]['regex']) for n, k in [
+    ("Superficial -ing", 'superficial -ing'),
+    ("Copula avoidance", 'copula avoidance'),
+    ("Undue emphasis", 'undue emphasis'),
+    ("Negative parallelism", 'negative parallelism'),
+]]
+
+PASTE = [("Vendor paste artifacts", r'contentReference|oaicite|grok_card|ppl-ai-file-upload|【')]
+
+PATTERNS = VOCAB + PROBES + SHIPPED + PASTE
 
 DASHES = [("--- (LaTeX em dash)", r'---'),
           ("-- (LaTeX en/em)",    r'(?<!-)--(?!-)'),

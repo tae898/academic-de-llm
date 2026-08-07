@@ -100,28 +100,33 @@ Measured instead on arXiv `cs.LG` abstracts, which preserve LaTeX dash markup, 2
 
 Em dash use roughly doubled in academic prose, and the 2026 instances are the parenthetical clause-separator pattern ("five influential benchmarks -- MMLU, ARC, ... -- revealing"). It is a real tell in prose, not only in Markdown. Two of the raw hits were a numeric range (`folds-1--5`) and a compound surname (`Kullback--Leibler`), at the false-positive rate this skill documents elsewhere.
 
-**Open: the excess figures and the shipped regexes are not the same regexes.**
-Found 2026-08-07 and not yet resolved. `research/measure.py` carries the narrow
-pre-0.4.0 patterns; `patterns.md` ships the retiered ones, which were tuned for
-precision and recall on an editing task rather than for measuring excess. The
-wider regexes fire on pre-ChatGPT prose too, so they raise the baseline and
-shrink the ratio:
+**Two regex sets, on purpose (resolved 2026-08-08).** The figures above use a
+**probe**: a tight definition of each tell, chosen so the pre-ChatGPT baseline is
+low and the ratio is interpretable. `patterns.md` ships wider regexes tuned for
+recall on an editing task, and those also match ordinary academic prose, which
+raises the baseline and shrinks the ratio. Neither number is wrong and they
+answer different questions, so `measure.py` now reports both and `baseline.json`
+tracks both.
 
-| Pattern | narrow (measured above) | shipped in `patterns.md` |
+| Pattern | probe | shipped in `patterns.md` |
 |---|---|---|
 | Superficial `-ing` | 1.03 → 9.19, **8.9x** | 7.10 → 26.36, **3.7x** |
 | Copula avoidance | 1.73 → 4.14, 2.4x | 10.17 → 17.22, 1.7x |
 | Undue emphasis | 0.36 → 0.97, 2.7x | 3.97 → 9.67, 2.4x |
 | Negative parallelism | 0.61 → 1.11, 1.8x | 1.19 → 1.82, 1.5x |
 
-Both are real and they answer different questions. A high excess ratio means the
-pattern separates eras; high recall means it finds instances worth reading. The
-tuned regexes trade the first for the second, and 3.7x is still the largest
-structural excess measured here. **The 8.9x figure above is the narrow regex and
-should be quoted as such.** Under the shipped regex copula avoidance also stops
-looking flat and rises 59% from 2024 to 2026 rather than 9%, which would change
-what source 5 concludes. Deciding which set is the measurement of record is the
-next review's job; until then this file reports the narrow one and says so.
+**Quote the probe for excess and the shipped set for what a pass will find.**
+The probe answers "did this tell rise after ChatGPT"; the shipped regex answers
+"how much will fire when I run this on a draft". A reader who takes 8.9x as a
+hit rate will be surprised by the volume, and a reader who takes 3.7x as the
+effect size will understate it.
+
+**The shipped set also found something the probe hid.** Across the four windows
+the probe shows copula avoidance peaking in 2025 and falling back (1.7, 4.1,
+6.8, 4.5). The shipped regex shows it rising in every window and peaking in
+**2026** (10.2, 17.2, 25.8, 27.3), the only tell measured here still climbing.
+The probe misses it because `remains`, `presents a` and the copular `provides a`
+were added to the shipped regex in 0.4.0 and are where the recent growth is.
 
 **What it does NOT establish**
 
@@ -216,10 +221,19 @@ The skill has always claimed word-level tells decay faster than structural ones.
 | Copula avoidance | 1.73 | 4.14 | 6.84 | 4.53 | **+9%** |
 | `robust` | 4.17 | 9.88 | 17.30 | 14.39 | **+46%** |
 
+The same four structural tells under the regexes `patterns.md` actually ships:
+
+| Tell (shipped regex) | 2019-21 | 2024 | 2025 | 2026 | peak |
+|---|---|---|---|---|---|
+| Copula avoidance | 10.17 | 17.22 | 25.83 | **27.34** | **2026** |
+| Superficial `-ing` | 7.10 | 26.36 | 27.52 | 22.90 | 2025 |
+| Undue emphasis | 3.97 | 9.67 | 7.80 | 5.40 | 2024 |
+| Negative parallelism | 1.19 | 1.82 | 0.73 | 1.31 | 2024 |
+
 **What it establishes**
 
 - **The famous words died.** `crucial` is back to its pre-ChatGPT level. `delve` is effectively gone. Both were the most publicized markers, and Kobak's own paper is part of why. Publicity appears to kill a word-level tell, whether by training or by authors editing it out.
-- **The structural tells did not.** Superficial `-ing` is still 6.4x its pre-ChatGPT baseline in 2026 after peaking in 2025. Copula avoidance is still climbing. Structure is the durable section, which is why `SKILL.md` puts it first and tells you to run it on everything.
+- **The structural tells did not.** Superficial `-ing` is still 6.4x its pre-ChatGPT baseline in 2026 after peaking in 2025. **Copula avoidance is the only tell measured here that has not peaked**: under the shipped regex it rises in every window, 10.2 to 27.3, and 2026 is the highest. That is visible only in the shipped set, because the triggers carrying the growth (`remains`, `presents a`, the copular `provides a`) were added in 0.4.0 and are absent from the probe. Structure is the durable section, which is why `SKILL.md` puts it first and tells you to run it on everything.
 - **Excess vocabulary shifts rather than vanishing.** `robust` is 3.5x baseline and up 46% since 2024. A fixed word list ages badly in both directions, not just downward.
 
 **What it does NOT establish**
@@ -231,12 +245,8 @@ The skill has always claimed word-level tells decay faster than structural ones.
 
 **Consequence for anyone using this skill:** re-run this measurement before trusting the vocabulary list. The method survives; the list is a snapshot. Structure is what to lean on.
 
-**Caveat, added 2026-08-07.** The structural rows here use the narrow regexes in
-`measure.py`, not the ones `patterns.md` ships. Under the shipped regexes copula
-avoidance rises 59% from 2024 to 2026 instead of 9%, which strengthens the
-conclusion rather than weakening it, and superficial `-ing` falls 13% instead of
-28%. The vocabulary rows are unaffected: those regexes are identical in both
-sets. See the open item in source 3.
+Both sets are in the tables above. The vocabulary rows need only one, because
+those regexes are identical in the probe and the shipped set.
 
 ---
 

@@ -245,4 +245,4 @@ Its clearest advantage is the one that was not expected: on prose that did not
 need de-slopping, the naive prompt made things worse and the skill did not. The
 machinery for knowing what to leave alone turns out to matter more than the
 pattern lists, which is also what the decay measurement in
-[`sources.md`](../skills/de-llm/references/sources.md) implies.
+[`sources.md`](../skills/academic-de-llm/references/sources.md) implies.

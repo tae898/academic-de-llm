@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce every measured number in skills/de-llm/references/sources.md.
+"""Reproduce every measured number in skills/academic-de-llm/references/sources.md.
 
     python3 research/fetch.py     # downloads the corpora (PubMed + arXiv)
     python3 research/measure.py   # prints the tables

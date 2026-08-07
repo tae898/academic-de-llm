@@ -139,7 +139,7 @@ count "trap 'crucial' x2: live+quote" "$TRAP" 2 '\bcrucial\b'
 
 echo
 echo "Self-audit: the skill must not commit the tells it flags"
-for f in skills/de-llm/SKILL.md README.md; do
+for f in skills/academic-de-llm/SKILL.md README.md; do
   [ -f "$f" ] || continue
   n=$(rg -c '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]' "$f" 2>/dev/null || true)
   n=${n:-0}
@@ -169,7 +169,7 @@ echo
 echo "The skill must name no tool and no operating system"
 # Word-boundary, and 'windows' only when it is not "time windows" / "four windows".
 toolhits=$(rg -in '\b(ripgrep|rg|grep|bash|zsh|powershell|shell|terminal|linux|macos|ubuntu)\b|(?<!time )(?<!four )(?<!both )\bwindows\b' \
-  skills/de-llm/SKILL.md skills/de-llm/references/patterns.md 2>/dev/null | wc -l | tr -d ' ')
+  skills/academic-de-llm/SKILL.md skills/academic-de-llm/references/patterns.md 2>/dev/null | wc -l | tr -d ' ')
 if [ "$toolhits" -eq 0 ]; then ok "skill names no tool or OS"
 else bad "skill" "$toolhits tool/OS mentions leaked into the skill"; fi
 

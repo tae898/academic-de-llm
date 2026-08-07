@@ -1,5 +1,5 @@
 {
-  "name": "de-llm",
+  "name": "academic-de-llm",
   "description": "Writing skills from tae898. Evidence-ordered, with sources.",
   "owner": {
     "name": "Taewoon Kim",
@@ -7,14 +7,14 @@
   },
   "plugins": [
     {
-      "name": "de-llm",
-      "description": "Strip the surface markers that make text read as machine-generated, without flattening its meaning. Ordered by measured frequency in agent-written prose: formatting first, paste-era artifacts last.",
+      "name": "academic-de-llm",
+      "description": "Last-pass polish for academic writing: strip the markers that make a paper, abstract or academic blog post read as machine-generated, without flattening the prose or weakening a claim. LaTeX, Markdown and HTML.",
       "author": {
         "name": "Taewoon Kim"
       },
       "category": "productivity",
       "source": "./",
-      "homepage": "https://github.com/tae898/de-llm"
+      "homepage": "https://github.com/tae898/academic-de-llm"
     }
   ]
 }

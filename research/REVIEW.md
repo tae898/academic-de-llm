@@ -101,7 +101,7 @@ this whole apparatus back into taste.
 - Move a decayed pattern down; note the decay rather than deleting it, so the
   next reviewer can see the trend.
 - Refresh the register table in `SKILL.md`.
-- Bump `version` and `last_reviewed` in `skills/de-llm/SKILL.md`, and mirror the
+- Bump `version` and `last_reviewed` in `skills/academic-de-llm/SKILL.md`, and mirror the
   version in `.claude-plugin/plugin.json`.
 - Update `research/baseline.json` to the new numbers, with the new date.
 - Record what changed and why in `references/sources.md`, including corrections.

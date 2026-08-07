@@ -1,55 +1,60 @@
 ---
-name: de-llm
-version: 0.4.0
+name: academic-de-llm
+version: 0.1.0
 description: |
-  Strip the surface markers that make text read as machine-generated, without
-  flattening its meaning. Use when the user says "de-LLM", "de-slop", "remove
-  the AI tells", "make this sound human", "this reads like ChatGPT", "sounds
-  like an LLM wrote it", or asks why a draft feels generated. Works on any
-  register: READMEs, documentation, LaTeX and academic papers, commit messages,
-  PR descriptions, issue comments, emails. Branches on register, because the
-  tells differ: formatting dominates documents with markup, structure dominates
-  plain prose.
+  Last-pass polish for academic writing: strip the surface markers that make a
+  paper, abstract or academic blog post read as machine-generated, without
+  flattening the prose or weakening a claim. Use when the user says "de-LLM",
+  "de-slop", "remove the AI tells", "this reads like ChatGPT", or asks why a
+  draft sounds generated. Covers LaTeX, Markdown and HTML. Scoped deliberately
+  to scholarly prose, where the tells were measured.
 license: MIT
 metadata:
   sources: >
     Kobak et al., Science Advances 2025 (arXiv:2406.07016);
     Wikipedia:Signs of AI writing (community-maintained);
-    own corpus measurements, 2026-08 (see references/sources.md)
+    own corpus measurements over 1.3M words of academic text, 2026-08
+    (see references/sources.md)
   last_reviewed: 2026-08
   changelog: CHANGELOG.md
   review_process: research/REVIEW.md
 ---
 
-# De-LLM: Remove the Tells, Keep the Meaning
+# Academic de-LLM: Remove the Tells, Keep the Argument
 
-Generated prose is rarely wrong. It is recognizable. This skill removes what makes it recognizable.
+Generated prose is rarely wrong. It is recognizable. This is the pass you run
+last, after the argument is settled and before submission.
 
+Scoped to academic writing on purpose. The measurements behind it come from
+1.3M words of journal abstracts, open-access full texts and arXiv preprints.
 Every claim here is measured or cited, and `references/sources.md` says which,
-including what each source does **not** establish and which claims have no source
-at all.
+including what each source does **not** establish and which claims have no
+source at all.
 
-## Read the register first, then pick a tier
+## Two things move, and one mostly does not
 
-The tells are not universal, and running the wrong tier first wastes the pass.
+**Structure and vocabulary rise everywhere.** Two to four times against a
+pre-ChatGPT baseline, in abstracts and in full texts alike. Tier 2 and Tier 3
+are where the work is, in any academic document.
 
-**Structure and vocabulary rise in every register with a baseline**, two to four
-times. Tier 2 and Tier 3 are the ones to trust everywhere.
+**Formatting is mostly journal template, not authorship.** In full texts,
+section headings sit flat across 2021 to 2026: "2. Materials and Methods" is
+what the form requires. Em dash use is low either way.
 
-**Formatting is register-specific and usually is not a tell.** Decide by how the
-document was written, not by whether it contains markup:
+So:
 
 | Document | Start at | Because |
 |---|---|---|
-| Written end to end by an agent | **Tier 1** | em dashes and bold lists run about ten times a maintained repository |
-| A README a human maintains | **Tier 2** | em dashes have *fallen* since 2022 and title case is flat; both are house style. Check the inline-header bold list first, the one formatting tell that rose |
-| An academic paper | **Tier 2** | section headings are journal template, not authorship. "2. Materials and Methods" is what the form requires |
-| Plain prose: abstracts, email, commit bodies | **Tier 2** | only the em dash carries over from Tier 1. The rest needs markup to exist |
+| A paper, LaTeX or journal template | **Tier 2** | headings and numbering are the venue's, not yours. Skip Tier 1 even though the file has markup |
+| An abstract, or a submission field | **Tier 2** | there is no markup to check |
+| An academic blog post in Markdown or HTML | **Tier 1**, briefly | you chose the formatting, so em dashes and inline-header bold lists are yours to answer for. Then Tier 2 |
 
-Figures, corpora and the before-and-after comparisons behind this table are in
-`references/sources.md`.
+Figures and corpora behind this are in `references/sources.md`.
 
-Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100). Use that when a reader might misread the text. Use this one when a reader might think a machine wrote it. On technical docs, run both. On a paper, run only this one, because STE bans the modals that carry your certainty.
+Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100).
+Use that when a reader might misread the text. Use this one when a reader might
+think a machine wrote it. On a paper, run only this one, because STE bans the
+modals that carry your certainty.
 
 ## Two directives, equally binding
 
@@ -83,7 +88,7 @@ On plain prose only the em dash below applies. Everything else in this tier need
 
 ### Em dash
 
-The strongest signal in documents with markup: 91% of READMEs, 122 per 10k words. It is also the one Tier 1 pattern that occurs in plain prose, where it roughly doubled in arXiv abstracts between 2020 and 2026 (3.7 to 7.8 per 10k).
+The one Tier 1 pattern that occurs in prose without markup. In arXiv preprints it roughly doubled between 2020 and 2026, 3.7 to 7.8 per 10k words. In full texts it is low either way, so it is worth a glance in a blog post and rarely repays one in a paper.
 
 Wikipedia lists "em dash overuse", not em dash use. Rewrite rather than substitute:
 
@@ -121,13 +126,13 @@ Model-level generation habits rather than interface artifacts, so they survive a
 
 ### Copula avoidance
 
-34% of READMEs, and 2.6x excess in journal abstracts after ChatGPT. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
+2.6x excess in journal abstracts after ChatGPT, 2.6x in full texts. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
 
 `serves as` is a real instance every time it appears. Bare `provides` was only 1 in 6, because "the tool provides X" is an ordinary verb, so it is narrowed to the copular form: "provides an effective solution" means "is an effective solution". `maintains` was never real across 11 matches. Read the verb: if `is` cannot replace it, leave it.
 
 ### Superficial analysis via -ing
 
-**The strongest tell of any kind in plain prose, and it does not occur in READMEs at all.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 8.7 in 2024, peaked at 12.2 in 2025, and sits at 6.9 in 2026. Still nearly 7x baseline after two years, while the vocabulary markers decayed.
+**The strongest tell of any kind in academic prose.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 8.7 in 2024, peaked at 12.2 in 2025, and sits at 6.9 in 2026. Full texts show the same shape, 1.9 to 8.2. Still nearly 7x baseline after two years, while the vocabulary markers decayed.
 
 A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`, `providing`, `enhancing`, `allowing`, `helping`, `supporting`, `maintaining`, `thereby ...ing`.
 
@@ -220,7 +225,7 @@ Every pattern here is a finder. Read each hit.
 
 Measured on one real paper: the em-dash pattern returned 8 hits, of which 2 were prose worth fixing. The rest were three code comments, a table placeholder, and two numeric en dashes. A pass that changed all 8 would have corrupted a table and three code samples.
 
-A second measurement, on this skill's own research: a keyword search for writing-related plugins across 278 marketplace entries returned 48 hits and 0 real ones. `docs` matched documentation tools, `write` matched "write optimized SQL", `style` matched UI themes.
+Measured across 30 abstracts with a judge panel labelling every hit: of everything the finders match, **about half is a real instance**. The other half is a word that happened to coincide.
 
 The skip pass in step zero is what keeps this rate survivable.
 

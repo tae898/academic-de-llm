@@ -1,28 +1,36 @@
 # Changelog
 
 Versions below 1.0.0 mean the patterns, tier ordering and file layout can still
-change without notice. They have changed materially twice in the last day, both
-times because a measurement contradicted the previous version. 1.0.0 is for when
-a review cycle passes without a finding that forces a rewrite.
+change without notice. The version number is the *released* version: commits
+between releases do not touch it.
 
 ## A note on the numbering
 
-Early development used 2.x and 3.x before this repository existed and before
+Development ran through 2.x and 3.x before this repository existed and before
 anything was released. Those numbers implied a stability that was never earned:
 v3.1.0 shipped with pattern finders that caught **8% of real instances**, which
 was only discovered afterwards by measuring.
 
-Renumbered to 0.x on 2026-08-06, with no releases or installs to break. The
-mapping:
+Reset to **0.1.0** on 2026-08-07 for the first release, with no tags or installs
+to break. Everything below happened before that release and is recorded because
+the corrections are the useful part.
 
-| Old | New | What it was |
-|---|---|---|
-| 2.0.0 | pre-release | private skill, never published |
-| 3.0.0 | 0.3.0 | tier ordering inverted to formatting-first |
-| 3.1.0 | 0.3.1 | register branch, decay data, Kobak figures corrected |
-| — | **0.4.0** | finders retiered on measured precision and recall |
+## 0.1.0 (2026-08-07) — first release
 
-## 0.4.0 (2026-08-06)
+Scope narrowed to **academic writing**: papers, abstracts and academic blog
+posts, in LaTeX, Markdown and HTML. The earlier version claimed READMEs, commit
+messages, PR descriptions and email as well, a range the evaluation never
+tested. Two registers now instead of four.
+
+Renamed from `de-llm` to `academic-de-llm` to match.
+
+The README corpora stay in `research/` as contrast evidence. They are what
+established that formatting tells are markup-specific rather than universal, and
+that finding is why a paper skips Tier 1. They no longer shape the skill.
+
+Everything below is pre-release development history.
+
+## Pre-release: 0.4.0 (2026-08-06)
 
 **Finders retiered on measurement rather than judgement.** Recall went from 8%
 to **74%**; precision from 32% to **51%**. Method: one judge panel labels every

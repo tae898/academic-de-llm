@@ -1,6 +1,6 @@
 # Research
 
-Reproduces every measured number in `skills/de-llm/references/sources.md`.
+Reproduces every measured number in `skills/academic-de-llm/references/sources.md`.
 
 ```bash
 python3 research/fetch.py     # public endpoints, no API key

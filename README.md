@@ -1,9 +1,14 @@
-# de-llm
+# academic-de-llm
 
-[![patterns](https://github.com/tae898/de-llm/actions/workflows/test.yml/badge.svg)](https://github.com/tae898/de-llm/actions/workflows/test.yml)
+[![patterns](https://github.com/tae898/academic-de-llm/actions/workflows/test.yml/badge.svg)](https://github.com/tae898/academic-de-llm/actions/workflows/test.yml)
 
-A Claude Code skill that strips the surface markers making text read as
-machine-generated, without flattening what it says.
+A Claude Code skill for the last pass over an academic draft: strip the markers
+that make a paper read as machine-generated, without flattening the prose or
+weakening a claim.
+
+Scoped to scholarly writing on purpose. Papers, abstracts and academic blog
+posts, in LaTeX, Markdown and HTML. The measurements behind it come from 1.3M
+words of journal abstracts, open-access full texts and arXiv preprints.
 
 Most tools in this space ship a banned-word list. This one is ordered by
 measured frequency, cites its sources, and states which of its own rules are
@@ -55,15 +60,15 @@ is done. A 91% em dash rate is evidence of frequency and nothing more.
 As a plugin:
 
 ```
-/plugin marketplace add tae898/de-llm
+/plugin marketplace add tae898/academic-de-llm
 /plugin install de-llm@de-llm
 ```
 
 Or drop the skill in directly:
 
 ```bash
-git clone https://github.com/tae898/de-llm.git
-cp -r de-llm/skills/de-llm ~/.claude/skills/
+git clone https://github.com/tae898/academic-de-llm.git
+cp -r de-llm/skills/academic-de-llm ~/.claude/skills/
 ```
 
 Then ask for it by name, or say "de-slop this", "remove the AI tells", "this
@@ -130,11 +135,12 @@ It does not make text true, well argued, or worth reading.
 
 ## Status
 
-**0.4.0.** Below 1.0.0 on purpose: the patterns and tier ordering have changed
-materially twice in the last day, both times because a measurement contradicted
-the previous version. v0.3.1 shipped finders that caught 8% of real instances,
-which was only found by measuring afterwards. 1.0.0 is for when a review cycle
-passes without a finding that forces a rewrite. See [CHANGELOG.md](CHANGELOG.md).
+**0.1.0**, first release. Below 1.0.0 on purpose: the patterns have changed
+materially several times, each because a measurement contradicted the previous
+version. The finders that shipped in pre-release 0.3.1 caught 8% of real
+instances, which was only found by measuring afterwards. 1.0.0 is for when a
+review cycle passes without a finding that forces a rewrite. See
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Requirements
 

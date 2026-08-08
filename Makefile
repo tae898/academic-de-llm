@@ -4,6 +4,7 @@ help:
 	@echo "test      run every pattern assertion (needs ripgrep)"
 	@echo "fetch     download the PubMed and arXiv corpora"
 	@echo "measure   print every table in references/sources.md"
+	@echo "audit     test every claimed tell; keep only what rises"
 	@echo "rhythm    is rhythm a tell, and does de-slopping damage it"
 	@echo "review    re-measure and diff against research/baseline.json"
 	@echo "baseline  overwrite baseline.json with current numbers (do this at review time)"
@@ -19,6 +20,10 @@ fetch:
 
 measure:
 	@python3 research/measure.py
+
+# Which claimed tells survive contact with the corpora. Run before adding one.
+audit:
+	@python3 research/audit.py
 
 # Rhythm needs an eval run for its second half; the corpus half works alone.
 rhythm:

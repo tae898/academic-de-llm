@@ -489,6 +489,50 @@ which no precision figure here should be treated as precise.
 each output file under `research/eval/out/` names the models that produced it.
 A finding that only holds on one panel is a finding about the panel.
 
+## The style metric is largely measuring compression
+
+This is the most damaging finding in this file and it arrived last, which is
+its own lesson: the headline number was never checked against the thing it was
+supposed to be tracking.
+
+Six configurations, style score against what each one did to the text:
+
+| arm | style | `-ing` remaining | length retained |
+|---|---|---|---|
+| naive one-liner | 78.0 | 32.9 | **97%** |
+| 19 lines + edit locality | 53.9 | **4.3** | 95% |
+| dead-pattern trim | 38.2 | 17.6 | 94% |
+| 19 lines | 30.7 | 5.3 | 92% |
+| **shipped skill** | **22.2** | 13.6 | 92% |
+| 5KB condensation | **13.3** | 19.8 | **89%** |
+
+Correlation of the style score with **length retained: r = +0.95**. With tell
+removal: **r = +0.42**.
+
+The decisive pair is the shipped skill against the 19-line prompt. Both retain
+92% of the original length. The 19-line prompt removes **two and a half times
+more** of the largest tell — and scores **worse**. At matched compression,
+removing more tells did not help.
+
+So "reads less machine-generated", the one column this skill wins, is
+substantially a judgement about density. Shown two rewrites, a panel picks the
+tighter one. That does not make the skill useless: it removes more tells, and
+that is regex counting with no judge involved. It does mean **the judged
+advantage cannot be attributed to tell removal**, and every headline in this
+repository that leans on it is weaker than it reads.
+
+Two caveats on the caveat. Six configurations is a small basis for a
+correlation, and length and tell-removal are not independent — cutting a tell
+shortens the text. The matched-length comparison is the part that does not
+depend on either.
+
+**What this leaves standing.** The corpus findings are untouched: they are
+regex measurements against pre-ChatGPT baselines and no judge is involved. What
+weakens is the case for the skill *as a rewriter*. Its defensible use is as a
+checklist — run the four surviving patterns, read the hits, edit them yourself
+— which is also the use that avoids the 16% rate of discarding something worth
+keeping.
+
 ## Limits
 
 - **Small.** 28 abstracts, four judges. Differences of a few percentage points

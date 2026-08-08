@@ -139,13 +139,23 @@ and judges:
 | Made prose flatter | **3%** | 16% |
 | Lost something worth keeping | **2%** | 16% |
 
-**The skill wins the one column you are buying and loses every other.** Use it
-anyway, for a reason that is about you rather than the numbers: its failure mode
-is one you can catch and the one-liner's is not. You wrote the text, so you will
-notice a missing hedge on a diff. You cannot notice a tell that was left in —
-if you could spot your own, you would not need the tool.
+**The skill wins the one column you are buying and loses every other — and that
+column is confounded.** The style score correlates with how much text the
+rewrite cut at **r = +0.95**, and with tell removal at only +0.42. At matched
+compression a shorter prompt removed two and a half times more of the largest
+tell and still scored worse. Shown two rewrites, judges pick the tighter one.
 
-So: **run it, then read the diff.** The losses cluster in three places.
+So the honest summary is narrower than it first reads. The skill **does** remove
+more tells — that is regex counting, no judge involved. Its **judged** advantage
+cannot be attributed to that. See [`research/EVAL.md`](research/EVAL.md).
+
+**The use this evidence supports is as a checklist, not a rewriter.** Run the
+four patterns that survived ten corpora, read the hits, edit them yourself. That
+keeps what the research bought and avoids discarding something worth keeping one
+time in six.
+
+If you do run it as a rewriter, **read the diff.** The losses cluster in three
+places.
 
 Hedges, first: "may vary with the demand profile" is a claim about uncertainty
 and deleting it makes the sentence say more than the evidence does. Then any

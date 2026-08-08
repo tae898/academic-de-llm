@@ -7,7 +7,7 @@
    "z-ai/glm-5.2",
    "deepseek/deepseek-v4-flash-0731"
   ],
-  "corpus": "pubmed/sensors 2026 n=30 [140-330w] pools=y2026.txt",
+  "corpus": "pubmed/sensors 2026 n=30 [140-330w] pools=y2026.txt skill=armF-local.md:1263b",
   "seed": 20260805,
   "stage": "judge-quality"
  },
@@ -1364,152 +1364,17 @@
   },
   {
    "kind": "quality",
-   "i": 2,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "52ba67a8e772",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and removes redundant modifiers while preserving all technical details and the original meaning.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and removes redundant modifiers while preserving all technical details and the original meaning."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 7,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "213b6d50af7a",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit effectively streamlines the text, removing slight redundancies and wordy transitions (like \\\"To this end\\\" and \\\"noticeable improvements in\\\") to create a tighter, more natural reading flow without sacrificing technical specificity.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit effectively streamlines the text, removing slight redundancies and wordy transitions (like \"To this end\" and \"noticeable improvements in\") to create a tighter, more natural reading flow without sacrificing technical specificity."
-   }
-  },
-  {
-   "kind": "quality",
    "i": 3,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e6997968c750",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant phrasing and removes filler without sacrificing key details or technical meaning, making the prose more concise and direct while retaining the original's specificity.\"}",
+   "sig": "f58b5ef04b60",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit deletes meaningful qualifiers and claims\u2014'directly affecting,' 'improving dynamic adaptability,' and 'demonstrating strong effectiveness and robustness'\u2014leaving the prose less informative and more monotonous.\"}",
    "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens redundant phrasing and removes filler without sacrificing key details or technical meaning, making the prose more concise and direct while retaining the original's specificity."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 5,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9b48a30617b3",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens phrasing, splits an overlong sentence, and removes redundant modifiers without losing key details or technical content.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens phrasing, splits an overlong sentence, and removes redundant modifiers without losing key details or technical content."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 6,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "1a8c15decaab",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant academic phrasing and streamlines the prose without sacrificing key technical details, making it clearer and more natural while preserving the core claims and specifics.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens redundant academic phrasing and streamlines the prose without sacrificing key technical details, making it clearer and more natural while preserving the core claims and specifics."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 2,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "52ba67a8e772",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version improves clarity and flow by replacing clunky passive constructions with active phrasing, while retaining all critical technical details and avoiding the removal of essential qualifiers.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version improves clarity and flow by replacing clunky passive constructions with active phrasing, while retaining all critical technical details and avoiding the removal of essential qualifiers."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 3,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "e6997968c750",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version removes wordy transitions and unnecessary passive constructions, making the academic abstract more direct and active while preserving all essential technical details.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version removes wordy transitions and unnecessary passive constructions, making the academic abstract more direct and active while preserving all essential technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 6,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "1a8c15decaab",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false,\n  \"lost_something_worth_keeping\": false, \"why\": \"The edited version replaces wordy nominalizations with stronger verbs (e.g., 'accumulate drift' instead of 'cumulative drift errors'), improves sentence flow with a colon, and eliminates redundant phrasing without losing key technical details.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version replaces wordy nominalizations with stronger verbs (e.g., 'accumulate drift' instead of 'cumulative drift errors'), improves sentence flow with a colon, and eliminates redundant phrasing without losing key technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 1,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "469a5f8c72e0",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit effectively tightens wordy phrasing and removes redundant academic puffery (e.g., \\\"extensive,\\\" \\\"considerable,\\\" \\\"effective and reliable\\\"), resulting in more concise and active prose without losing the core technical meaning.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit effectively tightens wordy phrasing and removes redundant academic puffery (e.g., \"extensive,\" \"considerable,\" \"effective and reliable\"), resulting in more concise and active prose without losing the core technical meaning."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 4,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "68ce2dc4dd69",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit trims wordiness and unnecessary filler (e.g., \\\"significantly\\\" where a p-value is provided, \\\"also\\\"), tightens phrasing, and shifts to a more active voice without losing any meaningful scientific detail.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit trims wordiness and unnecessary filler (e.g., \"significantly\" where a p-value is provided, \"also\"), tightens phrasing, and shifts to a more active voice without losing any meaningful scientific detail."
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit deletes meaningful qualifiers and claims\u2014'directly affecting,' 'improving dynamic adaptability,' and 'demonstrating strong effectiveness and robustness'\u2014leaving the prose less informative and more monotonous."
    }
   },
   {
@@ -1518,13 +1383,88 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "213b6d50af7a",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens phrasing and removes redundant transitions without sacrificing any technical detail or qualifier, making the passage clearer and more direct.\"}",
+   "sig": "8ecf5cb48472",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the concluding clause about generalizability across road structures and driving scenarios, which adds meaningful support for the model's broader applicability beyond just intersection geometries.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the concluding clause about generalizability across road structures and driving scenarios, which adds meaningful support for the model's broader applicability beyond just intersection geometries."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c9e84f8e3f52",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips the original's emphatic qualifiers and specific claims, leaving flat, uninformative prose without adding clarity or removing redundancy.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips the original's emphatic qualifiers and specific claims, leaving flat, uninformative prose without adding clarity or removing redundancy."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8ecf5cb48472",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edited version merely truncates the ends of two sentences, dropping useful context about safety-critical reliability and generalizability without improving rhythm or clarity.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edited version merely truncates the ends of two sentences, dropping useful context about safety-critical reliability and generalizability without improving rhythm or clarity."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "35fa6e70a442",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant phrasing (e.g., 'enabling' to 'with', 'ensuring' to 'for') without changing meaning or losing detail, resulting in a more concise and professional style.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit tightens phrasing and removes redundant transitions without sacrificing any technical detail or qualifier, making the passage clearer and more direct."
+    "why": "The edit tightens redundant phrasing (e.g., 'enabling' to 'with', 'ensuring' to 'for') without changing meaning or losing detail, resulting in a more concise and professional style."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c9e84f8e3f52",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips out intensifying adjectives and adverbs such as 'vital', 'significant', and 'favorable', resulting in blander, less persuasive prose without improving clarity.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips out intensifying adjectives and adverbs such as 'vital', 'significant', and 'favorable', resulting in blander, less persuasive prose without improving clarity."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "35fa6e70a442",
+   "raw": "```json\n{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit removes useful qualifiers like 'To enhance operational performance,' 'efficient,' and 'seamless,' making the prose flatter without meaningfully improving rhythm or clarity.\"}\n```",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes useful qualifiers like 'To enhance operational performance,' 'efficient,' and 'seamless,' making the prose flatter without meaningfully improving rhythm or clarity."
    }
   },
   {
@@ -1533,73 +1473,13 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "1a8c15decaab",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit trims stock academic padding but also strips useful force and detail (fundamental/tightly/novel/synergy/substantially/compact footprint), leaving flatter, more generic prose a professional editor would not prefer.\"}",
+   "sig": "0dc9a0040b0a",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit mainly strips useful qualifiers and specifics (fundamental, efficient, minimizing redundant computation, substantially, high/highly, advantageous) without fixing real problems, leaving flatter, less precise prose.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit trims stock academic padding but also strips useful force and detail (fundamental/tightly/novel/synergy/substantially/compact footprint), leaving flatter, more generic prose a professional editor would not prefer."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 9,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "f5175e7b55d2",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit successfully breaks down dense, run-on sentences into clear, digestible statements, improving readability without losing any key technical details or the core message.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit successfully breaks down dense, run-on sentences into clear, digestible statements, improving readability without losing any key technical details or the core message."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 0,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "da3c444ff3d9",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens awkward stock phrases, improves rhythm and clarity, and keeps the technical content without stripping voice into blandness.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens awkward stock phrases, improves rhythm and clarity, and keeps the technical content without stripping voice into blandness."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 4,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "68ce2dc4dd69",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens repetitive phrasing and improves conciseness while preserving all specific data and conclusions.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens repetitive phrasing and improves conciseness while preserving all specific data and conclusions."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 1,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "469a5f8c72e0",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Cuts stock intensifiers and a few wordy phrases but leaves the same flat academic cadence while stripping useful force (significant/considerable/strong, reliable, efficient, Extensive, effective and reliable).\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "Cuts stock intensifiers and a few wordy phrases but leaves the same flat academic cadence while stripping useful force (significant/considerable/strong, reliable, efficient, Extensive, effective and reliable)."
+    "why": "The edit mainly strips useful qualifiers and specifics (fundamental, efficient, minimizing redundant computation, substantially, high/highly, advantageous) without fixing real problems, leaving flatter, less precise prose."
    }
   },
   {
@@ -1608,23 +1488,13 @@
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "9b48a30617b3",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit successfully declutters the original by removing wordy constructions (like \\\"not only... but also\\\" and \\\"in terms of\\\"), splits an overly long sentence for better readability, and changes \"overcomes\" to the more accurate \"addresses\" without losing any technical precision.\"}",
-   "parsed": null
-  },
-  {
-   "kind": "quality",
-   "i": 10,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "f1db72e797f7",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version trims wordy constructions like 'Results show that' and 'two approaches:' to create tighter, more natural sentences without losing any essential meaning.\"}",
+   "sig": "8b8044763ff9",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edits merely truncate minor words like 'significantly' and 'enhanced', resulting in slightly flatter prose without meaningfully improving rhythm or clarity.\"}",
    "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version trims wordy constructions like 'Results show that' and 'two approaches:' to create tighter, more natural sentences without losing any essential meaning."
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edits merely truncate minor words like 'significantly' and 'enhanced', resulting in slightly flatter prose without meaningfully improving rhythm or clarity."
    }
   },
   {
@@ -1633,13 +1503,88 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "e6997968c750",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful force and specificity (crucial/directly, high-performance, dynamic adaptability across phases, strong) and smooths transitions into flatter, more uniform declaratives without a real gain in clarity.\"}",
+   "sig": "f58b5ef04b60",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit mainly strips useful qualifiers (dynamic adaptability; effectiveness and robustness) and softens \u201cdirectly affecting,\u201d yielding flatter prose without clearer rhythm or substance.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit strips useful force and specificity (crucial/directly, high-performance, dynamic adaptability across phases, strong) and smooths transitions into flatter, more uniform declaratives without a real gain in clarity."
+    "why": "The edit mainly strips useful qualifiers (dynamic adaptability; effectiveness and robustness) and softens \u201cdirectly affecting,\u201d yielding flatter prose without clearer rhythm or substance."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f970cbcc7b24",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"It strips meaningful qualifiers like 'promising prospects' and 'efficient and reliable solution' without adding substance, leaving the prose flatter and less informative.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "It strips meaningful qualifiers like 'promising prospects' and 'efficient and reliable solution' without adding substance, leaving the prose flatter and less informative."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f970cbcc7b24",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit merely strips out adjectives and modifiers like 'boasts promising prospects', 'significantly', and 'efficient and reliable', which flattens the prose without improving the rhythm or clarity.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit merely strips out adjectives and modifiers like 'boasts promising prospects', 'significantly', and 'efficient and reliable', which flattens the prose without improving the rhythm or clarity."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "c9e84f8e3f52",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit only strips useful intensifiers and claims (vital, significant, considerable, effectively, favorable, strong, effective and reliable) without improving clarity or rhythm, leaving flatter, blander prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit only strips useful intensifiers and claims (vital, significant, considerable, effectively, favorable, strong, effective and reliable) without improving clarity or rhythm, leaving flatter, blander prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0dc9a0040b0a",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit mechanically strips out useful qualifiers like \\\"efficient\\\" and \\\"comprehensive\\\" and discards the specific technical benefit \\\"minimizing redundant computation,\\\" resulting in flatter, less precise academic prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit mechanically strips out useful qualifiers like \"efficient\" and \"comprehensive\" and discards the specific technical benefit \"minimizing redundant computation,\" resulting in flatter, less precise academic prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "72733106073c",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edits remove minor transitional phrases and qualifying language like 'In particular' and 'supporting the idea that' without adding any value, slightly flattening the logical flow and rhythm of the abstract.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edits remove minor transitional phrases and qualifying language like 'In particular' and 'supporting the idea that' without adding any value, slightly flattening the logical flow and rhythm of the abstract."
    }
   },
   {
@@ -1648,43 +1593,13 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "9b48a30617b3",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit shortens sentences modestly but strips useful force and detail (significantly/clearly, the fine-feature capability clause, overcomes, research-scenarios framing), leaving flatter, more generic prose.\"}",
+   "sig": "8b8044763ff9",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"Minor cuts strip useful qualifiers (significantly, enhanced, to ensure, assists in) and yield slightly flatter prose without gaining clarity or rhythm.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit shortens sentences modestly but strips useful force and detail (significantly/clearly, the fine-feature capability clause, overcomes, research-scenarios framing), leaving flatter, more generic prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 8,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "523c472f81db",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful precision and force (essential/robust, curated, consistent, temporally grounded, comprehensive/extensive, significantly, fair) and replaces them with weaker or clumsier phrasing (supports; transformations in time), yielding flatter prose without a clearer or more natural voice.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips useful precision and force (essential/robust, curated, consistent, temporally grounded, comprehensive/extensive, significantly, fair) and replaces them with weaker or clumsier phrasing (supports; transformations in time), yielding flatter prose without a clearer or more natural voice."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 4,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "68ce2dc4dd69",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"Tighter phrasing, consistent younger/older wording, and clearer Results improve flow, though dropping \u201ccontrolled\u201d and the hedged \u201csupporting the idea that\u201d trims minor useful nuance.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "Tighter phrasing, consistent younger/older wording, and clearer Results improve flow, though dropping \u201ccontrolled\u201d and the hedged \u201csupporting the idea that\u201d trims minor useful nuance."
+    "why": "Minor cuts strip useful qualifiers (significantly, enhanced, to ensure, assists in) and yield slightly flatter prose without gaining clarity or rhythm."
    }
   },
   {
@@ -1693,43 +1608,13 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "213b6d50af7a",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit trims mildly stock phrasing and a few words but discards useful qualifiers (strong, core, noticeable, further) and the transitional cue, leaving equally flat academic prose that is no clearer or more varied.\"}",
+   "sig": "8ecf5cb48472",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The cut drops useful stakes and claims (safety-critical reliability, \u201cnoticeable\u201d gains, generalizability) without fixing rhythm or clarity, so the prose is only thinner, not better.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit trims mildly stock phrasing and a few words but discards useful qualifiers (strong, core, noticeable, further) and the transitional cue, leaving equally flat academic prose that is no clearer or more varied."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 0,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "da3c444ff3d9",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit significantly improves grammar, phrasing, and flow, but drops the concluding sentence summarizing the paper's practical contribution.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "The edit significantly improves grammar, phrasing, and flow, but drops the concluding sentence summarizing the paper's practical contribution."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 8,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "523c472f81db",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips away useful qualifiers like 'curated,' 'robust,' 'comprehensive,' and 'extensive,' and replaces 'temporally grounded reasoning' with a redundant phrase, making the prose less precise and more generic without adding clarity.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips away useful qualifiers like 'curated,' 'robust,' 'comprehensive,' and 'extensive,' and replaces 'temporally grounded reasoning' with a redundant phrase, making the prose less precise and more generic without adding clarity."
+    "why": "The cut drops useful stakes and claims (safety-critical reliability, \u201cnoticeable\u201d gains, generalizability) without fixing rhythm or clarity, so the prose is only thinner, not better."
    }
   },
   {
@@ -1738,283 +1623,28 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "52ba67a8e772",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit trims stock phrasing and gains some concision but flattens rhythm, drops useful qualifiers (intuitive, efficient/seamless, unifying platform, next-generation), and leaves blander, more uniform prose a professional editor would not prefer.\"}",
+   "sig": "35fa6e70a442",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Minor wording swaps strip useful qualifiers (efficient, seamless, to enhance operational performance, enabling/ensuring) without improving clarity, rhythm, or voice, leaving equally flat prose.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit trims stock phrasing and gains some concision but flattens rhythm, drops useful qualifiers (intuitive, efficient/seamless, unifying platform, next-generation), and leaves blander, more uniform prose a professional editor would not prefer."
+    "why": "Minor wording swaps strip useful qualifiers (efficient, seamless, to enhance operational performance, enabling/ensuring) without improving clarity, rhythm, or voice, leaving equally flat prose."
    }
   },
   {
    "kind": "quality",
-   "i": 12,
+   "i": 5,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "a0830c12d7a8",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit improves clarity and naturalness by replacing nominal constructions with direct phrasing, refining prepositions, and restructuring the conclusion without losing any specific details or the author's voice.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit improves clarity and naturalness by replacing nominal constructions with direct phrasing, refining prepositions, and restructuring the conclusion without losing any specific details or the author's voice."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 9,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "f5175e7b55d2",
-   "raw": "{\"verdict\": \"better\", \"flatter\": true, \"lost_something_worth_keeping\": false, \"why\": \"The edit cuts redundancy and run-ons into clearer claims while keeping the technical substance, though the resulting prose is more uniformly short and declarative.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": true,
-    "lost_something_worth_keeping": false,
-    "why": "The edit cuts redundancy and run-ons into clearer claims while keeping the technical substance, though the resulting prose is more uniformly short and declarative."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 12,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "a0830c12d7a8",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edits correct a minor preposition error (\\\"at\\\" different speeds), apply the proper en dash for \\\"Bland\u2013Altman,\\\" and improve the flow of the final clause without losing any of the original's meaning or concision.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edits correct a minor preposition error (\"at\" different speeds), apply the proper en dash for \"Bland\u2013Altman,\" and improve the flow of the final clause without losing any of the original's meaning or concision."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 13,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "c45b5eb94f96",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy transitions and breaks an overloaded sentence into clearer units while preserving all technical specifics and the author's evident voice.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy transitions and breaks an overloaded sentence into clearer units while preserving all technical specifics and the author's evident voice."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 12,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "a0830c12d7a8",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false,\n  \"lost_something_worth_keeping\": false, \"why\": \"Minor polish (because/can, with, en dashes, and a clearer closing clause) improves flow without flattening voice or dropping useful detail.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "Minor polish (because/can, with, en dashes, and a clearer closing clause) improves flow without flattening voice or dropping useful detail."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 16,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9abff59667f2",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens phrasing, improves comma clarity, and reorganizes the final clause without losing technical detail or meaning.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens phrasing, improves comma clarity, and reorganizes the final clause without losing technical detail or meaning."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 10,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "f1db72e797f7",
-   "raw": "```json\n{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"Light tightening removes a few useful qualifiers (recent, custom-made, toward, thereby) without improving clarity, rhythm, or voice, so the result is essentially equivalent academic prose.\"}\n```",
+   "sig": "8b8044763ff9",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"Minor trims to qualifiers and a verb phrase, but no substantial improvement or loss.\"}",
    "parsed": {
     "verdict": "same",
     "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "Light tightening removes a few useful qualifiers (recent, custom-made, toward, thereby) without improving clarity, rhythm, or voice, so the result is essentially equivalent academic prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 11,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "a604f2316a2d",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit effectively trims academic bloat and stock phrasing (e.g., 'plays a pivotal role', 'synergistic interaction', 'critical necessity') to create more concise and direct prose without losing the core scientific details.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit effectively trims academic bloat and stock phrasing (e.g., 'plays a pivotal role', 'synergistic interaction', 'critical necessity') to create more concise and direct prose without losing the core scientific details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 11,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "a604f2316a2d",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers (pivotal, significantly, systematically, distinct, synergistic, critical) and weakens verbs, yielding flatter, less precise prose without meaningful gains in clarity or rhythm.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips useful qualifiers (pivotal, significantly, systematically, distinct, synergistic, critical) and weakens verbs, yielding flatter, less precise prose without meaningful gains in clarity or rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 17,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "ef7227f734b5",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers (remarkable, sufficiently, extensively, consistent, favorable, effectively, robust and generalizable) and weakens verbs, leaving flatter, blander prose without real gains in clarity.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips useful qualifiers (remarkable, sufficiently, extensively, consistent, favorable, effectively, robust and generalizable) and weakens verbs, leaving flatter, blander prose without real gains in clarity."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 14,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "738a546483a3",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Tightening drops useful qualifiers (essential, lightweight, expensive) and contribution framing without improving clarity or rhythm, leaving flatter, less specific prose.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "Tightening drops useful qualifiers (essential, lightweight, expensive) and contribution framing without improving clarity or rhythm, leaving flatter, less specific prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "1ab38d205b32",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Tightening drops useful qualifiers (comprehensive, complementary, stable/reliable SNR, qualitative waveforms, valuable-resource close) and flattens rhythm without real clarity gains.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "Tightening drops useful qualifiers (comprehensive, complementary, stable/reliable SNR, qualitative waveforms, valuable-resource close) and flattens rhythm without real clarity gains."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 13,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "c45b5eb94f96",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"Splitting the long system-description sentence improves rhythm and clarity, but dropping \u201cWithin this context\u201d and swapping \u201chighlight the potential\u201d for the stronger \u201csupport the use\u201d trims useful linkage and appropriate hedging.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "Splitting the long system-description sentence improves rhythm and clarity, but dropping \u201cWithin this context\u201d and swapping \u201chighlight the potential\u201d for the stronger \u201csupport the use\u201d trims useful linkage and appropriate hedging."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 17,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "ef7227f734b5",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant modifiers and weak qualifiers while preserving all essential details, resulting in a clearer and more concise phrasing without sacrificing natural rhythm.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens redundant modifiers and weak qualifiers while preserving all essential details, resulting in a clearer and more concise phrasing without sacrificing natural rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "1ab38d205b32",
-   "raw": "```json\n{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit tightens the prose but discards the key result of the SNR analysis (\\\"demonstrating stable and reliable signal acquisition\\\"), flattening the conclusion by replacing its statement of value with a dry list of inclusions.\"}\n```",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit tightens the prose but discards the key result of the SNR analysis (\"demonstrating stable and reliable signal acquisition\"), flattening the conclusion by replacing its statement of value with a dry list of inclusions."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 16,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "9abff59667f2",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version improves conciseness by converting clunky passive phrases into active ones, corrects comma usage in the compound modifier, and tightens the scientific terminology without dropping any crucial technical details.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version improves conciseness by converting clunky passive phrases into active ones, corrects comma usage in the compound modifier, and tightens the scientific terminology without dropping any crucial technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 10,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "f1db72e797f7",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wording and removes a couple of minor details without losing substantive information, making the prose slightly clearer and more direct.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wording and removes a couple of minor details without losing substantive information, making the prose slightly clearer and more direct."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 13,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "c45b5eb94f96",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"Breaking the overly long run-on sentence about the robotic system into two improves readability and flow without losing any technical detail.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "Breaking the overly long run-on sentence about the robotic system into two improves readability and flow without losing any technical detail."
+    "why": "Minor trims to qualifiers and a verb phrase, but no substantial improvement or loss."
    }
   },
   {
@@ -2022,374 +1652,74 @@
    "i": 0,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "da3c444ff3d9",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens phrasing, removes redundant modifiers like 'dynamic decision' and 'boasts promising prospects,' and condenses the conclusion without sacrificing technical substance, resulting in a more concise and professional presentation.\"}",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f970cbcc7b24",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit mainly strips modest claims and qualifiers (promising prospects, significantly, efficient and reliable) without fixing rhythm or clarity, leaving flatter, more generic prose.\"}",
    "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens phrasing, removes redundant modifiers like 'dynamic decision' and 'boasts promising prospects,' and condenses the conclusion without sacrificing technical substance, resulting in a more concise and professional presentation."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 17,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "ef7227f734b5",
-   "raw": "```json\n{\n  \"verdict\": \"better\",\n  \"flatter\": false,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit successfully trims academic filler and uses active phrasing for better flow, though it drops the meaningful claims of 'consistent' improvements and a 'robust and generalizable' framework.\"\n}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
+    "verdict": "worse",
+    "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit successfully trims academic filler and uses active phrasing for better flow, though it drops the meaningful claims of 'consistent' improvements and a 'robust and generalizable' framework."
+    "why": "The edit mainly strips modest claims and qualifiers (promising prospects, significantly, efficient and reliable) without fixing rhythm or clarity, leaving flatter, more generic prose."
    }
   },
   {
    "kind": "quality",
-   "i": 14,
+   "i": 10,
    "era": "2026",
    "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "738a546483a3",
-   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edits successfully tighten wordy phrases like 'design, development, and evaluation of', but they strip away useful specific details and qualifiers like 'lightweight', 'expensive', and 'Most' that provided important context.\"}",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1a0ba7438a17",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited passage is identical to the original, so no changes were made to judge.\"}",
    "parsed": {
     "verdict": "same",
     "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "The edits successfully tighten wordy phrases like 'design, development, and evaluation of', but they strip away useful specific details and qualifiers like 'lightweight', 'expensive', and 'Most' that provided important context."
+    "lost_something_worth_keeping": false,
+    "why": "The edited passage is identical to the original, so no changes were made to judge."
    }
   },
   {
    "kind": "quality",
-   "i": 21,
+   "i": 3,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "e6146c0abfc7",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit removes wordy academic filler like 'of utmost importance' and 'in the paper' while preserving all technical details and improving sentence flow.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit removes wordy academic filler like 'of utmost importance' and 'in the paper' while preserving all technical details and improving sentence flow."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 1,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "469a5f8c72e0",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and removes generic intensifiers without sacrificing essential claims, resulting in a more concise and direct abstract.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and removes generic intensifiers without sacrificing essential claims, resulting in a more concise and direct abstract."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 16,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "9abff59667f2",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Tightening and commas help little while nominalization flattens rhythm and drops useful qualifiers (complicated biasing network, practically implementable) that carried the claim\u2019s force.\"}",
+   "sig": "f58b5ef04b60",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes useful outcomes like 'improving dynamic adaptability' and 'demonstrating strong effectiveness and robustness,' and flattens the prose by converting elegant participial phrases into basic coordinate clauses.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "Tightening and commas help little while nominalization flattens rhythm and drops useful qualifiers (complicated biasing network, practically implementable) that carried the claim\u2019s force."
+    "why": "The edit removes useful outcomes like 'improving dynamic adaptability' and 'demonstrating strong effectiveness and robustness,' and flattens the prose by converting elegant participial phrases into basic coordinate clauses."
    }
   },
   {
    "kind": "quality",
-   "i": 20,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e87a86c872a5",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens the prose, removes formulaic sequencing words, and preserves all technical specifics, making the passage more direct and readable.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens the prose, removes formulaic sequencing words, and preserves all technical specifics, making the passage more direct and readable."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 11,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "a604f2316a2d",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wording, improves sentence rhythm, and removes clich\u00e9s while preserving all substantive details and qualifiers that matter.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wording, improves sentence rhythm, and removes clich\u00e9s while preserving all substantive details and qualifiers that matter."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 18,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "0ac6688afbc6",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false,\n  \"lost_something_worth_keeping\": false, \"why\": \"The edit trims formulaic padding and intensifiers while keeping the technical content, voice, and rhythm intact, yielding clearer, more natural prose a professional editor would accept.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit trims formulaic padding and intensifiers while keeping the technical content, voice, and rhythm intact, yielding clearer, more natural prose a professional editor would accept."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 14,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "738a546483a3",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit drops the qualifier 'lightweight' from the algorithm description, which is a useful detail that contrasts with the computational overhead of thermal imaging systems, and it also loses the explicit design-purpose phrasing that clarifies the system's intended flexibility.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "The edit drops the qualifier 'lightweight' from the algorithm description, which is a useful detail that contrasts with the computational overhead of thermal imaging systems, and it also loses the explicit design-purpose phrasing that clarifies the system's intended flexibility."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 18,
+   "i": 10,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "0ac6688afbc6",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version trims wordy transitional phrases and redundant modifiers, resulting in clearer, more direct academic prose without losing critical technical details or metrics.\"}",
+   "sig": "1a0ba7438a17",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"Removing the wordy filler \\\"thereby\\\" slightly improves the conciseness and flow of the sentence.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edited version trims wordy transitional phrases and redundant modifiers, resulting in clearer, more direct academic prose without losing critical technical details or metrics."
+    "why": "Removing the wordy filler \"thereby\" slightly improves the conciseness and flow of the sentence."
    }
   },
   {
    "kind": "quality",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "3ec95cd8e39a",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and improves clarity without losing technical content or nuance.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and improves clarity without losing technical content or nuance."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "1ab38d205b32",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and redundant qualifiers, improving concision and readability without losing any essential technical details or qualifications.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and redundant qualifiers, improving concision and readability without losing any essential technical details or qualifications."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 19,
+   "i": 4,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "b52589efe6b1",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"Small grammar and punctuation fixes (the demand, board including, energy-efficiency phrasing) help clarity, but dropping \u201cefficient\u201d and \u201creliable\u201d trims useful qualifiers without adding rhythm or voice.\"}",
+   "sig": "72733106073c",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Trivial cuts (dropping \u201cIn particular\u201d and swapping \u201csupporting the idea that\u201d for \u201cand\u201d) neither clarify nor improve rhythm and slightly weaken the conclusions\u2019 logical link.\"}",
    "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "Small grammar and punctuation fixes (the demand, board including, energy-efficiency phrasing) help clarity, but dropping \u201cefficient\u201d and \u201creliable\u201d trims useful qualifiers without adding rhythm or voice."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 22,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "7797a368147f",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens vague phrasing, removes redundant statements, and clarifies the limit of detection without losing any specific details or the author's emphasis.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens vague phrasing, removes redundant statements, and clarifies the limit of detection without losing any specific details or the author's emphasis."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "3ec95cd8e39a",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edited version tightens wordy constructions, fixes grammatical awkwardness, and employs active voice without discarding important technical details.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edited version tightens wordy constructions, fixes grammatical awkwardness, and employs active voice without discarding important technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 19,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "b52589efe6b1",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit fixes punctuation errors, removes a dangling modifier, and tightens the phrasing for better flow without sacrificing any technical details.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit fixes punctuation errors, removes a dangling modifier, and tightens the phrasing for better flow without sacrificing any technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "3cf0a2ef31f9",
-   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit strips useful framing and specificity (e.g. \u201cmajor challenges,\u201d \u201csecure and efficient,\u201d \u201cdistinguishing feature,\u201d \u201ccomprehensive\u201d), yielding flatter, more generic prose without real gains in clarity or rhythm.\"\n}",
-   "parsed": {
-    "verdict": "worse",
+    "verdict": "same",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit strips useful framing and specificity (e.g. \u201cmajor challenges,\u201d \u201csecure and efficient,\u201d \u201cdistinguishing feature,\u201d \u201ccomprehensive\u201d), yielding flatter, more generic prose without real gains in clarity or rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 21,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "e6146c0abfc7",
-   "raw": "{\n  \"verdict\": \"better\",\n  \"flatter\": false,\n  \"lost_something_worth_keeping\": false,\n  \"why\": \"The edit tightens stock academic phrasing, improves grammar and flow, and keeps all substantive content without flattening the prose or discarding useful detail.\"\n}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens stock academic phrasing, improves grammar and flow, and keeps all substantive content without flattening the prose or discarding useful detail."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "3cf0a2ef31f9",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit successfully tightens the verbose, repetitive phrasing of the original (e.g., removing 'One of the major challenges' and repeated instances of 'The proposed algorithm') while preserving all essential technical details and numerical results, resulting in clearer, more naturally flowing academic p",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit successfully tightens the verbose, repetitive phrasing of the original (e.g., removing 'One of the major challenges' and repeated instances of 'The proposed algorithm') while preserving all essential technical details and numerical results, resulting in clearer, more naturally flowing academic prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 22,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "7797a368147f",
-   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edited version excises the concluding takeaway about the films' potential for ammonia sensing and awkwardly truncates the opening sentence, resulting in blander, less informative prose.\"\n}\n```",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edited version excises the concluding takeaway about the films' potential for ammonia sensing and awkwardly truncates the opening sentence, resulting in blander, less informative prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "3cf0a2ef31f9",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy constructions, removes redundant framing, and sharpens technical phrasing while preserving all specific details and the original meaning.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy constructions, removes redundant framing, and sharpens technical phrasing while preserving all specific details and the original meaning."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "3ec95cd8e39a",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false,\n  \"lost_something_worth_keeping\": false, \"why\": \"The edit removes redundant stock intensifiers and smooths awkward phrasing into clearer, tighter sentences while preserving all technical content and a natural academic rhythm.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit removes redundant stock intensifiers and smooths awkward phrasing into clearer, tighter sentences while preserving all technical content and a natural academic rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 24,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "9e695575d423",
-   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit removes wordy academic filler, fixes awkward formatting, and tightens the prose for better flow while preserving all technical details and data.\"}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit removes wordy academic filler, fixes awkward formatting, and tightens the prose for better flow while preserving all technical details and data."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 25,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "4046ccf54f44",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers (stringent, promising, robust, consistently, significantly, valuable, highly reliable) and breaks the prose into flatter, more uniform sentences without gaining clarity.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips useful qualifiers (stringent, promising, robust, consistently, significantly, valuable, highly reliable) and breaks the prose into flatter, more uniform sentences without gaining clarity."
+    "why": "Trivial cuts (dropping \u201cIn particular\u201d and swapping \u201csupporting the idea that\u201d for \u201cand\u201d) neither clarify nor improve rhythm and slightly weaken the conclusions\u2019 logical link."
    }
   },
   {
@@ -2398,178 +1728,253 @@
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "523c472f81db",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit systematically strips useful academic qualifiers (e.g., 'robust,' 'consistent,' 'comprehensive,' 'fair') and weakens strong verbs, leaving the prose flatter and less precise without improving clarity.\"}",
+   "sig": "4aa974d5bbe0",
+   "raw": "```json\n{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit trims standard academic filler like 'comprehensive' and 'extensive', but unjustifiably discards the meaningful descriptive phrase 'enabling temporally grounded reasoning about near-future transformations' and weakens the baseline's contribution.\"}\n```",
    "parsed": {
-    "verdict": "worse",
-    "flatter": true,
+    "verdict": "same",
+    "flatter": false,
     "lost_something_worth_keeping": true,
-    "why": "The edit systematically strips useful academic qualifiers (e.g., 'robust,' 'consistent,' 'comprehensive,' 'fair') and weakens strong verbs, leaving the prose flatter and less precise without improving clarity."
+    "why": "The edit trims standard academic filler like 'comprehensive' and 'extensive', but unjustifiably discards the meaningful descriptive phrase 'enabling temporally grounded reasoning about near-future transformations' and weakens the baseline's contribution."
    }
   },
   {
    "kind": "quality",
-   "i": 20,
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "959189878bee",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Removing \\\"high levels of\\\" is fine, but deleting the active verb \\\"highlight\\\" in favor of a simple conjunction (\\\"and the potential\\\") makes the final sentence slightly flatter and less impactful.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Removing \"high levels of\" is fine, but deleting the active verb \"highlight\" in favor of a simple conjunction (\"and the potential\") makes the final sentence slightly flatter and less impactful."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "48fb8de65ee5",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes meaningful qualifiers like 'pivotal' and 'challenging', and drops the specific contribution 'promote model optimization in ET retrieval research,' leaving the passage more concise but less precise and richer in detail.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes meaningful qualifiers like 'pivotal' and 'challenging', and drops the specific contribution 'promote model optimization in ET retrieval research,' leaving the passage more concise but less precise and richer in detail."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 11,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "e87a86c872a5",
-   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"Stripping stock transitions and hedges left uniformly flat declaratives while dropping useful qualifiers (significantly, rate) and slight precision without gaining clearer voice or rhythm.\"\n}",
+   "sig": "48fb8de65ee5",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful emphasis and a concrete contribution (model optimization) while turning already formal prose flatter and more generic without improving clarity or rhythm.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "Stripping stock transitions and hedges left uniformly flat declaratives while dropping useful qualifiers (significantly, rate) and slight precision without gaining clearer voice or rhythm."
+    "why": "The edit strips useful emphasis and a concrete contribution (model optimization) while turning already formal prose flatter and more generic without improving clarity or rhythm."
    }
   },
   {
    "kind": "quality",
-   "i": 20,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "e87a86c872a5",
-   "raw": "{\"verdict\": \"better\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit effectively tightens wordy phrases into active verbs but drops the structural sequence markers and useful qualifiers like 'novel' and 'significantly', making it read slightly flatter.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit effectively tightens wordy phrases into active verbs but drops the structural sequence markers and useful qualifiers like 'novel' and 'significantly', making it read slightly flatter."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 24,
+   "i": 8,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "9e695575d423",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit tightens prose and improves flow by cutting stock academic phrasing, though it slightly softens the useful 'trade-off' framing into a blander statement of effect.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": true,
-    "why": "The edit tightens prose and improves flow by cutting stock academic phrasing, though it slightly softens the useful 'trade-off' framing into a blander statement of effect."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "5067be6d038d",
-   "raw": "```json\n{\n  \"verdict\": \"better\",\n  \"flatter\": false,\n  \"lost_something_worth_keeping\": false,\n  \"why\": \"The edit tightens the prose by removing filler words, redundancies, and unnecessary passives, improving readability without sacrificing any technical precision or key details.\"\n}\n```",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens the prose by removing filler words, redundancies, and unnecessary passives, improving readability without sacrificing any technical precision or key details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "5067be6d038d",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and removes filler transitions while preserving the technical content and natural rhythm.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and removes filler transitions while preserving the technical content and natural rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 28,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "83a1e60a3d92",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit removes wordy academic padding like \\\"emerged as a powerful paradigm for enabling\\\" and \\\"statistically rigorous\\\" while tightening sentence structure and preserving all essential technical details.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit removes wordy academic padding like \"emerged as a powerful paradigm for enabling\" and \"statistically rigorous\" while tightening sentence structure and preserving all essential technical details."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 19,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "b52589efe6b1",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens phrasing, fixes punctuation and flow, and clarifies the list of peripherals without losing any technical detail or author's intent.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens phrasing, fixes punctuation and flow, and clarifies the list of peripherals without losing any technical detail or author's intent."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 29,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "31d6e22b8590",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens the prose, removes redundant academic framing, and retains all substantive details, making it more direct and professional.\"}",
-   "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens the prose, removes redundant academic framing, and retains all substantive details, making it more direct and professional."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 22,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "7797a368147f",
-   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"Cleanup of awkward LOD phrasing and notation is offset by stripping the key-challenges/high-sensitivity framing, the \u2018clearly visible\u2019 detail, and the potential-highlight clause, leaving flatter, less informative prose.\"\n}",
+   "sig": "4aa974d5bbe0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit mainly strips useful qualifiers (significantly, comprehensive, extensive), the enabling-reasoning clause, and the release purpose, leaving flatter prose with less information and no real gain in clarity or rhythm.\"}",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "Cleanup of awkward LOD phrasing and notation is offset by stripping the key-challenges/high-sensitivity framing, the \u2018clearly visible\u2019 detail, and the potential-highlight clause, leaving flatter, less informative prose."
+    "why": "The edit mainly strips useful qualifiers (significantly, comprehensive, extensive), the enabling-reasoning clause, and the release purpose, leaving flatter prose with less information and no real gain in clarity or rhythm."
    }
   },
   {
    "kind": "quality",
-   "i": 29,
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "46bf186e1735",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit trims useful specifics (unseen-attack detection, high accuracy, trust/transparency goals) and stock phrases alike, yielding shorter but flatter, less informative prose a professional editor would reject.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit trims useful specifics (unseen-attack detection, high accuracy, trust/transparency goals) and stock phrases alike, yielding shorter but flatter, less informative prose a professional editor would reject."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 11,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "31d6e22b8590",
-   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": false,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit discards meaningful qualifiers and context, such as 'reasonable' parameter settings, 'transparent' quantification, and the framing of the research as a human motion analysis problem.\"\n}\n```",
+   "sig": "48fb8de65ee5",
+   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit removes useful academic qualifiers like 'pivotal' and 'challenging', and drops a specific contribution detail ('promote model optimization in ET retrieval research'), making the prose flatter and less informative without improving rhythm.\"\n}\n```",
    "parsed": {
     "verdict": "worse",
-    "flatter": false,
+    "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit discards meaningful qualifiers and context, such as 'reasonable' parameter settings, 'transparent' quantification, and the framing of the research as a human motion analysis problem."
+    "why": "The edit removes useful academic qualifiers like 'pivotal' and 'challenging', and drops a specific contribution detail ('promote model optimization in ET retrieval research'), making the prose flatter and less informative without improving rhythm."
    }
   },
   {
    "kind": "quality",
-   "i": 25,
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1a0ba7438a17",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The sole change drops the useful causal connector \u201cthereby,\u201d slightly weakening the link between single-shot acquisition and its benefits without any gain in clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The sole change drops the useful causal connector \u201cthereby,\u201d slightly weakening the link between single-shot acquisition and its benefits without any gain in clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 13,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "4046ccf54f44",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit trims redundant adjectives and splits the dense opening into clearer, more varied sentences while preserving all technical specifics and logical flow.\"}",
+   "sig": "959189878bee",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the emphatic qualifier 'high levels' and the active verb 'highlight', which dulls the impact without improving clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the emphatic qualifier 'high levels' and the active verb 'highlight', which dulls the impact without improving clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0dc9a0040b0a",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens the prose by removing redundant intensifiers and qualifiers while preserving all concrete claims and technical details.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit trims redundant adjectives and splits the dense opening into clearer, more varied sentences while preserving all technical specifics and logical flow."
+    "why": "The edit tightens the prose by removing redundant intensifiers and qualifiers while preserving all concrete claims and technical details."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "824c77e2f1da",
+   "raw": "```json\n{\n  \"verdict\": \"same\",\n  \"flatter\": false,\n  \"lost_something_worth_keeping\": false,\n  \"why\": \"The edits only make a negligible change to the verb tense and final clause of the conclusion, leaving the rest of the text identical and not significantly altering the quality.\"\n}\n```",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edits only make a negligible change to the verb tense and final clause of the conclusion, leaving the rest of the text identical and not significantly altering the quality."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "46bf186e1735",
+   "raw": "```json\n{\"verdict\": \"better\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit effectively trims repetitive fluff and stock phrasing, but unfortunately drops the specific detail about detecting previously unseen attack patterns and high accuracy.\"}\n```",
+   "parsed": {
+    "verdict": "better",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit effectively trims repetitive fluff and stock phrasing, but unfortunately drops the specific detail about detecting previously unseen attack patterns and high accuracy."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e46a19cf1125",
+   "raw": "```json\n{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers like 'lightweight' and 'initial evidence' and awkwardly restructures a sentence, losing the clear cause-and-effect framing that explained how the system achieves its flexible deployment.\"}\n```",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful qualifiers like 'lightweight' and 'initial evidence' and awkwardly restructures a sentence, losing the clear cause-and-effect framing that explained how the system achieves its flexible deployment."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "959189878bee",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Tiny cuts (\u201chigh levels of,\u201d \u201chighlight\u201d) only flatten emphasis and drop a useful intensity qualifier without improving clarity, rhythm, or voice.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Tiny cuts (\u201chigh levels of,\u201d \u201chighlight\u201d) only flatten emphasis and drop a useful intensity qualifier without improving clarity, rhythm, or voice."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b0385bf76837",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful framing (systematic investigation under realistic conditions), the SNR validation claim, and \u201cvaluable,\u201d leaving tighter but flatter, less purposeful prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful framing (systematic investigation under realistic conditions), the SNR validation claim, and \u201cvaluable,\u201d leaving tighter but flatter, less purposeful prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "824c77e2f1da",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit clarifies the final clause, making the need for cautious interpretation more direct and appropriately using 'showed' to describe study findings rather than the generic 'provides'.\"}",
+   "parsed": {
+    "verdict": "better",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edit clarifies the final clause, making the need for cautious interpretation more direct and appropriately using 'showed' to describe study findings rather than the generic 'provides'."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e46a19cf1125",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit drops useful qualifiers (lightweight, distance-invariant measurements) and reshuffles the deployment claim into a flatter, slightly clumsier sentence without gaining clarity.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit drops useful qualifiers (lightweight, distance-invariant measurements) and reshuffles the deployment claim into a flatter, slightly clumsier sentence without gaining clarity."
    }
   },
   {
@@ -2578,103 +1983,148 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "f5175e7b55d2",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit improves clarity by breaking dense, run-on sentences into shorter, focused ones, and moves the framework name upfront while preserving all key technical details and qualifiers.\"}",
+   "sig": "46bf186e1735",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant phrasing and removes unsupported claims like 'high accuracy' while preserving the core technical details and intent.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit improves clarity by breaking dense, run-on sentences into shorter, focused ones, and moves the framework name upfront while preserving all key technical details and qualifiers."
+    "why": "The edit tightens redundant phrasing and removes unsupported claims like 'high accuracy' while preserving the core technical details and intent."
    }
   },
   {
    "kind": "quality",
-   "i": 29,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "31d6e22b8590",
-   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"Tightening drops the human-motion-analysis framing and useful qualifiers (reasonable, transparent, operator-facing) without gaining clearer rhythm or voice, leaving slightly blander abstract prose.\"\n}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "Tightening drops the human-motion-analysis framing and useful qualifiers (reasonable, transparent, operator-facing) without gaining clearer rhythm or voice, leaving slightly blander abstract prose."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 28,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "83a1e60a3d92",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful emphatic qualifiers and precise details (powerful paradigm, strongly, statistically rigorous, critical, practical) for flatter, less informative prose without gaining clarity or rhythm.\"}",
-   "parsed": {
-    "verdict": "worse",
-    "flatter": true,
-    "lost_something_worth_keeping": true,
-    "why": "The edit strips useful emphatic qualifiers and precise details (powerful paradigm, strongly, statistically rigorous, critical, practical) for flatter, less informative prose without gaining clarity or rhythm."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "5067be6d038d",
-   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": false, \"why\": \"Mostly trims stock academic filler without adding clarity or rhythm, leaving the same flat abstract prose slightly more uniform.\"}",
-   "parsed": {
-    "verdict": "same",
-    "flatter": true,
-    "lost_something_worth_keeping": false,
-    "why": "Mostly trims stock academic filler without adding clarity or rhythm, leaving the same flat abstract prose slightly more uniform."
-   }
-  },
-  {
-   "kind": "quality",
-   "i": 25,
+   "i": 16,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "4046ccf54f44",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit successfully breaks up a long, clunky sentence into a clear, sequential structure and appropriately trims unnecessary academic filler words like 'stringent', 'promising', and 'valuable' without losing any technical meaning.\"}",
+   "sig": "7926537b6ab4",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit simplifies a convoluted sentence structure into a clearer sequence without losing any technical details or altering the author's voice.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit successfully breaks up a long, clunky sentence into a clear, sequential structure and appropriately trims unnecessary academic filler words like 'stringent', 'promising', and 'valuable' without losing any technical meaning."
+    "why": "The edit simplifies a convoluted sentence structure into a clearer sequence without losing any technical details or altering the author's voice."
    }
   },
   {
    "kind": "quality",
-   "i": 18,
+   "i": 12,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "0ac6688afbc6",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wording without losing key details, improving clarity and flow.\"}",
+   "judge": "x-ai/grok-4.5",
+   "sig": "824c77e2f1da",
+   "raw": "{\n  \"verdict\": \"same\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The sole change swaps a tighter present-tense conclusion for a slightly stiffer past-tense split, neither clarifying nor harming the nearly identical abstract.\"\n}",
    "parsed": {
-    "verdict": "better",
-    "flatter": false,
-    "lost_something_worth_keeping": false,
-    "why": "The edit tightens wording without losing key details, improving clarity and flow."
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The sole change swaps a tighter present-tense conclusion for a slightly stiffer past-tense split, neither clarifying nor harming the nearly identical abstract."
    }
   },
   {
    "kind": "quality",
-   "i": 24,
+   "i": 17,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9e695575d423",
-   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit weakens the claim 'essential' to 'supports', replaces the informative 'trade-off' phrasing with a flat statement, and changes the ambiguous window notation to a less clear comma-separated form, losing nuance without improving clarity.\"}",
+   "judge": "z-ai/glm-5.2",
+   "sig": "42ed2a7bcf2d",
+   "raw": "```json\n{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit systematically strips out meaningful adverbs and adjectives like 'important', 'remarkable', 'extensively', and 'comprehensively', flattening the prose and removing the author's evaluative voice without improving clarity or rhythm.\"}\n```",
    "parsed": {
     "verdict": "worse",
     "flatter": true,
     "lost_something_worth_keeping": true,
-    "why": "The edit weakens the claim 'essential' to 'supports', replaces the informative 'trade-off' phrasing with a flat statement, and changes the ambiguous window notation to a less clear comma-separated form, losing nuance without improving clarity."
+    "why": "The edit systematically strips out meaningful adverbs and adjectives like 'important', 'remarkable', 'extensively', and 'comprehensively', flattening the prose and removing the author's evaluative voice without improving clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "42ed2a7bcf2d",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips meaningful qualifiers like 'important,' 'remarkable,' 'extensively,' and 'favorable,' leaving the prose flatter and less informative without any compensating gain in clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips meaningful qualifiers like 'important,' 'remarkable,' 'extensively,' and 'favorable,' leaving the prose flatter and less informative without any compensating gain in clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e46a19cf1125",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the useful qualifier 'lightweight' and awkwardly relocates 'through external signal processing,' making the sentence less precise and less natural.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the useful qualifier 'lightweight' and awkwardly relocates 'through external signal processing,' making the sentence less precise and less natural."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "935d1a04a81c",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the meaningful qualifier \\\"more accurate and robust\\\" from the final sentence, resulting in the nonsensical statement that the method simply \\\"results in fault classification.\\\"\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the meaningful qualifier \"more accurate and robust\" from the final sentence, resulting in the nonsensical statement that the method simply \"results in fault classification.\""
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "72733106073c",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit trims redundant transitions and simplifies the concluding clause, making the text more direct without sacrificing any substantive detail.\"}",
+   "parsed": {
+    "verdict": "better",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edit trims redundant transitions and simplifies the concluding clause, making the text more direct without sacrificing any substantive detail."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "42ed2a7bcf2d",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful intensifiers and claims (important/remarkable/extensively/comprehensively/favorable/robust and generalizable) that conveyed strength and scope, leaving flatter, weaker prose with no gain in clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful intensifiers and claims (important/remarkable/extensively/comprehensively/favorable/robust and generalizable) that conveyed strength and scope, leaving flatter, weaker prose with no gain in clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b0385bf76837",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"While the edit successfully tightens the prose, it unfortunately drops the specific finding that the SNR analysis demonstrated 'stable and reliable signal acquisition,' making the results section less informative.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "While the edit successfully tightens the prose, it unfortunately drops the specific finding that the SNR analysis demonstrated 'stable and reliable signal acquisition,' making the results section less informative."
    }
   },
   {
@@ -2683,13 +2133,523 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e6146c0abfc7",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens redundant phrasing, removes stock expressions, and improves sentence rhythm while preserving all key technical details.\"}",
+   "sig": "935d1a04a81c",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes meaningful qualifiers like 'pivotal' and 'more accurate and robust' and weakens 'utmost importance' to 'important', making the prose more generic and less informative while also leaving the final claim understated.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes meaningful qualifiers like 'pivotal' and 'more accurate and robust' and weakens 'utmost importance' to 'important', making the prose more generic and less informative while also leaving the final claim understated."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a1f4770c0d83",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Removing the clause 'highlighting the potential of WS2 films for low operating temperature ammonia sensing' leaves the fragmentary and lifeless sentence 'Experimental results indicate a limit of detection.'\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Removing the clause 'highlighting the potential of WS2 films for low operating temperature ammonia sensing' leaves the fragmentary and lifeless sentence 'Experimental results indicate a limit of detection.'"
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "09188c9944e0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers (efficient, stability rationale, signal integrity, lightweight, flexible, reliability) and leaves flatter, less precise prose without improving clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful qualifiers (efficient, stability rationale, signal integrity, lightweight, flexible, reliability) and leaves flatter, less precise prose without improving clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "935d1a04a81c",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit only strips intensifiers and key claims (utmost importance, pivotal features, more accurate and robust) without improving clarity or rhythm, leaving flatter, weaker prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit only strips intensifiers and key claims (utmost importance, pivotal features, more accurate and robust) without improving clarity or rhythm, leaving flatter, weaker prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "7926537b6ab4",
+   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The tweak turns a purposeful \u201cenabling\u2026while avoiding\u201d clause into flatter coordination and swaps \u201coffers\u201d for bland \u201cis,\u201d with no real gain in clarity or rhythm.\"\n}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The tweak turns a purposeful \u201cenabling\u2026while avoiding\u201d clause into flatter coordination and swaps \u201coffers\u201d for bland \u201cis,\u201d with no real gain in clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "355e36f3e344",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Minor cuts strip useful qualifiers (significantly, rigorous, typical, satisfactory) and blunt the closing claim without improving clarity, rhythm, or voice.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Minor cuts strip useful qualifiers (significantly, rigorous, typical, satisfactory) and blunt the closing claim without improving clarity, rhythm, or voice."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "c3136e199dc0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Minor trims drop useful emphasis (explicitly, improving-to) and the robust/scalable claim without clearer rhythm or meaning, leaving slightly flatter prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Minor trims drop useful emphasis (explicitly, improving-to) and the robust/scalable claim without clearer rhythm or meaning, leaving slightly flatter prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "09188c9944e0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edited version strips out useful qualifiers and technical details such as 'efficient', 'To improve stability across multi-peripheral setups', 'lightweight', and 'improves signal integrity', making the prose less informative without improving its flow.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edited version strips out useful qualifiers and technical details such as 'efficient', 'To improve stability across multi-peripheral setups', 'lightweight', and 'improves signal integrity', making the prose less informative without improving its flow."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a1f4770c0d83",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips the purposeful clause highlighting sensing potential and the qualifier 'clearly,' leaving an abrupt incomplete sentence and weaker, less informative prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips the purposeful clause highlighting sensing potential and the qualifier 'clearly,' leaving an abrupt incomplete sentence and weaker, less informative prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "355e36f3e344",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit removes redundant qualifiers and compresses phrasing while preserving all substantive technical claims, resulting in a more concise and natural style.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit tightens redundant phrasing, removes stock expressions, and improves sentence rhythm while preserving all key technical details."
+    "why": "The edit removes redundant qualifiers and compresses phrasing while preserving all substantive technical claims, resulting in a more concise and natural style."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8498619aa827",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the qualifier 'accurate' from 'achieves reconstruction' and replaces the active 'The results highlight' with the flat 'There is,' losing specificity and punch without meaningful gain.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the qualifier 'accurate' from 'achieves reconstruction' and replaces the active 'The results highlight' with the flat 'There is,' losing specificity and punch without meaningful gain."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4aa974d5bbe0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the clarifying phrase 'enabling temporally grounded reasoning about near-future transformations,' which specifies the method's key capability and is a meaningful qualifier.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the clarifying phrase 'enabling temporally grounded reasoning about near-future transformations,' which specifies the method's key capability and is a meaningful qualifier."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8498619aa827",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Dropping \u201caccurate\u201d and turning \u201cThe results highlight a trade-off\u201d into bare \u201cThere is a trade-off\u201d weakens precision and voice for only minor syntactic gains.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Dropping \u201caccurate\u201d and turning \u201cThe results highlight a trade-off\u201d into bare \u201cThere is a trade-off\u201d weakens precision and voice for only minor syntactic gains."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8498619aa827",
+   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edited version inexplicably drops the useful qualifier 'accurate' in 'achieves accurate reconstruction' and weakens the phrase 'The results highlight a trade-off' to the flatter 'There is a trade-off'.\"\n}\n```",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edited version inexplicably drops the useful qualifier 'accurate' in 'achieves accurate reconstruction' and weakens the phrase 'The results highlight a trade-off' to the flatter 'There is a trade-off'."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2e8a03451ce2",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit removes redundant modifiers and weak intensifiers, yielding a more concise and professional tone without losing key technical details.\"}",
+   "parsed": {
+    "verdict": "better",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edit removes redundant modifiers and weak intensifiers, yielding a more concise and professional tone without losing key technical details."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e24e6bef83c3",
+   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit strips out valuable specifics such as 'energy-efficient,' the practical guidance clause at the end, and the conclusion of 'superior' performance, rendering the abstract flatter and less informative.\"\n}\n```",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips out valuable specifics such as 'energy-efficient,' the practical guidance clause at the end, and the conclusion of 'superior' performance, rendering the abstract flatter and less informative."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "355e36f3e344",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips out useful qualifiers like \\\"rigorous\\\" and \\\"typical\\\" and flattens the rhythm by replacing varied participial phrases with simple conjunctions.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips out useful qualifiers like \"rigorous\" and \"typical\" and flattens the rhythm by replacing varied participial phrases with simple conjunctions."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0a108c7e442f",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Useful qualifiers (secure and efficient, distinguishing feature, Comprehensive, strong, competitive) were stripped and \u201cachieves performance compared with\u201d is broken English, so the edit is flatter and less precise without gaining clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Useful qualifiers (secure and efficient, distinguishing feature, Comprehensive, strong, competitive) were stripped and \u201cachieves performance compared with\u201d is broken English, so the edit is flatter and less precise without gaining clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2e46cd9e2fab",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edits merely replace 'reflecting' with 'and indicate' and 'thereby distinguishing' with 'which distinguishes', which does not meaningfully change the text's quality, clarity, or rhythm.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edits merely replace 'reflecting' with 'and indicate' and 'thereby distinguishing' with 'which distinguishes', which does not meaningfully change the text's quality, clarity, or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0a108c7e442f",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"The edit strips out useful qualifiers like \\\"secure and efficient\\\" and \\\"competitive,\\\" with the latter removal resulting in the grammatically awkward phrase \\\"achieves performance compared with.\\\"\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips out useful qualifiers like \"secure and efficient\" and \"competitive,\" with the latter removal resulting in the grammatically awkward phrase \"achieves performance compared with.\""
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "17bdf0daa79e",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The single word change from 'supports' to 'includes' is neutral and does not alter clarity, rhythm, or meaning.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The single word change from 'supports' to 'includes' is neutral and does not alter clarity, rhythm, or meaning."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c3136e199dc0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edited version removes the useful qualifier \\\"explicitly\\\" twice and ends with a clumsy repetition of prepositions (\\\"in isolation in real-world continuous monitoring systems\\\"), degrading the original's smoother syntax.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edited version removes the useful qualifier \"explicitly\" twice and ends with a clumsy repetition of prepositions (\"in isolation in real-world continuous monitoring systems\"), degrading the original's smoother syntax."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "17bdf0daa79e",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The only change is replacing 'supports' with 'includes', both of which are perfectly acceptable and functionally identical in this context.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The only change is replacing 'supports' with 'includes', both of which are perfectly acceptable and functionally identical in this context."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "09188c9944e0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers like 'lightweight,' 'efficient,' 'reliable,' and 'flexible,' and removes specific technical claims about signal integrity and reliability, making the description less informative.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful qualifiers like 'lightweight,' 'efficient,' 'reliable,' and 'flexible,' and removes specific technical claims about signal integrity and reliability, making the description less informative."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2e8a03451ce2",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit mainly strips useful qualifiers (robust LoS, low complexity, consistently/significantly/further) and leaves the same stiff abstract prose flatter and less precise, without clearer structure or livelier rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit mainly strips useful qualifiers (robust LoS, low complexity, consistently/significantly/further) and leaves the same stiff abstract prose flatter and less precise, without clearer structure or livelier rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e24e6bef83c3",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips useful qualifiers (energy-efficient, superior/systematically, guidance for control) and TCN detail without improving rhythm or clarity, leaving flatter, more generic prose.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful qualifiers (energy-efficient, superior/systematically, guidance for control) and TCN detail without improving rhythm or clarity, leaving flatter, more generic prose."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4867e79b99ea",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true,\n  \"lost_something_worth_keeping\": true, \"why\": \"Stripping \u201cpowerful,\u201d \u201cstatistically rigorous,\u201d \u201ccritical,\u201d and \u201cpractical\u201d weakens precise claims and leaves flatter, less authoritative prose without real gains in clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Stripping \u201cpowerful,\u201d \u201cstatistically rigorous,\u201d \u201ccritical,\u201d and \u201cpractical\u201d weakens precise claims and leaves flatter, less authoritative prose without real gains in clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b0385bf76837",
+   "raw": "{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit removes the stated purpose ('To facilitate systematic investigation...'), the conclusion that the system demonstrates stable and reliable signal acquisition, and the qualifier 'valuable' from the dataset description, making the prose more abrupt and less informative without a proportional gain in ",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the stated purpose ('To facilitate systematic investigation...'), the conclusion that the system demonstrates stable and reliable signal acquisition, and the qualifier 'valuable' from the dataset description, making the prose more abrupt and less informative without a proportional gain in clarity or naturalness."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4867e79b99ea",
+   "raw": "```json\n{\n  \"verdict\": \"worse\",\n  \"flatter\": true,\n  \"lost_something_worth_keeping\": true,\n  \"why\": \"The edit strips useful academic qualifiers like 'statistically rigorous' and 'critical,' rendering the prose blander without improving clarity or rhythm.\"\n}\n```",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips useful academic qualifiers like 'statistically rigorous' and 'critical,' rendering the prose blander without improving clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "17bdf0daa79e",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The sole change swaps \u201csupports\u201d for \u201cincludes,\u201d which is neither clearer nor worse and leaves meaning, rhythm, and voice intact.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The sole change swaps \u201csupports\u201d for \u201cincludes,\u201d which is neither clearer nor worse and leaves meaning, rhythm, and voice intact."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e24e6bef83c3",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes meaningful qualifiers like 'energy-efficient' and the final clause about providing guidance for system control and operation, weakening the technical description and practical value.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes meaningful qualifiers like 'energy-efficient' and the final clause about providing guidance for system control and operation, weakening the technical description and practical value."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0a108c7e442f",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit strips informative qualifiers like 'secure and efficient', 'distinguishing feature', 'comprehensive', 'strong', and 'competitive', and even breaks grammar by reducing 'achieves competitive performance' to the nonsensical 'achieves performance'.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit strips informative qualifiers like 'secure and efficient', 'distinguishing feature', 'comprehensive', 'strong', and 'competitive', and even breaks grammar by reducing 'achieves competitive performance' to the nonsensical 'achieves performance'."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2e8a03451ce2",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Removing adverbs like \\\"consistently\\\" and \\\"significantly\\\" is fine, but stripping useful technical qualifiers like \\\"robust\\\" (describing the LoS link) and \\\"further\\\" (indicating the sequential contribution of the OLS-CC detector) makes the abstract slightly less precise and flatter.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Removing adverbs like \"consistently\" and \"significantly\" is fine, but stripping useful technical qualifiers like \"robust\" (describing the LoS link) and \"further\" (indicating the sequential contribution of the OLS-CC detector) makes the abstract slightly less precise and flatter."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2e46cd9e2fab",
+   "raw": "{\"verdict\": \"same\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"Only two tiny swaps (reflecting\u2192and indicate; thereby distinguishing\u2192which distinguishes) neither clarify nor improve rhythm and slightly weaken the causal link and emphasis.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "Only two tiny swaps (reflecting\u2192and indicate; thereby distinguishing\u2192which distinguishes) neither clarify nor improve rhythm and slightly weaken the causal link and emphasis."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "7926537b6ab4",
+   "raw": "{\"verdict\": \"same\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit only rephrases a clause and swaps 'offers' for 'is,' which neither clarifies nor improves the technical prose, so it is not a meaningful improvement.\"}",
+   "parsed": {
+    "verdict": "same",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edit only rephrases a clause and swaps 'offers' for 'is,' which neither clarifies nor improves the technical prose, so it is not a meaningful improvement."
    }
   },
   {
@@ -2698,13 +2658,58 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "83a1e60a3d92",
-   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit tightens wordy phrasing and removes stock descriptors while preserving all key technical details and the overall argumentative structure, resulting in clearer, more direct prose without sacrificing nuance.\"}",
+   "sig": "4867e79b99ea",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit discards meaningful qualifiers like 'statistically rigorous' and weakens the conclusion by changing 'critical role' to 'role', losing specificity and emphasis.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit discards meaningful qualifiers like 'statistically rigorous' and weakens the conclusion by changing 'critical role' to 'role', losing specificity and emphasis."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c3136e199dc0",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": true, \"lost_something_worth_keeping\": true, \"why\": \"The edit removes the claim about robustness and scalability and creates an awkward final sentence, making the conclusion less clear.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": true,
+    "lost_something_worth_keeping": true,
+    "why": "The edit removes the claim about robustness and scalability and creates an awkward final sentence, making the conclusion less clear."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2e46cd9e2fab",
+   "raw": "{\"verdict\": \"worse\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"The edit replaces the naturally subordinating 'reflecting' with a stiff coordinator 'and indicate,' making the sentence choppier without improving clarity or rhythm.\"}",
+   "parsed": {
+    "verdict": "worse",
+    "flatter": false,
+    "lost_something_worth_keeping": false,
+    "why": "The edit replaces the naturally subordinating 'reflecting' with a stiff coordinator 'and indicate,' making the sentence choppier without improving clarity or rhythm."
+   }
+  },
+  {
+   "kind": "quality",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a1f4770c0d83",
+   "raw": "{\"verdict\": \"better\", \"flatter\": false, \"lost_something_worth_keeping\": false, \"why\": \"Removing the vague, promotional clause streamlines the sentence without sacrificing any specific result or qualifier.\"}",
    "parsed": {
     "verdict": "better",
     "flatter": false,
     "lost_something_worth_keeping": false,
-    "why": "The edit tightens wordy phrasing and removes stock descriptors while preserving all key technical details and the overall argumentative structure, resulting in clearer, more direct prose without sacrificing nuance."
+    "why": "Removing the vague, promotional clause streamlines the sentence without sacrificing any specific result or qualifier."
    }
   }
  ]

@@ -2126,6 +2126,1933 @@
     "confidence": 4,
     "reason": "Text 1 uses passive constructions and formulaic participial clauses like 'An optical theory is analyzed, showing that...' and repetitive phrasing, whereas Text 2 is more direct and natural."
    }
+  },
+  {
+   "kind": "style",
+   "i": 9,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "aa02b46c2747",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 5,\n  \"reason\": \"Text 1 packs formulaic openings, vague participial add-ons, hollow triplets like 'comprehensive protection while ensuring transparency, enhancing security and trustworthiness', and stock significance phrasing absent from the tighter Text 2.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 packs formulaic openings, vague participial add-ons, hollow triplets like 'comprehensive protection while ensuring transparency, enhancing security and trustworthiness', and stock significance phrasing absent from the tighter Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 1,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "21186a67e2a4",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 relies heavily on formulaic template openings like \\\"To address these challenges, we propose\\\" and uses obvious synonym rotation for passive verbs (\\\"is introduced\\\", \\\"is employed\\\", \\\"is designed\\\") to describe the modules.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 relies heavily on formulaic template openings like \"To address these challenges, we propose\" and uses obvious synonym rotation for passive verbs (\"is introduced\", \"is employed\", \"is designed\") to describe the modules."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 8,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "6c2a6d63f847",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more formulaic participial clauses and generic emphasis on significance, while Text 2 is more concise and natural.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more formulaic participial clauses and generic emphasis on significance, while Text 2 is more concise and natural."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "f0cc32069253",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 relies heavily on stock LLM phrases like 'plays a pivotal role' and 'highlights the critical necessity', which add generic emphasis without doing much work, whereas Text 2 uses more direct, human-like phrasing such as 'is central to' and 'shows that region-specific model selection is necessary'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 relies heavily on stock LLM phrases like 'plays a pivotal role' and 'highlights the critical necessity', which add generic emphasis without doing much work, whereas Text 2 uses more direct, human-like phrasing such as 'is central to' and 'shows that region-specific model selection is necessary'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 10,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "8b9a52134150",
+   "raw": "```json\n{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 uses the formulaic opening 'Results show that' and the slightly more verbose connective 'thereby eliminating', which are characteristic of AI-generated academic text.\"\n}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses the formulaic opening 'Results show that' and the slightly more verbose connective 'thereby eliminating', which are characteristic of AI-generated academic text."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 10,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "8b9a52134150",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":4,\"reason\":\"Text 2 adds formulaic 'Results show that' and 'thereby' which are typical LLM-style connectors, whereas Text 1 is more direct.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 adds formulaic 'Results show that' and 'thereby' which are typical LLM-style connectors, whereas Text 1 is more direct."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 10,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "8b9a52134150",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"TEXT 2 adds formulaic 'Results show that', the connector 'thereby', and 'toward' phrasing that heighten stock LLM cadence absent in TEXT 1.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "TEXT 2 adds formulaic 'Results show that', the connector 'thereby', and 'toward' phrasing that heighten stock LLM cadence absent in TEXT 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 9,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "aa02b46c2747",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":4,\"reason\":\"Text 1 adds formulaic participial clauses, a hollow triplet of benefits, and generic emphasis on significance that are typical of LLM-inflated prose.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 adds formulaic participial clauses, a hollow triplet of benefits, and generic emphasis on significance that are typical of LLM-inflated prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "65f005136207",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses heavily formulaic phrasing like 'Distinct regional heterogeneity was observed', 'synergistic interaction', and 'complex topographies', culminating in a rigid, four-part list of broad impacts that epitomizes LLM-generated abstracts.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses heavily formulaic phrasing like 'Distinct regional heterogeneity was observed', 'synergistic interaction', and 'complex topographies', culminating in a rigid, four-part list of broad impacts that epitomizes LLM-generated abstracts."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "f0cc32069253",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 4,\n  \"reason\": \"TEXT 1 packs more stock LLM phrasing ('pivotal role', 'highlights the critical necessity', 'while...demonstrate superior') and generic significance padding than the slightly plainer TEXT 2.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 packs more stock LLM phrasing ('pivotal role', 'highlights the critical necessity', 'while...demonstrate superior') and generic significance padding than the slightly plainer TEXT 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "f0cc32069253",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 uses formulaic emphatic phrases ('plays a pivotal role', 'critical necessity'), a hollow triplet of verbs ('advance...facilitate...promote...enhance'), and vague participatory clauses, whereas Text 2 is more direct and concise.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses formulaic emphatic phrases ('plays a pivotal role', 'critical necessity'), a hollow triplet of verbs ('advance...facilitate...promote...enhance'), and vague participatory clauses, whereas Text 2 is more direct and concise."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "65f005136207",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 shows more formulaic openings ('Distinct regional heterogeneity was observed'), stock phrases ('synergistic interaction', 'mitigate uncertainties arising from'), and a hollow significance triplet.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 shows more formulaic openings ('Distinct regional heterogeneity was observed'), stock phrases ('synergistic interaction', 'mitigate uncertainties arising from'), and a hollow significance triplet."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 8,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "0223b4849553",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses generic intensifiers like 'curated', 'comprehensive', 'extensive', and 'significantly' along with a participial clause ('enabling temporally grounded reasoning') that add vague emphasis without specific content.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses generic intensifiers like 'curated', 'comprehensive', 'extensive', and 'significantly' along with a participial clause ('enabling temporally grounded reasoning') that add vague emphasis without specific content."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "4c8f08400cf1",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more formulaic LLM-style transitional phrasing like 'Despite this progress' and generic significance markers like 'highlight the potential' and 'These findings'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more formulaic LLM-style transitional phrasing like 'Despite this progress' and generic significance markers like 'highlight the potential' and 'These findings'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "82493f7b3ee6",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 inserts formulaic padding (\u201cshowed strong agreement, with\u201d) and slightly more generic phrasing (\u201cdue to\u201d, \u201cacross different speeds\u201d) without adding substance.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 inserts formulaic padding (\u201cshowed strong agreement, with\u201d) and slightly more generic phrasing (\u201cdue to\u201d, \u201cacross different speeds\u201d) without adding substance."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 10,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "a2fa868069b3",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses more formulaic and generic phrasing like 'exhibits greater robustness' and 'has potential applications,' which are typical of LLM-generated text.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses more formulaic and generic phrasing like 'exhibits greater robustness' and 'has potential applications,' which are typical of LLM-generated text."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "5771d480e46b",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 adds more formulaic phrasing ('lightweight', 'By delivering...'), participial/gerund openings for vague significance, and slightly puffier stock vocabulary without adding concrete content.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 adds more formulaic phrasing ('lightweight', 'By delivering...'), participial/gerund openings for vague significance, and slightly puffier stock vocabulary without adding concrete content."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "82493f7b3ee6",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses the phrase 'strong agreement, with' to add a vague summary clause before listing the actual data, and awkwardly uses 'across different speeds' instead of the more natural 'at different speeds'.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses the phrase 'strong agreement, with' to add a vague summary clause before listing the actual data, and awkwardly uses 'across different speeds' instead of the more natural 'at different speeds'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "82493f7b3ee6",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 inserts the stock evaluative phrase 'strong agreement' before the quantitative results, a typical LLM-style emphasis that adds generic interpretation without new information.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 inserts the stock evaluative phrase 'strong agreement' before the quantitative results, a typical LLM-style emphasis that adds generic interpretation without new information."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "eae39b94b53b",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 relies more on nominalization, synonym rotation (analyzed, assessed, evaluated, demonstrated, revealed), and ends with a classic LLM-style trailing participial clause ('requiring cautious interpretation at higher speeds').\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 relies more on nominalization, synonym rotation (analyzed, assessed, evaluated, demonstrated, revealed), and ends with a classic LLM-style trailing participial clause ('requiring cautious interpretation at higher speeds')."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "4c8f08400cf1",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more verbose, formulaic phrasing with synonym rotation and generic emphasis ('findings demonstrate', 'highlight the potential'), characteristic of LLM-style editing.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more verbose, formulaic phrasing with synonym rotation and generic emphasis ('findings demonstrate', 'highlight the potential'), characteristic of LLM-style editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "e3cc6d0602c9",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 adds the formulaic opener \\\"Within this context,\\\" packs a longer after-which clause, and ends with stock \\\"highlight the potential\\\" versus the leaner wording in Text 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 adds the formulaic opener \"Within this context,\" packs a longer after-which clause, and ends with stock \"highlight the potential\" versus the leaner wording in Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "5771d480e46b",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic emphasis ('essential', 'lightweight') and a classic LLM-style concluding participial clause ('By delivering...'), whereas Text 2 uses more neutral, direct phrasing.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic emphasis ('essential', 'lightweight') and a classic LLM-style concluding participial clause ('By delivering...'), whereas Text 2 uses more neutral, direct phrasing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 11,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "65f005136207",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 employs passive formulaic openings ('Distinct regional heterogeneity was observed'), stock phrases ('synergistic interaction'), and a generic four-fold list of benefits ('advance, facilitate, promote, enhance') that feel hollow and machine-generated, while Text 2 is more direct and varied.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 employs passive formulaic openings ('Distinct regional heterogeneity was observed'), stock phrases ('synergistic interaction'), and a generic four-fold list of benefits ('advance, facilitate, promote, enhance') that feel hollow and machine-generated, while Text 2 is more direct and varied."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "5771d480e46b",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":4,\"reason\":\"Text 1 uses a participial clause ('By delivering...') and passive construction 'is designed to support', typical of LLM-generated prose, while Text 2 states the same idea more directly.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses a participial clause ('By delivering...') and passive construction 'is designed to support', typical of LLM-generated prose, while Text 2 states the same idea more directly."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "2eff8ca75f11",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 adds participial clauses with vague interpretation (\\\"demonstrating stable and reliable signal acquisition\\\"), stock vocabulary (\\\"comprehensive\\\"), and generic emphasis on significance (\\\"serves as a valuable resource\\\") that are absent in Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 adds participial clauses with vague interpretation (\"demonstrating stable and reliable signal acquisition\"), stock vocabulary (\"comprehensive\"), and generic emphasis on significance (\"serves as a valuable resource\") that are absent in Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "78522994c0e0",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 adds vague interpretive participles like 'demonstrating stable and reliable signal acquisition' and generic value claims like 'valuable resource', typical of LLM-generated padding.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 adds vague interpretive participles like 'demonstrating stable and reliable signal acquisition' and generic value claims like 'valuable resource', typical of LLM-generated padding."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "a6601be9421e",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 shows more LLM hallmarks: stock emphasis ('is important'), filler adjectives ('lightweight'), formulaic 'By providing...' opener, smoother passive phrasing, and generic enablement language.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 shows more LLM hallmarks: stock emphasis ('is important'), filler adjectives ('lightweight'), formulaic 'By providing...' opener, smoother passive phrasing, and generic enablement language."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "78522994c0e0",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 adds vague participial praise ('demonstrating stable and reliable'), stock significance framing ('comprehensive', 'valuable resource'), and a formulaic 'By offering... provides' closer typical of LLM polishing.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 adds vague participial praise ('demonstrating stable and reliable'), stock significance framing ('comprehensive', 'valuable resource'), and a formulaic 'By offering... provides' closer typical of LLM polishing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "8f09713d88cb",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 relies heavily on formulaic LLM structures, such as the hollow triplet \\\"compact, wideband, and practically implementable\\\" and the participial phrase \\\"enabling radiation-pattern switching... avoiding a complicated biasing network\\\" that adds vague interpretation.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 relies heavily on formulaic LLM structures, such as the hollow triplet \"compact, wideband, and practically implementable\" and the participial phrase \"enabling radiation-pattern switching... avoiding a complicated biasing network\" that adds vague interpretation."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 0,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "25d3c28ace10",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 employs typical LLM smoothing and stock phrasing such as 'shows considerable promise', 'significantly improving', and 'efficient and reliable solution', whereas Text 1 reads more like a direct, clunky translation from a non-native human author.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 employs typical LLM smoothing and stock phrasing such as 'shows considerable promise', 'significantly improving', and 'efficient and reliable solution', whereas Text 1 reads more like a direct, clunky translation from a non-native human author."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "2eff8ca75f11",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 5,\n  \"reason\": \"TEXT 2 adds stock LLM padding such as 'comprehensive', 'enabling the simultaneous capture', 'demonstrating stable and reliable', 'qualitatively illustrate', and the closing 'serves as a valuable resource' clause.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "TEXT 2 adds stock LLM padding such as 'comprehensive', 'enabling the simultaneous capture', 'demonstrating stable and reliable', 'qualitatively illustrate', and the closing 'serves as a valuable resource' clause."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "4c8f08400cf1",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 shows more formulaic openers (Despite this progress), wordier stock phrasing, and generic significance closers (findings demonstrate... highlight the potential) versus Text 2\u2019s tighter wording.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 shows more formulaic openers (Despite this progress), wordier stock phrasing, and generic significance closers (findings demonstrate... highlight the potential) versus Text 2\u2019s tighter wording."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "f63ef2823695",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"TEXT 1 shows more formulaic openings, vague participial clauses, generic significance phrasing, and stock evaluative vocabulary without added substance.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 shows more formulaic openings, vague participial clauses, generic significance phrasing, and stock evaluative vocabulary without added substance."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "eae39b94b53b",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 shows more formulaic transitions (Nevertheless), generic emphasis (strong agreement despite only moderate ICCs), and a wordier stock cautious-interpretation close than the tighter Text 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 shows more formulaic transitions (Nevertheless), generic emphasis (strong agreement despite only moderate ICCs), and a wordier stock cautious-interpretation close than the tighter Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "a32d4246131f",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"TEXT 1 uses formulaic padding and vague intensifiers like 'plays an important role', 'demonstrated remarkable performance', 'extensively evaluated', and 'robust and generalizable framework' which are hallmarks of LLM generation.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "TEXT 1 uses formulaic padding and vague intensifiers like 'plays an important role', 'demonstrated remarkable performance', 'extensively evaluated', and 'robust and generalizable framework' which are hallmarks of LLM generation."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "8f09713d88cb",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"TEXT 1 shows more formulaic polish via hollow triplet ('compact, wideband, and practically implementable'), stock significance phrasing, and smoother elaborative clauses than the terser TEXT 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 shows more formulaic polish via hollow triplet ('compact, wideband, and practically implementable'), stock significance phrasing, and smoother elaborative clauses than the terser TEXT 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "9996ab417f6a",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 uses formulaic LLM markers like 'proposed approach', the hollow triplet 'compact, wideband, and practically implementable', and more convoluted, generically emphasized sentence structures.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses formulaic LLM markers like 'proposed approach', the hollow triplet 'compact, wideband, and practically implementable', and more convoluted, generically emphasized sentence structures."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "9996ab417f6a",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 5,\n  \"reason\": \"Text 1 packs formulaic participial clauses, a hollow triplet ('compact, wideband, and practically implementable'), and stock significance phrasing absent from the tighter Text 2.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 packs formulaic participial clauses, a hollow triplet ('compact, wideband, and practically implementable'), and stock significance phrasing absent from the tighter Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "f63ef2823695",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text1 relies on formulaic sentence openings, hollow triplets like 'robust and generalizable,' and generic emphasis on significance, whereas Text2 is more direct and less stylistically embellished.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text1 relies on formulaic sentence openings, hollow triplets like 'robust and generalizable,' and generic emphasis on significance, whereas Text2 is more direct and less stylistically embellished."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "e3cc6d0602c9",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic openers ('Within this context'), a participial connector ('after which'), and a generic emphatic verb ('highlight') that are typical of LLM-generated prose, whereas Text 2 is more direct and concise.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic openers ('Within this context'), a participial connector ('after which'), and a generic emphatic verb ('highlight') that are typical of LLM-generated prose, whereas Text 2 is more direct and concise."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 7,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "963ac4f2dc38",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":5,\"reason\":\"Text 2 uses formulaic connectors like 'To this end', rotates synonyms ('the proposed model'), and adds generic significance phrases ('further supporting its generalizability') that feel typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses formulaic connectors like 'To this end', rotates synonyms ('the proposed model'), and adds generic significance phrases ('further supporting its generalizability') that feel typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "7d71c1b1a092",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 adds formulaic transitions (To resolve..., First..., Subsequently...), hollow intensifiers (explicitly, consistently, highly robust and scalable), and generic significance claims absent from the tighter Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 adds formulaic transitions (To resolve..., First..., Subsequently...), hollow intensifiers (explicitly, consistently, highly robust and scalable), and generic significance claims absent from the tighter Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "2eff8ca75f11",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 uses formulaic participial clauses ('enabling...', 'demonstrating...'), generic significance ('serves as a valuable resource'), and stock phrases ('comprehensive', 'qualitatively illustrate') without adding substantive information.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses formulaic participial clauses ('enabling...', 'demonstrating...'), generic significance ('serves as a valuable resource'), and stock phrases ('comprehensive', 'qualitatively illustrate') without adding substantive information."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "8f09713d88cb",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 contains a hollow triplet ('compact, wideband, and practically implementable platform'), a generic significance phrase ('suitable for coverage and interference adaptation'), and more complex participial clauses that add interpretive weight, which are typical LLM flourishes.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 contains a hollow triplet ('compact, wideband, and practically implementable platform'), a generic significance phrase ('suitable for coverage and interference adaptation'), and more complex participial clauses that add interpretive weight, which are typical LLM flourishes."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "7d71c1b1a092",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 employs formulaic transition phrases like 'First' and 'Subsequently', adds redundant adverbs such as 'effectively' and 'explicitly', and concludes with a generic, hollow emphasis on providing a 'highly robust and scalable solution'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 employs formulaic transition phrases like 'First' and 'Subsequently', adds redundant adverbs such as 'effectively' and 'explicitly', and concludes with a generic, hollow emphasis on providing a 'highly robust and scalable solution'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "a32d4246131f",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses inflated stock phrases like 'plays an important role,' 'remarkable performance,' 'comprehensively validate,' and 'favorable balance,' along with formulaic triplets and generic significance framing, whereas Text 2 is more concise and direct.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses inflated stock phrases like 'plays an important role,' 'remarkable performance,' 'comprehensively validate,' and 'favorable balance,' along with formulaic triplets and generic significance framing, whereas Text 2 is more concise and direct."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "53f6bb67a638",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 shows more formulaic openings, purposive participial clauses, and stock interpretive phrases (\\\"designed to meet demand\\\", \\\"enabling efficient\\\", \\\"To improve stability\\\", \\\"improves signal integrity\\\", \\\"confirm the platform's reliability\\\") that add vague significance without new content.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 shows more formulaic openings, purposive participial clauses, and stock interpretive phrases (\"designed to meet demand\", \"enabling efficient\", \"To improve stability\", \"improves signal integrity\", \"confirm the platform's reliability\") that add vague significance without new content."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 5,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "db09bc4162d0",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 employs trailing participial clauses like 'creating a new...' and 'demonstrating an enhanced ability...' that add vague interpretation and generic emphasis on significance, which are classic LLM traits.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 employs trailing participial clauses like 'creating a new...' and 'demonstrating an enhanced ability...' that add vague interpretation and generic emphasis on significance, which are classic LLM traits."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "1d57b91c39df",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more participial clauses like 'For improved stability...' and 'A four-layer PCB layout further improves...', generic emphasis ('confirm the platform's reliability'), and redundant phrasing, whereas Text 2 is more concise and direct.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more participial clauses like 'For improved stability...' and 'A four-layer PCB layout further improves...', generic emphasis ('confirm the platform's reliability'), and redundant phrasing, whereas Text 2 is more concise and direct."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "f63ef2823695",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more generic emphasis and participial clauses that add vague interpretation, such as 'Comprehensive validation included' and 'yielding a robust and generalizable framework', which are characteristic of LLM-generated academic writing.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more generic emphasis and participial clauses that add vague interpretation, such as 'Comprehensive validation included' and 'yielding a robust and generalizable framework', which are characteristic of LLM-generated academic writing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "0f1d73e6874b",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 appends the generic, hollow closing phrase 'offering a robust and scalable solution for real-world continuous monitoring systems,' a stock vocabulary emphasis lacking in Text 2.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 appends the generic, hollow closing phrase 'offering a robust and scalable solution for real-world continuous monitoring systems,' a stock vocabulary emphasis lacking in Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 16,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "9996ab417f6a",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":5,\"reason\":\"TEXT1 uses formulaic 'The proposed approach offers' with a hollow triplet and stock vocabulary like 'practically implementable platform' and 'coverage and interference adaptation' in a generic emphasis.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "TEXT1 uses formulaic 'The proposed approach offers' with a hollow triplet and stock vocabulary like 'practically implementable platform' and 'coverage and interference adaptation' in a generic emphasis."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 12,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "eae39b94b53b",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 includes formulaic phrases like 'remains essential' and 'should therefore be interpreted cautiously,' along with generic terms such as 'strong agreement' that add little specific information.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 includes formulaic phrases like 'remains essential' and 'should therefore be interpreted cautiously,' along with generic terms such as 'strong agreement' that add little specific information."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "a6601be9421e",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses generic significance markers (\"is important for\"), stock vocabulary (\"substantial computational requirements\", \"lightweight\"), and a vague participial clause for emphasis (\"By providing distance-invariant measurements... the system is intended to enable\").\"}",
+   "parsed": null
+  },
+  {
+   "kind": "style",
+   "i": 15,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "78522994c0e0",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 features telltale LLM hallmarks like the vague participial clause \\\"demonstrating stable and reliable signal acquisition,\\\" the stock qualifier \\\"comprehensive,\\\" and the formulaic concluding emphasis on being a \\\"valuable resource\\\" for a hollow triplet (\\\"developing, evaluating, and comparing\\\").\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 features telltale LLM hallmarks like the vague participial clause \"demonstrating stable and reliable signal acquisition,\" the stock qualifier \"comprehensive,\" and the formulaic concluding emphasis on being a \"valuable resource\" for a hollow triplet (\"developing, evaluating, and comparing\")."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "7d71c1b1a092",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 uses formulaic signposting ('To resolve', 'First', 'Subsequently'), repetitive emphasis ('explicitly', 'consistently'), and a generic closing line about scalability and real-world monitoring, which are typical LLM stylistic markers.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses formulaic signposting ('To resolve', 'First', 'Subsequently'), repetitive emphasis ('explicitly', 'consistently'), and a generic closing line about scalability and real-world monitoring, which are typical LLM stylistic markers."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "0f1d73e6874b",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"TEXT 1 piles on stock closers (\u2018offering a robust and scalable solution\u2019), formulaic \u2018first\u2026then\u2026also\u2026raising\u2019 chaining, and generic significance padding that TEXT 2 largely strips.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 piles on stock closers (\u2018offering a robust and scalable solution\u2019), formulaic \u2018first\u2026then\u2026also\u2026raising\u2019 chaining, and generic significance padding that TEXT 2 largely strips."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "1d57b91c39df",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 piles on formulaic purpose clauses, vague participial boosts (improved stability, further improves signal integrity), and stock confirmatory closers that Text 2 largely strips out.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 piles on formulaic purpose clauses, vague participial boosts (improved stability, further improves signal integrity), and stock confirmatory closers that Text 2 largely strips out."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "53f6bb67a638",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":4,\"reason\":\"Text 2 employs redundant participial clauses, stock phrases like 'meet demand' and 'confirm reliability,' and generic emphasis on reliability, which are hallmarks of LLM-generated prose.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 employs redundant participial clauses, stock phrases like 'meet demand' and 'confirm reliability,' and generic emphasis on reliability, which are hallmarks of LLM-generated prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "ee561390854e",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses formulaic connectors ('Firstly', 'Meanwhile', 'Then'), generic intensifiers ('novel', 'satisfactory', 'highlight'), and participial clauses that add little information, typical of LLM-style editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses formulaic connectors ('Firstly', 'Meanwhile', 'Then'), generic intensifiers ('novel', 'satisfactory', 'highlight'), and participial clauses that add little information, typical of LLM-style editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 18,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "0f1d73e6874b",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 ends with a generic 'offering a robust and scalable solution' claim and uses formulaic transitions like 'We address this limitation,' typical of LLM-generated enhancements.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 ends with a generic 'offering a robust and scalable solution' claim and uses formulaic transitions like 'We address this limitation,' typical of LLM-generated enhancements."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "507436aa32e3",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 includes formulaic phrasing like 'of utmost importance,' a vague participial clause with 'designed to extract pivotal features,' and stock vocabulary such as 'pivotal' and 'achieved,' which are typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 includes formulaic phrasing like 'of utmost importance,' a vague participial clause with 'designed to extract pivotal features,' and stock vocabulary such as 'pivotal' and 'achieved,' which are typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "531f26a750bb",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":5,\"reason\":\"Text 1 uses formulaic participial openers ('By adaptively adjusting...', 'At the same time...', 'In this design...') and vague generic emphasis ('substantially reduces', 'robust performance') without added specificity, while Text 2 is more direct and plainly structured.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses formulaic participial openers ('By adaptively adjusting...', 'At the same time...', 'In this design...') and vague generic emphasis ('substantially reduces', 'robust performance') without added specificity, while Text 2 is more direct and plainly structured."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "ee561390854e",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 contains more LLM-typical padding and formulaic transitions such as 'Firstly', 'Secondly', 'Then', 'Finally', along with vague modifiers like 'novel', 'significantly', 'inherent', and 'satisfactory'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 contains more LLM-typical padding and formulaic transitions such as 'Firstly', 'Secondly', 'Then', 'Finally', along with vague modifiers like 'novel', 'significantly', 'inherent', and 'satisfactory'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "1d57b91c39df",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more formulaic, padded openings like 'to address the need for' and 'further improves signal integrity for reliable high-speed operation,' which give it a more generated feel.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more formulaic, padded openings like 'to address the need for' and 'further improves signal integrity for reliable high-speed operation,' which give it a more generated feel."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "507436aa32e3",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 uses formulaic transition words (Therefore, However, Firstly), includes a hollow emphasis on significance ('ensuring its safety and reliability is of utmost importance'), and pads the text with stock vocabulary like 'pivotal features'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses formulaic transition words (Therefore, However, Firstly), includes a hollow emphasis on significance ('ensuring its safety and reliability is of utmost importance'), and pads the text with stock vocabulary like 'pivotal features'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "ee561390854e",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 packs formulaic transitions (Firstly/Meanwhile/Then), vague enhancers (novel, significantly, satisfactory, highlight), and padded clauses (serves to, inherent in, is given to demonstrate) typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 packs formulaic transitions (Firstly/Meanwhile/Then), vague enhancers (novel, significantly, satisfactory, highlight), and padded clauses (serves to, inherent in, is given to demonstrate) typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 17,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "a32d4246131f",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 packs stock LLM phrasing (important role, remarkable performance, extensively/comprehensively, favorable balance, robust and generalizable framework) and vague emphatic closures that Text 2 strips down.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 packs stock LLM phrasing (important role, remarkable performance, extensively/comprehensively, favorable balance, robust and generalizable framework) and vague emphatic closures that Text 2 strips down."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "88bd30a185df",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 includes a classic LLM-style participial clause\u2014\\\"underscoring the potential of WS\u2082 films...\\\"\u2014that adds vague interpretive significance not present in the more direct Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 includes a classic LLM-style participial clause\u2014\"underscoring the potential of WS\u2082 films...\"\u2014that adds vague interpretive significance not present in the more direct Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 19,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "53f6bb67a638",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 pads nearly every sentence with vague interpretive clauses such as 'designed to meet demand for', 'enabling efficient', and 'To improve stability', which are hallmarks of LLM-style generic elaboration.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 pads nearly every sentence with vague interpretive clauses such as 'designed to meet demand for', 'enabling efficient', and 'To improve stability', which are hallmarks of LLM-style generic elaboration."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "87ae14fdedc6",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 adds generic significance padding ('Ensuring its safety and reliability is therefore essential'), formulaic purpose-led openings, and smoother stock academic phrasing typical of LLM polishing.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 adds generic significance padding ('Ensuring its safety and reliability is therefore essential'), formulaic purpose-led openings, and smoother stock academic phrasing typical of LLM polishing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "88bd30a185df",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"TEXT 2 adds stock significance phrasing ('underscoring the potential'), smoother synonym rotation, and formulaic emphasis absent in the more abrupt, repetitive TEXT 1.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "TEXT 2 adds stock significance phrasing ('underscoring the potential'), smoother synonym rotation, and formulaic emphasis absent in the more abrupt, repetitive TEXT 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "531f26a750bb",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"TEXT 2 shows heavier formulaic signposting (First/Second/Finally), stock evaluative add-ons, and smoother synonym-padded phrasing typical of LLM academic prose.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "TEXT 2 shows heavier formulaic signposting (First/Second/Finally), stock evaluative add-ons, and smoother synonym-padded phrasing typical of LLM academic prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "1174db7b3519",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 5,\n  \"reason\": \"Text 2 piles on stock intensifiers (significant, comprehensive, superior, systematically, valuable) and formulaic padding absent or lighter in Text 1.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 piles on stock intensifiers (significant, comprehensive, superior, systematically, valuable) and formulaic padding absent or lighter in Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "507436aa32e3",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 5,\n  \"reason\": \"Text 2 adds formulaic transitions (Therefore/However/Firstly), generic significance padding ('utmost importance'), and stock intensifiers ('pivotal', 'achieved', 'results in') absent from the leaner Text 1.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 adds formulaic transitions (Therefore/However/Firstly), generic significance padding ('utmost importance'), and stock intensifiers ('pivotal', 'achieved', 'results in') absent from the leaner Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "aefbb67f7247",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 includes the classic LLM-style participial clause 'highlighting the potential of WS2 films for low operating temperature ammonia sensing,' which adds vague interpretation and generic emphasis.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 includes the classic LLM-style participial clause 'highlighting the potential of WS2 films for low operating temperature ammonia sensing,' which adds vague interpretation and generic emphasis."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 20,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "531f26a750bb",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 utilizes rigid formulaic sequencing ('First,' 'Second,' 'Finally,') and redundant formalisms like 'Comparative results show that, compared with...,' which are classic hallmarks of LLM structuring.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 utilizes rigid formulaic sequencing ('First,' 'Second,' 'Finally,') and redundant formalisms like 'Comparative results show that, compared with...,' which are classic hallmarks of LLM structuring."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "1174db7b3519",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 pads the original text with generic LLM-style intensifiers and stock vocabulary like 'significant,' 'comprehensive,' 'systematically,' 'superior,' and 'valuable,' which add no actual meaning but falsely inflate the significance.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 pads the original text with generic LLM-style intensifiers and stock vocabulary like 'significant,' 'comprehensive,' 'systematically,' 'superior,' and 'valuable,' which add no actual meaning but falsely inflate the significance."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "c29d6ec9c86c",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic participial clauses like 'enabling the joint exploitation of' and 'reflecting its smoother dynamics', which are classic markers of LLM-generated text compared to the more direct phrasing in Text 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic participial clauses like 'enabling the joint exploitation of' and 'reflecting its smoother dynamics', which are classic markers of LLM-generated text compared to the more direct phrasing in Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "aefbb67f7247",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 4,\n  \"reason\": \"TEXT 1 adds the stock participial clause 'highlighting the potential...' plus clumsier stacked prepositional phrasing around the LOD, classic LLM filler and formulaic significance padding absent from the tighter TEXT 2.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 adds the stock participial clause 'highlighting the potential...' plus clumsier stacked prepositional phrasing around the LOD, classic LLM filler and formulaic significance padding absent from the tighter TEXT 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "7afa3bbb43bf",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 shows smoother LLM polish: stock phrases (considerable attention, superior performance, valuable guidance), neat parallel clauses, and formulaic significance padding versus Text 1\u2019s rougher non-native phrasing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 shows smoother LLM polish: stock phrases (considerable attention, superior performance, valuable guidance), neat parallel clauses, and formulaic significance padding versus Text 1\u2019s rougher non-native phrasing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "78b962e34454",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses more formulaic phrasing and stock vocabulary such as 'essential for', 'frequently affected by', 'augmented with', 'jointly exploit', and 'corresponding to', whereas Text 2 reads more naturally and concisely with transitions like 'Yet' and 'allowing it to capture'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses more formulaic phrasing and stock vocabulary such as 'essential for', 'frequently affected by', 'augmented with', 'jointly exploit', and 'corresponding to', whereas Text 2 reads more naturally and concisely with transitions like 'Yet' and 'allowing it to capture'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 6,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "088321eaaf0e",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses formulaic emphasis ('central innovation', 'substantially', 'highly advantageous'), vague modifiers, and stock phrasing like 'novel' and 'provide a prior', which are typical of LLM-generated abstracts.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses formulaic emphasis ('central innovation', 'substantially', 'highly advantageous'), vague modifiers, and stock phrasing like 'novel' and 'provide a prior', which are typical of LLM-generated abstracts."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "c29d6ec9c86c",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 piles on participial add-ons (enabling/reflecting), stock emphasis (achieves accurate, performance remains stable, highlight), and slightly puffier phrasing versus Text 2\u2019s tighter wording.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 piles on participial add-ons (enabling/reflecting), stock emphasis (achieves accurate, performance remains stable, highlight), and slightly puffier phrasing versus Text 2\u2019s tighter wording."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 14,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "a6601be9421e",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":4,\"reason\":\"Text 2 uses generic emphasis ('is important'), a participial opening ('By providing...'), and vague intent phrasing ('is intended to enable') that are common LLM patterns.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses generic emphasis ('is important'), a participial opening ('By providing...'), and vague intent phrasing ('is intended to enable') that are common LLM patterns."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "888c88af3d47",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 ends with the hollow, generic LLM clich\u00e9 \\\"These results offer valuable insights into...\\\" and uses formulaic stage-by-stage phrasing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 ends with the hollow, generic LLM clich\u00e9 \"These results offer valuable insights into...\" and uses formulaic stage-by-stage phrasing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "b9387c6c3b9e",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 includes generic emphasis ('promising', 'valuable insights'), a participial clause ('featuring'), and an added phrase 'with low computational complexity' that are characteristic of LLM-generated prose, while Text 2 is more concise and factual.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 includes generic emphasis ('promising', 'valuable insights'), a participial clause ('featuring'), and an added phrase 'with low computational complexity' that are characteristic of LLM-generated prose, while Text 2 is more concise and factual."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "7afa3bbb43bf",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic openers like 'In this study' and 'In the proposed model,' a hollow triplet ('local features,' 'temporal dependencies,' 'bidirectional contextual relationships'), and vague connective 'Accordingly,' which are characteristic of LLM-generated prose.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic openers like 'In this study' and 'In the proposed model,' a hollow triplet ('local features,' 'temporal dependencies,' 'bidirectional contextual relationships'), and vague connective 'Accordingly,' which are characteristic of LLM-generated prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "888c88af3d47",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"TEXT 2 adds the stock closing claim about \u2018valuable insights,\u2019 formulaic stage openers, and vague significance padding typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "TEXT 2 adds the stock closing claim about \u2018valuable insights,\u2019 formulaic stage openers, and vague significance padding typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "7afa3bbb43bf",
+   "raw": "```json\n{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 adds generic LLM-style positive adjectives and filler words like \\\"Comprehensive,\\\" \\\"superior performance,\\\" and \\\"valuable guidance,\\\" and awkwardly repeats \\\"systematically\\\" to artificially inflate the significance of the results.\"\n}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 adds generic LLM-style positive adjectives and filler words like \"Comprehensive,\" \"superior performance,\" and \"valuable guidance,\" and awkwardly repeats \"systematically\" to artificially inflate the significance of the results."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "b9387c6c3b9e",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 packs stock LLM markers: 'promising... featuring', 'is first employed to', 'is developed to... with low computational complexity', 'significantly/further', and the hollow closer 'provide valuable insights for the design of...'.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 packs stock LLM markers: 'promising... featuring', 'is first employed to', 'is developed to... with low computational complexity', 'significantly/further', and the hollow closer 'provide valuable insights for the design of...'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "c29d6ec9c86c",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic participial phrases like 'enabling the joint exploitation' and 'reflecting', plus generic emphasis like 'achieves accurate reconstruction' and 'highlight', which are typical LLM-style flourishes.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic participial phrases like 'enabling the joint exploitation' and 'reflecting', plus generic emphasis like 'achieves accurate reconstruction' and 'highlight', which are typical LLM-style flourishes."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 8,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "6c2a6d63f847",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 pads sentences with hollow intensifiers and generic academic adjectives like 'crucial,' 'comprehensive,' 'extensive,' and 'significantly improves,' which are classic hallmarks of LLM rewriting.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 pads sentences with hollow intensifiers and generic academic adjectives like 'crucial,' 'comprehensive,' 'extensive,' and 'significantly improves,' which are classic hallmarks of LLM rewriting."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "840cf835cd23",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 uses formulaic emphatic phrases like 'A distinguishing feature...' and 'The proposed algorithm exhibits strong robustness...', plus broader generic terms like 'comprehensive numerical evaluations', which are typical of LLM-generated prose.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses formulaic emphatic phrases like 'A distinguishing feature...' and 'The proposed algorithm exhibits strong robustness...', plus broader generic terms like 'comprehensive numerical evaluations', which are typical of LLM-generated prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "78b962e34454",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"TEXT 2 shows tighter LLM polish: stock swaps (crucial/Yet), formulaic openings, smoother participial \u2018allowing/reflecting\u2019 clauses, and generic significance phrasing versus TEXT 1\u2019s slightly clunkier academic wording.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "TEXT 2 shows tighter LLM polish: stock swaps (crucial/Yet), formulaic openings, smoother participial \u2018allowing/reflecting\u2019 clauses, and generic significance phrasing versus TEXT 1\u2019s slightly clunkier academic wording."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "840cf835cd23",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 uses repetitive padding phrases like 'A distinguishing feature of the proposed algorithm is that', 'Comprehensive numerical evaluations', and 'achieves competitive performance', which are classic LLM tics absent in the more concise Text 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses repetitive padding phrases like 'A distinguishing feature of the proposed algorithm is that', 'Comprehensive numerical evaluations', and 'achieves competitive performance', which are classic LLM tics absent in the more concise Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "88bd30a185df",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 adds a participial clause ('underscoring the potential...') that provides generic significance and uses formulaic phrasing like 'along with' and 'demonstrated,' typical of LLM-generated text.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 adds a participial clause ('underscoring the potential...') that provides generic significance and uses formulaic phrasing like 'along with' and 'demonstrated,' typical of LLM-generated text."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "d2f0c061f8e1",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 4,\n  \"reason\": \"Text 1 piles on formulaic padding (comprehensive/Notably/thereby/further), vague participial framing, and stock significance cues absent from the tighter Text 2.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 piles on formulaic padding (comprehensive/Notably/thereby/further), vague participial framing, and stock significance cues absent from the tighter Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "b9387c6c3b9e",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 includes classic LLM hallmarks like a hollow concluding sentence about 'valuable insights', unnecessary adverbs such as 'significantly' and 'further', and tacked-on participial phrases like 'featuring large-scale reconfigurability'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 includes classic LLM hallmarks like a hollow concluding sentence about 'valuable insights', unnecessary adverbs such as 'significantly' and 'further', and tacked-on participial phrases like 'featuring large-scale reconfigurability'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "99419832cfee",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic openers, vague participial phrases like 'designed to protect', and stock evaluative vocabulary ('comprehensive numerical evaluations', 'demonstrated strong robustness', 'competitive performance') that are typical of LLM-generated text.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic openers, vague participial phrases like 'designed to protect', and stock evaluative vocabulary ('comprehensive numerical evaluations', 'demonstrated strong robustness', 'competitive performance') that are typical of LLM-generated text."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "840cf835cd23",
+   "raw": "{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 5,\n  \"reason\": \"Text 1 pads with formulaic openers, repeated 'proposed algorithm', and hollow emphasis phrases (distinguishing feature, comprehensive, exhibits strong, competitive performance) that Text 2 strips out.\"\n}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 pads with formulaic openers, repeated 'proposed algorithm', and hollow emphasis phrases (distinguishing feature, comprehensive, exhibits strong, competitive performance) that Text 2 strips out."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 24,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "78b962e34454",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic openings ('In this work'), generic phrases ('Experimental results show that'), and verbose constructions like 'jointly exploit' and 'attains', whereas Text 2 is more concise and direct.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic openings ('In this work'), generic phrases ('Experimental results show that'), and verbose constructions like 'jointly exploit' and 'attains', whereas Text 2 is more concise and direct."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "a919b08fc3f8",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"TEXT 1 uses formulaic openings ('With the control method isolated'), vague participial clauses ('statistically rigorous'), generic emphasis ('underscore the importance'), and hollow triplets ('learning efficiency, robustness, and operational performance'), typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "TEXT 1 uses formulaic openings ('With the control method isolated'), vague participial clauses ('statistically rigorous'), generic emphasis ('underscore the importance'), and hollow triplets ('learning efficiency, robustness, and operational performance'), typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "e6ba2191e01d",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses the formulaic opener 'This study investigates,' the filler 'Notably,' and a strained contrast ('distinguishing this system') that are typical of LLM-generated emphasis, while Text 2 is more direct and factual.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses the formulaic opener 'This study investigates,' the filler 'Notably,' and a strained contrast ('distinguishing this system') that are typical of LLM-generated emphasis, while Text 2 is more direct and factual."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "87ae14fdedc6",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 includes generic emphasis with 'Ensuring its safety and reliability is therefore essential,' smooths transitions with 'while' and 'first,' and uses polished phrasing like 'key features' and 'validated,' all common LLM patterns. Text 1 is more direct and slightly awkward in places, reading as more human.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 includes generic emphasis with 'Ensuring its safety and reliability is therefore essential,' smooths transitions with 'while' and 'first,' and uses polished phrasing like 'key features' and 'validated,' all common LLM patterns. Text 1 is more direct and slightly awkward in places, reading as more human."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 13,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "e3cc6d0602c9",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 5, \"reason\": \"Text 1 features formulaic transition phrases ('Within this context'), overly long sentence structures held together by relative clauses ('after which'), and generic emphasis on significance ('highlight the potential'), which are classic hallmarks of LLM generation removed in Text 2.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 features formulaic transition phrases ('Within this context'), overly long sentence structures held together by relative clauses ('after which'), and generic emphasis on significance ('highlight the potential'), which are classic hallmarks of LLM generation removed in Text 2."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "e6ba2191e01d",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 3, \"reason\": \"Text 2 opens with the highly formulaic 'To investigate [topic], this study examines...' template characteristic of LLM-generated abstracts, along with transitional phrases like 'Furthermore' and 'Through...'\"",
+   "parsed": null
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "99419832cfee",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses more formulaic openings (One of the major challenges; In this paper, we propose; The experimental results demonstrate), smoother stock connectors (comprising both, along with, exceeding, across all), and generic polished phrasing typical of LLM editing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses more formulaic openings (One of the major challenges; In this paper, we propose; The experimental results demonstrate), smoother stock connectors (comprising both, along with, exceeding, across all), and generic polished phrasing typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 22,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "aefbb67f7247",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":5,\"reason\":\"Text 1 includes a vague participial clause ('highlighting the potential...') and redundant phrasing ('limit of detection of 0.6 ppm') that are typical of LLM-generated text.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 includes a vague participial clause ('highlighting the potential...') and redundant phrasing ('limit of detection of 0.6 ppm') that are typical of LLM-generated text."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "e6ba2191e01d",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"Text 2 shows more formulaic openings (To investigate...), stock transitions (Furthermore, reveal), and smoother synonym-rotated phrasing typical of LLM editing.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 shows more formulaic openings (To investigate...), stock transitions (Furthermore, reveal), and smoother synonym-rotated phrasing typical of LLM editing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "25bf8782fc6f",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 uses formulaic stock phrases ('powerful paradigm', 'statistically rigorous', 'consistently superior', 'critical role') and synonym rotation for significance, typical of LLM-generated emphasis, while Text 1 is more direct and less embellished.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses formulaic stock phrases ('powerful paradigm', 'statistically rigorous', 'consistently superior', 'critical role') and synonym rotation for significance, typical of LLM-generated emphasis, while Text 1 is more direct and less embellished."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "25bf8782fc6f",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 packs stock LLM phrasing (emerged as a powerful paradigm, statistically rigorous, consistently superior, highlight the critical role) and inflated emphasis absent from the leaner Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 packs stock LLM phrasing (emerged as a powerful paradigm, statistically rigorous, consistently superior, highlight the critical role) and inflated emphasis absent from the leaner Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "25bf8782fc6f",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 uses classic LLM academic boilerplate such as \\\"emerged as a powerful paradigm,\\\" \\\"statistically rigorous,\\\" and \\\"highlight the critical role,\\\" which inflate the text without adding meaning compared to the more direct phrasing of Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 uses classic LLM academic boilerplate such as \"emerged as a powerful paradigm,\" \"statistically rigorous,\" and \"highlight the critical role,\" which inflate the text without adding meaning compared to the more direct phrasing of Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 10,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "a2fa868069b3",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 exhibits classic LLM editing hallmarks such as nominalizations ('exhibits greater robustness' instead of 'is more robust'), academic inflation ('markedly', 'custom-made', 'serves as'), and awkward sentence combining using passive clauses ('and is evaluated').\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 exhibits classic LLM editing hallmarks such as nominalizations ('exhibits greater robustness' instead of 'is more robust'), academic inflation ('markedly', 'custom-made', 'serves as'), and awkward sentence combining using passive clauses ('and is evaluated')."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": true,
+   "sig": "a919b08fc3f8",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 piles on stock LLM markers\u2014\\\"statistically rigorous,\\\" \\\"consistently delivers,\\\" and especially \\\"These findings underscore the importance\\\"\u2014plus padded additive clauses, while Text 2 stays tighter and less formulaic.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 piles on stock LLM markers\u2014\"statistically rigorous,\" \"consistently delivers,\" and especially \"These findings underscore the importance\"\u2014plus padded additive clauses, while Text 2 stays tighter and less formulaic."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": true,
+   "sig": "d2f0c061f8e1",
+   "raw": "{\"more_machine_like\":\"1\",\"confidence\":4,\"reason\":\"Text 1 uses formulaic intensifiers ('comprehensive', 'Notably') and participial clauses ('reflecting', 'thereby distinguishing') that add vague interpretation without new information.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic intensifiers ('comprehensive', 'Notably') and participial clauses ('reflecting', 'thereby distinguishing') that add vague interpretation without new information."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 26,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "99419832cfee",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 uses more formulaic LLM padding such as 'One of the major challenges in securing...' and 'The experimental results demonstrate... along with', as well as slightly elevated synonym replacements like 'serves exclusively' and 'bears no'.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 uses more formulaic LLM padding such as 'One of the major challenges in securing...' and 'The experimental results demonstrate... along with', as well as slightly elevated synonym replacements like 'serves exclusively' and 'bears no'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "8e12e6d21940",
+   "raw": "```json\n{\"more_machine_like\": \"2\", \"confidence\": 3, \"reason\": \"Text 2 uses slightly more verbose and stock academic phrasing with 'frames... as' and 'operator-facing interface supports' compared to the simpler 'treats... as' and 'The interface includes' in Text 1.\"}\n```",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 3,
+    "reason": "Text 2 uses slightly more verbose and stock academic phrasing with 'frames... as' and 'operator-facing interface supports' compared to the simpler 'treats... as' and 'The interface includes' in Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 28,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "a919b08fc3f8",
+   "raw": "```json\n{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 uses formulaic padding and generic emphasis like 'statistically rigorous', 'together with', and the classic LLM conclusion 'These findings underscore the importance of'.\"}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 uses formulaic padding and generic emphasis like 'statistically rigorous', 'together with', and the classic LLM conclusion 'These findings underscore the importance of'."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 21,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "87ae14fdedc6",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 includes classic LLM filler such as the generic significance statement 'Ensuring its safety and reliability is therefore essential' and uses smoother, formulaic transitions like 'yet' and 'therefore' that polish away the clunky, literal phrasing seen in Text 1.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 includes classic LLM filler such as the generic significance statement 'Ensuring its safety and reliability is therefore essential' and uses smoother, formulaic transitions like 'yet' and 'therefore' that polish away the clunky, literal phrasing seen in Text 1."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "05b5feb6924c",
+   "raw": "{\"more_machine_like\": \"1\", \"confidence\": 4, \"reason\": \"Text 1 relies on formulaic openers like 'This study treats' and passive constructions, and uses generic emphasis like 'These findings show' that are typical of LLM-generated prose.\"}",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 4,
+    "reason": "Text 1 relies on formulaic openers like 'This study treats' and passive constructions, and uses generic emphasis like 'These findings show' that are typical of LLM-generated prose."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "z-ai/glm-5.2",
+   "flip": false,
+   "sig": "05b5feb6924c",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 3, \"reason\": \"Text 2 uses classic LLM stylistic markers such as the formulaic \\\"X refers to\\\" opening, the overly precise \\\"operator-facing interface,\\\" and the awkward synonym rotation of \\\"beyond... to provide\\\" in the conclusion.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 3,
+    "reason": "Text 2 uses classic LLM stylistic markers such as the formulaic \"X refers to\" opening, the overly precise \"operator-facing interface,\" and the awkward synonym rotation of \"beyond... to provide\" in the conclusion."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 23,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "1174db7b3519",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":4,\"reason\":\"Text 2 is padded with generic intensifiers (e.g., 'significant,' 'superior,' 'comprehensive,' 'systematically,' 'valuable'), which are typical of LLM-generated text that emphasize importance without adding substantive meaning, whereas Text 1 is more concise and factual.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 is padded with generic intensifiers (e.g., 'significant,' 'superior,' 'comprehensive,' 'systematically,' 'valuable'), which are typical of LLM-generated text that emphasize importance without adding substantive meaning, whereas Text 1 is more concise and factual."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 27,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "z-ai/glm-5.2",
+   "flip": true,
+   "sig": "d2f0c061f8e1",
+   "raw": "```json\n{\n  \"more_machine_like\": \"1\",\n  \"confidence\": 5,\n  \"reason\": \"Text 1 uses classic LLM padding and emphasis words like 'comprehensive', 'occurrence of', 'Notably', 'thereby', and 'further', which add length without meaning, whereas Text 2 is more direct and concise.\"\n}\n```",
+   "parsed": {
+    "more_machine_like": "1",
+    "confidence": 5,
+    "reason": "Text 1 uses classic LLM padding and emphasis words like 'comprehensive', 'occurrence of', 'Notably', 'thereby', and 'further', which add length without meaning, whereas Text 2 is more direct and concise."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 25,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "888c88af3d47",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 5, \"reason\": \"Text 2 ends with a generic significance sentence about 'valuable insights' that is typical of LLM-generated filler, whereas Text 1 stays strictly technical and avoids such hollow statements.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 5,
+    "reason": "Text 2 ends with a generic significance sentence about 'valuable insights' that is typical of LLM-generated filler, whereas Text 1 stays strictly technical and avoids such hollow statements."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_B",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "05b5feb6924c",
+   "raw": "{\"more_machine_like\": \"2\", \"confidence\": 4, \"reason\": \"Text 2 shows more formulaic openings (\\\"refers to\\\"), stock transitions (\\\"likewise\\\", \\\"demonstrate that... beyond... to provide\\\"), and polished synonym rotation versus Text 1's slightly rougher, more direct phrasing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "Text 2 shows more formulaic openings (\"refers to\"), stock transitions (\"likewise\", \"demonstrate that... beyond... to provide\"), and polished synonym rotation versus Text 1's slightly rougher, more direct phrasing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "flip": false,
+   "sig": "8e12e6d21940",
+   "raw": "{\"more_machine_like\":\"2\",\"confidence\":3,\"reason\":\"The use of 'operator-facing' as a stock modifier and 'frames' as a synonym rotation for 'treats' are characteristic of LLM-generated phrasing.\"}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 3,
+    "reason": "The use of 'operator-facing' as a stock modifier and 'frames' as a synonym rotation for 'treats' are characteristic of LLM-generated phrasing."
+   }
+  },
+  {
+   "kind": "style",
+   "i": 29,
+   "era": "2026",
+   "pair": "C_vs_A",
+   "judge": "x-ai/grok-4.5",
+   "flip": false,
+   "sig": "8e12e6d21940",
+   "raw": "{\n  \"more_machine_like\": \"2\",\n  \"confidence\": 4,\n  \"reason\": \"TEXT 2 shows synonym rotation (treats\\to frames, includes\\to supports) plus the added stock modifier \\\"operator-facing\\\" that does little extra work.\"\n}",
+   "parsed": {
+    "more_machine_like": "2",
+    "confidence": 4,
+    "reason": "TEXT 2 shows synonym rotation (treats\to frames, includes\to supports) plus the added stock modifier \"operator-facing\" that does little extra work."
+   }
   }
  ]
 }

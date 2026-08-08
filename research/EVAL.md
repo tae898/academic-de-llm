@@ -192,6 +192,55 @@ is the mechanism, and it gives the directive something checkable: **keep the
 longest sentence long.** A pass that leaves the longest sentence near its
 original length has not flattened the text, whatever else it did.
 
+### Five prompt lengths on one corpus: shorter measured worse, every time
+
+30 *Sensors* 2026 abstracts, same rewriter, same judges, same arm B throughout.
+Only the instruction file changed.
+
+| instruction | size | reads machine-like | faithful | judged worse | lost something |
+|---|---|---|---|---|---|
+| naive one-liner | 1 line | 78% | **99%** | **0%** | **2%** |
+| **shipped skill** | **19KB** | **22.2%** | **96%** | **7%** | **16%** |
+| condensed | 5KB | **13.3%** | 77% | 28% | 38% |
+| minimal | 19 lines | 30.7% | 84% | 41% | 54% |
+| minimal + edit locality | 19 lines | 53.9% | 71% | **71%** | **80%** |
+
+**The long file wins on balance and three attempts to shorten it all lost.**
+The condensed version buys nine points of style for twenty-two points of
+fidelity and twenty-two of loss. The two minimal versions are worse on every
+axis at once.
+
+**Edit locality is actively harmful**, which was not the prediction. The
+instruction was "do not rewrite a sentence that contains nothing to fix; change
+the fewest words that remove it". It produced the best figures this repo can
+compute without a judge — 79% of the largest tell removed, 53% of sentences
+untouched, sentence-length variation within 4% of the original — and the worst
+figures with one. The samples show why:
+
+> "boasts promising prospects" became "has prospects"
+> "enables online damping adjustment, improving dynamic adaptability" became
+> "enables online damping adjustment and dynamic adaptability"
+
+Told to change as few words as possible, the model **excises instead of
+rewriting**. The trigger word leaves and a damaged sentence stays. A regex sees
+a clean document; a reader sees broken English. It is the sharpest example this
+repo has of why the density table is not evidence.
+
+**What the long file appears to buy is worked examples.** Every short version
+kept the descriptions and dropped the before-and-after pairs, and the failure
+mode of the shortest is precisely not knowing what a good edit looks like. That
+is the next thing to test, and it is cheap: the same 19 lines plus three worked
+pairs.
+
+**A harness bug found on the way, and worth recording.** The rewriter labelled
+its input `ABSTRACT:` and asked for no preamble. Under a long instruction the
+model ignored the label; under a short one it echoed it into the output — 0 of
+30 for the 19KB file, 10 of 30 at 19 lines, 15 of 30 at 19 lines plus locality.
+The harness was penalising prompts in proportion to their brevity, in the exact
+comparison it existed to make. Input is fenced now. Re-running with it fixed
+moved the numbers by a few points and changed no conclusion, so the effect was
+real and not the explanation.
+
 ### The skill's advantage is conditional on the model
 
 Measured on `gpt-5.6-sol-pro`, a stronger and 50x more expensive rewriter, the

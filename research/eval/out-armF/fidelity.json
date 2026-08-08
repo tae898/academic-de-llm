@@ -7,7 +7,7 @@
    "z-ai/glm-5.2",
    "deepseek/deepseek-v4-flash-0731"
   ],
-  "corpus": "pubmed/sensors 2026 n=30 [140-330w] pools=y2026.txt",
+  "corpus": "pubmed/sensors 2026 n=30 [140-330w] pools=y2026.txt skill=armF-local.md:1263b",
   "seed": 20260805,
   "stage": "judge-fidelity"
  },
@@ -1456,27 +1456,11 @@
   },
   {
    "kind": "fidelity",
-   "i": 7,
+   "i": 0,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "213b6d50af7a",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 3,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "e6997968c750",
+   "sig": "f970cbcc7b24",
    "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
@@ -1488,12 +1472,108 @@
   },
   {
    "kind": "fidelity",
-   "i": 4,
+   "i": 3,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "68ce2dc4dd69",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "sig": "f58b5ef04b60",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f970cbcc7b24",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "35fa6e70a442",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f970cbcc7b24",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8b8044763ff9",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0dc9a0040b0a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 9,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "35fa6e70a442",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
@@ -1504,32 +1584,32 @@
   },
   {
    "kind": "fidelity",
-   "i": 2,
+   "i": 5,
    "era": "2026",
    "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "52ba67a8e772",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8b8044763ff9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 7,
+    "evaluative_only_changes": 2,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 8,
+   "i": 4,
    "era": "2026",
    "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "523c472f81db",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "72733106073c",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 6,
+    "evaluative_only_changes": 0,
     "substantively_faithful": true,
     "severity": "none"
    }
@@ -1540,7 +1620,7 @@
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "469a5f8c72e0",
+   "sig": "c9e84f8e3f52",
    "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
@@ -1556,177 +1636,16 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "213b6d50af7a",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 4,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "68ce2dc4dd69",
-   "raw": "{\n  \"substantive_losses\": [\n    \"removal of 'controlled' qualifier on the seated foot-tapping paradigm\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}",
+   "sig": "8ecf5cb48472",
+   "raw": "{\n  \"substantive_losses\": [\n    \"limiting their reliability in safety-critical scenarios\",\n    \"further supporting its generalizability across diverse road structures and driving scenarios\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
    "parsed": {
     "substantive_losses": [
-     "removal of 'controlled' qualifier on the seated foot-tapping paradigm"
+     "limiting their reliability in safety-critical scenarios",
+     "further supporting its generalizability across diverse road structures and driving scenarios"
     ],
     "substantive_additions": [],
     "evaluative_only_changes": 1,
-    "substantively_faithful": true,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 5,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "9b48a30617b3",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 3,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "e6997968c750",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 9,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "f5175e7b55d2",
-   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 6,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "1a8c15decaab",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 13,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 13,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 4,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "68ce2dc4dd69",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 0,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 5,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "9b48a30617b3",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 5,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 10,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "f1db72e797f7",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 2,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 11,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "a604f2316a2d",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 0,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "da3c444ff3d9",
-   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The rewrite omits 'dynamic decision' from the description of the constructed Markov Decision Process (MDP) model.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [
-     "The rewrite omits 'dynamic decision' from the description of the constructed Markov Decision Process (MDP) model."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
-    "substantively_faithful": true,
+    "substantively_faithful": false,
     "severity": "minor"
    }
   },
@@ -1736,7 +1655,7 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "469a5f8c72e0",
+   "sig": "c9e84f8e3f52",
    "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
@@ -1748,75 +1667,43 @@
   },
   {
    "kind": "fidelity",
-   "i": 12,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "a0830c12d7a8",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 0,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 12,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "a0830c12d7a8",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 0,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 6,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "1a8c15decaab",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 11,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 11,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 13,
+   "i": 2,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "c45b5eb94f96",
-   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "sig": "35fa6e70a442",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 1,
+    "evaluative_only_changes": 3,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 12,
+   "i": 5,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "a0830c12d7a8",
+   "sig": "8b8044763ff9",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "72733106073c",
    "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
@@ -1828,15 +1715,15 @@
   },
   {
    "kind": "fidelity",
-   "i": 0,
+   "i": 7,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "da3c444ff3d9",
-   "raw": "{\"substantive_losses\": [\"The concluding claim that the work offers an efficient and reliable solution for real-time adaptive signal control is omitted\"], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8ecf5cb48472",
+   "raw": "```json\n{\"substantive_losses\": [\"The original's conclusion that nuPlan validation 'further support[s] its generalizability across diverse road structures and driving scenarios' is dropped; the rewrite ends at generating plausible trajectories across intersection geometries without stating the generalizability conclusion.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_",
    "parsed": {
     "substantive_losses": [
-     "The concluding claim that the work offers an efficient and reliable solution for real-time adaptive signal control is omitted"
+     "The original's conclusion that nuPlan validation 'further support[s] its generalizability across diverse road structures and driving scenarios' is dropped; the rewrite ends at generating plausible trajectories across intersection geometries without stating the generalizability conclusion."
     ],
     "substantive_additions": [],
     "evaluative_only_changes": 2,
@@ -1846,167 +1733,16 @@
   },
   {
    "kind": "fidelity",
-   "i": 11,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "a604f2316a2d",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 10,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 10,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 2,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "52ba67a8e772",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 10,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 10,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 9,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "f5175e7b55d2",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 8,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 8,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "523c472f81db",
-   "raw": "{\n  \"substantive_losses\": [\n    \"curated (benchmark) removed\",\n    \"consistent (pre-/post-state labels) removed\",\n    \"temporally grounded (reasoning) removed/replaced by weaker 'in time'\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "curated (benchmark) removed",
-     "consistent (pre-/post-state labels) removed",
-     "temporally grounded (reasoning) removed/replaced by weaker 'in time'"
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 2,
+   "i": 10,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "52ba67a8e772",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 7, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "sig": "1a0ba7438a17",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 13,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "c45b5eb94f96",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 1,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 0,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "da3c444ff3d9",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 17,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "ef7227f734b5",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 9,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 9,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "1ab38d205b32",
-   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The finding that the SNR analysis demonstrated stable and reliable signal acquisition is dropped.\",\n    \"The method detail that raw waveform examples were used to 'qualitatively' illustrate signal characteristics is dropped.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [
-     "The finding that the SNR analysis demonstrated stable and reliable signal acquisition is dropped.",
-     "The method detail that raw waveform examples were used to 'qualitatively' illustrate signal characteristics is dropped."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 16,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "9abff59667f2",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
+    "evaluative_only_changes": 0,
     "substantively_faithful": true,
     "severity": "none"
    }
@@ -2017,128 +1753,71 @@
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "f1db72e797f7",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "sig": "1a0ba7438a17",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 4,
+    "evaluative_only_changes": 0,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 14,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "738a546483a3",
-   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"Removed 'Most' before 'existing solutions', so the rewrite now claims all existing solutions require fixed-geometry installations, post-processing corrections, or thermal imaging systems, overstating the original's scope.\",\n    \"Changed 'the system is designed to support flexible, height-independent deployment' to 'supports flexible, height-independent depl",
-   "parsed": {
-    "substantive_losses": [
-     "Removed 'Most' before 'existing solutions', so the rewrite now claims all existing solutions require fixed-geometry installations, post-processing corrections, or thermal imaging systems, overstating the original's scope.",
-     "Changed 'the system is designed to support flexible, height-independent deployment' to 'supports flexible, height-independent deployment', dropping the hedge that the system is designed for this purpose rather than proven to achieve it."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 19,
+   "i": 4,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "b52589efe6b1",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "sig": "72733106073c",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 2,
+    "evaluative_only_changes": 1,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 14,
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1a0ba7438a17",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "738a546483a3",
-   "raw": "{\n  \"substantive_losses\": [\n    \"hedge 'Most' removed so rewrite implies all existing solutions require the listed approaches\",\n    \"'design, development, and evaluation of' removed, leaving only that a system is presented\",\n    \"'the system is designed to support' weakened/hedged claim replaced by direct 'supports'\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantiv",
-   "parsed": {
-    "substantive_losses": [
-     "hedge 'Most' removed so rewrite implies all existing solutions require the listed approaches",
-     "'design, development, and evaluation of' removed, leaving only that a system is presented",
-     "'the system is designed to support' weakened/hedged claim replaced by direct 'supports'"
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 14,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "738a546483a3",
-   "raw": "{\n  \"substantive_losses\": [\n    \"Dropped 'Most' from 'Most existing solutions', changing the claim from 'most' to 'all', which overstates the original's scope\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "Dropped 'Most' from 'Most existing solutions', changing the claim from 'most' to 'all', which overstates the original's scope"
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 19,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "b52589efe6b1",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "sig": "824c77e2f1da",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 2,
+    "evaluative_only_changes": 0,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 18,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "0ac6688afbc6",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 19,
+   "i": 12,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "b52589efe6b1",
+   "sig": "824c77e2f1da",
    "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
    "parsed": {
     "substantive_losses": [],
@@ -2150,18 +1829,141 @@
   },
   {
    "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "48fb8de65ee5",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The conclusion that the findings 'promote model optimization in ET retrieval research' is omitted.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "The conclusion that the findings 'promote model optimization in ET retrieval research' is omitted."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
    "i": 13,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "c45b5eb94f96",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [\"Final conclusion changed from 'highlight the potential' to 'support the use', asserting stronger support than the original claimed.\"], \"evaluative_only_changes\": 0, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "sig": "959189878bee",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
-    "substantive_additions": [
-     "Final conclusion changed from 'highlight the potential' to 'support the use', asserting stronger support than the original claimed."
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "959189878bee",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c9e84f8e3f52",
+   "raw": "{\"substantive_losses\": [\"The rewrite changes 'demonstrate the effectiveness' to 'demonstrate the performance', dropping the claim that the experiments demonstrate GeoSeqNet's effectiveness.\", \"The rewrite changes 'provides an effective and reliable solution' to 'is a solution', removing the stated conclusion that GeoSeqNet is effective and reliable.\"], \"substantive_additions\": [], \"evaluative_only",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite changes 'demonstrate the effectiveness' to 'demonstrate the performance', dropping the claim that the experiments demonstrate GeoSeqNet's effectiveness.",
+     "The rewrite changes 'provides an effective and reliable solution' to 'is a solution', removing the stated conclusion that GeoSeqNet is effective and reliable."
     ],
-    "evaluative_only_changes": 0,
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4aa974d5bbe0",
+   "raw": "{\n  \"substantive_losses\": [\n    \"enabling temporally grounded reasoning about near-future transformations\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "enabling temporally grounded reasoning about near-future transformations"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "46bf186e1735",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"Original states DAEs enable 'detection of previously unseen attack patterns'; rewrite omits this specific capability claim, keeping only 'detecting anomalous traffic deviating from learned normal behavior'.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "Original states DAEs enable 'detection of previously unseen attack patterns'; rewrite omits this specific capability claim, keeping only 'detecting anomalous traffic deviating from learned normal behavior'."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4aa974d5bbe0",
+   "raw": "```json\n{\"substantive_losses\": [\"Original states the baseline's fusion approach is 'enabling temporally grounded reasoning about near-future transformations'; this methodological capability/enablement detail is dropped in the rewrite.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"minor\"}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "Original states the baseline's fusion approach is 'enabling temporally grounded reasoning about near-future transformations'; this methodological capability/enablement detail is dropped in the rewrite."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "48fb8de65ee5",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Claim that findings 'promote model optimization in ET retrieval research' is entirely omitted\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "Claim that findings 'promote model optimization in ET retrieval research' is entirely omitted"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
     "substantively_faithful": false,
     "severity": "minor"
    }
@@ -2171,42 +1973,192 @@
    "i": 3,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e6997968c750",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "1ab38d205b32",
-   "raw": "```json\n{\"substantive_losses\": [\"omission of SNR finding that analysis demonstrated stable and reliable signal acquisition\"], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": false, \"severity\": \"minor\"}\n```",
+   "sig": "f58b5ef04b60",
+   "raw": "{\n  \"substantive_losses\": [\n    \"claim that residual parameterized policy improves dynamic adaptability across contact phases\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
    "parsed": {
     "substantive_losses": [
-     "omission of SNR finding that analysis demonstrated stable and reliable signal acquisition"
+     "claim that residual parameterized policy improves dynamic adaptability across contact phases"
     ],
     "substantive_additions": [],
-    "evaluative_only_changes": 6,
+    "evaluative_only_changes": 2,
     "substantively_faithful": false,
     "severity": "minor"
    }
   },
   {
    "kind": "fidelity",
-   "i": 20,
+   "i": 14,
    "era": "2026",
    "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "e87a86c872a5",
+   "sig": "e46a19cf1125",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "959189878bee",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f58b5ef04b60",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The rewrite omits the claim that the residual parameterized policy improves dynamic adaptability across contact phases; it only says it enables online damping adjustment.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits the claim that the residual parameterized policy improves dynamic adaptability across contact phases; it only says it enables online damping adjustment."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "48fb8de65ee5",
+   "raw": "{\"substantive_losses\": [\"The rewrite omits the stated benefit that the findings 'promote model optimization in ET retrieval research'.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits the stated benefit that the findings 'promote model optimization in ET retrieval research'."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "7926537b6ab4",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0dc9a0040b0a",
+   "raw": "{\"substantive_losses\":[\"The rewrite omits the claim that the shared backbone minimizes redundant computation, a specific efficiency benefit stated in the original.\"],\"substantive_additions\":[],\"evaluative_only_changes\":9,\"substantively_faithful\":false,\"severity\":\"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits the claim that the shared backbone minimizes redundant computation, a specific efficiency benefit stated in the original."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e46a19cf1125",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "824c77e2f1da",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0dc9a0040b0a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "7926537b6ab4",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c3136e199dc0",
    "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
@@ -2218,43 +2170,11 @@
   },
   {
    "kind": "fidelity",
-   "i": 21,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "e6146c0abfc7",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 7,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "213b6d50af7a",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 20,
+   "i": 14,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "e87a86c872a5",
+   "sig": "e46a19cf1125",
    "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
@@ -2266,11 +2186,68 @@
   },
   {
    "kind": "fidelity",
-   "i": 20,
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b0385bf76837",
+   "raw": "```json\n{\"substantive_losses\": [\"SNR analysis result that demonstrated stable and reliable signal acquisition is omitted\", \"stated purpose/scope of facilitating systematic investigation of multi-modal sensing strategies under realistic operating conditions is omitted\"], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": false, \"severity\": \"minor\"}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "SNR analysis result that demonstrated stable and reliable signal acquisition is omitted",
+     "stated purpose/scope of facilitating systematic investigation of multi-modal sensing strategies under realistic operating conditions is omitted"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e87a86c872a5",
+   "sig": "4aa974d5bbe0",
+   "raw": "{\"substantive_losses\": [\"removed 'significantly' qualifying the improvement in result (i)\", \"omitted that the baseline enables temporally grounded reasoning about near-future transformations\"], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "removed 'significantly' qualifying the improvement in result (i)",
+     "omitted that the baseline enables temporally grounded reasoning about near-future transformations"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8ecf5cb48472",
+   "raw": "{\n  \"substantive_losses\": [\n    \"omission of 'limiting their reliability in safety-critical scenarios'\",\n    \"omission of the generalizability claim 'across diverse road structures and driving scenarios'\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "omission of 'limiting their reliability in safety-critical scenarios'",
+     "omission of the generalizability claim 'across diverse road structures and driving scenarios'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "7926537b6ab4",
    "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
    "parsed": {
     "substantive_losses": [],
@@ -2285,28 +2262,122 @@
    "i": 17,
    "era": "2026",
    "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "ef7227f734b5",
-   "raw": "{\n  \"substantive_losses\": [\n    \"Removed 'sufficiently' from 'may not sufficiently capture', strengthening the limitation claim\",\n    \"Dropped 'consistent' from 'consistent improvements' (qualifier on the finding)\",\n    \"Dropped 'robust and generalizable' from the concluding claim about the framework\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": f",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "42ed2a7bcf2d",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
-    "substantive_losses": [
-     "Removed 'sufficiently' from 'may not sufficiently capture', strengthening the limitation claim",
-     "Dropped 'consistent' from 'consistent improvements' (qualifier on the finding)",
-     "Dropped 'robust and generalizable' from the concluding claim about the framework"
-    ],
+    "substantive_losses": [],
     "substantive_additions": [],
     "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "355e36f3e344",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "355e36f3e344",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "42ed2a7bcf2d",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "42ed2a7bcf2d",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b0385bf76837",
+   "raw": "{\"substantive_losses\": [\"The rewrite omits the conclusion from the SNR analysis that it demonstrated stable and reliable signal acquisition.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits the conclusion from the SNR analysis that it demonstrated stable and reliable signal acquisition."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
     "substantively_faithful": false,
     "severity": "minor"
    }
   },
   {
    "kind": "fidelity",
-   "i": 16,
+   "i": 18,
    "era": "2026",
    "arm": "C",
    "judge": "x-ai/grok-4.5",
-   "sig": "9abff59667f2",
+   "sig": "c3136e199dc0",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c3136e199dc0",
    "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
@@ -2318,191 +2389,11 @@
   },
   {
    "kind": "fidelity",
-   "i": 21,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "e6146c0abfc7",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 18,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "0ac6688afbc6",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 10,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "f1db72e797f7",
-   "raw": "{\n  \"substantive_losses\": [\"The description of the CNN as 'custom-made' is omitted, losing a detail about the model architecture.\"],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "The description of the CNN as 'custom-made' is omitted, losing a detail about the model architecture."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 0,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 15,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "1ab38d205b32",
-   "raw": "{\n  \"substantive_losses\": [\n    \"The original states that the SNR analysis demonstrates stable and reliable signal acquisition; the rewrite omits this conclusion, leaving the outcome of the validation unstated.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "The original states that the SNR analysis demonstrates stable and reliable signal acquisition; the rewrite omits this conclusion, leaving the outcome of the validation unstated."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 18,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "0ac6688afbc6",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 24,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "9e695575d423",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 16,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9abff59667f2",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 1,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "3cf0a2ef31f9",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
    "i": 22,
    "era": "2026",
    "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "7797a368147f",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
    "judge": "z-ai/glm-5.2",
-   "sig": "3ec95cd8e39a",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 24,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "9e695575d423",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 5,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "5067be6d038d",
+   "sig": "a1f4770c0d83",
    "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
@@ -2514,229 +2405,15 @@
   },
   {
    "kind": "fidelity",
-   "i": 25,
+   "i": 21,
    "era": "2026",
    "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "4046ccf54f44",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "3ec95cd8e39a",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 25,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "4046ccf54f44",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 22,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "7797a368147f",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 5,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 29,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "31d6e22b8590",
-   "raw": "```json\n{\"substantive_losses\": [\"The rewrite drops the framing of interpersonal synchrony as 'a human motion analysis problem,' a methodological/conceptual framing stated in the original.\", \"The rewrite removes the qualifier 'reasonable' from 'reasonable parameter settings,' weakening a hedge so that stability of dyad rankings is now implied across all parameter settings rather than only reasonabl",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "935d1a04a81c",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The rewrite omits the claim that the proposed method results in 'more accurate and robust' fault classification, losing the conclusion about improved accuracy and robustness relative to other methods.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
    "parsed": {
     "substantive_losses": [
-     "The rewrite drops the framing of interpersonal synchrony as 'a human motion analysis problem,' a methodological/conceptual framing stated in the original.",
-     "The rewrite removes the qualifier 'reasonable' from 'reasonable parameter settings,' weakening a hedge so that stability of dyad rankings is now implied across all parameter settings rather than only reasonable ones."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 1,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "5067be6d038d",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 3,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 28,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "83a1e60a3d92",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 5,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "3cf0a2ef31f9",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 28,
-   "era": "2026",
-   "arm": "C",
-   "judge": "z-ai/glm-5.2",
-   "sig": "83a1e60a3d92",
-   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 25,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "4046ccf54f44",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 7,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 23,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "3ec95cd8e39a",
-   "raw": "{\n  \"substantive_losses\": [\n    \"The original claims that the developed models' 'superior performance' was validated through comparative analysis; the rewrite only says 'performance' was validated, dropping the explicit comparative superiority finding.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "The original claims that the developed models' 'superior performance' was validated through comparative analysis; the rewrite only says 'performance' was validated, dropping the explicit comparative superiority finding."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 27,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "5067be6d038d",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 26,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "3cf0a2ef31f9",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
-   "parsed": {
-    "substantive_losses": [],
-    "substantive_additions": [],
-    "evaluative_only_changes": 4,
-    "substantively_faithful": true,
-    "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 29,
-   "era": "2026",
-   "arm": "C",
-   "judge": "x-ai/grok-4.5",
-   "sig": "31d6e22b8590",
-   "raw": "{\n  \"substantive_losses\": [\n    \"omission of framing interpersonal synchrony as a human motion analysis problem\",\n    \"omission of hedge 'reasonable' on parameter settings (now claims stability more broadly)\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "omission of framing interpersonal synchrony as a human motion analysis problem",
-     "omission of hedge 'reasonable' on parameter settings (now claims stability more broadly)"
+     "The rewrite omits the claim that the proposed method results in 'more accurate and robust' fault classification, losing the conclusion about improved accuracy and robustness relative to other methods."
     ],
     "substantive_additions": [],
     "evaluative_only_changes": 2,
@@ -2749,15 +2426,55 @@
    "i": 9,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "f5175e7b55d2",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "judge": "x-ai/grok-4.5",
+   "sig": "46bf186e1735",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Dropped claim that DAEs enable detection of previously unseen attack patterns\",\n    \"Dropped 'high accuracy' result for FNN classification (only reduced training time retained)\",\n    \"Dropped stated aims/results of enhancing security measures, event transparency, improving trust, comprehensive protection, ensuring transparency, enhancing security and trustworthines",
    "parsed": {
-    "substantive_losses": [],
+    "substantive_losses": [
+     "Dropped claim that DAEs enable detection of previously unseen attack patterns",
+     "Dropped 'high accuracy' result for FNN classification (only reduced training time retained)",
+     "Dropped stated aims/results of enhancing security measures, event transparency, improving trust, comprehensive protection, ensuring transparency, enhancing security and trustworthiness, and serving as an essential tool"
+    ],
     "substantive_additions": [],
-    "evaluative_only_changes": 8,
-    "substantively_faithful": true,
-    "severity": "none"
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "major"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "935d1a04a81c",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Claim that method yields more accurate and robust fault classification is dropped (rewrite states only that it 'results in fault classification')\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "Claim that method yields more accurate and robust fault classification is dropped (rewrite states only that it 'results in fault classification')"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "935d1a04a81c",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The finding that the method achieves more accurate and robust fault classification is lost; the rewrite merely states it results in fault classification.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "The finding that the method achieves more accurate and robust fault classification is lost; the rewrite merely states it results in fault classification."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
    }
   },
   {
@@ -2766,32 +2483,14 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "7797a368147f",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "sig": "a1f4770c0d83",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 5,
+    "evaluative_only_changes": 2,
     "substantively_faithful": true,
     "severity": "none"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 29,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "31d6e22b8590",
-   "raw": "{\"substantive_losses\": [\"Removed the hedge 'reasonable' before 'parameter settings', so the rewrite claims dyad rankings remained stable across all parameter settings instead of only reasonable ones, overstating the original claim.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": false, \"severity\": \"minor\"}",
-   "parsed": {
-    "substantive_losses": [
-     "Removed the hedge 'reasonable' before 'parameter settings', so the rewrite claims dyad rankings remained stable across all parameter settings instead of only reasonable ones, overstating the original claim."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 1,
-    "substantively_faithful": false,
-    "severity": "minor"
    }
   },
   {
@@ -2800,81 +2499,23 @@
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9e695575d423",
-   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "sig": "8498619aa827",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
     "substantive_additions": [],
-    "evaluative_only_changes": 3,
+    "evaluative_only_changes": 0,
     "substantively_faithful": true,
     "severity": "none"
    }
   },
   {
    "kind": "fidelity",
-   "i": 21,
+   "i": 20,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "e6146c0abfc7",
-   "raw": "{\n  \"substantive_losses\": [\n    \"The original explicitly states that the feasibility of the method has been verified; the rewrite only says the method was evaluated, omitting the stated conclusion of verified feasibility.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
-   "parsed": {
-    "substantive_losses": [
-     "The original explicitly states that the feasibility of the method has been verified; the rewrite only says the method was evaluated, omitting the stated conclusion of verified feasibility."
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 0,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 17,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "ef7227f734b5",
-   "raw": "{\n  \"substantive_losses\": [\n    \"Loss of the claim that improvements were consistent across datasets (original: 'consistent improvements' vs. rewrite: 'improvements')\",\n    \"Weakening of the conclusion from 'demonstrate' to 'indicate', reducing the evidentiary strength of the findings\",\n    \"Removal of the characterization of the framework as 'robust and generalizable' (original: 'providing a robu",
-   "parsed": {
-    "substantive_losses": [
-     "Loss of the claim that improvements were consistent across datasets (original: 'consistent improvements' vs. rewrite: 'improvements')",
-     "Weakening of the conclusion from 'demonstrate' to 'indicate', reducing the evidentiary strength of the findings",
-     "Removal of the characterization of the framework as 'robust and generalizable' (original: 'providing a robust and generalizable framework' vs. rewrite: 'yielding a framework')"
-    ],
-    "substantive_additions": [],
-    "evaluative_only_changes": 6,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 5,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "9b48a30617b3",
-   "raw": "{\n  \"substantive_losses\": [\n    \"The original states the technique 'overcomes' the limitations of conventional microsphere lenses; the rewrite says it 'addresses' them, weakening the claimed outcome.\"\n  ],\n  \"substantive_additions\": [\n    \"The original says the microsphere 'assists in enhancing near-field coupling and increasing effective numerical aperture'; the rewrite states the microsphere its",
-   "parsed": {
-    "substantive_losses": [
-     "The original states the technique 'overcomes' the limitations of conventional microsphere lenses; the rewrite says it 'addresses' them, weakening the claimed outcome."
-    ],
-    "substantive_additions": [
-     "The original says the microsphere 'assists in enhancing near-field coupling and increasing effective numerical aperture'; the rewrite states the microsphere itself 'enhances' and 'increases', asserting a stronger causal role not supported by the original."
-    ],
-    "evaluative_only_changes": 9,
-    "substantively_faithful": false,
-    "severity": "minor"
-   }
-  },
-  {
-   "kind": "fidelity",
-   "i": 1,
-   "era": "2026",
-   "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "469a5f8c72e0",
+   "judge": "x-ai/grok-4.5",
+   "sig": "355e36f3e344",
    "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
@@ -2886,17 +2527,118 @@
   },
   {
    "kind": "fidelity",
-   "i": 28,
+   "i": 24,
    "era": "2026",
    "arm": "C",
-   "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "83a1e60a3d92",
-   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [\n    \"The rewrite says 'the results establish the role' while the original says 'the results highlight the critical role', strengthening the conclusion beyond what the original claimed.\"\n  ],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8498619aa827",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
    "parsed": {
     "substantive_losses": [],
-    "substantive_additions": [
-     "The rewrite says 'the results establish the role' while the original says 'the results highlight the critical role', strengthening the conclusion beyond what the original claimed."
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8498619aa827",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2e46cd9e2fab",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0a108c7e442f",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2e46cd9e2fab",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b0385bf76837",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The motivation and scope condition 'To facilitate systematic investigation of multi-modal sensing strategies under realistic operating conditions' is removed.\",\n    \"The finding/result from the SNR analysis, 'demonstrating stable and reliable signal acquisition', is removed.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantive",
+   "parsed": {
+    "substantive_losses": [
+     "The motivation and scope condition 'To facilitate systematic investigation of multi-modal sensing strategies under realistic operating conditions' is removed.",
+     "The finding/result from the SNR analysis, 'demonstrating stable and reliable signal acquisition', is removed."
     ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "09188c9944e0",
+   "raw": "{\n  \"substantive_losses\": [\n    \"purpose clause 'To improve stability across multi-peripheral setups' for the multi-power-domain supply architecture omitted\",\n    \"PCB detail 'improves signal integrity for reliable high-speed operation' reduced to merely 'supports high-speed operation'\",\n    \"descriptor 'lightweight' removed from the custom vision algorithm PEPoseNet\"\n  ],\n  \"substantive_additions",
+   "parsed": {
+    "substantive_losses": [
+     "purpose clause 'To improve stability across multi-peripheral setups' for the multi-power-domain supply architecture omitted",
+     "PCB detail 'improves signal integrity for reliable high-speed operation' reduced to merely 'supports high-speed operation'",
+     "descriptor 'lightweight' removed from the custom vision algorithm PEPoseNet"
+    ],
+    "substantive_additions": [],
     "evaluative_only_changes": 4,
     "substantively_faithful": false,
     "severity": "minor"
@@ -2904,11 +2646,123 @@
   },
   {
    "kind": "fidelity",
-   "i": 11,
+   "i": 29,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "a604f2316a2d",
+   "sig": "17bdf0daa79e",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2e46cd9e2fab",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a1f4770c0d83",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0a108c7e442f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4867e79b99ea",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4867e79b99ea",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "17bdf0daa79e",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2e8a03451ce2",
    "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
    "parsed": {
     "substantive_losses": [],
@@ -2920,16 +2774,83 @@
   },
   {
    "kind": "fidelity",
-   "i": 6,
+   "i": 28,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "1a8c15decaab",
-   "raw": "{\n  \"substantive_losses\": [\n    \"Removed 'primarily' from 'Conventional approaches primarily rely' \u2014 rewrite states 'Conventional approaches rely' without the qualifier, slightly overstating the original scope.\",\n    \"Missing explicit claim of a compact footprint: original says 'demonstrating a highly compact footprint advantageous for prospective embedded robotic deployment'; rewrite only says 's",
+   "sig": "4867e79b99ea",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2e8a03451ce2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "09188c9944e0",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The rationale 'To improve stability across multi-peripheral setups' for the multi-power-domain supply architecture is omitted.\",\n    \"The method detail that the four-layer PCB layout 'improves signal integrity' is omitted, replaced simply with 'supports high-speed operation'.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantiv",
    "parsed": {
     "substantive_losses": [
-     "Removed 'primarily' from 'Conventional approaches primarily rely' \u2014 rewrite states 'Conventional approaches rely' without the qualifier, slightly overstating the original scope.",
-     "Missing explicit claim of a compact footprint: original says 'demonstrating a highly compact footprint advantageous for prospective embedded robotic deployment'; rewrite only says 'supporting its use in embedded robotic deployment' without mentioning the compact footprint."
+     "The rationale 'To improve stability across multi-peripheral setups' for the multi-power-domain supply architecture is omitted.",
+     "The method detail that the four-layer PCB layout 'improves signal integrity' is omitted, replaced simply with 'supports high-speed operation'."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "17bdf0daa79e",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e24e6bef83c3",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The method detail that the TCN is employed to 'improve the learning ability of temporal dependencies' is omitted.\",\n    \"The concluding statement that the analysis 'can provide guidance for system control and operation' is omitted.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The method detail that the TCN is employed to 'improve the learning ability of temporal dependencies' is omitted.",
+     "The concluding statement that the analysis 'can provide guidance for system control and operation' is omitted."
     ],
     "substantive_additions": [],
     "evaluative_only_changes": 8,
@@ -2939,20 +2860,116 @@
   },
   {
    "kind": "fidelity",
-   "i": 8,
+   "i": 19,
    "era": "2026",
    "arm": "C",
    "judge": "deepseek/deepseek-v4-flash-0731",
-   "sig": "523c472f81db",
-   "raw": "{\n  \"substantive_losses\": [\"The finding that integrating structured action/state history 'significantly improves' anticipation is weakened to 'improves', removing the claim of statistical significance.\"],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "sig": "09188c9944e0",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Omitted specific claim that four-layer PCB layout 'improves signal integrity' for reliable high-speed operation; rewrite only says it 'supports high-speed operation'\",\n    \"Omitted conclusion that results confirm the platform's 'reliability'; rewrite only says results confirm the platform as an educational training platform\"\n  ],\n  \"substantive_additions\": [],\n  \"e",
    "parsed": {
     "substantive_losses": [
-     "The finding that integrating structured action/state history 'significantly improves' anticipation is weakened to 'improves', removing the claim of statistical significance."
+     "Omitted specific claim that four-layer PCB layout 'improves signal integrity' for reliable high-speed operation; rewrite only says it 'supports high-speed operation'",
+     "Omitted conclusion that results confirm the platform's 'reliability'; rewrite only says results confirm the platform as an educational training platform"
     ],
     "substantive_additions": [],
-    "evaluative_only_changes": 6,
+    "evaluative_only_changes": 3,
     "substantively_faithful": false,
     "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e24e6bef83c3",
+   "raw": "{\"substantive_losses\": [\"Omission of TCN's function 'improve the learning ability of temporal dependencies'\", \"Omission of conclusion 'which can provide valuable guidance for system control and operation'\"], \"substantive_additions\": [], \"evaluative_only_changes\": 7, \"substantively_faithful\": true, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "Omission of TCN's function 'improve the learning ability of temporal dependencies'",
+     "Omission of conclusion 'which can provide valuable guidance for system control and operation'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2e8a03451ce2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0a108c7e442f",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The rewrite omits 'competitive' from the claim that the algorithm 'achieves competitive performance compared with several existing encryption methods', changing it to 'achieves performance compared with several existing encryption methods', which weakens the finding about relative performance.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits 'competitive' from the claim that the algorithm 'achieves competitive performance compared with several existing encryption methods', changing it to 'achieves performance compared with several existing encryption methods', which weakens the finding about relative performance."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e24e6bef83c3",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Claim that liquid desiccant dehumidification is an energy-efficient technology removed\",\n    \"TCN detail that it improves learning ability of temporal dependencies removed\",\n    \"Conclusion that the analysis can provide valuable guidance for system control and operation removed\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_fa",
+   "parsed": {
+    "substantive_losses": [
+     "Claim that liquid desiccant dehumidification is an energy-efficient technology removed",
+     "TCN detail that it improves learning ability of temporal dependencies removed",
+     "Conclusion that the analysis can provide valuable guidance for system control and operation removed"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "46bf186e1735",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Omission of 'previously unseen attack patterns' from DAE capability\",\n    \"Omission of 'high accuracy' for FNN classification\",\n    \"Omission of 'improve trust' from explainability tools\",\n    \"Omission of purpose 'to enhance security measures and event transparency'\",\n    \"Reduction of final claims from offering comprehensive protection, ensuring transparency, enh",
+   "parsed": {
+    "substantive_losses": [
+     "Omission of 'previously unseen attack patterns' from DAE capability",
+     "Omission of 'high accuracy' for FNN classification",
+     "Omission of 'improve trust' from explainability tools",
+     "Omission of purpose 'to enhance security measures and event transparency'",
+     "Reduction of final claims from offering comprehensive protection, ensuring transparency, enhancing security and trustworthiness, and serving as an essential tool to merely 'to protect IoT networks'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "major"
    }
   }
  ]

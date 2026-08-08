@@ -214,11 +214,14 @@ section has room for varied rhythm that a compressed abstract does not. The
 rhythm directive in `SKILL.md` exists because of this measurement and has not
 yet fixed it.
 
-One defect worth knowing before you trust the output: on copula avoidance the
-skill **relocates** the tell rather than removing it. `serves as` falls 6 to 2,
-while `remains` rises 4 to 6 and `provides` 3 to 4 — the two triggers the skill
-hedges. Net removal is 18% against 62% for every other structural pattern, and
-this is the one tell still rising in 2026.
+One finding from this run is worth more than the numbers. A defect published
+that morning — "the skill relocates copula avoidance rather than removing it" —
+did not survive reading the instances. Most of what the judge panel called
+copula avoidance was `X remains a challenge`, which is not a dressed-up copula:
+`remains` means *continues to be, despite prior work*. Classified by what the
+construction does rather than which verb it uses, the skill removes **half** of
+the real cases and the naive prompt removes none. The retraction and what it
+implies are in [`research/EVAL.md`](research/EVAL.md).
 
 Full numbers, both configurations, and the limits in
 [`research/EVAL.md`](research/EVAL.md). Reproduce with `make eval`.

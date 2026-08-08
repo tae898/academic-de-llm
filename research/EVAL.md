@@ -89,53 +89,61 @@ directive existed) but **not the ratio**: the skill still flattens roughly five
 times as often as simply asking. It has not solved the problem it was written
 for.
 
-### The copula finding: the skill relocates the tell rather than removing it
+### The copula finding, and its retraction
 
-The clearest defect this eval has surfaced, and it replicates on both corpora.
+**Published 2026-08-08 and retracted the same day.** It is kept here because the
+mistake is more instructive than the claim was.
 
-Net change in *adjudicated* real instances, skill arm against the original, 30
-abstracts:
+The claim was that the skill *relocates* copula avoidance rather than removing
+it: adjudicated real instances fell only 17 to 14 (-18%) against -62% for every
+other structural pattern, while `remains` rose 4 to 6 and `provides` 3 to 4 —
+the two triggers `SKILL.md` hedges. The reading was that the rewriter drops
+`serves as` and reaches for a verb the skill has told it is usually fine.
 
-| Pattern | original | skill | net |
+**Reading the instances kills it.** Of the 21 `remains` hits the panel called
+real, nearly all are of one shape:
+
+> Accurate distance measurement in outdoor environments **remains** a challenging problem
+> Reliable quality control of AAV vectors **remains** a major bottleneck
+> The relevant literature **remains** dispersed
+
+That is not a dressed-up copula. `remains` means *continues to be, despite prior
+work*, which is the standard opening move of an abstract and the thing that
+justifies the paper existing. `is` is grammatically substitutable and drops the
+meaning. `serves as` splits the same way: "descriptors **serve as** a correction
+signal" and "alpha-band modulation may **serve as** a biomarker" name a
+functional role, while "this review **serves as** a comprehensive guide" is the
+tell.
+
+Classified by what the construction does rather than which verb it uses:
+
+| | original | naive | **skill** |
 |---|---|---|---|
-| Superficial `-ing` | 16 | 6 | **-62%** |
-| Undue emphasis | 8 | 3 | **-62%** |
-| Copula avoidance | 17 | 14 | **-18%** |
+| **Praise-copula**, the real tell | 6 | 6 | **3** |
+| Persistence, `remains a challenge` | 4 | 11 | 6 |
+| Functional role, `serve as a signal` | 3 | 2 | 2 |
+| Other | 4 | 0 | 3 |
 
-Broken down by trigger, copula avoidance is not uniformly weak. It is two
-triggers moving the wrong way:
+**On the real tell the skill removes 50% and the naive prompt removes none.**
+The naive prompt writes *more* `remains a challenge` (4 to 11), which is also
+not a defect: it is reaching for standard academic phrasing.
 
-| trigger | original | skill |
-|---|---|---|
-| `serve as` / `serving as` | 6 | **2** |
-| `offers` | 2 | 1 |
-| `positions X as` | 1 | 0 |
-| `remains` | 4 | **6** |
-| `provides` | 3 | **4** |
+Three things follow, and they matter more than the retracted number.
 
-The triggers the skill removes cleanly are the ones `SKILL.md` is decisive
-about: "`serves as` is a real instance every time it appears." The two that
-*grow* are the two it hedges — "bare `provides` was only 1 in 6" — and
-`remains`, which is listed with no rewrite guidance at all. **Ten of the
-fourteen survivors sit on hedged triggers.**
+**The panel inherited the regex's framing.** It was asked whether each match was
+a real instance of "copula avoidance", having been handed a match. Unanimity was
+high (3/3 on most `remains` hits) and unanimity is not accuracy. A judge panel
+shown a hit is answering a narrower question than a judge panel shown a text.
 
-The mechanism this suggests: when the rewriter removes `serves as` it needs a
-replacement verb, and reaches for another verb on the same list that the skill
-has told it is usually acceptable. The tell moves rather than leaving.
+**The trigger list was the wrong abstraction.** Every genuine hit shares
+something no verb list captures: an unmeasured quality claim. `provides an
+efficient and reliable solution`, `offers a cost-effective, robust, low-latency
+solution`, `serves as a comprehensive guide`. The verb is incidental; the
+praise adjective with no number behind it is the tell.
 
-Raw density on paper sections replicates the direction independently. Copula
-avoidance goes 7.7 → **8.1** per 10k in the skill arm, the only pattern that
-does not fall, while superficial `-ing` goes 14.7 → 4.0.
-
-Two caveats. The per-trigger movements are 1 to 4 instances on a base of 17, so
-the direction is consistent but n is small. And the section figure is raw regex
-counts, which this file warns against quoting unadjudicated.
-
-It matters more than its size suggests, because copula avoidance is the one
-tell measured here that **has not peaked**: it rises in every window through
-2026. The obvious fix is one sentence saying the replacement must be `is` or
-`are` and not another verb from the list, and it should be A/B tested rather
-than assumed.
+**`remains` should come out of the trigger list**, and the section should ask a
+question rather than match a verb: *does this sentence claim quality without a
+measurement?* That keeps every real hit above and drops every false one.
 
 ### The skill's advantage is conditional on the model
 

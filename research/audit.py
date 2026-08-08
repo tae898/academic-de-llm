@@ -24,10 +24,24 @@ DATA = os.environ.get('DELLM_DATA', os.path.join(HERE, 'data'))
 sys.path.insert(0, HERE)
 from measure import rate   # noqa: E402  (mean of per-document rates)
 
+# Nine corpora across seven independent venues. The first two are the same
+# journal -- Sensors abstracts and Sensors full texts -- which is why the
+# original "two of three corpora" bar was weaker than it looked: a pattern
+# could clear it on one venue sampled twice. The rest are a different
+# publisher, a multidisciplinary megajournal, a clinical journal, a
+# high-profile general one, and four arXiv communities including two that are
+# not computer science at all.
 CORPORA = [
     ('Sensors abs', 'pubmed/ypre.txt', 'pubmed/y2026.txt'),
-    ('PMC papers', 'papers/ypre.txt', 'papers/y2026.txt'),
+    ('Sensors full', 'papers/ypre.txt', 'papers/y2026.txt'),
+    ('PLOS ONE', 'pubmed/plos_pre.txt', 'pubmed/plos_y2026.txt'),
+    ('BMJ Open', 'pubmed/bmj_pre.txt', 'pubmed/bmj_y2026.txt'),
+    ('Nat Commun', 'pubmed/natcom_pre.txt', 'pubmed/natcom_y2026.txt'),
     ('arXiv cs.LG', 'arxiv/pre.txt', 'arxiv/y2026.txt'),
+    ('arXiv cs.AI', 'arxiv/ai_pre.txt', 'arxiv/ai_y2026.txt'),
+    ('arXiv cs.CL', 'arxiv/nlp_pre.txt', 'arxiv/nlp_y2026.txt'),
+    ('arXiv econ', 'arxiv/econ_pre.txt', 'arxiv/econ_y2026.txt'),
+    ('arXiv math', 'arxiv/math_pre.txt', 'arxiv/math_y2026.txt'),
 ]
 
 # Candidates may carry a 4th field: corpora to SKIP, by name. PubMed normalises
@@ -81,7 +95,7 @@ CANDIDATES = [
 
 MIN_RATE = 0.5      # per 10k in the post window; below this the pattern cannot matter
 RISE = 1.5          # ratio that counts as a rise
-NEEDED = 2          # corpora that must agree
+NEEDED = 6          # corpora that must agree, of ten
 
 
 def load(rel):

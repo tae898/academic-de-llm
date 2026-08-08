@@ -38,8 +38,20 @@ def get(url, timeout=90):
 BIG = ('y2026_big', '2026[dp]', 1200)
 
 
-def pubmed(tag, window, retmax=320):
-    term = urllib.parse.quote(f'{JOURNAL} AND {window} AND hasabstract')
+# Sensors is one journal from one publisher. Two of the three original corpora
+# were drawn from it -- the abstracts and the full texts -- so a pattern could
+# clear a "two of three venues" bar on one venue sampled twice. These are
+# genuinely different: another publisher, a megajournal spanning every field,
+# and a clinical register.
+DIVERSE = {
+    'plos':  '"PLoS One"[jour]',
+    'bmj':   '"BMJ open"[jour]',
+    'natcom': '"Nature communications"[jour]',
+}
+
+
+def pubmed(tag, window, retmax=320, journal=None):
+    term = urllib.parse.quote(f'{journal or JOURNAL} AND {window} AND hasabstract')
     ids = json.loads(get(f'{EUTILS}/esearch.fcgi?db=pubmed&retmax={retmax}'
                          f'&retmode=json&term={term}'))['esearchresult']['idlist']
     if not ids:
@@ -116,9 +128,9 @@ def papers(tag, year, n=40):
     write(f'papers/{tag}_sections.txt', secs)
 
 
-def arxiv(tag, lo, hi, n=300):
+def arxiv(tag, lo, hi, n=300, cat='cs.LG'):
     q = urllib.parse.urlencode({
-        'search_query': f'cat:cs.LG AND submittedDate:[{lo} TO {hi}]',
+        'search_query': f'cat:{cat} AND submittedDate:[{lo} TO {hi}]',
         'max_results': n, 'sortBy': 'submittedDate'})
     root = ET.fromstring(get(f'https://export.arxiv.org/api/query?{q}'))
     ns = {'a': 'http://www.w3.org/2005/Atom'}

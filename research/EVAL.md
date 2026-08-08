@@ -145,6 +145,53 @@ praise adjective with no number behind it is the tell.
 question rather than match a verb: *does this sentence claim quality without a
 measurement?* That keeps every real hit above and drops every false one.
 
+### Rhythm: measured on both sides, and the folklore is half wrong
+
+"AI writes uniform, short, choppy sentences" is the most repeated claim in this
+space. `research/rhythm.py` tests it against the same venue before and after
+ChatGPT, and then against raw model output. The two answers disagree.
+
+**In published academic prose, rhythm barely moved.**
+
+| | abstracts pre-2022 | abstracts 2026 | papers pre-2022 | papers 2026 |
+|---|---|---|---|---|
+| sd of sentence length | 8.6 | **8.0** | 15.9 | **16.8** |
+| longest sentence | 40.5 | **39.6** | 110.7 | **118.4** |
+| % sentences 15-30 words | 61.7 | 66.3 | 51.0 | 51.3 |
+| commas per sentence | 1.3 | **1.6** | 1.5 | **2.0** |
+| % consecutive same opener | 11.3 | **6.4** | 11.0 | **7.5** |
+
+Burstiness is flat. The longest sentence is flat. Repeated openers went *down*,
+so 2026 prose varies its sentence openings **more** than 2019 prose did. The one
+metric that moved is clause density, up 23% in abstracts and 33% in papers,
+which is the superficial `-ing` finding seen from another angle.
+
+**So sentence rhythm is not a detection signal.** A section telling a reader to
+look for uniform sentence length in a draft would be encoding folklore this
+corpus refutes.
+
+**In raw model output, rhythm collapses.**
+
+| | original | naive | **skill** |
+|---|---|---|---|
+| sd of sentence length | 15.0 | 7.6 | **6.8 (-54%)** |
+| longest sentence | 69.4 | 39.8 | **35.7 (-49%)** |
+| mean sentence length | 33.3 | 21.8 | **19.7 (-41%)** |
+| commas per sentence | 2.2 | 1.4 | **1.1 (-50%)** |
+| % sentences 15-30 words | 50.0 | 69.4 | **68.8 (+38%)** |
+
+Paper sections, n=24. Asking any model to de-slop halves the variance and halves
+the longest sentence; the skill goes slightly further than the naive prompt on
+every row. On abstracts the same effect is smaller (sd -22%) because an abstract
+starts closer to uniform.
+
+**This is the second directive's evidence, and it is much harder than the judge
+opinion that used to stand in for it.** "Made prose flatter 16% of the time" is
+a panel's impression. "The longest sentence fell 49% and comma density halved"
+is the mechanism, and it gives the directive something checkable: **keep the
+longest sentence long.** A pass that leaves the longest sentence near its
+original length has not flattened the text, whatever else it did.
+
 ### The skill's advantage is conditional on the model
 
 Measured on `gpt-5.6-sol-pro`, a stronger and 50x more expensive rewriter, the

@@ -17,7 +17,7 @@ abstracts cannot pass on its home turf alone.
 Nothing here needs an API key. Run it before believing any claim about what AI
 writing looks like, including the claims in this repository.
 """
-import argparse, io, os, sys
+import argparse, io, os, statistics, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.environ.get('DELLM_DATA', os.path.join(HERE, 'data'))
@@ -94,15 +94,25 @@ def measure():
         rises = sum(1 for x, y, r in cells if r >= RISE and y >= MIN_RATE)
         dead = all(y < MIN_RATE for _, y, _ in cells)
         falls = sum(1 for x, y, r in cells if r < 1.0 and x >= MIN_RATE)
+        # Stability of the RATIO across fields, not of the rate. Pre-AI
+        # `leverage` runs 0.7 per 10k in Sensors and 4.4 in cs.LG, so a target
+        # rate cannot travel. The multiplier does: mean spread across fields is
+        # 0.38 for ratios against 0.57 for rates, and 0.12 to 0.21 for the three
+        # strongest patterns. An unstable ratio means a field habit, not a tell.
+        rats = [r for _x, _y, r in cells if r not in (0.0, float('inf'))]
+        cv = (statistics.pstdev(rats) / statistics.mean(rats)
+              if len(rats) == 3 and statistics.mean(rats) else None)
         if dead:
             v = 'DEAD, never occurs'
+        elif rises >= NEEDED and cv is not None and cv <= 0.25:
+            v = f'CONFIRMED, travels ({rises}/3)'
         elif rises >= NEEDED:
-            v = f'CONFIRMED ({rises}/3)'
+            v = f'CONFIRMED, field-varying ({rises}/3)'
         elif falls >= NEEDED:
             v = f'FELL, not a tell ({falls}/3 down)'
         else:
             v = 'venue-limited'
-        out.append((name, src, cells, v, rises))
+        out.append((name, src, cells, v, rises, cv))
     return out
 
 
@@ -114,21 +124,30 @@ def main():
     rows = measure()
 
     if a.targets:
-        print('Pre-ChatGPT rates per 10k words. These are the TARGET, not zero:\n')
-        print(f"{'pattern':<28}" + ''.join(f'{n:>14}' for n, _, _ in CORPORA))
-        for name, _s, cells, v, _r in rows:
-            if v.startswith('CONFIRMED'):
-                print(f'{name:<28}' + ''.join(f'{x:>14.1f}' for x, _y, _r in cells))
-        print('\nHuman academic prose used all of these. A pass that drives one to')
-        print('zero has gone past the baseline and is removing the author, not the model.')
+        print('What to aim for. The absolute rate is field-specific and does not')
+        print('travel; the multiplier does, so the target is a FRACTION REMOVED.\n')
+        print(f"{'pattern':<28}{'pre-AI rate, by field':>24}{'rose':>7}{'remove':>9}")
+        for name, _s, cells, v, _r, _c in rows:
+            if not v.startswith('CONFIRMED'):
+                continue
+            rats = [r for _x, _y, r in cells if r not in (0.0, float('inf'))]
+            if not rats:
+                continue
+            m = statistics.mean(rats)
+            pre = '/'.join(f'{x:.1f}' for x, _y, _r in cells)
+            print(f'{name:<28}{pre:>24}{m:>6.1f}x{(1 - 1 / m) * 100:>8.0f}%')
+        print('\nHuman academic prose used all of these before ChatGPT existed, at')
+        print('the rates on the left, which vary by up to 40x between fields. The')
+        print('multiplier does not: that is why the target is a fraction, and why it')
+        print('is applicable to one document in a way a rate is not.')
         return
 
     print(f"{'candidate':<28}{'src':>4}" + ''.join(f'{n:>18}' for n, _, _ in CORPORA) + '   verdict')
     print('-' * (32 + 18 * len(CORPORA) + 24))
-    for name, src, cells, v, rises in sorted(rows, key=lambda r: -r[4]):
+    for name, src, cells, v, rises, cv in sorted(rows, key=lambda r: (-r[4], r[5] if r[5] is not None else 9)):
         s = ''.join(f'{x:>7.1f}->{y:<5.1f}' + (f'{r:>4.1f}x' if r not in (0.0, float("inf")) else '    -')
                     for x, y, r in cells)
-        print(f'{name:<28}{src:>4}{s}   {v}')
+        print(f'{name:<28}{src:>4}{s}  {(f"cv {cv:.2f}" if cv is not None else ""):>8}  {v}')
     print(f"\n  CONFIRMED = rises {RISE}x in >={NEEDED} of 3 corpora at >={MIN_RATE} per 10k.")
     print('  arXiv cs.LG is a different field and was never tuned on, but note that')
     print('  2020 ML preprints already ran high on `leverage`, `novel` and')

@@ -281,6 +281,53 @@ belongs in the evidence file rather than in the instruction, and that trimming
 an instruction on the strength of a corpus measurement needs its own A/B before
 shipping.
 
+### Blind re-adjudication: the framing effect is real, small, and two-directional
+
+Every precision figure here came from showing a judge a matched phrase and
+asking whether it was real. That is the design that unanimously called 21
+instances of `X remains a challenge` copula avoidance and produced a
+retraction, so the number needed checking by a method that does not lead the
+witness.
+
+`research/eval/blind.py` does it with data already collected and no API calls.
+`recall.py` had a second panel read the same 30 texts cold — pattern
+definitions only, no regex, no match — and quote whatever it found. A hit
+counts as real only if a majority of those cold readers independently quoted
+text covering it.
+
+| Pattern | hits | shown the match | blind | direction |
+|---|---|---|---|---|
+| Copula avoidance | 37 | **46%** | 35% | over-confirmed |
+| Superficial `-ing` | 52 | 31% | **50%** | under-confirmed |
+| Undue emphasis | 10 | 80% | **90%** | under-confirmed |
+| Negative parallelism | 3 | 0% | 33% | n too small |
+| **All** | **102** | **40%** | **48%** | |
+
+**Overall the published figure holds.** 48% blind against 40% shown is an
+eight-point gap, and the 51% quoted elsewhere sits at the top of that range
+rather than above it.
+
+**Per pattern it does not.** The effect runs in opposite directions, which is
+more useful than a single correction would have been. `copula avoidance` is
+over-confirmed when the match is shown, exactly as the `remains` retraction
+implied. `superficial -ing` is *under*-confirmed: handed ", providing" in
+isolation a judge sees nothing wrong, because the tell is what the clause does
+to the sentence it hangs off, and that sentence is not in front of them.
+
+So a match-first panel is not credulous. It is bad at patterns whose instances
+look innocuous out of context, and too generous with patterns that have a
+seductive name.
+
+**A methodological note on this file's own first attempt.** The initial version
+counted a hit as real if any one of three cold readers quoted it, and compared
+that against the shown panel's majority. A 1-of-3 threshold against a 2-of-3
+threshold produced a 30-point gap that was entirely an artefact. The overlap
+rule turned out not to matter at all — requiring the whole match inside the
+quote, half its content words, or a literal substring all give the same answer
+— and the judge threshold was the only thing moving it. A favourable result
+from a method written the same hour deserves the sensitivity check before it is
+published, not after.
+
 ### The skill's advantage is conditional on the model
 
 Measured on `gpt-5.6-sol-pro`, a stronger and 50x more expensive rewriter, the

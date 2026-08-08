@@ -124,6 +124,43 @@ November 2022, and it reports what it skipped so the pass is auditable.
 every claim in the skill that has no source behind it. That list exists so the
 unsourced parts can be challenged separately from the cited ones.
 
+## Which to use: this, or just asking
+
+A one-line prompt — "rewrite so it does not read as AI-generated" — already
+works, and the eval says how well. On 30 abstracts, against the same rewriter
+and judges:
+
+| | naive one-liner | **this skill** |
+|---|---|---|
+| Reads machine-generated | 78% | **22%** |
+| Substantively faithful | **99%** | 96% |
+| Major content losses | **0** | **0** |
+| Judged worse | **0%** | 7% |
+| Made prose flatter | **3%** | 16% |
+| Lost something worth keeping | **2%** | 16% |
+
+**The skill wins the one column you are buying and loses every other.** Use it
+anyway, for a reason that is about you rather than the numbers: its failure mode
+is one you can catch and the one-liner's is not. You wrote the text, so you will
+notice a missing hedge on a diff. You cannot notice a tell that was left in —
+if you could spot your own, you would not need the tool.
+
+So: **run it, then read the diff.** The losses cluster in three places.
+
+- **Hedges.** "may vary with the demand profile" is a claim about uncertainty.
+- **Numbers that replaced vague praise** — good, but check the number survived.
+- **Third items in lists.** "pending, active and failed" is three real states,
+  not a rule-of-three tic.
+
+**Use the one-liner instead for anything you will not read**: bulk passes, old
+posts, someone else's draft. Zero judged worse is a strong guarantee when nobody
+is reviewing.
+
+**Run it on a section, not on an abstract** you have already cut to the bone. On
+534-word paper sections the quality cost mostly disappears — 6% flatter and 3%
+lost against 16% and 16% on 200-word abstracts — because a section has room for
+varied rhythm and a compressed abstract does not.
+
 ## What this is not
 
 It is not an AI detector, and the skill says so at length. Population statistics

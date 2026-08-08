@@ -21,9 +21,12 @@ papers, and held while the vocabulary below decayed.
 
 These four are re-scored every review cycle: one judge panel labels every hit
 real or a words-matched false positive, a second panel reads the same texts cold
-to find what the patterns missed. Currently **74% recall at 51% precision** — read as an upper bound, because the
-labelling panel was shown a regex match rather than a text, and did that badly
-enough once to produce a retracted finding (see `sources.md`) —
+to find what the patterns missed. Currently **74% recall at 51% precision**. Scored a second way, by a panel that
+read the texts cold and never saw a regex, precision is **48%** against the
+match-first panel's 40% on the same hits, so the figure is about right overall.
+Per pattern it is not: `copula avoidance` is over-confirmed when the match is
+shown, 46% against 35% blind, and `superficial -ing` is under-confirmed, 31%
+against 50%. Run `research/eval/blind.py`.
 against 8% and 32% for the version that shipped in v0.3.1. Per-trigger strengths
 are in the notes column; see `research/EVAL.md`.
 

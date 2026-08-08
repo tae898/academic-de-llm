@@ -147,10 +147,11 @@ if you could spot your own, you would not need the tool.
 
 So: **run it, then read the diff.** The losses cluster in three places.
 
-- **Hedges.** "may vary with the demand profile" is a claim about uncertainty.
-- **Numbers that replaced vague praise** — good, but check the number survived.
-- **Third items in lists.** "pending, active and failed" is three real states,
-  not a rule-of-three tic.
+Hedges, first: "may vary with the demand profile" is a claim about uncertainty
+and deleting it makes the sentence say more than the evidence does. Then any
+number that replaced vague praise, which is the right trade only if the number
+survived it. Then third items in lists, because "pending, active and failed" is
+three real states rather than a rule-of-three tic.
 
 **Use the one-liner instead for anything you will not read**: bulk passes, old
 posts, someone else's draft. Zero judged worse is a strong guarantee when nobody

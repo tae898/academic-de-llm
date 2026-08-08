@@ -20,9 +20,9 @@ from common import REWRITER, SEED, Incremental, call, manifest   # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
 DATA = os.environ.get('DELLM_DATA', os.path.join(REPO, 'research', 'data'))
-SKILL = io.open(os.path.join(REPO, 'skills', 'academic-de-llm', 'SKILL.md'), encoding='utf-8').read()
+DEFAULT_SKILL = os.path.join(REPO, 'skills', 'academic-de-llm', 'SKILL.md')
 
-def prompts(unit):
+def prompts(unit, skill_text):
     """Both arms, with the unit noun substituted.
 
     The noun matters: telling a model to rewrite "the following abstract" when
@@ -30,11 +30,15 @@ def prompts(unit):
     into an abstract, which would read as a fidelity failure caused by the
     harness rather than by the skill.
     """
+    # The input is fenced rather than labelled. A bare "ABSTRACT:" label was
+    # echoed back into the output by 15 of 30 rewrites under a short
+    # instruction and 0 of 30 under a long one, so the harness was penalising
+    # exactly the prompts it was meant to be comparing.
     tail = (f"Preserve every factual claim exactly. Do not add claims. Do not change "
-            f"the findings. Output only the rewritten {unit}, no preamble."
-            f"\n\n{unit.upper()}:\n")
+            f"the findings. Output only the rewritten {unit} and nothing else: no "
+            f"preamble, no label, no fences.\n\n<{unit}>\n")
     naive = f"Rewrite the following {unit} so that it does not read as AI-generated. " + tail
-    skilled = SKILL + f"\n\n---\n\nApply the guidance above to the following {unit}. " + tail
+    skilled = skill_text + f"\n\n---\n\nApply the guidance above to the following {unit}. " + tail
     return naive, skilled
 
 # Density scoring picks the abstracts with something to fix. Sampling at random
@@ -96,9 +100,14 @@ def main():
                     help='corpus name recorded in the manifest')
     ap.add_argument('--unit', default='abstract',
                     help="what the model is holding: 'abstract' or 'section'")
+    ap.add_argument('--skill', default=DEFAULT_SKILL,
+                    help='instruction file for arm C. Lets one run compare two '
+                         'candidate prompts without editing the shipped skill, '
+                         'and is what a prompt optimiser drives.')
     a = ap.parse_args()
     random.seed(SEED)
-    NAIVE, SKILLED = prompts(a.unit)
+    skill_text = io.open(a.skill, encoding='utf-8').read()
+    NAIVE, SKILLED = prompts(a.unit, skill_text)
 
     # 2026 is the era that matters: it is what the skill will actually meet.
     # 2024 is kept because its slop profile is different and largely extinct
@@ -117,7 +126,8 @@ def main():
     # "pubmed/sensors 2026 n=30" while sampling from a --pool override, so the
     # manifest could not distinguish two entirely different samples.
     corpus = (f'{a.label} ' + ' + '.join(f'{e} n={src[e][1]}' for e in eras)
-              + f' [{lo}-{hi}w] pools=' + ','.join(os.path.basename(src[e][0]) for e in eras))
+              + f' [{lo}-{hi}w] pools=' + ','.join(os.path.basename(src[e][0]) for e in eras)
+              + f' skill={os.path.basename(a.skill)}:{len(skill_text)}b')
     out = Incremental('rewrites.json', manifest(corpus, stage='rewrite'))
     print(f'{len(sample)} {a.unit}s, rewriter={REWRITER}', flush=True)
 
@@ -131,10 +141,17 @@ def main():
                     prevB.setdefault(r['A'][:120], r['B'])
         print(f'  reusing {len(prevB)} arm-B rewrites', flush=True)
 
+    def clean(t):
+        """Strip anything the model echoed from the scaffolding."""
+        t = re.sub(r'^\s*<?/?(abstract|section)>?\s*:?\s*', '', t, flags=re.I)
+        t = re.sub(r'\s*</?(abstract|section)>\s*$', '', t, flags=re.I)
+        return t.strip()
+
     def work(item):
         i, s = item
         b = prevB.get(s['text'][:120]) if a.arm == 'C' else None
-        return i, s, b or call(REWRITER, NAIVE + s['text']), call(REWRITER, SKILLED + s['text'])
+        return (i, s, b or clean(call(REWRITER, NAIVE + s['text'] + f"\n</{a.unit}>")),
+                clean(call(REWRITER, SKILLED + s['text'] + f"\n</{a.unit}>")))
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         for i, s, b, c in ex.map(work, list(enumerate(sample))):

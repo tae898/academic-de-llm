@@ -1,0 +1,2959 @@
+{
+ "manifest": {
+  "date": "2026-08-07",
+  "rewriter": "openai/gpt-5.6-luna",
+  "judges": [
+   "x-ai/grok-4.5",
+   "z-ai/glm-5.2",
+   "deepseek/deepseek-v4-flash-0731"
+  ],
+  "corpus": "pubmed/sensors 2026 n=30 [140-330w] pools=y2026.txt",
+  "seed": 20260805,
+  "stage": "judge-fidelity"
+ },
+ "results": [
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "da293c37acf8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "032d1097420e",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f063b3e0935a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1551ff552e20",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "da293c37acf8",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "238827997a0f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "14939db885cb",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "238827997a0f",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "14939db885cb",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f063b3e0935a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "9f747ca21488",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "14939db885cb",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "032d1097420e",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1551ff552e20",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "032d1097420e",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a1cc2828dafa",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1551ff552e20",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "238827997a0f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "9f747ca21488",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "9f747ca21488",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2e6fcabedc00",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "da293c37acf8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0a11398a133f",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2e6fcabedc00",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "216bea01433e",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a1cc2828dafa",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "29679fe8ca22",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "29679fe8ca22",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "29679fe8ca22",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0a11398a133f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4d17248335fd",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a1cc2828dafa",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "46aa83021f12",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4d17248335fd",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2e6fcabedc00",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "216bea01433e",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4d17248335fd",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "46aa83021f12",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "47924086f5bb",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0a11398a133f",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "46aa83021f12",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b89d16785726",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "611f11e1ec4c",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "611f11e1ec4c",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b89d16785726",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b89d16785726",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "10632ec34d73",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "611f11e1ec4c",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "10632ec34d73",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a38eb0830ff2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f063b3e0935a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "10632ec34d73",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a38eb0830ff2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ffaed4d96b90",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a38eb0830ff2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "47924086f5bb",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4fdf3a6d0e0e",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8a933e421e87",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4fdf3a6d0e0e",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "65a7bc783ab4",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8a933e421e87",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "9d88e58afc33",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4fdf3a6d0e0e",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ffaed4d96b90",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8a933e421e87",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "65a7bc783ab4",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a5d58440bfed",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "85248ed2cd5c",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "9d88e58afc33",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a5d58440bfed",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ffaed4d96b90",
+   "raw": "{\"substantive_losses\":[],\"substantive_additions\":[],\"evaluative_only_changes\":2,\"substantively_faithful\":true,\"severity\":\"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "9d88e58afc33",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "216bea01433e",
+   "raw": "{\"substantive_losses\": [\"The rewrite drops the qualifier 'synergistic interaction' for lowlands drivers, replacing it with 'combined effects', losing the specific claim of synergy.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite drops the qualifier 'synergistic interaction' for lowlands drivers, replacing it with 'combined effects', losing the specific claim of synergy."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ef2789bf0dd0",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a5d58440bfed",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "2ad508778f02",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "85248ed2cd5c",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "2ad508778f02",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a387670be913",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ef2789bf0dd0",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8d1aa7bd512b",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "2ad508778f02",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8d1aa7bd512b",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a387670be913",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ef2789bf0dd0",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "85248ed2cd5c",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8d1aa7bd512b",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a387670be913",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "47924086f5bb",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "65a7bc783ab4",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "213b6d50af7a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e6997968c750",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "68ce2dc4dd69",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "52ba67a8e772",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "523c472f81db",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "469a5f8c72e0",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "213b6d50af7a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "68ce2dc4dd69",
+   "raw": "{\n  \"substantive_losses\": [\n    \"removal of 'controlled' qualifier on the seated foot-tapping paradigm\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "removal of 'controlled' qualifier on the seated foot-tapping paradigm"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "9b48a30617b3",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e6997968c750",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f5175e7b55d2",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1a8c15decaab",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 13,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 13,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "68ce2dc4dd69",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "9b48a30617b3",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f1db72e797f7",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a604f2316a2d",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "da3c444ff3d9",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The rewrite omits 'dynamic decision' from the description of the constructed Markov Decision Process (MDP) model.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite omits 'dynamic decision' from the description of the constructed Markov Decision Process (MDP) model."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "469a5f8c72e0",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a0830c12d7a8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a0830c12d7a8",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1a8c15decaab",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 11,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 11,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c45b5eb94f96",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a0830c12d7a8",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "da3c444ff3d9",
+   "raw": "{\"substantive_losses\": [\"The concluding claim that the work offers an efficient and reliable solution for real-time adaptive signal control is omitted\"], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "The concluding claim that the work offers an efficient and reliable solution for real-time adaptive signal control is omitted"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a604f2316a2d",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 10,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 10,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "52ba67a8e772",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 10,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 10,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f5175e7b55d2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "523c472f81db",
+   "raw": "{\n  \"substantive_losses\": [\n    \"curated (benchmark) removed\",\n    \"consistent (pre-/post-state labels) removed\",\n    \"temporally grounded (reasoning) removed/replaced by weaker 'in time'\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "curated (benchmark) removed",
+     "consistent (pre-/post-state labels) removed",
+     "temporally grounded (reasoning) removed/replaced by weaker 'in time'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "52ba67a8e772",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 7, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "c45b5eb94f96",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "da3c444ff3d9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ef7227f734b5",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 9,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1ab38d205b32",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The finding that the SNR analysis demonstrated stable and reliable signal acquisition is dropped.\",\n    \"The method detail that raw waveform examples were used to 'qualitatively' illustrate signal characteristics is dropped.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "The finding that the SNR analysis demonstrated stable and reliable signal acquisition is dropped.",
+     "The method detail that raw waveform examples were used to 'qualitatively' illustrate signal characteristics is dropped."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "9abff59667f2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f1db72e797f7",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "738a546483a3",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"Removed 'Most' before 'existing solutions', so the rewrite now claims all existing solutions require fixed-geometry installations, post-processing corrections, or thermal imaging systems, overstating the original's scope.\",\n    \"Changed 'the system is designed to support flexible, height-independent deployment' to 'supports flexible, height-independent depl",
+   "parsed": {
+    "substantive_losses": [
+     "Removed 'Most' before 'existing solutions', so the rewrite now claims all existing solutions require fixed-geometry installations, post-processing corrections, or thermal imaging systems, overstating the original's scope.",
+     "Changed 'the system is designed to support flexible, height-independent deployment' to 'supports flexible, height-independent deployment', dropping the hedge that the system is designed for this purpose rather than proven to achieve it."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b52589efe6b1",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "738a546483a3",
+   "raw": "{\n  \"substantive_losses\": [\n    \"hedge 'Most' removed so rewrite implies all existing solutions require the listed approaches\",\n    \"'design, development, and evaluation of' removed, leaving only that a system is presented\",\n    \"'the system is designed to support' weakened/hedged claim replaced by direct 'supports'\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantiv",
+   "parsed": {
+    "substantive_losses": [
+     "hedge 'Most' removed so rewrite implies all existing solutions require the listed approaches",
+     "'design, development, and evaluation of' removed, leaving only that a system is presented",
+     "'the system is designed to support' weakened/hedged claim replaced by direct 'supports'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "738a546483a3",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Dropped 'Most' from 'Most existing solutions', changing the claim from 'most' to 'all', which overstates the original's scope\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "Dropped 'Most' from 'Most existing solutions', changing the claim from 'most' to 'all', which overstates the original's scope"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b52589efe6b1",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0ac6688afbc6",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b52589efe6b1",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c45b5eb94f96",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [\"Final conclusion changed from 'highlight the potential' to 'support the use', asserting stronger support than the original claimed.\"], \"evaluative_only_changes\": 0, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [
+     "Final conclusion changed from 'highlight the potential' to 'support the use', asserting stronger support than the original claimed."
+    ],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e6997968c750",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1ab38d205b32",
+   "raw": "```json\n{\"substantive_losses\": [\"omission of SNR finding that analysis demonstrated stable and reliable signal acquisition\"], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": false, \"severity\": \"minor\"}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "omission of SNR finding that analysis demonstrated stable and reliable signal acquisition"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e87a86c872a5",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e6146c0abfc7",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "213b6d50af7a",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e87a86c872a5",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e87a86c872a5",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ef7227f734b5",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Removed 'sufficiently' from 'may not sufficiently capture', strengthening the limitation claim\",\n    \"Dropped 'consistent' from 'consistent improvements' (qualifier on the finding)\",\n    \"Dropped 'robust and generalizable' from the concluding claim about the framework\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": f",
+   "parsed": {
+    "substantive_losses": [
+     "Removed 'sufficiently' from 'may not sufficiently capture', strengthening the limitation claim",
+     "Dropped 'consistent' from 'consistent improvements' (qualifier on the finding)",
+     "Dropped 'robust and generalizable' from the concluding claim about the framework"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "9abff59667f2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e6146c0abfc7",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0ac6688afbc6",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f1db72e797f7",
+   "raw": "{\n  \"substantive_losses\": [\"The description of the CNN as 'custom-made' is omitted, losing a detail about the model architecture.\"],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The description of the CNN as 'custom-made' is omitted, losing a detail about the model architecture."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1ab38d205b32",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original states that the SNR analysis demonstrates stable and reliable signal acquisition; the rewrite omits this conclusion, leaving the outcome of the validation unstated.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The original states that the SNR analysis demonstrates stable and reliable signal acquisition; the rewrite omits this conclusion, leaving the outcome of the validation unstated."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0ac6688afbc6",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "9e695575d423",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "9abff59667f2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "3cf0a2ef31f9",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "7797a368147f",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "3ec95cd8e39a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "9e695575d423",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "5067be6d038d",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4046ccf54f44",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "3ec95cd8e39a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4046ccf54f44",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "7797a368147f",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "31d6e22b8590",
+   "raw": "```json\n{\"substantive_losses\": [\"The rewrite drops the framing of interpersonal synchrony as 'a human motion analysis problem,' a methodological/conceptual framing stated in the original.\", \"The rewrite removes the qualifier 'reasonable' from 'reasonable parameter settings,' weakening a hedge so that stability of dyad rankings is now implied across all parameter settings rather than only reasonabl",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite drops the framing of interpersonal synchrony as 'a human motion analysis problem,' a methodological/conceptual framing stated in the original.",
+     "The rewrite removes the qualifier 'reasonable' from 'reasonable parameter settings,' weakening a hedge so that stability of dyad rankings is now implied across all parameter settings rather than only reasonable ones."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "5067be6d038d",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "83a1e60a3d92",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "3cf0a2ef31f9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "83a1e60a3d92",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4046ccf54f44",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "3ec95cd8e39a",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original claims that the developed models' 'superior performance' was validated through comparative analysis; the rewrite only says 'performance' was validated, dropping the explicit comparative superiority finding.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The original claims that the developed models' 'superior performance' was validated through comparative analysis; the rewrite only says 'performance' was validated, dropping the explicit comparative superiority finding."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "5067be6d038d",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "3cf0a2ef31f9",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "31d6e22b8590",
+   "raw": "{\n  \"substantive_losses\": [\n    \"omission of framing interpersonal synchrony as a human motion analysis problem\",\n    \"omission of hedge 'reasonable' on parameter settings (now claims stability more broadly)\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "omission of framing interpersonal synchrony as a human motion analysis problem",
+     "omission of hedge 'reasonable' on parameter settings (now claims stability more broadly)"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f5175e7b55d2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "7797a368147f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "31d6e22b8590",
+   "raw": "{\"substantive_losses\": [\"Removed the hedge 'reasonable' before 'parameter settings', so the rewrite claims dyad rankings remained stable across all parameter settings instead of only reasonable ones, overstating the original claim.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": false, \"severity\": \"minor\"}",
+   "parsed": {
+    "substantive_losses": [
+     "Removed the hedge 'reasonable' before 'parameter settings', so the rewrite claims dyad rankings remained stable across all parameter settings instead of only reasonable ones, overstating the original claim."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "9e695575d423",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e6146c0abfc7",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original explicitly states that the feasibility of the method has been verified; the rewrite only says the method was evaluated, omitting the stated conclusion of verified feasibility.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The original explicitly states that the feasibility of the method has been verified; the rewrite only says the method was evaluated, omitting the stated conclusion of verified feasibility."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ef7227f734b5",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Loss of the claim that improvements were consistent across datasets (original: 'consistent improvements' vs. rewrite: 'improvements')\",\n    \"Weakening of the conclusion from 'demonstrate' to 'indicate', reducing the evidentiary strength of the findings\",\n    \"Removal of the characterization of the framework as 'robust and generalizable' (original: 'providing a robu",
+   "parsed": {
+    "substantive_losses": [
+     "Loss of the claim that improvements were consistent across datasets (original: 'consistent improvements' vs. rewrite: 'improvements')",
+     "Weakening of the conclusion from 'demonstrate' to 'indicate', reducing the evidentiary strength of the findings",
+     "Removal of the characterization of the framework as 'robust and generalizable' (original: 'providing a robust and generalizable framework' vs. rewrite: 'yielding a framework')"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "9b48a30617b3",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original states the technique 'overcomes' the limitations of conventional microsphere lenses; the rewrite says it 'addresses' them, weakening the claimed outcome.\"\n  ],\n  \"substantive_additions\": [\n    \"The original says the microsphere 'assists in enhancing near-field coupling and increasing effective numerical aperture'; the rewrite states the microsphere its",
+   "parsed": {
+    "substantive_losses": [
+     "The original states the technique 'overcomes' the limitations of conventional microsphere lenses; the rewrite says it 'addresses' them, weakening the claimed outcome."
+    ],
+    "substantive_additions": [
+     "The original says the microsphere 'assists in enhancing near-field coupling and increasing effective numerical aperture'; the rewrite states the microsphere itself 'enhances' and 'increases', asserting a stronger causal role not supported by the original."
+    ],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "469a5f8c72e0",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "83a1e60a3d92",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [\n    \"The rewrite says 'the results establish the role' while the original says 'the results highlight the critical role', strengthening the conclusion beyond what the original claimed.\"\n  ],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [
+     "The rewrite says 'the results establish the role' while the original says 'the results highlight the critical role', strengthening the conclusion beyond what the original claimed."
+    ],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a604f2316a2d",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1a8c15decaab",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Removed 'primarily' from 'Conventional approaches primarily rely' \u2014 rewrite states 'Conventional approaches rely' without the qualifier, slightly overstating the original scope.\",\n    \"Missing explicit claim of a compact footprint: original says 'demonstrating a highly compact footprint advantageous for prospective embedded robotic deployment'; rewrite only says 's",
+   "parsed": {
+    "substantive_losses": [
+     "Removed 'primarily' from 'Conventional approaches primarily rely' \u2014 rewrite states 'Conventional approaches rely' without the qualifier, slightly overstating the original scope.",
+     "Missing explicit claim of a compact footprint: original says 'demonstrating a highly compact footprint advantageous for prospective embedded robotic deployment'; rewrite only says 'supporting its use in embedded robotic deployment' without mentioning the compact footprint."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "523c472f81db",
+   "raw": "{\n  \"substantive_losses\": [\"The finding that integrating structured action/state history 'significantly improves' anticipation is weakened to 'improves', removing the claim of statistical significance.\"],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The finding that integrating structured action/state history 'significantly improves' anticipation is weakened to 'improves', removing the claim of statistical significance."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  }
+ ]
+}

@@ -171,13 +171,16 @@ contributors, not on users.
 sh tests/check.sh    # needs ripgrep
 ```
 
-81 assertions on seven fixtures, one pair per register: a LaTeX paper, a journal
+84 assertions on seven fixtures, one pair per register: a LaTeX paper, a journal
 abstract, and an academic blog post.
 
 Every assertion runs in **both** directions, because over-fixing is the failure
 mode this skill was built to avoid. `paper-after.tex` must still contain its
 `---` em dash and its title-case `\section{Related Work}`, since both belong to
-the venue rather than the author. `blog-after.md` must still contain two
+the venue rather than the author, and both its uses of `remains`, which mark
+persistence rather than a dressed-up copula. That last one is a test for a
+mistake this repo actually made: the retired verb-list framing scored 21
+instances of `X remains a challenge` as tells. `blog-after.md` must still contain two
 protected em dashes and a three-item notation list. The trap asserts that all
 eleven of its hits are the rejectable kind, and that the correct output is no
 change at all. CI runs on `ubuntu-latest` and `macos-latest`.

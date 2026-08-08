@@ -8,7 +8,7 @@ Reinforcement learning has been applied to adaptive traffic signal control since
 at least 2016~\cite{genders2016,wei2019}, and the actor-critic designs that
 followed build directly on the earlier value-based methods~\cite{mnih2015}.
 
-Tabular $Q$-learning is still the canonical starting point. It is interpretable
+Tabular $Q$-learning remains the canonical starting point. It is interpretable
 in a way deep methods are not, which is what makes it useful for baselines on
 small intersection topologies~\cite{abdulhai2003}. Function approximation came
 next and generalised across unseen states, which cut the number of episodes
@@ -22,4 +22,6 @@ measures the two together---the distinction the rest of the paper turns on.
 The literature covers the single-intersection case well and does not scale to
 corridors. Coordination overhead may dominate at higher flow densities, though
 only two studies have measured it, and both report the effect to be robust to
-sensor dropout~\cite{chu2020}.
+sensor dropout~\cite{chu2020}. Coordination across corridors therefore remains
+an open problem, and Section~\ref{sec:method} sets out the two-branch design we
+use to attack it.

@@ -63,7 +63,9 @@ Three of them, and only three:
 trace = trace * lam * gamma
 ```
 
-Reported delay may vary with the demand profile you simulate.
+Reported delay may vary with the demand profile you simulate. Detector
+placement remains an open question, and our controller offers a robust and
+flexible solution for the topologies we tested.
 
 ## Limitations And Future Work
 

@@ -23,7 +23,8 @@ The fixture for the case this skill exists for. What fires, and what happens:
 
 | Pattern | before | after | |
 |---|---|---|---|
-| Copula avoidance | 2 | 0 | `serve as`, `remains`, `offering` |
+| Unmeasured quality claim | 1 | **0** | `provides an efficient and reliable framework` |
+| `remains` (persistence) | 2 | **2** | **both kept** |
 | Superficial `-ing` | 3 | 0 | `providing`, `thereby enabling`, `highlighting` |
 | Negative parallelism | 1 | 0 | `Unlike prior studies…, this work emphasises` |
 | Undue emphasis | 2 | 0 | `is crucial for`, `highlighting the importance of` |
@@ -32,6 +33,22 @@ The fixture for the case this skill exists for. What fires, and what happens:
 | Excess vocabulary | 9 | **1** | one `robust` survives |
 | `---` em dash | 1 | **1** | **kept** |
 | `\section{Related Work}` | title case | **unchanged** | **kept** |
+
+### `remains` must survive, in both files
+
+`paper-before.tex` and `paper-after.tex` both contain two uses of `remains`:
+"Tabular $Q$-learning **remains** the canonical starting point" and
+"Coordination across corridors **remains** an open problem". Neither is a
+dressed-up copula. `remains` means *continues to be, despite prior work*, and
+`is` is grammatically substitutable while dropping the reason the paper exists.
+
+This is a regression test for a mistake the repo made. A judge panel scored 21
+instances of `X remains a challenge` as genuine tells, unanimously, because it
+was handed a regex match rather than a sentence. `remains` was in the trigger
+list for months as a result. The assertion exists so it cannot come back.
+
+Meanwhile "Our two-branch design **provides an efficient and reliable
+framework**" does go: it rates the work and reports no measurement.
 
 ### The two that must NOT be touched
 
@@ -62,12 +79,13 @@ count, is the point.
 ## prose-before.md to prose-after.md
 
 `prose-before.md` is a real *Sensors* abstract from 2026, taken unedited from
-PubMed. An abstract has no markup at all, so the structure section is the whole
+PubMed. An abstract has no markup at all, so unearned evaluation is the whole
 job.
 
 | Tell | before | after | |
 |---|---|---|---|
-| Copula avoidance (`boasts`, `offers`) | 2 | 0 | |
+| Unmeasured quality claim (`offers an efficient`) | 1 | 0 | |
+| Copula, other (`boasts`) | 1 | 0 | |
 | Superficial `-ing` clause | 1 | 0 | |
 | Intensifier with no number (`significantly`) | 1 | 0 | |
 | `robust` / `robustness` | 4 | **4** | **all kept** |
@@ -114,7 +132,9 @@ the rare ones the other fixtures have no natural home for.
 | Inline-header bold list | 6 | **3** | three converted, three kept |
 | Title case headings | 5 | 0 | |
 | Emoji, curly quotes, thematic break, H2→H4 | 1 each | 0 | |
-| Copula avoidance | 4 | 0 | |
+| Unmeasured quality claim | 1 | **0** | |
+| `remains` (persistence) | 1 | **1** | **kept** |
+| Copula, other | 3 | 0 | |
 | Superficial `-ing` | 3 | 0 | |
 | Negative parallelism, challenges formula | 1 each | 0 | |
 | Vague attribution, stacked hedge | 1 each | 0 | |
@@ -180,7 +200,7 @@ Eleven hits across six patterns, zero of them real:
 | 4 | em dash | table placeholder, code comment, Python string literal, quoted error |
 | 3 | inline-header bold list | a notation table: parallel, scanned not read |
 | 2 | `crucial` | one doing real work in live prose, one inside a 2019 quotation |
-| 2 | copula (`stands as`, `serving as`) | both inside the same 2019 quotation |
+| 2 | copula-ish (`stands as`, `serving as`) | both inside the same 2019 quotation |
 | 1 | title case | `## Monte Carlo Tree Search`, capitalised by convention |
 | 1 | superficial `-ing` (`underscoring`) | inside the same quotation |
 

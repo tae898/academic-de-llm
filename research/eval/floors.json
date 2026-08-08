@@ -1,17 +1,11 @@
 {
  "_note": "Precision floors from the frozen labels. A regex edit that drops below these, or that stops surfacing a real instance, fails tests. Regenerate deliberately, never to make a red test green.",
  "floors": {
-  "copula avoidance": {
-   "precision": 0.607,
-   "real_kept": 17,
-   "real_lost": 0,
-   "surfaced": 28
-  },
   "negative parallelism": {
    "precision": 0.0,
    "real_kept": 0,
    "real_lost": 0,
-   "surfaced": 3
+   "surfaced": 1
   },
   "superficial -ing": {
    "precision": 0.41,
@@ -24,6 +18,13 @@
    "real_kept": 8,
    "real_lost": 0,
    "surfaced": 10
+  },
+  "unmeasured quality claim": {
+   "precision": 0.643,
+   "real_kept": 9,
+   "real_lost": 8,
+   "surfaced": 14
   }
- }
+ },
+ "_refrozen_2026-08-08": "`copula avoidance` became `unmeasured quality claim` and its regex was reframed from a verb list to the construction it was naming. The old floor (60.7% over 17 real instances) cannot carry over: 8 of those 17 were labelled real under the retired framing and are not tells -- `X remains a challenge`, `Mw serves as the primary conditioning variable`. Refrozen at the new measurement, 64.3% over 9. Both numbers are upper bounds until a blind re-adjudication replaces labels collected by showing a panel a regex match."
 }

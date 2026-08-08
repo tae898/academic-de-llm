@@ -33,19 +33,23 @@ source at all.
 
 ## What moves, and what does not
 
-**Structure and vocabulary rise everywhere.** Two to four times against a
-pre-ChatGPT baseline, in abstracts and in full texts alike. Those two sections
-are the skill; run them on everything.
+**One thing rises, and it is not a word list.** Sentences that grade the work
+rather than report it. Three to eight times a pre-ChatGPT baseline in the same
+journal, in abstracts and full papers alike, and still rising in 2026.
 
-**Formatting is mostly the venue's, not yours.** In full texts, section headings
-sit flat across 2021 to 2026, because "2. Materials and Methods" is what the
-form requires. So the markup section is scoped by a question rather than a rate:
-**did you choose this formatting?** In a journal template or a LaTeX class, no,
-and you should skip it. In a blog post you wrote in Markdown, yes, and the em
-dashes and bold lists are yours to answer for.
+**Vocabulary rises too, and decays fastest.** `crucial` fell 84% and `delve` 89%
+between 2024 and 2026 while `robust` rose 46%. A snapshot with an expiry date.
 
-Figures and corpora behind this are in `references/sources.md`, which also says
-plainly that no academic corpus here can measure markup at all.
+**Formatting is mostly the venue's.** Section headings sit flat across 2021 to
+2026 in full texts, because "2. Materials and Methods" is what the form
+requires. So that section is scoped by a question rather than a rate: **did you
+choose this formatting?**
+
+**Sentence rhythm did not move at all.** It is not a tell. It is the damage this
+skill does, which is what the second directive bounds.
+
+Figures in `references/sources.md`, which also says which claims have no
+measurement behind them.
 
 Related but separate, and by a different author: `SimpleEnglish` (ASD-STE100).
 Use that when a reader might misread the text. Use this one when a reader might
@@ -56,17 +60,25 @@ modals that carry your certainty.
 
 **Delete the tell, keep the claim.** A rewrite that makes a sentence claim more than the evidence supports has broken the text to pass a style check. That is worse than the tell.
 
-**Delete the tell, keep the rhythm.** Applied thoroughly, the sections below produce short declaratives sharing a subject: every tell gone and the cadence gone with them. That is measured, not hypothetical, which is why these four rules override everything below wherever they conflict with it.
+**Delete the tell, keep the rhythm.** This is the measured failure mode, not a
+hypothetical, and it is why these rules override everything below.
+
+On paper sections, a de-slop pass takes the standard deviation of sentence
+length from 15.0 to 6.8 and the longest sentence from 69 words to 36. Comma
+density halves. Every rewriter tested does this; following the guidance below
+thoroughly makes it slightly worse.
+
+**Keep the longest sentence long.** The single checkable version of this rule.
+If the longest sentence in your output is roughly as long as the longest in the
+input, you have not flattened the text, whatever else you did.
 
 **Do not split a long sentence into three short ones just because the join was a participle.** Rewrite the participle in place, or make the clause subordinate. One long sentence among short ones is what a human paragraph looks like.
 
-**Do not start consecutive sentences with the same subject.** If a fix produces "We do X. We do Y. We do Z", the fix is worse than what it replaced, whatever the pattern count says.
+**Keep the connective tissue.** Phrases that signal what a sentence is doing, contrasting, conceding, moving on, are how a reader follows an argument. Several look like tells. Removing them scores well and reads worse.
 
-**Keep the connective tissue.** Phrases that signal what a sentence is doing, contrasting, conceding, moving on, are how a reader follows an argument. Several sit on trigger lists. Removing them scores well and reads worse.
-
-**A high-scoring trigger is not automatically worth removing.** Precision measures how reliably a pattern indicates machine authorship. It says nothing about whether the phrase earns its place for the reader. Only you can answer the second question.
-
-After any pass, read the result aloud. If every sentence is the same length, put one back.
+**A pattern is not a verdict.** Frequency measures how often a construction
+appears, not whether this instance earns its place for the reader. Only you can
+answer the second question.
 
 ## Step zero: the skip pass
 
@@ -76,74 +88,91 @@ Fenced code blocks and inline code spans. YAML, TOML, and JSON frontmatter or co
 
 Say what you skipped when you report back ("skipped: 3 code blocks, 1 table, frontmatter"). It makes the pass auditable and it is the main defense against the false-positive rate documented below.
 
-## Structure
+## Unearned evaluation
 
-**Run this on every document.** It is the only section with a measured baseline behind it, it rises 2-4x against pre-ChatGPT academic text in both abstracts and full papers, and it held across 2024 to 2026 while the vocabulary below decayed. If you only have attention for one section, this is it.
+**Run this on every document. It is the skill.**
 
-Model-level generation habits rather than interface artifacts, so they survive across vendors and model generations. Wikipedia's categories and terminology, except false ranges, which is noted below.
+Four patterns were listed separately here until they were measured against each
+other and turned out to be one move: adding an evaluation the evidence does not
+carry. Not a claim about the subject, a claim about the work's value. That is
+why the first directive keeps applying — the tell *is* a claim.
 
-### Copula avoidance
+Together they rise **3 to 8 times** against a pre-ChatGPT baseline in the same
+journal, in abstracts and full papers alike, and they held across 2024 to 2026
+while the vocabulary below decayed.
 
-2.4x excess in journal abstracts after ChatGPT, and **the one tell here that has not peaked**: on the regex below it rises in every window through 2026, while every other pattern fell back from its 2024 or 2025 high. A plain `is` or `are` dressed up as `serves as`, `serve as`, `stands as`, `functions as`, `boasts`, `offers`, `remains`, `positions X as`, `presents a`, and `provides a ... solution`.
+One component has not peaked: the unmeasured quality claim runs 1.2, 7.0, 8.7,
+**10.1** per 10k across 2019-21, 2024, 2025 and 2026.
 
-`serves as` is a real instance every time it appears. Bare `provides` was only 1 in 6, because "the tool provides X" is an ordinary verb, so it is narrowed to the copular form: "provides an effective solution" means "is an effective solution". `maintains` was never real across 11 matches. Read the verb: if `is` cannot replace it, leave it.
+**The test, which replaces four trigger lists.** For each candidate, ask:
 
-### Superficial analysis via -ing
+> **What measurement supports this?** If the sentence rates the work and no
+> number, comparison or result stands behind the rating, the rating is the tell.
+> Cut the rating, keep the fact.
 
-**The strongest tell of any kind in academic prose.** Against a pre-ChatGPT baseline of 1.0 per 10k in one journal it hit 9.2 in 2024, peaked at 12.2 in 2025, and sits at 6.6 in 2026. Full texts show the same shape. Still 6.4x baseline after two years, while the vocabulary markers decayed.
+Four shapes it takes. Read them as descriptions, not as a match list.
 
-A participial clause that attaches vague interpretation to a fact: `highlighting`, `underscoring`, `emphasizing`, `ensuring`, `reflecting`, `contributing to`, `providing`, `enhancing`, `allowing`, `helping`, `supporting`, `maintaining`, `thereby ...ing`.
-
-**It does not need a comma.** "sensor signals enabling precise and robust detection" is the same pattern without punctuation, and looking only after commas missed most of them. `enabling` was dropped entirely: it matched 16 times and not one was a real instance, while accounting for a third of everything this pattern found.
+**An evaluation hung off a fact**, usually as a participial clause. "…, which
+enables robust detection", "…, highlighting the importance of careful tuning".
+The fact is fine; the clause grades it. This is the largest single tell measured
+in academic prose and it does not need a comma to be one.
 
 > Before: Attention is computed over the full sequence, enabling long-range dependencies and improving downstream accuracy.
 > After: Attention is computed over the full sequence. That is what lets the model use tokens 400 positions back.
 
-### Negative parallelism
+**A quality claim with no number.** "provides an efficient and reliable
+solution", "offers a cost-effective, robust, low-latency framework". The verb is
+incidental — this was mis-specified as a verb list for months, which cost a
+retracted finding. The praise adjective with nothing behind it is the tell.
+Ask what was measured; if the answer is nothing, delete the adjective.
 
-The form that occurs in academic prose is `unlike X, this Y`: "unlike traditional
-studies that optimise accuracy, this work emphasises...". A contrast is set up
-against unnamed prior work so the next clause can knock it down.
+> Before: This work provides an efficient and reliable solution for real-time control.
+> After: The controller runs in 4 ms on the target hardware.
 
-**`not only X, but Y` is not this pattern**, and was removed after being measured.
-It asserts that two things are both true, which is ordinary English: "can not
-only recognise terrain types but also estimate slip" is two real capabilities,
-not a false contrast. Every judge who read one rejected it.
+**Generic importance where a fact belongs.** "plays a crucial role", "is
+essential for", "is a testament to". Say what it does instead.
+
+**Significance manufactured by contrast.** "Unlike prior work that optimises
+accuracy in isolation, this study emphasises…". A position is attributed to
+unnamed prior work so the next clause can improve on it.
 
 > Before: Unlike prior work that optimises accuracy in isolation, this study emphasises the accuracy-latency tradeoff.
 > After: Prior work optimises accuracy in isolation. This study measures accuracy against latency.
 
-This is the weakest finder here. Three matches across thirty abstracts is not
-enough to estimate how often it is right, so read the hit and decide; do not
-treat a match as a finding.
+### What this is NOT
 
-### Rule of three
+The failure mode here is over-firing, and every case below was flagged wrongly
+by an earlier version of this file. Each names a real function that the flat
+alternative loses.
 
-Triplet adjectives or phrases. Not every triad is a tell; three real things are three real things. The test is whether deleting the third loses information.
+| Looks like it | Actually | Why it stays |
+|---|---|---|
+| "X **remains** a challenge" | persistence | means *still open, despite prior work*. `is` is grammatically fine and drops the reason the paper exists |
+| "descriptors **serve as** a correction signal" | functional role | names what a thing does. "are a correction signal" is worse English |
+| "may **serve as** a biomarker" | hedged claim | the hedge is carrying real uncertainty |
+| "can **not only** recognise terrain **but** also estimate slip" | conjunction | asserts two true things. Not a false contrast |
+| "the three failure modes were A, B and C" | a real triad | three things that exist. Delete the third only if it measures nothing |
 
-### Undue emphasis on significance
+A judge panel called 21 instances of `remains a challenge` genuine tells,
+unanimously, because it was handed a regex match and asked whether the match was
+real. Unanimity of agreement is not accuracy. **Read the sentence, not the
+match.**
 
-`pivotal`, `is crucial`, `is essential`, `is vital`, `plays a crucial role`, `is a testament to`, `significant potential`, `highlighting the importance of`. Generic importance replacing a specific fact.
+Roughly half of what any pattern in `references/patterns.md` matches is not a
+real instance. On one paper the em dash pattern returned 8 hits and 2 were worth
+fixing; the rest were code comments, a table placeholder and numeric en dashes.
+Step zero is what keeps that survivable.
 
-The most reliable of the structural patterns: about 3 matches in 4 are real. Bare `pivotal` is weaker at 2 in 5, and is kept anyway because it catches "are pivotal to classification performance", and on a finder whose hits get read a miss costs more than a false positive.
+### Also in this family, unmeasured
 
-### Vague attribution
+Own observation, no baseline, listed apart so it can be challenged.
 
-`Observers have cited`, `Experts argue`, `Industry reports suggest`, `several sources`. Name who, or drop the claim.
-
-### False ranges
-
-`from X to Y` where X and Y are not on a common scale. "from the birth of stars to the enigmatic dance of dark matter" is a shape, not a range.
-
-Unsourced. Not on the Wikipedia page, unlike the rest of this section. See `references/sources.md`.
-
-### The challenges formula
-
-"Despite its X, it faces several challenges", followed by vague positivity.
-
-### Elegant variation
-
-Rotating synonyms to avoid repeating a word, an artifact of repetition penalties. In technical text this is actively harmful: one thing, one name.
+**Vague attribution**: "Observers have cited", "Experts argue", "several
+sources". Name who, or drop the claim. **The challenges formula**: "Despite its
+X, it faces several challenges", then vague positivity. **False ranges**: "from
+X to Y" where the two are not on a common scale. **Elegant variation**: rotating
+synonyms to avoid repeating a word. In technical prose this is actively harmful,
+because one thing should have one name.
 
 ## Vocabulary
 
@@ -207,21 +236,26 @@ One pass for `contentReference`, `oaicite`, `[cite: 1]`, `grok_card`, `attached_
 
 Then the citation checks a regex cannot do: DOIs that resolve to unrelated papers, invalid ISBNs, and named references declared but never used.
 
-## Patterns find candidates, not violations
-
-Every pattern here is a finder. Read each hit.
-
-Measured on one real paper: the em-dash pattern returned 8 hits, of which 2 were prose worth fixing. The rest were three code comments, a table placeholder, and two numeric en dashes. A pass that changed all 8 would have corrupted a table and three code samples.
-
-Measured across 30 abstracts with a judge panel labelling every hit: of everything the finders match, **about half is a real instance**. The other half is a word that happened to coincide.
-
-The skip pass in step zero is what keeps this rate survivable.
-
 ## What is NOT evidence
 
-Wikipedia is explicit about this, and it matters more than the markers.
+Four things every other guide leads with, each measured here and found flat or
+backwards. Looking for them wastes the pass and produces false accusations.
 
-Text that predates ChatGPT (November 2022) cannot be AI-generated, whatever it looks like. An author who can explain their choices coherently is an author. Irregular syntax is a human pattern, not a machine one. None of these markers is proof: Kobak et al. estimate a population rate, and population statistics do not classify individuals.
+| Commonly claimed | Measured, same venue, pre-ChatGPT to 2026 |
+|---|---|
+| AI writes uniform, short sentences | sd of sentence length **8.6 → 8.0** in abstracts, **15.9 → 16.8** in papers. Flat |
+| AI repeats sentence openers | **11.3% → 6.4%**. It went *down*; 2026 prose varies openings more than 2019 prose |
+| Title case headings signal AI | flat across 2021 to 2026 in full papers. It is the venue's house style |
+| Vendor paste artifacts are the strongest tell | **0.00 per 10k in every corpus measured.** Near-conclusive when present, and almost never present |
+
+Uniform rhythm is what this skill *produces*, not what it should look for. See
+the second directive.
+
+And the older warnings, which still hold. Text that predates ChatGPT (November
+2022) cannot be AI-generated, whatever it looks like. An author who can explain
+their choices is an author. Irregular syntax is a human pattern, not a machine
+one. None of these markers is proof: Kobak et al. estimate a population rate,
+and population statistics do not classify individuals.
 
 Do not use this checklist as evidence about who wrote something. Use it to edit.
 
@@ -229,18 +263,17 @@ Do not use this checklist as evidence about who wrote something. Use it to edit.
 
 1. Run the skip pass. Announce what you excluded.
 2. Decide whether the markup section applies: did you choose this formatting, or did the venue?
-3. Read every hit from `references/patterns.md`. Fix only real ones. Structure first.
-4. Count vocabulary markers per paragraph. One is nothing. Four doing no work is the signal.
-5. Read your three-item lists. Delete a third item that measures nothing.
+3. For every candidate, ask what measurement supports the rating. If a number, comparison or result stands behind it, leave it.
+4. Check the What-this-is-NOT table before cutting. `remains a challenge`, a functional `serve as`, a hedge, and a real triad all survive.
+5. Count vocabulary markers per paragraph. One is nothing. Four doing no work is the signal.
 6. For every hedge you removed, ask whether the sentence now claims more than the evidence supports. Put back any that does.
-7. Read the first sentence of each section. If it announces the section instead of stating a fact, rewrite it.
-8. Read the result aloud. If sentences are uniformly short, or several start with the same subject, the pass has flattened the text and must be partly undone. See the second directive: this is the skill's own measured failure mode, not a hypothetical.
+7. **Compare the longest sentence in your output with the longest in the input.** If it has dropped by much, you have flattened the text and must put a long sentence back. This is the measured failure mode and the one check that catches it.
 
 ## Limits
 
 This removes markers of machine authorship. It does not make text true, well argued, or worth reading, and it cannot certify authorship in either direction.
 
-It preserves voice deliberately. If the author writes long sentences by choice, the structural pass still applies, but do not sand their register into house style.
+It preserves voice deliberately. If the author writes long sentences by choice, the evaluation pass still applies, but do not sand their register into house style. The rhythm measurements say this is the likeliest way to get it wrong.
 
 Voice fingerprinting, meaning a statistical profile built from the author's own corpus, is a deliberate non-goal. It requires stored state and a corpus, and "sounds like you" is not falsifiable the way the rest of this file tries to be.
 

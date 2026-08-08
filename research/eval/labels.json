@@ -17,7 +17,7 @@
    "i": 0,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "present a",
    "context": "We present a real-time method for terrain recognition and slip estimation in quadruped robots based on proprioceptive sensors and temporal con",
    "real": false,
@@ -26,7 +26,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 0,
@@ -107,7 +108,7 @@
    "i": 0,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "an recognize terrain types and detect surface states, supporting safer and more adaptive locomotion. Overall, the proposed system offers a cost-effective, robust, and low-latency solution for real-time terrain recognition and provides a strong foundation for future ",
    "real": true,
@@ -116,7 +117,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 0,
@@ -182,7 +184,7 @@
    "i": 0,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ion. Overall, the proposed system offers a cost-effective, robust, and low-latency solution for real-time terrain recognition and provides a strong foundation for future deployment across more diverse terrains.",
    "real": false,
@@ -191,13 +193,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 1,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ly 120 s, and a steady-state mean tracking error below 0.01 m. These results confirm that the plant-linearization-based framework provides accuracy, robustness, and practical applicability for DDWMR trajectory tracking, all within a responsible control environment.",
    "real": false,
@@ -206,7 +209,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 0,
@@ -272,7 +276,7 @@
    "i": 1,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": ", and the steady-state mean tracking error remained below 0.01 m. These results show that the plant-linearization-based framework offers accuracy, robustness, and practical applicability for DDWMR trajectory tracking in a responsible control environment.",
    "real": false,
@@ -281,13 +285,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 1,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ly 120 s, and a steady-state mean tracking error below 0.01 m. These results confirm that the plant-linearization-based framework provides accuracy, robustness, and practical applicability for DDWMR trajectory tracking within a responsible control environment.",
    "real": false,
@@ -296,13 +301,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "s, such as Alzheimer's or Parkinson's, affect individuals' ability to perform daily tasks autonomously and safely. HAR technology offers an invaluable solution by enabling real-time monitoring and assistance, helping to maintain independence and quality of life for ",
    "real": false,
@@ -311,7 +317,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -347,7 +354,7 @@
    "i": 2,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "-time monitoring and assistance, helping to maintain independence and quality of life for patients. Additionally, this technology provides a valuable data source for doctors and caregivers, allowing for more precise and personalized care, which can make a difference i",
    "real": false,
@@ -356,7 +363,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -452,7 +460,7 @@
    "i": 2,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ng real-time monitoring and assistance, HAR technology can help patients maintain their independence and quality of life. It also provides doctors and caregivers with valuable data for more precise and personalized care, which can support the management and treatment ",
    "real": false,
@@ -461,13 +469,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": " to critical or unusual activities in multi-user environments. Together, these advances show that integrating both approaches can provide greater personalization and robustness in human activity recognition, thereby improving the quality of life of patients in clinic",
    "real": false,
@@ -476,7 +485,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -497,7 +507,7 @@
    "i": 2,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "n and their potential to improve patients\u2019 quality of life. Because this is an emerging area of research, the relevant literature remains dispersed; therefore, this review presents the current research direction in the field. The analysis was conducted using the scie",
    "real": true,
@@ -506,7 +516,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -527,7 +538,7 @@
    "i": 2,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "technology enables real-time monitoring and assistance, helping patients maintain their independence and quality of life. It also provides doctors and caregivers with valuable data for more precise and personalized care, which can support the management and treatment ",
    "real": false,
@@ -536,7 +547,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -557,7 +569,7 @@
    "i": 2,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": " daily activity recognition and their role in supporting patients\u2019 quality of life. Because the literature on this emerging topic remains dispersed, the review also maps current research in the field. The analysis follows the science tree paradigm, which establishes ",
    "real": true,
@@ -566,7 +578,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -587,7 +600,7 @@
    "i": 2,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "mprove the detection of and response to critical or unusual activities in multi-user environments. Together, these approaches can provide greater personalization and robustness in human activity recognition, thereby improving patients\u2019 quality of life in clinical set",
    "real": false,
@@ -596,7 +609,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -647,7 +661,7 @@
    "i": 3,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "ative evaluations conducted from three dimensions. Scenario and parameter tests validate its generality and robustness. This work offers an efficient and reliable solution for real-time adaptive signal control of isolated intersections.",
    "real": true,
@@ -656,13 +670,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 3,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "e evaluations across three dimensions. Scenario and parameter tests validate the framework's generality and robustness. This work offers an efficient and reliable solution for real-time adaptive signal control at isolated intersections.",
    "real": false,
@@ -671,7 +686,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 3,
@@ -692,7 +708,7 @@
    "i": 3,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ations across three dimensions. Scenario and parameter tests further confirm the framework\u2019s generality and robustness. This work provides an efficient and reliable solution for real-time adaptive signal control at isolated intersections.",
    "real": true,
@@ -701,13 +717,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 3,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "boasts",
    "context": " fixed-timing traffic signal control. Among these methods, intelligent signal timing control based on reinforcement learning (RL) boasts promising prospects. Classic RL algorithms have flaws like high estimation bias and lack of robustness, while the newer complex-s",
    "real": false,
@@ -716,13 +733,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Accurate distance measurement in outdoor environments remains a challenging problem for mobile augmented reality (AR) systems due to sensor noise, environmental variability, and the limitatio",
    "real": true,
@@ -731,13 +749,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "position EfMAR as",
    "context": "influence of environmental factors such as lighting conditions and spatial scale on measurement variability. Overall, the results position EfMAR as a flexible and adaptive framework designed to enhance robustness in outdoor AR-based geospatial measurement tasks. By emphasizing",
    "real": true,
@@ -746,7 +765,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
@@ -767,7 +787,7 @@
    "i": 4,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Accurate distance measurement outdoors remains difficult for mobile augmented reality (AR) systems because of sensor noise, environmental variability, and the limitations of re",
    "real": true,
@@ -776,13 +796,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "position EfMAR as",
    "context": "ects of environmental factors, including lighting conditions and spatial scale, on measurement variability. Overall, the findings position EfMAR as a flexible, adaptive framework for improving robustness in outdoor AR-based geospatial measurement tasks. By emphasizing consiste",
    "real": true,
@@ -791,13 +812,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": " shows how environmental factors, including lighting conditions and spatial scale, affect measurement variability. Overall, EfMAR provides a flexible framework for adaptive outdoor AR-based geospatial measurement, with an emphasis on consistency, transparency, and arc",
    "real": true,
@@ -806,13 +828,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "door AR-based geospatial measurement tasks. By emphasizing consistency, transparency, and architectural generalization, this work provides a practical foundation for future research and development in mobile AR sensing for real-world outdoor applications.",
    "real": true,
@@ -821,7 +844,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
@@ -842,7 +866,7 @@
    "i": 5,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "nstrating comparable or superior performance to the original implementation. Mobgap (v1.2) is openly available and is intended to serve as a reproducible reference implementation and benchmarking platform for researchers developing or validating mobility analysis algo",
    "real": true,
@@ -851,13 +875,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 5,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "present a",
    "context": "ackage. Here, we describe the mobgap ecosystem, detail how algorithms can be integrated and benchmarked in a reproducible way and present a re-validation of the pipeline against reference data across six clinical cohorts under real-world conditions. Validation results ",
    "real": false,
@@ -866,13 +891,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 4,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "tive outdoor AR-based geospatial measurement, with an emphasis on consistency, transparency, and architectural generalization. It offers a practical foundation for future research and development in mobile AR sensing for real-world outdoor applications.",
    "real": false,
@@ -881,7 +907,8 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 5,
@@ -902,7 +929,7 @@
    "i": 5,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "g performance comparable or superior to that of the original implementation. Mobgap (v1.2) is openly available and is intended to provide researchers developing or validating mobility analysis algorithms from wearable data with a reproducible reference implementation",
    "real": false,
@@ -911,7 +938,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 5,
@@ -932,7 +960,7 @@
    "i": 5,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "present a",
    "context": "Python package. Here, we describe the mobgap ecosystem, detail how algorithms can be integrated and benchmarked reproducibly, and present a re-validation of the pipeline against reference data from six clinical cohorts under real-world conditions. Across all cohorts, w",
    "real": false,
@@ -941,13 +969,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 6,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "oth the MC Dropout and Bootstrap enhance model robustness and uncertainty awareness under noisy sensor conditions. The MC Dropout provides sharper and more sensitive uncertainty estimates, while the Bootstrap yields more stable and better-calibrated predictions. The e",
    "real": false,
@@ -956,7 +985,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 5,
@@ -992,7 +1022,7 @@
    "i": 6,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "tstrap yields more stable and better-calibrated predictions. The evaluation using the proposed PUAF demonstrates that each method offers distinct advantages, highlighting the importance of uncertainty quantification for reliable wearable-based HAR systems.",
    "real": false,
@@ -1001,7 +1031,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 6,
@@ -1052,7 +1083,7 @@
    "i": 6,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "This paper presents a Predictive and Uncertainty Assessment Framework (PUAF) that compares two prominent uncertainty estimation methods for neural netw",
    "real": false,
@@ -1061,13 +1092,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 6,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": " awareness under noisy sensor conditions. MC Dropout produces sharper and more sensitive uncertainty estimates, whereas Bootstrap provides more stable and better-calibrated predictions. Evaluation with the proposed PUAF shows that the two methods offer distinct advant",
    "real": false,
@@ -1076,13 +1108,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 6,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offer",
    "context": "as Bootstrap provides more stable and better-calibrated predictions. Evaluation with the proposed PUAF shows that the two methods offer distinct advantages, underscoring the importance of uncertainty quantification in reliable wearable-based HAR systems.",
    "real": false,
@@ -1091,7 +1124,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 6,
@@ -1157,7 +1191,7 @@
    "i": 6,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": " awareness under noisy sensor conditions. MC Dropout produces sharper and more sensitive uncertainty estimates, whereas Bootstrap provides more stable and better-calibrated predictions. The evaluation with the proposed PUAF shows that each method has distinct advantag",
    "real": false,
@@ -1166,13 +1200,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 7,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serves as",
    "context": "f non-invasive and cost-effective screening and decision-making tools, allowing for earlier detection of the disease. This review serves as a comprehensive guide, providing structured insights into computational research methods for automated detection of PD and AD, wi",
    "real": true,
@@ -1181,13 +1216,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 7,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "present a",
    "context": "Neurodegenerative diseases such as Parkinson's disease (PD) and Alzheimer's disease (AD) present a significant and growing challenge to the healthcare systems worldwide. Both conditions are progressive and often undetected early",
    "real": true,
@@ -1196,7 +1232,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 7,
@@ -1232,7 +1269,7 @@
    "i": 7,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "present a",
    "context": "Neurodegenerative diseases such as Parkinson's disease (PD) and Alzheimer's disease (AD) present a significant and growing challenge to healthcare systems worldwide. Both conditions are progressive and often undetected early, wh",
    "real": true,
@@ -1241,13 +1278,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 7,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "opment of non-invasive, cost-effective screening and decision-making tools that may enable earlier disease detection. This review provides a structured overview of computational research methods for the automated detection of PD and AD, focusing on handwriting analysi",
    "real": false,
@@ -1256,13 +1294,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 7,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": " multimodal approaches that combine kinematic and spatial handwriting features to capture cognitive and motor changes. The review provides structured summaries of publicly available handwriting datasets and discusses critical advancements, ongoing challenges, and futu",
    "real": false,
@@ -1271,13 +1310,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ficiency-accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate that GeoSeqNet provides an effective and reliable solution for point cloud understanding in challenging sensing environments.",
    "real": true,
@@ -1286,7 +1326,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
@@ -1322,7 +1363,7 @@
    "i": 9,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "mbine advanced robotic actuation, sensing, and intelligent control within unified training and operational frameworks. This paper presents a Digital Twin-based virtual reality (VR) interaction and control system developed for an innovative parallel surgical robot, desig",
    "real": false,
@@ -1331,13 +1372,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "orable efficiency-accuracy trade-off, and shows strong robustness in complex real-world scenarios. These results indicate that it offers an effective and reliable solution for point cloud understanding in challenging sensing environments.",
    "real": true,
@@ -1346,13 +1388,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "ficiency\u2013accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate that GeoSeqNet offers an effective and reliable solution for point cloud understanding in challenging sensing environments.",
    "real": true,
@@ -1361,7 +1404,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 9,
@@ -1427,7 +1471,7 @@
    "i": 9,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": " bring together advanced robotic actuation, sensing, and intelligent control for both training and clinical operation. This paper presents a Digital Twin-based virtual reality (VR) interaction and control system for an innovative parallel surgical robot, supporting surg",
    "real": false,
@@ -1436,7 +1480,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 9,
@@ -1457,7 +1502,7 @@
    "i": 9,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "egree-of-freedom architecture with a Remote Center of Motion (RCM) constraint, along with a flexible laparoscopic instrument that provides enhanced dexterity. VR controllers enable users to manipulate the robotic system intuitively within an immersive environment. An ",
    "real": false,
@@ -1466,7 +1511,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 9,
@@ -1487,7 +1533,7 @@
    "i": 9,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "e preserving a high degree of control intuitiveness. These findings demonstrate the potential of Digital Twin-based VR systems to provide a unified platform for surgical training, interaction, and intelligent assistance in next-generation medical robotic systems.",
    "real": false,
@@ -1496,13 +1542,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 9,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "s that combine robotic actuation, sensing, and intelligent control within unified training and operational frameworks. This paper presents a Digital Twin-based virtual reality (VR) interaction and control system for an innovative parallel surgical robot, supporting surg",
    "real": false,
@@ -1511,13 +1558,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 9,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": " a 4-degree-of-freedom architecture with a Remote Center of Motion (RCM) constraint, with a flexible laparoscopic instrument that provides enhanced dexterity. VR controllers enable intuitive manipulation of the robotic system in the immersive environment. An artificia",
    "real": false,
@@ -1526,7 +1574,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 10,
@@ -1562,7 +1611,7 @@
    "i": 9,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "n quality while maintaining a high level of control intuitiveness. These findings indicate that Digital Twin-based VR systems can provide a unified platform for surgical training, interaction, and intelligent assistance in next-generation medical robotic systems.",
    "real": false,
@@ -1571,13 +1620,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 10,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": ". However, achieving high-performance contact control and optimizing reinforcement learning policies in unstructured environments remains challenging due to environmental uncertainty, contact oscillations, and friction disturbances. This paper addresses these challen",
    "real": true,
@@ -1586,7 +1636,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 10,
@@ -1607,7 +1658,7 @@
    "i": 11,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "lects age-related differences in auditory-feedback-driven neural adaptability, supporting the idea that alpha-band modulation may serve as a potential biomarker of motor-cognitive adaptability.",
    "real": true,
@@ -1616,7 +1667,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 10,
@@ -1637,7 +1689,7 @@
    "i": 11,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "lects age-related differences in auditory-feedback-driven neural adaptability and support the idea that alpha-band modulation may serve as a potential biomarker of motor-cognitive adaptability.",
    "real": true,
@@ -1646,7 +1698,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 12,
@@ -1667,7 +1720,7 @@
    "i": 12,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "y interpretable, allowing neuroscientists to examine the decision logic instead of relying on nontransparent classifiers. We also provide comprehensive validation through noise robustness analysis with 0\u201330% Gaussian noise and an assessment of between-subjects genera",
    "real": false,
@@ -1676,7 +1729,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 12,
@@ -1697,7 +1751,7 @@
    "i": 13,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serving as",
    "context": "ating its feasibility for estimating SOM in Moso bamboo forests under the specific constraints of the current study area, thereby serving as a valuable reference for forest soil SOM monitoring in specific regions.",
    "real": true,
@@ -1706,7 +1760,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 13,
@@ -1832,7 +1887,7 @@
    "i": 14,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "icrosphere lenses generate photonic nanojets with subwavelength beam waists; however, conventional imaging techniques struggle to provide consistent image quality for targets at different axial planes. An optical theory is analyzed to show that incorporating a micros",
    "real": false,
@@ -1841,7 +1896,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 14,
@@ -1862,7 +1918,7 @@
    "i": 15,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "ts are used in optimizing warehouse logistics, yet achieving precise positioning during docking maneuvers and autonomous planning remains a technical challenge. This study presents a custom vision-based control system designed for an autonomous omnidirectional wheele",
    "real": true,
@@ -1871,13 +1927,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "ics, yet achieving precise positioning during docking maneuvers and autonomous planning remains a technical challenge. This study presents a custom vision-based control system designed for an autonomous omnidirectional wheeled robot. The proposed methodology acquires vi",
    "real": false,
@@ -1886,7 +1943,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
@@ -1907,7 +1965,7 @@
    "i": 15,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": " Servoing. Consequently, these findings indicate that integrating depth-based feature recovery with advanced algebraic strategies offers a stable control strategy for automated industrial scenarios.",
    "real": true,
@@ -1916,13 +1974,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "s can improve warehouse logistics, but precise positioning during docking and autonomous planning remains challenging. This study presents a custom vision-based control system for an autonomous omnidirectional wheeled robot. Visual feedback is obtained from a stereo cam",
    "real": false,
@@ -1931,13 +1990,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Autonomous mobile robots can improve warehouse logistics, but precise positioning during docking and autonomous planning remains challenging. This study presents a custom vision-based control system for an autonomous omnidirectional wheeled robot. Visual fee",
    "real": true,
@@ -1946,13 +2006,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ion-Based Visual Servoing. These findings indicate that combining depth-based feature recovery with advanced algebraic strategies provides a stable control strategy for automated industrial applications.",
    "real": false,
@@ -1961,7 +2022,8 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
@@ -1982,7 +2044,7 @@
    "i": 15,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": " mobile robots are used to optimize warehouse logistics, but precise positioning during docking maneuvers and autonomous planning remains a technical challenge. This study presents a custom vision-based control system for an autonomous omnidirectional wheeled robot. ",
    "real": true,
@@ -1991,13 +2053,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "use logistics, but precise positioning during docking maneuvers and autonomous planning remains a technical challenge. This study presents a custom vision-based control system for an autonomous omnidirectional wheeled robot. The methodology acquires visual feedback thro",
    "real": false,
@@ -2006,13 +2069,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 15,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "n-Based Visual Servoing. These findings indicate that integrating depth-based feature recovery with advanced algebraic strategies offers a stable control strategy for automated industrial scenarios.",
    "real": false,
@@ -2021,13 +2085,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 16,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Structural health monitoring (SHM) of fibre-reinforced composites requires a health indicator that remains monotonically non-decreasing under the standard SHM assumption that no self-healing or maintenance-induced restoration event is a",
    "real": false,
@@ -2036,13 +2101,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 16,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "jection and a globally consistent prognosability metric retain a SAMS-Net advantage. Cross-site or cross-material transferability remains to be established in future work.",
    "real": false,
@@ -2051,13 +2117,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 16,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "ction and a globally consistent prognosability metric preserve a SAMS-Net advantage. Cross-site or cross-material transferability remains to be established in future work.",
    "real": false,
@@ -2066,7 +2133,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 17,
@@ -2087,7 +2155,7 @@
    "i": 16,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "jection and a globally consistent prognosability metric retain a SAMS-Net advantage. Cross-site or cross-material transferability remains to be established in future work.",
    "real": false,
@@ -2096,7 +2164,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 17,
@@ -2117,7 +2186,7 @@
    "i": 17,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "elivery within the evaluated setup. AES-GCM encryption, blockchain smart contracts, and InterPlanetary File System (IPFS) storage provide confidential, tamper-evident archival under the stated trust and threat model. Experimental evaluation on the KITTI dataset shows",
    "real": false,
@@ -2126,7 +2195,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 17,
@@ -2147,7 +2217,7 @@
    "i": 18,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "Low Earth orbit (LEO) satellite systems provide ubiquitous global connectivity for massive grant-free random access Internet of Things (IoT) applications. Full frequency reuse (",
    "real": false,
@@ -2156,13 +2226,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 18,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offer",
    "context": "Low Earth orbit (LEO) satellite systems offer ubiquitous global connectivity for massive grant-free random access in Internet of Things (IoT) applications. Although full frequ",
    "real": false,
@@ -2171,13 +2242,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 18,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "Low Earth orbit (LEO) satellite systems provide ubiquitous global connectivity for massive grant-free random access Internet of Things (IoT) applications. Full frequency reuse (",
    "real": false,
@@ -2186,7 +2258,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
@@ -2207,7 +2280,7 @@
    "i": 19,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Reliable quality control of adeno-associated virus (AAV) vectors remains a significant challenge in gene therapy manufacturing, especially when subtle differences in genome loading and conformation must",
    "real": true,
@@ -2216,13 +2289,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "-independent over the tested range. Together, these results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical sing",
    "real": false,
@@ -2231,13 +2305,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Reliable quality control of adeno-associated virus (AAV) vectors remains a major bottleneck in gene therapy manufacturing, particularly for resolving subtle differences in genome loading and conformatio",
    "real": true,
@@ -2246,13 +2321,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "ncentration over the tested range. Together, these findings demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing offers a multidimensional approach for resolving closely related AAV populations and moves plasmonic nanopores closer to practical singl",
    "real": false,
@@ -2261,13 +2337,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Reliable quality control of adeno-associated virus (AAV) vectors remains a major bottleneck in gene therapy manufacturing, particularly when resolving subtle differences in genome loading and conformati",
    "real": true,
@@ -2276,13 +2353,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "centration-independent over the tested range. These results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical sing",
    "real": true,
@@ -2291,13 +2369,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remain",
    "context": "cal feature matching or optical flow prediction, but their robustness can degrade under large parallax, while computational costs remain high and tracking errors accumulate over long sequences. To address these issues, we propose SPTNet (SuperPoint Tracking Network)",
    "real": false,
@@ -2306,13 +2385,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "he dense optical flow field provides a temporal prior that constrains the descriptor-matching search space, while the descriptors serve as a correction signal that removes flow-induced drift at each frame through spatially constrained Sinkhorn optimization. This combi",
    "real": true,
@@ -2321,13 +2401,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Reliable image-to-image correspondence remains a challenge for camera-based Visual Simultaneous Localization and Mapping (SLAM). Conventional approaches primarily rely on isola",
    "real": true,
@@ -2336,13 +2417,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "on is a Hybrid Tracking Module (HTM) based on a novel Predictor-Corrector mechanism. In this design, the dense optical flow field provides a temporal prior that constrains the descriptor-matching search space, while the descriptors serve as a correction signal that re",
    "real": false,
@@ -2351,13 +2433,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Robust image-to-image correspondence remains a fundamental challenge in camera-based Visual Simultaneous Localization and Mapping (SLAM). Conventional methods typically depen",
    "real": true,
@@ -2366,13 +2449,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 20,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "The dense optical flow field acts as a temporal prior that constrains the descriptor matching search space, while the descriptors provide a correction signal that eliminates flow-induced drift at each frame through spatially constrained Sinkhorn optimization. This sy",
    "real": false,
@@ -2381,13 +2465,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 21,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "nabling coarse localization of potential change regions. In the second stage, recognizing that high-resolution RGB domain details provide richer spatial information than frequency-domain features, we design a refinement fusion module (RFM) that leverages these RGB de",
    "real": false,
@@ -2396,7 +2481,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 21,
@@ -2432,7 +2518,7 @@
    "i": 21,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "ackground, enabling the coarse localization of potential change regions. In the second stage, because high-resolution RGB details provide richer spatial information than frequency-domain features, a refinement fusion module (RFM) uses these details to correct and ref",
    "real": false,
@@ -2441,7 +2527,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 21,
@@ -2477,7 +2564,7 @@
    "i": 22,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Vehicle trajectory prediction at urban intersections remains difficult because of ambiguous maneuvers, dense interactions among agents, and complex lane-branching structures. Existing method",
    "real": true,
@@ -2486,7 +2573,8 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 21,
@@ -2507,7 +2595,7 @@
    "i": 22,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "dense agent interactions, and complex lane branching structures. Existing methods frequently suffer from mode collapse or fail to provide sufficient coverage across all competing exit branches, limiting their reliability in safety-critical scenarios. This paper propo",
    "real": false,
@@ -2516,13 +2604,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 22,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "r ambiguity, dense agent interactions, and complex lane-branching structures. Existing methods often suffer from mode collapse or provide insufficient coverage of competing exit branches, limiting their reliability in safety-critical scenarios. This paper proposes IP",
    "real": false,
@@ -2531,7 +2620,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 23,
@@ -2582,7 +2672,7 @@
    "i": 23,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "occlusion. By analyzing historical occlusion patterns, it forecasts the future occlusion ratio for each target. These predictions serve as dynamic loss weights, allowing the model to penalize tracking errors according to predicted occlusion severity and improving robu",
    "real": true,
@@ -2591,13 +2681,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 23,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offer",
    "context": "Roadside perception systems offer longer detection ranges and higher precision than onboard sensors, but severe occlusion in complex traffic still causes tracking ",
    "real": false,
@@ -2606,7 +2697,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 23,
@@ -2672,7 +2764,7 @@
    "i": 25,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serves as",
    "context": "uency bands, which carry the bulk of seismic energy, receive proportionally higher training emphasis. Seismic moment magnitude Mw serves as the primary conditioning variable, enabling targeted synthesis for specific hazard scenarios. The model is implemented in Python ",
    "real": true,
@@ -2681,13 +2773,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": " and near-fault scenarios, limits the reliability of structural analyses and probabilistic seismic hazard assessments. This paper presents a proof-of-concept wavelet-decomposed conditional Generative Adversarial Network (WD-cGAN) for the synthesis of seismic accelerogra",
    "real": false,
@@ -2696,7 +2789,8 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
@@ -2717,7 +2811,7 @@
    "i": 25,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "The generation of synthetic seismic accelerograms remains a critical challenge in earthquake engineering. The limited availability of strong-motion records, especially for high-magnitude ",
    "real": true,
@@ -2726,13 +2820,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "awn from the Italian INGV/ITACA v4.0 archive. Preliminary evaluation on 500 synthetic accelerograms across five magnitude classes provides evidence that the proposed wavelet-domain multi-discriminator scheme reproduces the essential spectral shape and non-stationary t",
    "real": false,
@@ -2741,7 +2836,8 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
@@ -2762,7 +2858,7 @@
    "i": 25,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "de and near-fault events, reduces the reliability of structural analyses and probabilistic seismic hazard assessments. This paper presents a proof-of-concept wavelet-decomposed conditional Generative Adversarial Network (WD-cGAN) designed to generate accelerograms with ",
    "real": false,
@@ -2771,7 +2867,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
@@ -2792,7 +2889,7 @@
    "i": 25,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remain",
    "context": "dation on a larger and more diverse corpus, rigorous comparison with competing methods, and extended multi-parameter conditioning remain the principal directions for future work.",
    "real": true,
@@ -2801,13 +2898,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": " and near-fault scenarios, limits the reliability of structural analyses and probabilistic seismic hazard assessments. This paper presents a proof-of-concept wavelet-decomposed conditional Generative Adversarial Network (WD-cGAN) for synthesizing seismic accelerograms w",
    "real": false,
@@ -2816,13 +2914,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remain",
    "context": "dation on a larger and more diverse corpus, rigorous comparison with competing methods, and extended multi-parameter conditioning remain the principal avenues for future work.",
    "real": true,
@@ -2831,7 +2930,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 25,
@@ -2852,7 +2952,7 @@
    "i": 25,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides",
    "context": "ams from the Italian INGV/ITACA v4.0 archive. Preliminary evaluation of 500 synthetic accelerograms across five magnitude classes provides evidence that the wavelet-domain multi-discriminator scheme reproduces the essential spectral shape and non-stationary temporal s",
    "real": false,
@@ -2861,7 +2961,8 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 26,
@@ -2897,7 +2998,7 @@
    "i": 27,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "ings support the feasibility of interaction-driven olfactory feedback as a multisensory design approach for CAVE environments and provide a foundation for future controlled investigations of olfactory feedback in immersive VR.",
    "real": false,
@@ -2906,13 +3007,14 @@
     false,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 27,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "The integration of olfactory feedback into Virtual Reality (VR) applications remains significantly underexplored compared with other sensory modalities, particularly within room-scale Cave Automatic Virtual Environ",
    "real": true,
@@ -2921,13 +3023,14 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 27,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "Olfactory feedback remains considerably less explored in Virtual Reality (VR) than other sensory modalities, especially in room-scale Cave Automatic Virtual",
    "real": true,
@@ -2936,13 +3039,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": "security challenges, making it essential to develop robust and transparent intrusion detection system (IDS) solutions. This study presents a specialized system for IoT environments that combines hybrid feature selection methods with anomaly detection algorithms and clas",
    "real": false,
@@ -2951,13 +3055,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 27,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "The integration of olfactory feedback into Virtual Reality (VR) applications remains significantly underexplored compared with other sensory modalities, particularly in room-scale Cave Automatic Virtual Environment",
    "real": true,
@@ -2966,13 +3071,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "tools such as Shapley Additive Explanations (SHAP) and Local Interpretable Model-Agnostic Explanations (LIME) are incorporated to provide insights into model decisions and improve trust. We utilize the CIC-IDS2017 and EIIoT datasets to evaluate their effectiveness in",
    "real": false,
@@ -2981,13 +3087,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offer",
    "context": "nsion-reduction Autoencoder and Traditional Learning with Explainable Artificial Intelligence), integrates advanced techniques to offer comprehensive protection while ensuring transparency, enhancing security and trustworthiness, and serving as an essential tool fo",
    "real": false,
@@ -2996,13 +3103,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 27,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "ings support the feasibility of interaction-driven olfactory feedback as a multisensory design approach for CAVE environments and provide a foundation for future controlled investigations of olfactory feedback in immersive VR.",
    "real": true,
@@ -3011,13 +3119,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serving as",
    "context": "es advanced techniques to offer comprehensive protection while ensuring transparency, enhancing security and trustworthiness, and serving as an essential tool for protecting IoT networks.",
    "real": true,
@@ -3026,7 +3135,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
@@ -3047,7 +3157,7 @@
    "i": 28,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "imension-reduction Autoencoder and Traditional Learning with Explainable Artificial Intelligence), integrates these techniques to provide comprehensive protection, maintain transparency, enhance security and trustworthiness, and serve as an essential tool for protect",
    "real": false,
@@ -3056,7 +3166,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
@@ -3077,7 +3188,7 @@
    "i": 28,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": " and reduced training time, while Shapley Additive Explanations (SHAP) and Local Interpretable Model-Agnostic Explanations (LIME) provide insight into model decisions and support greater trust. The effectiveness of the proposed approach is evaluated using the CIC-IDS",
    "real": false,
@@ -3086,7 +3197,8 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
@@ -3107,7 +3219,7 @@
    "i": 28,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "serve as",
    "context": "integrates these techniques to provide comprehensive protection, maintain transparency, enhance security and trustworthiness, and serve as an essential tool for protecting IoT networks.",
    "real": true,
@@ -3116,13 +3228,14 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "presents a",
    "context": " creates distinct security challenges and the need for robust, transparent intrusion detection system (IDS) solutions. This study presents a specialized IoT system that combines hybrid feature selection, anomaly detection, classification, and explainability techniques. ",
    "real": false,
@@ -3131,7 +3244,8 @@
     true,
     false
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
@@ -3152,7 +3266,7 @@
    "i": 28,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "curacy and reduced training time. Shapley Additive Explanations (SHAP) and Local Interpretable Model-Agnostic Explanations (LIME) provide insights into model decisions and improve trust. The CIC-IDS2017 and EIIoT datasets are used to evaluate the framework\u2019s effectiv",
    "real": false,
@@ -3161,13 +3275,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 28,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provide",
    "context": "imension-reduction Autoencoder and Traditional Learning with Explainable Artificial Intelligence), integrates these techniques to provide comprehensive protection for IoT networks while maintaining transparency, security, and trustworthiness.",
    "real": false,
@@ -3176,13 +3291,14 @@
     false,
     false
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 29,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "offers",
    "context": "Neuroimaging offers a promising approach for early Alzheimer\u2019s disease (AD) detection and may support timely clinical intervention. This study presen",
    "real": false,
@@ -3191,13 +3307,14 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 29,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "remains",
    "context": "ncy. It requires substantially fewer computational resources than standard deep architectures such as VGG-16 (138 M), although it remains more parameter-intensive than highly compact models such as MobileNet and EfficientNet, which are specifically designed for resou",
    "real": true,
@@ -3206,7 +3323,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 2,
@@ -3362,7 +3480,7 @@
    "i": 3,
    "era": "2026",
    "arm": "B",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides an efficient and reliable solution",
    "context": "ations across three dimensions. Scenario and parameter tests further confirm the framework\u2019s generality and robustness. This work provides an efficient and reliable solution for real-time adaptive signal control at isolated intersections.",
    "real": true,
@@ -3371,13 +3489,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides an effective and reliable solution",
    "context": "ficiency-accuracy trade-off and exhibits strong robustness in complex real-world scenarios. These results indicate that GeoSeqNet provides an effective and reliable solution for point cloud understanding in challenging sensing environments.",
    "real": true,
@@ -3386,7 +3505,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 5,
@@ -3407,7 +3527,7 @@
    "i": 4,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides a flexible framework",
    "context": " shows how environmental factors, including lighting conditions and spatial scale, affect measurement variability. Overall, EfMAR provides a flexible framework for adaptive outdoor AR-based geospatial measurement, with an emphasis on consistency, transparency, and architectural generaliza",
    "real": true,
@@ -3416,7 +3536,8 @@
     true,
     true
    ],
-   "unanimous": true
+   "unanimous": true,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 8,
@@ -3572,7 +3693,7 @@
    "i": 19,
    "era": "2026",
    "arm": "A",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides a multidimensional framework",
    "context": "-independent over the tested range. Together, these results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical single-particle quality control o",
    "real": true,
@@ -3581,13 +3702,14 @@
     true,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 19,
    "era": "2026",
    "arm": "C",
-   "pattern": "copula avoidance",
+   "pattern": "unmeasured quality claim",
    "match": "provides a multidimensional framework",
    "context": "centration-independent over the tested range. These results demonstrate that ring-electrode-enabled AC plasmonic nanopore sensing provides a multidimensional framework for resolving closely related AAV populations and advances plasmonic nanopores toward practical single-particle quality control o",
    "real": false,
@@ -3596,7 +3718,8 @@
     false,
     true
    ],
-   "unanimous": false
+   "unanimous": false,
+   "framing": "verb-list (retired 2026-08-08)"
   },
   {
    "i": 22,
@@ -3703,5 +3826,8 @@
    ],
    "unanimous": true
   }
- ]
+ ],
+ "notes": {
+  "relabelled_2026-08-08": "The copula-avoidance labels were collected by showing a panel a verb-list match. They are kept, renamed and marked, not deleted: 21 `remains a challenge` hits were unanimously called real and are not tells. Any precision computed from them is an upper bound until a blind re-adjudication replaces them."
+ }
 }

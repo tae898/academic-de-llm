@@ -26,20 +26,34 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # Definitions are Wikipedia's, restated so a judge with no context can apply
 # them. Each carries the false positive that actually occurred in practice.
 PATTERNS = {
-    'copula avoidance': dict(
-        # `provides?` bare was 1/6 and mostly noise ("the tool provides X" is a
-        # real verb). Narrowed to the copular form it keeps the one real instance
-        # it was there for, "GeoSeqNet provides an effective and reliable
-        # solution", and drops the five false positives: 43% -> 58% precision
-        # with no recall lost.
-        regex=r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
-              r'remains?|positions? \w+ as|presents? a|'
-              r'provides? an? [\w\s]{0,24}?(solution|approach|framework|means|basis))\b',
-        definition="A plain `is` or `are` dressed up in a fancier verb. "
-                   "'This model serves as a proof of concept' means 'is a proof of concept'.",
-        not_a_hit="The verb is doing real work and cannot be replaced by 'is'. "
-                  "'maintains a high execution speed of 35 FPS' describes sustained behaviour "
-                  "over time, not identity. 'offers three modes' means it provides them."),
+    'unmeasured quality claim': dict(
+        # Reframed 2026-08-08 from a verb list to the construction it was
+        # always trying to name. The verb is incidental: `provides an efficient
+        # and reliable solution` is `is good`, dressed, while `remains a
+        # challenge` marks persistence and `Mw serves as the primary
+        # conditioning variable` names a function. The old verb list produced 21
+        # `remains` hits a panel unanimously called real and which are not.
+        #
+        # Anchored on the praise adjective, which is what carries the tell, with
+        # a noun fallback for the handful that rate the work without one
+        # ("provides a multidimensional framework"). On the 18 labelled cases
+        # this replaces: 8 of 8 real caught, 0 of 10 false fired, against 4 of 8
+        # and 0 of 10 for the noun-only form.
+        regex=r'\b(?:provides?|offers?|presents?|serv(?:es?|ing) as|positions? \w+ as|'
+              r'constitutes?)\s+(?:an?|the)\s+[\w\s,-]{0,30}?\b(?:efficient|reliable|'
+              r'effective|robust|flexible|adaptive|valuable|essential|stable|powerful|'
+              r'comprehensive|practical|cost-effective|novel|promising|seamless|superior|'
+              r'excellent|versatile|intuitive|scalable)\b'
+              r'|\b(?:provides?|offers?|presents?|serv(?:es?|ing) as|constitutes?)\s+an?\s+'
+              r'[\w\s,-]{0,30}?\b(?:solution|framework|foundation|platform|guide)\b',
+        definition="A sentence that rates the work without a measurement behind the rating. "
+                   "'This work provides an efficient and reliable solution' claims quality "
+                   "and reports nothing.",
+        not_a_hit="The sentence names a function, a persistent state, or a hedged claim rather "
+                  "than rating anything. 'descriptors serve as a correction signal' says what "
+                  "they do. 'X remains a challenge' says it is still open despite prior work. "
+                  "'may serve as a biomarker' is a hedged claim. A measured adjective is fine: "
+                  "'robust to 10% dropout' has a number behind it."),
     'superficial -ing': dict(
         regex=r'[, ](highlighting|underscoring|emphasizing|ensuring|reflecting|'
               r'contributing to|providing|enhancing|allowing|helping|supporting|'

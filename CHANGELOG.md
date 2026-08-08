@@ -76,6 +76,36 @@ read it, so that column was not reproducible.
 `skills/de-llm/SKILL.md` and would have raised `FileNotFoundError` on the first
 stage of every run since the rename.
 
+**Four structural patterns became one category.** Copula avoidance,
+superficial `-ing`, undue emphasis and negative parallelism were listed and
+measured separately for months. They are one move: adding an evaluation the
+evidence does not carry. The section is now `Unearned evaluation`, defined by a
+test — *what measurement supports this rating?* — rather than by four trigger
+lists.
+
+That is not only tidier, it measures better. Reframing the quality-claim regex
+off the verb and onto the praise adjective took its excess from **2.7x to 8.1x**
+against a pre-ChatGPT baseline, because the verb form was matching ordinary
+academic prose: `X remains a challenge` and `Mw serves as the primary
+conditioning variable` were roughly nine tenths of its pre-2022 count and are
+not tells. Precision went 60.7% to 64.3%, and on the 18 labelled cases the new
+form catches 8 of 8 real and fires on 0 of 10 false, against 4 of 8 for a
+noun-anchored version. `copula avoidance` is renamed `unmeasured quality claim`
+throughout, floors refrozen with the reason recorded in `floors.json`.
+
+**Rhythm moved from the detection side to the guardrail**, because it was
+measured and is not a tell. In published academic prose the standard deviation
+of sentence length is flat across the ChatGPT boundary (8.6 → 8.0 in abstracts,
+15.9 → 16.8 in papers) and consecutive same-openers went *down*, 11.3% to 6.4%.
+In raw model output it collapses: a de-slop pass halves both the variance and
+the longest sentence. So "uniform rhythm" is what this skill produces, not what
+it should look for, and the directive now has a checkable form — **keep the
+longest sentence long**.
+
+**A `What is NOT evidence` table**, four claims every other guide leads with,
+each measured flat or backwards here: uniform sentence length, repeated
+openers, title case headings in a paper, and paste artifacts.
+
 Everything below is pre-release development history.
 
 ## Pre-release: 0.4.0 (2026-08-06)

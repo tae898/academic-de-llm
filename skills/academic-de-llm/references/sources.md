@@ -111,7 +111,7 @@ tracks both.
 | Pattern | probe | shipped in `patterns.md` |
 |---|---|---|
 | Superficial `-ing` | 1.03 → 9.19, **8.9x** | 7.10 → 26.36, **3.7x** |
-| Copula avoidance | 1.73 → 4.14, 2.4x | 10.17 → 17.22, 1.7x |
+| Unmeasured quality claim | 1.73 → 4.14, 2.4x | **1.2 → 10.1, 8.1x** |
 | Undue emphasis | 0.36 → 0.97, 2.7x | 3.97 → 9.67, 2.4x |
 | Negative parallelism | 0.61 → 1.11, 1.8x | 1.19 → 1.82, 1.5x |
 
@@ -121,12 +121,18 @@ The probe answers "did this tell rise after ChatGPT"; the shipped regex answers
 hit rate will be surprised by the volume, and a reader who takes 3.7x as the
 effect size will understate it.
 
-**The shipped set also found something the probe hid.** Across the four windows
-the probe shows copula avoidance peaking in 2025 and falling back (1.7, 4.1,
-6.8, 4.5). The shipped regex shows it rising in every window and peaking in
-**2026** (10.2, 17.2, 25.8, 27.3), the only tell measured here still climbing.
-The probe misses it because `remains`, `presents a` and the copular `provides a`
-were added to the shipped regex in 0.4.0 and are where the recent growth is.
+**The shipped set also found something the probe hides**, and reframing it on
+2026-08-08 sharpened the finding rather than removing it. The probe shows the
+copula proxy peaking in 2025 and falling back (1.7, 4.1, 6.8, 4.5). The shipped
+regex, once it stopped matching on the verb and started matching on the
+unmeasured quality claim, runs **1.2, 7.0, 8.7, 10.1** — an 8.1x rise that has
+not peaked, and the only tell measured here still climbing in 2026.
+
+The verb-list version of the same regex read 10.2, 17.2, 25.8, 27.3, a 2.7x
+rise. Both describe a real increase, but the higher baseline was ordinary
+academic prose: `X remains a challenge` and `Mw serves as the primary
+conditioning variable` are not tells and were roughly nine tenths of the
+pre-ChatGPT count.
 
 **What it does NOT establish**
 
@@ -165,7 +171,7 @@ one document: 40 papers pre-2022 (227k words) and 39 from 2026 (269k).
 | Superficial `-ing`, probe | 1.0 → **9.2** | 1.0 → **5.7** |
 | Superficial `-ing`, shipped | 7.1 → **26.4** | 4.4 → **16.3** |
 | Copula avoidance, probe | 1.7 → **4.1** | 1.2 → **3.9** |
-| Copula avoidance, shipped | 10.2 → **17.2** | 3.6 → **12.7** |
+| Unmeasured quality claim, shipped | 1.2 → **10.1** | 0.5 → **2.2** |
 | Undue emphasis, shipped | 4.0 → 9.7 | 0.7 → 1.3 |
 | Negative parallelism, shipped | 1.2 → 1.8 | 1.4 → 1.3 |
 | Em dash | not measurable | 3.1 → 4.9 |
@@ -244,7 +250,7 @@ The same four structural tells under the regexes `patterns.md` actually ships:
 
 | Tell (shipped regex) | 2019-21 | 2024 | 2025 | 2026 | peak |
 |---|---|---|---|---|---|
-| Copula avoidance | 10.17 | 17.22 | 25.83 | **27.34** | **2026** |
+| Unmeasured quality claim | 1.20 | 7.03 | 8.72 | **10.14** | **2026** |
 | Superficial `-ing` | 7.10 | 26.36 | 27.52 | 22.90 | 2025 |
 | Undue emphasis | 3.97 | 9.67 | 7.80 | 5.40 | 2024 |
 | Negative parallelism | 1.19 | 1.82 | 0.73 | 1.31 | 2024 |
@@ -252,7 +258,7 @@ The same four structural tells under the regexes `patterns.md` actually ships:
 **What it establishes**
 
 - **The famous words died.** `crucial` is back to its pre-ChatGPT level. `delve` is effectively gone. Both were the most publicized markers, and Kobak's own paper is part of why. Publicity appears to kill a word-level tell, whether by training or by authors editing it out.
-- **The structural tells did not.** Superficial `-ing` is still 6.4x its pre-ChatGPT baseline in 2026 after peaking in 2025. **Copula avoidance is the only tell measured here that has not peaked**: under the shipped regex it rises in every window, 10.2 to 27.3, and 2026 is the highest. That is visible only in the shipped set, because the triggers carrying the growth (`remains`, `presents a`, the copular `provides a`) were added in 0.4.0 and are absent from the probe. Structure is the durable section, which is why `SKILL.md` puts it first and tells you to run it on everything.
+- **The structural tells did not.** Superficial `-ing` is still 6.4x its pre-ChatGPT baseline in 2026 after peaking in 2025. **The unmeasured quality claim is the only tell measured here that has not peaked**: it rises in every window, 1.2 to 10.1 per 10k, and 2026 is the highest. It is invisible to the probe, which matches on the verb and so counts `X remains a challenge` in the pre-ChatGPT baseline. Unearned evaluation is the durable section, which is why `SKILL.md` puts it first and tells you to run it on everything.
 - **Excess vocabulary shifts rather than vanishing.** `robust` is 3.5x baseline and up 46% since 2024. A fixed word list ages badly in both directions, not just downward.
 
 **What it does NOT establish**

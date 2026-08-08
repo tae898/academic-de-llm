@@ -57,7 +57,7 @@ PROBES = [
 
 SHIPPED = [(f'{n} (shipped)', _SHIPPED[k]['regex']) for n, k in [
     ("Superficial -ing", 'superficial -ing'),
-    ("Unmeasured quality", 'unmeasured quality claim'),
+    ("Copula avoidance", 'copula avoidance'),
     ("Undue emphasis", 'undue emphasis'),
     ("Negative parallelism", 'negative parallelism'),
 ]]

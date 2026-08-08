@@ -46,7 +46,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 #   emphasis: "offers an invaluable solution" was missed. `invaluable` is the
 #           marker there, not `offers`.
 CANDIDATE = {
-    'unmeasured quality claim':
+    'copula avoidance':
         r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
         r'remains?|positions? \w+ as|presents? a|'
         r'provides? an? [\w\s]{0,24}?(solution|approach|framework|means|basis))\b',

@@ -3,6 +3,7 @@
  "rates": {
   "2019-21": {
    "Copula avoidance": 1.73,
+   "Copula avoidance (shipped)": 10.17,
    "Kobak's ten markers": 15.46,
    "Negative parallelism": 0.61,
    "Negative parallelism (shipped)": 0.0,
@@ -10,7 +11,6 @@
    "Superficial -ing (shipped)": 7.1,
    "Undue emphasis": 0.36,
    "Undue emphasis (shipped)": 3.97,
-   "Unmeasured quality (shipped)": 1.24,
    "Vendor paste artifacts": 0.0,
    "crucial": 1.56,
    "delve/showcase/underscore": 0.0,
@@ -19,6 +19,7 @@
   },
   "2024": {
    "Copula avoidance": 4.14,
+   "Copula avoidance (shipped)": 17.22,
    "Kobak's ten markers": 50.87,
    "Negative parallelism": 1.11,
    "Negative parallelism (shipped)": 0.29,
@@ -26,7 +27,6 @@
    "Superficial -ing (shipped)": 26.36,
    "Undue emphasis": 0.97,
    "Undue emphasis (shipped)": 9.67,
-   "Unmeasured quality (shipped)": 6.98,
    "Vendor paste artifacts": 0.0,
    "crucial": 6.04,
    "delve/showcase/underscore": 2.04,
@@ -35,6 +35,7 @@
   },
   "2025": {
    "Copula avoidance": 6.84,
+   "Copula avoidance (shipped)": 25.83,
    "Kobak's ten markers": 50.8,
    "Negative parallelism": 0.73,
    "Negative parallelism (shipped)": 0.24,
@@ -42,7 +43,6 @@
    "Superficial -ing (shipped)": 27.52,
    "Undue emphasis": 0.32,
    "Undue emphasis (shipped)": 7.8,
-   "Unmeasured quality (shipped)": 8.68,
    "Vendor paste artifacts": 0.0,
    "crucial": 4.12,
    "delve/showcase/underscore": 1.34,
@@ -51,6 +51,7 @@
   },
   "2026": {
    "Copula avoidance": 4.53,
+   "Copula avoidance (shipped)": 27.34,
    "Kobak's ten markers": 39.41,
    "Negative parallelism": 0.69,
    "Negative parallelism (shipped)": 0.43,
@@ -58,7 +59,6 @@
    "Superficial -ing (shipped)": 22.9,
    "Undue emphasis": 0.33,
    "Undue emphasis (shipped)": 5.4,
-   "Unmeasured quality (shipped)": 10.08,
    "Vendor paste artifacts": 0.0,
    "crucial": 0.96,
    "delve/showcase/underscore": 0.23,
@@ -79,6 +79,7 @@
   },
   "papers-2026": {
    "Copula avoidance": 3.87,
+   "Copula avoidance (shipped)": 12.7,
    "Kobak's ten markers": 39.0,
    "Negative parallelism": 0.69,
    "Negative parallelism (shipped)": 0.21,
@@ -86,7 +87,6 @@
    "Superficial -ing (shipped)": 16.25,
    "Undue emphasis": 0.13,
    "Undue emphasis (shipped)": 1.27,
-   "Unmeasured quality (shipped)": 2.22,
    "Vendor paste artifacts": 0.0,
    "crucial": 0.81,
    "delve/showcase/underscore": 0.18,
@@ -95,6 +95,7 @@
   },
   "papers-pre": {
    "Copula avoidance": 1.2,
+   "Copula avoidance (shipped)": 3.58,
    "Kobak's ten markers": 12.04,
    "Negative parallelism": 0.8,
    "Negative parallelism (shipped)": 0.12,
@@ -102,7 +103,6 @@
    "Superficial -ing (shipped)": 4.45,
    "Undue emphasis": 0.04,
    "Undue emphasis (shipped)": 0.67,
-   "Unmeasured quality (shipped)": 0.53,
    "Vendor paste artifacts": 0.0,
    "crucial": 0.61,
    "delve/showcase/underscore": 0.12,

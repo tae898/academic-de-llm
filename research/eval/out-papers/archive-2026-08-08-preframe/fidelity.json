@@ -1,0 +1,2942 @@
+{
+ "manifest": {
+  "date": "2026-08-07",
+  "rewriter": "openai/gpt-5.6-luna",
+  "judges": [
+   "x-ai/grok-4.5",
+   "z-ai/glm-5.2",
+   "deepseek/deepseek-v4-flash-0731"
+  ],
+  "corpus": "papers/sections 2026 n=24 + pre-2022 n=6 [250-900w]",
+  "seed": 20260805,
+  "stage": "judge-fidelity"
+ },
+ "results": [
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "364892077062",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "964530ad6498",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "171db9db7eab",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 14, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 14,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "7b34c6a3be72",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 11,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 11,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "6eef65dcafd8",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "364a6357c7e8",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "5c9006ace28c",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ddc32a974447",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "7b34c6a3be72",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "02e5b6ac1d6b",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "02caea2f22de",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [\n    \"The rewrite states the network can use learned feature extractors 'without modification to the input-channel structure,' which is an interpretation added to the original's 'seamlessly' and could be seen as slightly misleading given the earlier description of modifying weights for additional channels.\"\n  ],\n  \"evaluative_only_c",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [
+     "The rewrite states the network can use learned feature extractors 'without modification to the input-channel structure,' which is an interpretation added to the original's 'seamlessly' and could be seen as slightly misleading given the earlier description of modifying weights for additional channels."
+    ],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "5c9006ace28c",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "10af4ce14f99",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a600846cfaa9",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "364a6357c7e8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "964530ad6498",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "6eef65dcafd8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1e6c7f7d7bf1",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "02e5b6ac1d6b",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a600846cfaa9",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b1fed2222655",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "02caea2f22de",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f4c772d254d2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "171db9db7eab",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ddc32a974447",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "10af4ce14f99",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "10af4ce14f99",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b1fed2222655",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1e6c7f7d7bf1",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b1fed2222655",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "364892077062",
+   "raw": "{\n  \"substantive_losses\": [\n    \"hedge 'This suggests' removed so the greater difficulty of ALN/axillary vs breast-tumour classification is stated as fact rather than suggested\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "hedge 'This suggests' removed so the greater difficulty of ALN/axillary vs breast-tumour classification is stated as fact rather than suggested"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 6,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1e6c7f7d7bf1",
+   "raw": "{\n  \"substantive_losses\": [\n    \"omission of 'architectural' from the description of limited low-level exploration (original: 'low-level architectural and placement-aware')\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "omission of 'architectural' from the description of limited low-level exploration (original: 'low-level architectural and placement-aware')"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f4c772d254d2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "56c158b909f4",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "40f97d7b866a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "675b72f4bb52",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "964530ad6498",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "40f97d7b866a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "eaf9fd1989b9",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "12df771753b2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b75f6a265d93",
+   "raw": "```json\n{\n\"substantive_losses\": [], \"substantive_additions\": [],\n\"evaluative_only_changes\": 2,\n\"substantively_faithful\": true,\n\"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "12df771753b2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "675b72f4bb52",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b75f6a265d93",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1a523ef0a9c4",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "40f97d7b866a",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "56c158b909f4",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 9,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "eaf9fd1989b9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "6eef65dcafd8",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "147f94342284",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 10,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 10,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1a523ef0a9c4",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "bfe1218715f7",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "171db9db7eab",
+   "raw": "{\"substantive_losses\":[],\"substantive_additions\":[],\"evaluative_only_changes\":1,\"substantively_faithful\":true,\"severity\":\"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "3a8db29acee1",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ba1281c4c660",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "675b72f4bb52",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "bfe1218715f7",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 12,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 12,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 3,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "7b34c6a3be72",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "916ce74f7032",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "147f94342284",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "3a8db29acee1",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 0,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "364892077062",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ba1281c4c660",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 7,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "932d1cbf9669",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "147f94342284",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 8,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "56c158b909f4",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a3e94677c289",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "932d1cbf9669",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a3e94677c289",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "ccc1e675a537",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "02e5b6ac1d6b",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 6, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "627ae7d9c51a",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 5,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a600846cfaa9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "916ce74f7032",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "627ae7d9c51a",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "ccc1e675a537",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"The justification for introducing grid attention, 'Based on the attention mechanism and receptive field optimization', is omitted in the rewrite.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "The justification for introducing grid attention, 'Based on the attention mechanism and receptive field optimization', is omitted in the rewrite."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "b492188eeaa5",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "b492188eeaa5",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "3a8db29acee1",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "59e1a6390c59",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 12,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 12,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "80abe88e9da2",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 12, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 12,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "fa59f89e7102",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1a523ef0a9c4",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "fa59f89e7102",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "80abe88e9da2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 9,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "1b14699fbeae",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "59e1a6390c59",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "1b14699fbeae",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 9, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 4,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ddc32a974447",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "d5f808253860",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "12df771753b2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c3c70919e916",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "c3c70919e916",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "fa59f89e7102",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "8f64659a92a2",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "8f64659a92a2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 10,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "eaf9fd1989b9",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 11,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "bfe1218715f7",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "e9523ac53607",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "84cd38e77980",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "e9523ac53607",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a3e94677c289",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 9,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b75f6a265d93",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Original states sensor observations are 'inherently noisy and potentially adversarial'; rewrite says they 'may be noisy or adversarial', weakening the claim about inherent noise and changing the conjunction from 'and' to 'or'.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "Original states sensor observations are 'inherently noisy and potentially adversarial'; rewrite says they 'may be noisy or adversarial', weakening the claim about inherent noise and changing the conjunction from 'and' to 'or'."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "a8a91d6014be",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "364a6357c7e8",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 8, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "d5f808253860",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "fae0dc826e25",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "a8a91d6014be",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "d0192a451af8",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "932d1cbf9669",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c3c70919e916",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "0039486fd245",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 13,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "916ce74f7032",
+   "raw": "{\"substantive_losses\":[],\"substantive_additions\":[],\"evaluative_only_changes\":3,\"substantively_faithful\":true,\"severity\":\"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "d0192a451af8",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Removal of hedge 'can' in 'it can significantly improve the convergence speed...', now asserts that it does improve\",\n    \"Removal of hedge 'can' in 'The research results can provide a theoretical basis...', now asserts that they do provide\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n",
+   "parsed": {
+    "substantive_losses": [
+     "Removal of hedge 'can' in 'it can significantly improve the convergence speed...', now asserts that it does improve",
+     "Removal of hedge 'can' in 'The research results can provide a theoretical basis...', now asserts that they do provide"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "fae0dc826e25",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "84cd38e77980",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "b492188eeaa5",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The rewrite removes the hedge 'primarily' from the statement that discriminative information is 'primarily distributed across multiple dimensions', implying the information is fully distributed rather than mostly distributed.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite removes the hedge 'primarily' from the statement that discriminative information is 'primarily distributed across multiple dimensions', implying the information is fully distributed rather than mostly distributed."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "bfddcfb7d1fb",
+   "raw": "```json\n{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "84cd38e77980",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "0039486fd245",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 5, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "d0192a451af8",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "5e23106f43cc",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "5e23106f43cc",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "94f2ccfda790",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "94f2ccfda790",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 17,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "1b14699fbeae",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "bfddcfb7d1fb",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 12,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 12,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "7086eb04e400",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "c9c99ce48689",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 12,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ba1281c4c660",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The rewrite changes 'these two features can capture the differences' to 'they capture differences', dropping the hedge 'can' and asserting a stronger claim about ARV and Entropy_val than the original supported.\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 8,\n  \"substantively_faithful\": false,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite changes 'these two features can capture the differences' to 'they capture differences', dropping the hedge 'can' and asserting a stronger claim about ARV and Entropy_val than the original supported."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 8,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "7086eb04e400",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "c9c99ce48689",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "d8ee95bcd0bc",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 1,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "59e1a6390c59",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 28, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 28,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "72a8c21b966a",
+   "raw": "{\n  \"substantive_losses\": [\n    \"Original Eq. (8) expression PDF=\u03bb2 e^{\u03b1(I1-3)} (no square on \u03bb2) altered\",\n    \"Original Eq. (9) PVW expression (with its specific terms involving \u03bb2\u22122\u03bb1\u2212221 etc.) altered/replaced\"\n  ],\n  \"substantive_additions\": [\n    \"Rewrite Eq. (8) uses \u03bb2^{2} e^{\u03b1(I1-3)}\",\n    \"Rewrite Eq. (9) uses a different expanded form \u03bb2^{2} e^{C2(I1-3)} - \u03bb2^{-2\u03bb1^{-2}} - \u03bb2^{-2\u03bb1^{-2}",
+   "parsed": {
+    "substantive_losses": [
+     "Original Eq. (8) expression PDF=\u03bb2 e^{\u03b1(I1-3)} (no square on \u03bb2) altered",
+     "Original Eq. (9) PVW expression (with its specific terms involving \u03bb2\u22122\u03bb1\u2212221 etc.) altered/replaced"
+    ],
+    "substantive_additions": [
+     "Rewrite Eq. (8) uses \u03bb2^{2} e^{\u03b1(I1-3)}",
+     "Rewrite Eq. (9) uses a different expanded form \u03bb2^{2} e^{C2(I1-3)} - \u03bb2^{-2\u03bb1^{-2}} - \u03bb2^{-2\u03bb1^{-2}}"
+    ],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "major"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "d8ee95bcd0bc",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "72a8c21b966a",
+   "raw": "```json\n{\n  \"substantive_losses\": [\n    \"Equation (9) in the original contained a combined term/fraction (\u03bb2\u22122\u03bb1\u2212221\u2212\u03bb2\u22122\u03bb1\u221222) which was distorted in the rewrite.\"\n  ],\n  \"substantive_additions\": [\n    \"The rewrite introduces a duplicated term in Equation (9) (\u2212\u03bb2\u22122\u03bb1\u22122 \u2212 \u03bb2\u22122\u03bb1\u22122) that alters the mathematical structure from the original.\"\n  ],\n  \"evaluative_only_changes\": 0,\n  \"substantively_fai",
+   "parsed": {
+    "substantive_losses": [
+     "Equation (9) in the original contained a combined term/fraction (\u03bb2\u22122\u03bb1\u2212221\u2212\u03bb2\u22122\u03bb1\u221222) which was distorted in the rewrite."
+    ],
+    "substantive_additions": [
+     "The rewrite introduces a duplicated term in Equation (9) (\u2212\u03bb2\u22122\u03bb1\u22122 \u2212 \u03bb2\u22122\u03bb1\u22122) that alters the mathematical structure from the original."
+    ],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "e9523ac53607",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "0039486fd245",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 18,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "d5f808253860",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "83d8309cdded",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "83d8309cdded",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "83d8309cdded",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "f1ad727a4c82",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}\n```\n\n**Rationale:**\n\n1. **\"can satisfy the practical needs\" \u2192 \"meets practical needs\"**: The modal \"can\" (capability/possibility) is dropped, making the claim slightly more assertive. This is a hedge removal, but in the context of a conclusi",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "f1ad727a4c82",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "46b62149fec7",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 26,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f1ad727a4c82",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "46b62149fec7",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 4,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "6bc487dd895f",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "fb71b148d372",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "d8a5a77f14bf",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "fb71b148d372",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 22,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "bfddcfb7d1fb",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "z-ai/glm-5.2",
+   "sig": "4b967914a266",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 3,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 21,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "fae0dc826e25",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "7086eb04e400",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "6bc487dd895f",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 2,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "z-ai/glm-5.2",
+   "sig": "88f5191919ec",
+   "raw": "```json\n{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 5,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}\n```",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 5,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "x-ai/grok-4.5",
+   "sig": "4b967914a266",
+   "raw": "{\n  \"substantive_losses\": [\n    \"exponential complexity softened to increasing complexity\"\n  ],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 6,\n  \"substantively_faithful\": true,\n  \"severity\": \"minor\"\n}",
+   "parsed": {
+    "substantive_losses": [
+     "exponential complexity softened to increasing complexity"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 6,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 24,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "94f2ccfda790",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "d8a5a77f14bf",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "d8a5a77f14bf",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 28,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "fb71b148d372",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "6bc487dd895f",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 3, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 3,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "5e23106f43cc",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 1, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 19,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "8f64659a92a2",
+   "raw": "{\"substantive_losses\":[],\"substantive_additions\":[],\"evaluative_only_changes\":1,\"substantively_faithful\":true,\"severity\":\"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "x-ai/grok-4.5",
+   "sig": "88f5191919ec",
+   "raw": "```json\n{\"substantive_losses\": [\"'exponential complexity' weakened to 'increasing complexity'\", \"energy availability characterized only as 'limited' rather than original 'precariousness of the amount of energy'\"], \"substantive_additions\": [], \"evaluative_only_changes\": 11, \"substantively_faithful\": true, \"severity\": \"minor\"}\n```",
+   "parsed": {
+    "substantive_losses": [
+     "'exponential complexity' weakened to 'increasing complexity'",
+     "energy availability characterized only as 'limited' rather than original 'precariousness of the amount of energy'"
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 11,
+    "substantively_faithful": true,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "d8ee95bcd0bc",
+   "raw": "{\"substantive_losses\": [\"Equation (9) for P_VW was altered: the original mathematical expression involving \u03bb_2^{-2} \u03bb_1^{-2} and additional terms/denominators was rewritten in a different form, changing the formula.\"], \"substantive_additions\": [], \"evaluative_only_changes\": 0, \"substantively_faithful\": false, \"severity\": \"major\"}",
+   "parsed": {
+    "substantive_losses": [
+     "Equation (9) for P_VW was altered: the original mathematical expression involving \u03bb_2^{-2} \u03bb_1^{-2} and additional terms/denominators was rewritten in a different form, changing the formula."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": false,
+    "severity": "major"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 7,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "f4c772d254d2",
+   "raw": "{\n  \"substantive_losses\": [],\n  \"substantive_additions\": [],\n  \"evaluative_only_changes\": 0,\n  \"substantively_faithful\": true,\n  \"severity\": \"none\"\n}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 0,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 27,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "46b62149fec7",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 1,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "5c9006ace28c",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 9, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 23,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "c9c99ce48689",
+   "raw": "{\"substantive_losses\": [\"The rewrite changes the architecture description of the Feature Channel: original states the two 2D convolutional blocks are 'with batch normalization, ReLU, and max-pooling' (i.e., each block includes these operations), while rewrite says the blocks are 'followed by batch normalization, ReLU, and max-pooling', which can imply a single post-convolution BN/ReLU/max-pooling ",
+   "parsed": {
+    "substantive_losses": [
+     "The rewrite changes the architecture description of the Feature Channel: original states the two 2D convolutional blocks are 'with batch normalization, ReLU, and max-pooling' (i.e., each block includes these operations), while rewrite says the blocks are 'followed by batch normalization, ReLU, and max-pooling', which can imply a single post-convolution BN/ReLU/max-pooling step."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 25,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "72a8c21b966a",
+   "raw": "{\"substantive_losses\":[\"Equation (8) was changed: original has PDF = \u03bb2 e^{\u03b1(I1\u22123)} (\u03bb2, not \u03bb2^2); rewrite has \u03bb2^2 e^{\u03b1(I1\u22123)}.\",\"Equation (9) was distorted: the original expression had a leading \u03bb2 e^{C2(I1\u22123)} and a fractional/denominator structure involving \u03bb2^{-2} \u03bb1^{-2}; the rewrite changed the leading term to \u03bb2^2 and replaced the structure with two identical negative terms, losing the or",
+   "parsed": {
+    "substantive_losses": [
+     "Equation (8) was changed: original has PDF = \u03bb2 e^{\u03b1(I1\u22123)} (\u03bb2, not \u03bb2^2); rewrite has \u03bb2^2 e^{\u03b1(I1\u22123)}.",
+     "Equation (9) was distorted: the original expression had a leading \u03bb2 e^{C2(I1\u22123)} and a fractional/denominator structure involving \u03bb2^{-2} \u03bb1^{-2}; the rewrite changed the leading term to \u03bb2^2 and replaced the structure with two identical negative terms, losing the original formula."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 1,
+    "substantively_faithful": false,
+    "severity": "major"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 15,
+   "era": "2026",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "627ae7d9c51a",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 2, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 2,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 2,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "02caea2f22de",
+   "raw": "{\"substantive_losses\":[\"The claim that using basic early/late fusion methods 'ensured' that observed performance increases were directly attributable to Homography calibration is weakened to a purpose ('so that... could be attributed').\"],\"substantive_additions\":[\"States that the network used the learned feature extractors 'without modification to the input-channel structure,' whereas the original",
+   "parsed": {
+    "substantive_losses": [
+     "The claim that using basic early/late fusion methods 'ensured' that observed performance increases were directly attributable to Homography calibration is weakened to a purpose ('so that... could be attributed')."
+    ],
+    "substantive_additions": [
+     "States that the network used the learned feature extractors 'without modification to the input-channel structure,' whereas the original describes adapting the first convolutional layer to four/five input channels by averaging and replicating ImageNet weights."
+    ],
+    "evaluative_only_changes": 7,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "B",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "4b967914a266",
+   "raw": "{\n  \"substantive_losses\": [\n    \"The original states 'exponential complexity of the applications', but the rewrite says 'increasing complexity of applications', losing the specific 'exponential' magnitude.\",\n    \"The original says 'cost-effectiveness and energy efficiency could still pose great research challenges', using 'could' as a hedge; the rewrite changes to 'will remain significant research",
+   "parsed": {
+    "substantive_losses": [
+     "The original states 'exponential complexity of the applications', but the rewrite says 'increasing complexity of applications', losing the specific 'exponential' magnitude.",
+     "The original says 'cost-effectiveness and energy efficiency could still pose great research challenges', using 'could' as a hedge; the rewrite changes to 'will remain significant research challenges', removing the hedge and asserting certainty not present in the original."
+    ],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": false,
+    "severity": "minor"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 16,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "80abe88e9da2",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 11, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 11,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 29,
+   "era": "pre-2022",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "88f5191919ec",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 9, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 9,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 20,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "a8a91d6014be",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  },
+  {
+   "kind": "fidelity",
+   "i": 14,
+   "era": "2026",
+   "arm": "C",
+   "judge": "deepseek/deepseek-v4-flash-0731",
+   "sig": "ccc1e675a537",
+   "raw": "{\"substantive_losses\": [], \"substantive_additions\": [], \"evaluative_only_changes\": 4, \"substantively_faithful\": true, \"severity\": \"none\"}",
+   "parsed": {
+    "substantive_losses": [],
+    "substantive_additions": [],
+    "evaluative_only_changes": 4,
+    "substantively_faithful": true,
+    "severity": "none"
+   }
+  }
+ ]
+}

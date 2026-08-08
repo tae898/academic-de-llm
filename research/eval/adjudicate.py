@@ -26,34 +26,24 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # Definitions are Wikipedia's, restated so a judge with no context can apply
 # them. Each carries the false positive that actually occurred in practice.
 PATTERNS = {
-    'unmeasured quality claim': dict(
-        # Reframed 2026-08-08 from a verb list to the construction it was
-        # always trying to name. The verb is incidental: `provides an efficient
-        # and reliable solution` is `is good`, dressed, while `remains a
-        # challenge` marks persistence and `Mw serves as the primary
-        # conditioning variable` names a function. The old verb list produced 21
-        # `remains` hits a panel unanimously called real and which are not.
+    'copula avoidance': dict(
+        # Kept as the DETECTOR, including `remains`. Held out on arXiv cs.LG,
+        # a field this was never tuned on, the verb list shows 2.1x excess
+        # while a praise-adjective reframe showed 0.9x -- flat. Dropping
+        # `remains` costs 2.7x -> 1.9x on the tuned corpus and 2.1x -> 1.1x
+        # held out, so it carries real signal about the corpus.
         #
-        # Anchored on the praise adjective, which is what carries the tell, with
-        # a noun fallback for the handful that rate the work without one
-        # ("provides a multidimensional framework"). On the 18 labelled cases
-        # this replaces: 8 of 8 real caught, 0 of 10 false fired, against 4 of 8
-        # and 0 of 10 for the noun-only form.
-        regex=r'\b(?:provides?|offers?|presents?|serv(?:es?|ing) as|positions? \w+ as|'
-              r'constitutes?)\s+(?:an?|the)\s+[\w\s,-]{0,30}?\b(?:efficient|reliable|'
-              r'effective|robust|flexible|adaptive|valuable|essential|stable|powerful|'
-              r'comprehensive|practical|cost-effective|novel|promising|seamless|superior|'
-              r'excellent|versatile|intuitive|scalable)\b'
-              r'|\b(?:provides?|offers?|presents?|serv(?:es?|ing) as|constitutes?)\s+an?\s+'
-              r'[\w\s,-]{0,30}?\b(?:solution|framework|foundation|platform|guide)\b',
-        definition="A sentence that rates the work without a measurement behind the rating. "
-                   "'This work provides an efficient and reliable solution' claims quality "
-                   "and reports nothing.",
-        not_a_hit="The sentence names a function, a persistent state, or a hedged claim rather "
-                  "than rating anything. 'descriptors serve as a correction signal' says what "
-                  "they do. 'X remains a challenge' says it is still open despite prior work. "
-                  "'may serve as a biomarker' is a hedged claim. A measured adjective is fine: "
-                  "'robust to 10% dropout' has a number behind it."),
+        # It is NOT an edit target. `X remains a challenge` means still open
+        # despite prior work, and SKILL.md says never to change it. Detection
+        # and editing are different jobs and this regex does the first.
+        regex=r'\b(serves? as|serving as|stands? as|functions? as|boasts?|offers?|'
+              r'remains?|positions? \w+ as|presents? a|'
+              r'provides? an? [\w\s]{0,24}?(solution|approach|framework|means|basis))\b',
+        definition="A plain `is` or `are` dressed up in a fancier verb. "
+                   "'This model serves as a proof of concept' means 'is a proof of concept'.",
+        not_a_hit="The verb is doing real work and cannot be replaced by 'is' without losing "
+                  "meaning. 'maintains a high execution speed of 35 FPS' describes sustained "
+                  "behaviour. 'X remains a challenge' means it is still open despite prior work."),
     'superficial -ing': dict(
         regex=r'[, ](highlighting|underscoring|emphasizing|ensuring|reflecting|'
               r'contributing to|providing|enhancing|allowing|helping|supporting|'

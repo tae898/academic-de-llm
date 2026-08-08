@@ -12,35 +12,30 @@ Two rules before you match anything.
 
 **Case.** Structure and vocabulary are matched **case-insensitively**, which is how the precision and recall figures below were scored. Matching them case-sensitively silently drops every sentence-initial instance, and `Unlike prior work, this study...` is the most common form of one of them. Markup is the opposite: title case cannot be detected without case.
 
-## Unearned evaluation
+## Structure
 
-Four regexes for one idea: a sentence grading the work rather than reporting it.
-`SKILL.md` defines it semantically and these only find candidates, badly. Each
-is the operational proxy for the definition, not the definition.
+Model-level habits, so they survive across vendors and model generations. The
+section with a measured baseline behind it, and the one to run on every
+document. Rises 2-4x against pre-ChatGPT text in both abstracts and full
+papers, and held while the vocabulary below decayed.
 
-They are re-scored every review cycle: one judge panel labels every hit real or
-a words-matched false positive, a second panel reads the same texts cold to find
-what the patterns missed. Currently **74% recall at 51% precision** against 8%
-and 32% for v0.3.1, but see the warning below about what "real" meant.
+These four are re-scored every review cycle: one judge panel labels every hit
+real or a words-matched false positive, a second panel reads the same texts cold
+to find what the patterns missed. Currently **74% recall at 51% precision**,
+against 8% and 32% for the version that shipped in v0.3.1. Per-trigger strengths
+are in the notes column; see `research/EVAL.md`.
 
 | Pattern | Regex | A real hit |
 |---|---|---|
-| Evaluation hung off a fact | `[, ](highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|providing\|enhancing\|allowing\|helping\|supporting\|maintaining\|thereby \w+ing)\b` | An `-ing` clause that grades the sentence it hangs off. **The space alternative is load-bearing**: requiring a comma missed "sensor signals enabling precise detection". `enabling` dropped after 0 real in 16 matches |
-| Quality claim with no number | anchored on the praise adjective, with a noun fallback. Full form in `research/eval/adjudicate.py`, which is where all four are defined | The praise adjective is the tell, not the verb: "provides an **efficient and reliable** solution" is "is good", dressed. **Not a hit** when the sentence names a function ("descriptors serve as a correction signal"), a persistent state ("X remains a challenge") or a hedged claim ("may serve as a biomarker"). Reframing from the old verb list took excess from 2.7x to **8.1x** and precision from 60.7% to 64.3% |
-| Generic importance | `\b(pivotal\|invaluable)\b\|\bis (crucial\|essential\|vital\|critical)\b\|plays a (crucial\|pivotal\|vital) role\|is a testament\|significant potential\|highlighting the importance` | Importance asserted where a fact belongs. The strongest of the four at 89% real |
-| Significance by contrast | `not just .{0,60} but\|unlike .{0,80}?\b(this\|our\|we)\b` | A position given to unnamed prior work so the next clause can beat it. `not only X but Y` was retired: it asserts two true things. **n is far too small to quote a precision**: 3 matches across 30 abstracts |
-
-**These regexes over-fire on function words.** `remains`, a bare `provides`, and
-`maintains` were all removed from them after judging, because `X remains a
-challenge` marks persistence and `maintains 35 FPS` is behaviour over time.
-Neither grades anything. The verb-list framing is what put them there.
-
-**A caution about the precision figure above.** It was produced by showing a
-judge panel a regex match and asking whether the match was a real instance of
-the named pattern. The panel then called 21 instances of `remains a challenge`
-genuine copula avoidance, unanimously. A panel handed a match answers a narrower
-question than a panel handed a text, and the number inherits that. Treat 51% as
-an upper bound until the next cycle re-adjudicates blind.
+| Copula avoidance | `\b(serves? as\|serving as\|stands? as\|functions? as\|boasts?\|offers?\|remains?\|positions? \w+ as\|presents? a\|provides? an? [\w\s]{0,24}?(solution\|approach\|framework\|means\|basis))\b` | A plain `is` or `are` dressed up. `serves as` is real every time. `provides` only in the copular form (`provides an effective solution`), which is why it is narrowed: bare, it scored 1 in 6. Not a hit when the verb does real work, since "maintains 35 FPS" is behaviour over time |
+| Superficial `-ing` analysis | `[, ](highlighting\|underscoring\|emphasizing\|ensuring\|reflecting\|contributing to\|providing\|enhancing\|allowing\|helping\|supporting\|maintaining\|thereby \w+ing)\b` | An `-ing` clause that editorialises about the sentence it hangs off. **The space alternative is load-bearing**: requiring a comma missed "sensor signals enabling precise detection". `enabling` was dropped after 0 real in 16 matches; `helping`, `supporting`, `maintaining` were added from confirmed misses |
+| Negative parallelism | `not just .{0,60} but\|unlike .{0,80}?\b(this\|our\|we)\b` | A false contrast erected so the next clause can knock it down. `unlike X, this Y` is the form that occurs in academic prose. **`not only X but Y` was retired**: it asserts two true things rather than erecting a false contrast, and 0 of 6 judge votes called it real. The tail was widened from `this work|this study` because real instances say `this module` and `this method`. **n is far too small to quote a precision**: 3 distinct matches across 30 abstracts, and the frozen label set contains no confirmed instance at all. Treat hits as a hint
+| Undue emphasis | `\b(pivotal\|invaluable)\b\|\bis (crucial\|essential\|vital\|critical)\b\|plays a (crucial\|pivotal\|vital) role\|is a testament\|significant potential\|highlighting the importance` | Generic importance where a specific fact belongs. The strongest of the four at 89% real. `is crucial` and `is essential` are near-certain. Bare `pivotal` is weaker and kept anyway, because a miss costs more than a false positive |
+| Vague attribution | `Observers have`, `Experts (argue\|say)`, `Industry reports`, `several sources`, `it is widely` | Attribution to nobody. Name them or drop the claim |
+| False ranges | `from .{0,40} to .{0,40}, from` | "from X to Y" where X and Y are not on a common scale |
+| Challenges formula | `[Dd]espite .* (faces\|challenges)` | "Despite its X, it faces several challenges", then vague optimism |
+| Rule of three | no regex | Read comma lists of exactly three. Delete a third that measures nothing |
+| Elegant variation | no regex | One thing called three names across a page. One thing, one name |
 
 ## Vocabulary
 

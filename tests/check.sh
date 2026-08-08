@@ -62,8 +62,8 @@ command -v rg >/dev/null 2>&1 || {
 echo "$(rg --version | head -1)"
 echo
 
-echo "Unearned evaluation"
-fires  "quality claim"       1 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+echo "Structure"
+fires  "copula avoidance"    2 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 fires  "superficial -ing"    3 '[, ](highlighting|underscoring|emphasizing|ensuring|providing|enhancing|allowing|helping|supporting|maintaining|thereby \w+ing)\b' '-i'
 fires  "negative parallel"   1 'not just .{0,60} but|unlike .{0,80}?\b(this work|this study|we|our)\b' '-i'
 fires  "undue emphasis"      2 '\b(pivotal|invaluable)\b|\bis (crucial|essential|vital|critical)\b|highlighting the importance' '-i'
@@ -117,7 +117,7 @@ count "after fixed emoji"          "$BAFTER" 0 '\p{Emoji_Presentation}'
 count "after fixed curly quotes"   "$BAFTER" 0 '[\x{201C}\x{201D}\x{2018}\x{2019}]'
 count "after fixed thematic break" "$BAFTER" 0 '^\*\*\*$'
 count "after fixed heading skip"   "$BAFTER" 0 '^#### '
-count "after fixed quality claim"  "$BAFTER" 0 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "after fixed copula"         "$BAFTER" 0 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 # `remains` marks persistence, not a dressed-up copula. The retired verb-list
 # framing scored 21 of these as tells. The cleaned fixture must KEEP it.
 count "after KEEPS 'remains'"      "$BAFTER" 1 '\bremains?\b' '-i'
@@ -137,11 +137,11 @@ count "paper KEEPS the em dash"    "$TAFTER" 1 '\-\-\-'
 count "paper KEEPS numeric range"  "$TAFTER" 1 '4--9'
 count "paper KEEPS every \\cite"   "$TAFTER" 4 '\\cite\{'
 count "paper KEEPS the math"       "$TAFTER" 1 '\$Q\$'
-count "paper before: quality claim" "$TBEFORE" 1 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "paper before: copula"       "$TBEFORE" 1 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 count "paper before: -ing clause"  "$TBEFORE" 3 '[, ](highlighting|providing|thereby \w+ing)\b' '-i'
 count "paper before: neg parallel" "$TBEFORE" 1 'unlike .{0,80}?\b(this work|this study|we|our)\b' '-i'
 count "paper before: undue emph"   "$TBEFORE" 2 '\bis crucial\b|highlighting the importance' '-i'
-count "paper after: claim fixed"   "$TAFTER"  0 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "paper after: copula fixed"  "$TAFTER"  0 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 count "paper after: KEEPS 'remains'" "$TAFTER" 2 '\bremains?\b' '-i'
 count "paper after: -ing fixed"    "$TAFTER"  0 '[, ](highlighting|providing|thereby \w+ing)\b' '-i'
 count "paper after: neg par fixed" "$TAFTER"  0 'unlike .{0,80}?\b(this work|this study|we|our)\b' '-i'
@@ -154,10 +154,10 @@ echo "Abstract: no markup exists, so structure is the whole job"
 count "prose: no em dash to find"    "$PBEFORE" 0 '—'
 count "prose: no bold list to find"  "$PBEFORE" 0 '^\s*[-*] \*\*[^*]+\*\*'
 count "prose: no heading to find"    "$PBEFORE" 0 '^#{1,6} '
-count "prose before: quality claim"  "$PBEFORE" 1 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "prose before: copula"         "$PBEFORE" 2 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 count "prose before: -ing clause"    "$PBEFORE" 1 ', (constructing|integrating|calculating|conducted)' '-i'
 count "prose before: bare intensifier" "$PBEFORE" 1 'significantly|substantially|dramatically' '-i'
-count "prose after: claim fixed"     "$PAFTER"  0 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "prose after: copula fixed"    "$PAFTER"  0 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 count "prose after: -ing fixed"      "$PAFTER"  0 ', (constructing|integrating|calculating|conducted)' '-i'
 count "prose after: intensifier gone" "$PAFTER" 0 'significantly|substantially|dramatically' '-i'
 
@@ -176,7 +176,7 @@ echo "Extended trap: every hit must be rejectable"
 count "trap em dashes"              "$TRAP"   4 '—'
 count "trap notation list"          "$TRAP"   3 '^\s*[-*] \*\*[^*]+\*\*\s*[:—-]'
 count "trap pre-2022 quotation"     "$TRAP"   2 '\b(stands as|serving as)\b' '-i'
-count "trap: no quality claim fires" "$TRAP"  0 '\b(provides?|offers?|presents?|serv(es?|ing) as|positions? \w+ as|constitutes?)\s+(an?|the)\s+[\w\s,-]{0,30}?\b(efficient|reliable|effective|robust|flexible|adaptive|valuable|essential|stable|comprehensive|practical|novel|promising|seamless)\b' '-i'
+count "trap: copula only in quote"  "$TRAP"   1 '\b(serves? as|stands? as|functions? as|boasts?|offers?)\b' '-i'
 count "trap proper-noun heading"    "$TRAP"   1 '^#{1,6} .*[a-z] [A-Z][a-z]+ [A-Z]'
 count "trap 'crucial' x2: live+quote" "$TRAP" 2 '\bcrucial\b' '-i'
 count "trap -ing inside quotation"  "$TRAP"   2 '[, ](underscoring|serving)\b' '-i'

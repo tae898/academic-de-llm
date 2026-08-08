@@ -241,6 +241,46 @@ comparison it existed to make. Input is fenced now. Re-running with it fixed
 moved the numbers by a few points and changed no conclusion, so the effect was
 real and not the explanation.
 
+### Calibration language suppresses action
+
+Seven patterns in `SKILL.md` were measured across ten corpora and found to
+produce **four matches in sixty documents** between them. Three more turned out
+to be field habits rather than general tells: `robust` rises 3.5x in biomedical
+abstracts and falls in every arXiv category. The obvious edit was to cut the
+seven and demote the three to a section headed *field-varying, check before you
+cut*.
+
+The prediction was no change, since a pattern that never fires cannot be
+removed. The result:
+
+| | 19KB | after the edit |
+|---|---|---|
+| reads machine-like | **22.2%** | **38.2%** |
+| substantively faithful | 96% | **97%** |
+| judged worse | **7%** | 9% |
+| flatter | 16% | **12%** |
+| lost something worth keeping | 16% | **13%** |
+
+**Sixteen points of the primary outcome, for three points of safety.**
+
+Length does not explain it: the 5KB condensation scored the *best* style number
+of any version tested (13.3%). What the edit added was permission. Telling the
+model that three patterns are "a question about your field rather than a
+finding" moved them from *remove this* to *consider whether this applies*, and
+removals fell accordingly.
+
+The general form, which is uncomfortable for a repository built on
+qualification: **hedging in an instruction is not free.** In a document a
+caveat costs the reader nothing and buys accuracy. In an instruction it is a
+licence not to act, and the model takes it. Every version tested today with
+more hedging removed fewer tells.
+
+That does not make the measurement wrong. Those seven patterns genuinely do not
+occur and `references/sources.md` says so at length. It means the finding
+belongs in the evidence file rather than in the instruction, and that trimming
+an instruction on the strength of a corpus measurement needs its own A/B before
+shipping.
+
 ### The skill's advantage is conditional on the model
 
 Measured on `gpt-5.6-sol-pro`, a stronger and 50x more expensive rewriter, the

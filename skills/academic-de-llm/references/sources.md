@@ -196,6 +196,52 @@ the formatting rather than by a measured rate.
 
 ---
 
+## 3c. Seven venues, and what survives them (2026-08-08)
+
+Sources 3 and 3b rest on **one journal**. *Sensors* abstracts and *Sensors*
+full texts are the same publication sampled twice, so a claim that "rose in two
+of three corpora" could be true of one venue and one field. That was the
+weakest thing in this file and it is now fixed.
+
+Ten corpora, seven publishers, four of them outside engineering: *Sensors*
+abstracts and full texts, **PLOS ONE**, **BMJ Open**, **Nature
+Communications**, and arXiv **cs.LG**, **cs.AI**, **cs.CL**, **econ.EM**,
+**math.ST**. Same before-and-after design, same per-document rates.
+Reproduce with `python3 research/audit.py`.
+
+**Four patterns survive.**
+
+| Pattern | venues | range |
+|---|---|---|
+| Copula avoidance | **9 of 10** | 1.2x - 3.5x |
+| Kobak's ten, as a set | **9 of 10** | 1.3x - 3.4x |
+| Superficial `-ing` | **8 of 10** | 1.3x - 3.7x |
+| Dash as punctuation | **7 of 9 measurable** | 1.1x - 3.5x |
+
+**Three that the narrow audit called confirmed are field habits.** `robust`
+rises 3.5x in sensors and biomedical abstracts and falls below its pre-ChatGPT
+rate in every arXiv category, because in machine learning it is a technical
+term. `paradigm|landscape|realm` is 5.2x in full papers and 0.2x in PLOS ONE.
+`undue emphasis` is 2.2x in BMJ Open and 0.7x in cs.LG.
+
+This is the same failure that produced the retracted copula finding earlier the
+same day: performance on the corpus a pattern was built from, mistaken for a
+general result. Two venues cannot show it. Seven can.
+
+**The dash result changed most.** It rises in **all five arXiv categories**,
+2.0x to 3.5x, and sits at 1.1x to 1.6x in published journals. Authors type it
+and copy editors take it out, so it is a genuine tell in a draft and nearly
+invisible in the literature. That is why readers name the em dash first while
+it measures flat in published corpora.
+
+**The falsifications strengthened.** `novel` falls in 9 of 10 venues,
+glue-word openers in 9 of 10, `crucial` in 7, `state-of-the-art` in 6. Seven
+further patterns produce four matches across sixty documents between them and
+were cut from `SKILL.md`: vague attribution, the challenges formula, false
+ranges, negative parallelism, stacked hedges, `pave the way`, `pivotal`.
+
+---
+
 ## 4. Method correction: pooled rates overstate (2026-08-06)
 
 Every figure in source 3 and the first version of source 5 was a **pooled**

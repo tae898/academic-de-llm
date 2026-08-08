@@ -21,7 +21,9 @@ papers, and held while the vocabulary below decayed.
 
 These four are re-scored every review cycle: one judge panel labels every hit
 real or a words-matched false positive, a second panel reads the same texts cold
-to find what the patterns missed. Currently **74% recall at 51% precision**,
+to find what the patterns missed. Currently **74% recall at 51% precision** — read as an upper bound, because the
+labelling panel was shown a regex match rather than a text, and did that badly
+enough once to produce a retracted finding (see `sources.md`) —
 against 8% and 32% for the version that shipped in v0.3.1. Per-trigger strengths
 are in the notes column; see `research/EVAL.md`.
 

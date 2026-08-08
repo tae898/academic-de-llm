@@ -15,6 +15,57 @@ Reset to **0.1.0** on 2026-08-07 for the first release, with no tags or installs
 to break. Everything below happened before that release and is recorded because
 the corrections are the useful part.
 
+## 0.2.0 (2026-08-08)
+
+**The corpus went from one journal to seven publishers**, and that changed what
+the skill can claim. `research/audit.py` is new: it tests every candidate tell
+against ten corpora — *Sensors* abstracts and full texts, PLOS ONE, BMJ Open,
+Nature Communications, and arXiv `cs.LG`, `cs.AI`, `cs.CL`, `econ.EM`,
+`math.ST` — and keeps only what rises in a venue it was not tuned on.
+
+Four of twenty-six candidates survive: copula avoidance, Kobak's ten as a set,
+the superficial `-ing` clause, and dash-as-punctuation. Seven produce four
+matches across sixty documents between them. Five moved the wrong way: `novel`
+falls in 9 of 10 venues, glue-word openers in 9, `crucial` in 7.
+
+**The em dash is the one with the cleanest evidence.** It rises in all five
+arXiv categories, 2.0x to 3.5x, and sits at 1.1x to 1.6x in published journals.
+Authors type it and copy editors take it out, which is why readers name it
+first and why it looks flat in the published literature.
+
+**A retraction.** "The skill relocates copula avoidance rather than removing
+it" was published and withdrawn the same day. Most of what the judge panel
+called copula avoidance was `X remains a challenge`, which means *still open
+despite prior work* and is not a dressed-up copula. `SKILL.md` now says never
+to edit it, and states the rule as `is` **without loss of meaning** rather than
+`is` grammatically — a one-word bug that had stood for months.
+
+**Rhythm moved from detection to guardrail.** Published academic prose did not
+get flatter after ChatGPT: sentence-length variation is unchanged and repeated
+openers went down. Flatness is what a de-slop pass *creates* — it halves the
+standard deviation and the longest sentence. The directive now has a checkable
+form: keep the longest sentence long.
+
+**Six challengers were measured and rejected**, which is why `SKILL.md` is
+nearly unchanged despite all of the above. A category collapse, a semantic
+reframe, a 5KB condensation, a 19-line prompt, an edit-locality rule, and a
+cut of the dead patterns all scored worse on the judged outcome. Two findings
+came out of losing:
+
+- **A list and a test do different jobs.** Deleting the participle list in
+  favour of a description cost 67% of those removals down to 24%.
+- **Hedging in an instruction is not free.** Demoting three patterns to "a
+  question about your field" cost sixteen points of style score for three
+  points of safety. In a document a caveat is accuracy; in an instruction it is
+  permission not to act.
+
+**Three harness bugs**, each of which would have inverted a published result:
+`judge.py` keyed its resume on document index, so re-running an arm silently
+reused the previous skill's verdicts; the rewriter labelled its input
+`ABSTRACT:` and short prompts echoed it back, penalising brevity in the exact
+comparison that was measuring brevity; and the papers corpus was half
+tables-of-contents with its bodies duplicated 1.85x.
+
 ## 0.1.0 (2026-08-07) — first release
 
 Scope narrowed to **academic writing**: papers, abstracts and academic blog

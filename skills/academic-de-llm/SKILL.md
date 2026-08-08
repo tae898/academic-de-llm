@@ -1,6 +1,6 @@
 ---
 name: academic-de-llm
-version: 0.1.0
+version: 0.2.0
 description: |
   Last-pass polish for academic writing: strip the surface markers that make a
   paper, abstract or academic blog post read as machine-generated, without
@@ -13,8 +13,8 @@ metadata:
   sources: >
     Kobak et al., Science Advances 2025 (arXiv:2406.07016);
     Wikipedia:Signs of AI writing (community-maintained);
-    own corpus measurements over 1.3M words of academic text, 2026-08
-    (see references/sources.md)
+    own measurement over 1.9M words across seven publishers and six fields,
+    2026-08 (see references/sources.md)
   last_reviewed: 2026-08
   changelog: CHANGELOG.md
   review_process: research/REVIEW.md
@@ -26,7 +26,8 @@ Generated prose is rarely wrong. It is recognizable. This is the pass you run
 last, after the argument is settled and before submission.
 
 Scoped to academic writing on purpose. The measurements behind it come from
-1.3M words of journal abstracts, open-access full texts and arXiv preprints.
+1.9M words across seven publishers and six fields: journal abstracts, open-access
+full texts and arXiv preprints in machine learning, econometrics and mathematics.
 Every claim here is measured or cited, and `references/sources.md` says which,
 including what each source does **not** establish and which claims have no
 source at all.

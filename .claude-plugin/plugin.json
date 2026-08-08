@@ -1,7 +1,7 @@
 {
   "name": "academic-de-llm",
   "description": "Last-pass polish for academic writing: strip the markers that make a paper, abstract or academic blog post read as machine-generated, without flattening the prose or weakening a claim. LaTeX, Markdown and HTML.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Taewoon Kim",
     "url": "https://taewoon.kim"

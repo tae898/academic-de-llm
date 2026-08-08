@@ -118,7 +118,7 @@ November 2022, and it reports what it skipped so the pass is auditable.
 |---|---|---|
 | [Kobak et al. 2025](https://doi.org/10.1126/sciadv.adt3813), *Science Advances* | 15.1M English-language PubMed abstracts. Projects a counterfactual 2024 word frequency from 2021 to 2022 data and measures the gap, so "excess" is a measured quantity. | The vocabulary list with frequency ratios (`delves` at 28.0x) |
 | [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | Editors who screen AI text at volume across millions of articles | The structural and formatting taxonomy, and the paste-era artifacts |
-| This repo, 2026-08 | 1.3M words: PubMed *Sensors* abstracts in four windows, PMC open-access full texts, arXiv `cs.LG` | The structural excess figures, the decay measurement, and the section ordering |
+| This repo, 2026-08 | 1.9M words, ten corpora, seven publishers: *Sensors*, PLOS ONE, BMJ Open, Nature Communications, PMC full texts, and arXiv `cs.LG`, `cs.AI`, `cs.CL`, `econ.EM`, `math.ST` | Which claimed tells survive a venue they were not tuned on: four of twenty-six |
 
 `references/sources.md` says what each source does **not** establish, and lists
 every claim in the skill that has no source behind it. That list exists so the
